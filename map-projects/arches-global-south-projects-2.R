@@ -10,23 +10,32 @@
 #'
 #' @examples
 #'
+#' prj_arches_gs()
+#'
 #'
 #' @export
 prj_arches_gs <- function(root.project = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/map-projects/",
                           list.projects = "list-projects.txt",
-                          bck = paste0(root.project, "bckgrd/globalsouth.geojson"),
+                          bck = paste0(root.project, "bckgrd/global-south.geojson"),
                           map.title = "<a href='https://www.archesproject.org/'>Arches</a> projects in the Global South",
                           col.ramp = "Set1",
                           export.map = TRUE,
-                          dirOut = paste0(getwd(),"/projects/arches/"),
-                          fileOut = "arches-global-south.html"){
+                          dirOut = paste0(getwd(),"/map-projects/"),
+                          fileOut = "arches-global-south.html",
+                          verbose = TRUE){
   `%>%` <- dplyr::`%>%` # used to not load dplyr
+  if(verbose){
+    print(paste0("Creates a leaflet map (HTML widget) showing the extension of different Arches-powered projects"))
+  }
   l.projects <- read.csv(paste0(root.project, list.projects), header = F)
   l.projects <- l.projects[ , 1]
   projects.colors <- RColorBrewer::brewer.pal(length(l.projects), col.ramp)
   gs <- geojsonsf::geojson_sf(bck)
   gs.globalsouth <- gs[!is.na(gs$globalsout), ] # could be long
   # leaflet map
+  if(verbose){
+    print(paste0("Load the map background"))
+  }
   ggs <- leaflet::leaflet(gs.globalsouth,
                           width = "100%",
                           height = "100vh") %>%
@@ -41,13 +50,13 @@ prj_arches_gs <- function(root.project = "https://raw.githubusercontent.com/achp
                          opacity = .5,
                          fillOpacity = .5)
   if(verbose){
-    print(paste0("loop over ", list.projects, " to add the project layers"))
+    print(paste0("loop over '", list.projects, "' to add the project layers"))
   }
   for(i in seq(1, length(l.projects))){
     if(verbose){
       print(paste0(" - read: ", l.projects[i]))
     }
-    arches.projects <- readLines(paste0(root.project, "geojson/", l.projects[i], ".geojson")) %>%
+    arches.projects <- readLines(paste0(root.project, "prj-extent/", l.projects[i], ".geojson")) %>%
       paste(collapse = "\n") %>%
       jsonlite::fromJSON(simplifyVector = FALSE)
     ggs <- ggs %>%
@@ -63,7 +72,7 @@ prj_arches_gs <- function(root.project = "https://raw.githubusercontent.com/achp
     leaflet::addControl(map.title,
                         position = "topright")
   if(export.map){
-    dir.create(file.path(dirOut))
+    dir.create(file.path(dirOut), showWarnings = F)
     mapOut <- paste0(dirOut, fileOut)
     htmlwidgets::saveWidget(ggs, mapOut)
     if(verbose){
@@ -73,4 +82,6 @@ prj_arches_gs <- function(root.project = "https://raw.githubusercontent.com/achp
     print(ggs)
   }
 }
+
+prj_arches_gs()
 
