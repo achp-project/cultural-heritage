@@ -1,6 +1,6 @@
 #' Show the extension of the different Global South projects based in Arches in an interactive leaflet map.
 #'
-#' @name prj_arches_gs
+#' @name prj_map
 #'
 #' @description Creates a leaflet map (HTML widget) showing the extension of different Arches-powered projects
 #'
@@ -10,19 +10,19 @@
 #'
 #' @examples
 #'
-#' prj_arches_gs()
+#' prj_map()
 #'
 #'
 #' @export
-prj_arches_gs <- function(root.project = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/map-projects/",
-                          list.projects = "list-projects.txt",
-                          bck = paste0(root.project, "bckgrd/global-south.geojson"),
-                          map.title = "<a href='https://www.archesproject.org/'>Arches</a> projects in the Global South",
-                          col.ramp = "Set1",
-                          export.map = TRUE,
-                          dirOut = paste0(getwd(),"/map-projects/"),
-                          fileOut = "arches-global-south.html",
-                          verbose = TRUE){
+prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/map-projects/",
+                    list.projects = "list-projects.txt",
+                    bck = paste0(root.project, "bckgrd/global-south.geojson"),
+                    map.title = "<a href='https://www.archesproject.org/'>Arches</a> projects in the Global South",
+                    col.ramp = "Set1",
+                    export.map = TRUE,
+                    dirOut = paste0(getwd(),"/map-projects/"),
+                    fileOut = "arches-global-south.html",
+                    verbose = TRUE){
   `%>%` <- dplyr::`%>%` # used to not load dplyr
   if(verbose){
     print(paste0("Creates a leaflet map (HTML widget) showing the extension of different Arches-powered projects"))
@@ -82,6 +82,3 @@ prj_arches_gs <- function(root.project = "https://raw.githubusercontent.com/achp
     print(ggs)
   }
 }
-
-prj_arches_gs()
-
