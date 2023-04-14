@@ -10,6 +10,9 @@
 #'
 #' @examples
 #'
+#' # export the map
+#' prj_map()
+#'
 #' # plot without saving the map
 #' prj_map(export.map = F)
 #'
@@ -49,9 +52,9 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     leaflet::addProviderTiles(bmap.leaflet,
                               options = leaflet::providerTileOptions(noWrap = TRUE)
     ) %>%
-    leaflet::setView(lng = 53,
-                     lat = 25,
-                     zoom = 3) %>%
+    # leaflet::setView(lng = 53,
+    #                  lat = 25,
+    #                  zoom = 3) %>%
     leaflet::addPolygons(color = "red",
                          weight = 0,
                          opacity = .5,
@@ -89,5 +92,3 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     print(ggs)
   }
 }
-
-prj_map()
