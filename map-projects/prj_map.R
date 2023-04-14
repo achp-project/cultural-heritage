@@ -53,9 +53,9 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     leaflet::addProviderTiles(bmap.leaflet,
                               options = leaflet::providerTileOptions(noWrap = TRUE)
     ) %>%
-    # leaflet::setView(lng = 53,
-    #                  lat = 25,
-    #                  zoom = 3) %>%
+    leaflet::setView(lng = 53,
+                     lat = 25,
+                     zoom = 3) %>%
     leaflet::addPolygons(color = "red",
                          weight = 0,
                          opacity = .5,
@@ -63,7 +63,8 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
   if(verbose){
     print(paste0("loop over '", list.projects, "' to add the project layers"))
   }
-  for(i in seq(1, nrow(l.projects))){
+  # nrow(l.projects)
+  for(i in seq(1, 7)){
     # i <- 1
     prj.name <- l.projects[i, 1]
     prj.url <- l.projects[i, 2]
