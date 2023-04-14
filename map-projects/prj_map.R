@@ -10,14 +10,16 @@
 #'
 #' @examples
 #'
-#' prj_map()
+#' # plot without saving the map
+#' prj_map(export.map = F)
 #'
 #'
 #' @export
 prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/map-projects/",
                     list.projects = "list-projects.txt",
                     bck = paste0(root.project, "bckgrd/global-south.geojson"),
-                    map.title = "<a href='https://www.archesproject.org/'>Arches</a> projects in the Global South",
+                    basemap = "Terrain",
+                    map.title = "<a href='https://www.archesproject.org/'>Arches-based</a> projects in the Global South",
                     col.ramp = "Set1",
                     export.map = TRUE,
                     dirOut = paste0(getwd(),"/map-projects/"),
@@ -32,6 +34,11 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
   projects.colors <- RColorBrewer::brewer.pal(length(l.projects), col.ramp)
   gs <- geojsonsf::geojson_sf(bck)
   gs.globalsouth <- gs[!is.na(gs$globalsout), ] # could be long
+  if(basemap == "Terrain"){
+    bmap.leaflet <- leaflet::providers$Stamen.TerrainBackground
+  } else {
+    bmap.leaflet <- leaflet::providers$Stamen.Toner
+  }
   # leaflet map
   if(verbose){
     print(paste0("Load the map background"))
@@ -39,7 +46,7 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
   ggs <- leaflet::leaflet(gs.globalsouth,
                           width = "100%",
                           height = "100vh") %>%
-    leaflet::addProviderTiles(leaflet::providers$Stamen.Toner,
+    leaflet::addProviderTiles(bmap.leaflet,
                               options = leaflet::providerTileOptions(noWrap = TRUE)
     ) %>%
     leaflet::setView(lng = 53,
@@ -82,3 +89,5 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     print(ggs)
   }
 }
+
+prj_map()
