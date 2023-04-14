@@ -16,6 +16,8 @@
 #' # plot without saving the map
 #' prj_map(export.map = F)
 #'
+#' # highlight 'EAMENA' project
+#' prj_map(export.map = F, prj.highlight = 'eamena')
 #'
 #' @export
 prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/map-projects/",
@@ -24,6 +26,8 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
                     basemap = "Terrain",
                     map.title = "<a href='https://www.archesproject.org/'>Arches-based</a> projects in the Global South",
                     col.ramp = "Set1",
+                    prj.weight = 1,
+                    prj.highlight = "",
                     export.map = TRUE,
                     dirOut = paste0(getwd(),"/map-projects/"),
                     fileOut = "arches-global-south.html",
@@ -63,22 +67,30 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
   if(verbose){
     print(paste0("loop over '", list.projects, "' to add the project layers"))
   }
-  # nrow(l.projects)
-  for(i in seq(1, 7)){
+  #
+  for(i in seq(1, nrow(l.projects))){
     # i <- 1
     prj.name <- l.projects[i, 1]
     prj.url <- l.projects[i, 2]
     if(verbose){
       print(paste0(" - read: ", prj.name))
     }
-
+    if(prj.name == prj.highlight){
+      weight <- prj.weight + 1.5
+    } else {
+      weight <- prj.weight
+    }
     arches.project <- paste0(root.project, "prj-extent/", prj.name, ".geojson") %>%
     # arches.project <- readLines(paste0(root.project, "prj-extent/", l.projects[i], ".geojson")) %>%
       paste(collapse = "\n") %>%
       jsonlite::fromJSON(simplifyVector = FALSE)
-    hlink <- HTML(paste0('<a href=', shQuote(prj.url),
+    # TODO
+    # hlink <- HTML(paste0('<a href=', shQuote(prj.url),
+    #                      "\ target=\"_blank\"",
+    #                      '>', prj.name,'</a>'))
+    hlink <- paste0('<a href=', shQuote(prj.url),
                          "\ target=\"_blank\"",
-                         '>', prj.name,'</a>'))
+                         '>', prj.name,'</a>')
     arches.project$features.properties.description <- hlink
 
     ggs <- ggs %>%
@@ -86,7 +98,7 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
                                    labelProperty = "project",
                                    # popupProperty = "description",
                                    popupProperty = "description",
-                                   weight = 1,
+                                   weight = weight,
                                    color = projects.colors[i],
                                    opacity = 1,
                                    fillOpacity = 0)
@@ -108,5 +120,3 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     print(ggs)
   }
 }
-
-prj_map(export.map = F)
