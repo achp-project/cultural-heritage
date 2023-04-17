@@ -22,7 +22,7 @@
 #' @export
 prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/map-projects/",
                     list.projects = "list-projects.tsv",
-                    bck = paste0(root.project, "bckgrd/globalsouth.geojson"),
+                    bck = paste0(root.project, "bckgrd/globalsouth-1.geojson"),
                     basemap = "Terrain",
                     map.title = "<a href='https://www.archesproject.org/'>Arches-based</a> projects in the Global South",
                     col.ramp = "Set1",
