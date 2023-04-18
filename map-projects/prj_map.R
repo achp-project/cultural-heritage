@@ -120,5 +120,3 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     print(ggs)
   }
 }
-
-prj_map(export.map = F)
