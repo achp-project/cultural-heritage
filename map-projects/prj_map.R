@@ -39,7 +39,11 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
   l.projects <- read.table(paste0(root.project, list.projects))
   # l.projects <- read.csv(paste0(root.project, list.projects), header = F)
   # l.projects <- l.projects[ , 1]
+  # projects.colors <- RColorBrewer::brewer.pal(nrow(l.projects), col.ramp)
+
   projects.colors <- RColorBrewer::brewer.pal(nrow(l.projects), col.ramp)
+  projects.colors <- colorRampPalette(projects.colors)(nrow(l.projects))
+
   gs <- geojsonsf::geojson_sf(bck)
   gs.globalsouth <- gs[!is.na(gs$globalsout), ] # could be long
   if(basemap == "Terrain"){
@@ -120,4 +124,7 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     print(ggs)
   }
 }
-prj_map()
+
+# prj_map()
+
+
