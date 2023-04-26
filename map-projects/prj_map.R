@@ -20,9 +20,10 @@
 #' prj_map(export.map = F, prj.highlight = 'eamena')
 #'
 #' @export
-prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/map-projects/",
+prj_map <- function(root.gh =  "https://raw.githubusercontent.com/achp-project/",
+                    gh.dir = "cultural-heritage/main/map-projects/",
                     list.projects = "list-projects.tsv",
-                    bck = paste0(root.project, "bckgrd/globalsouth-1.geojson"),
+                    bck = paste0(root.gh, gh.dir, "bckgrd/globalsouth-1.geojson"),
                     basemap = "Terrain",
                     map.title = "<a href='https://www.archesproject.org/'>Arches-based</a> projects in the Global South",
                     col.ramp = "Set1",
@@ -33,8 +34,9 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
                     fileOut = "arches-global-south.html",
                     verbose = TRUE){
   `%>%` <- dplyr::`%>%` # used to not load dplyr
+  root.project <- paste0(root.gh, gh.dir)
   if(verbose){
-    print(paste0("Creates a leaflet map (HTML widget) showing the extension of different Arches-powered projects"))
+    print(paste0("Will create a leaflet map (HTML widget) showing the extension of different Arches-powered projects"))
   }
   l.projects <- read.table(paste0(root.project, list.projects))
   # l.projects <- read.csv(paste0(root.project, list.projects), header = F)
@@ -74,7 +76,7 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
   }
   #
   for(i in seq(1, nrow(l.projects))){
-    # i <- 1
+    # i <- 5
     prj.name <- l.projects[i, 1]
     prj.url <- l.projects[i, 2]
     if(verbose){
@@ -86,7 +88,7 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
       weight <- prj.weight
     }
     arches.project <- paste0(root.project, "prj-extent/", prj.name, ".geojson") %>%
-    # arches.project <- readLines(paste0(root.project, "prj-extent/", l.projects[i], ".geojson")) %>%
+      # arches.project <- readLines(paste0(root.project, "prj-extent/", l.projects[i], ".geojson")) %>%
       paste(collapse = "\n") %>%
       jsonlite::fromJSON(simplifyVector = FALSE)
     # TODO
@@ -94,8 +96,8 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     #                      "\ target=\"_blank\"",
     #                      '>', prj.name,'</a>'))
     hlink <- paste0('<a href=', shQuote(prj.url),
-                         "\ target=\"_blank\"",
-                         '>', prj.name,'</a>')
+                    "\ target=\"_blank\"",
+                    '>', prj.name,'</a>')
     arches.project$features.properties.description <- hlink
 
     ggs <- ggs %>%
@@ -125,7 +127,3 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
     print(ggs)
   }
 }
-
-prj_map(export.map = F)
-
-
