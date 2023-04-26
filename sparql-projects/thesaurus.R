@@ -26,8 +26,10 @@
 #'
 #'
 #' @export
-thesaurus <- function(inDir = "https://raw.githubusercontent.com/achp-project/prj-eamena/main/reference_data/concepts/",
+thesaurus <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/",
+                      inDir = "prj-eamena/main/reference_data/concepts/",
                       inFile = "EAMENA.xml",
+                      inSPARQL = paste0(getwd(), "/sparql-projects/sparql-queries.R"),
                       mod = "read",
                       root = "artefact",
                       # prefix = "https://thesaurus.mom.fr:443/opentheso/?idc=",
@@ -38,14 +40,31 @@ thesaurus <- function(inDir = "https://raw.githubusercontent.com/achp-project/pr
                       outDir = system.file(package = 'itineRis'),
                       verbose = FALSE){
   if(is.na(outFile)){outFile <- root}
-  thesaurus_path <- paste0(inDir, "/", inFile)
+  source(inSPARQL)
+  thesaurus_path <- paste0(rootGH, inDir, inFile)
   rdf <- rdflib::rdf_parse(thesaurus_path, format = "rdfxml")
+  if(verbose){
+    print(paste0("Will read the file'", thesaurus_path,"'"))
+  }
+
+  # sparql <-"
+  #           PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  #           PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+  #
+  #           SELECT ?label
+  #           WHERE {
+  #             ?s rdf:type skos:Concept ;
+  #                skos:prefLabel ?label .
+  #         }"
+
+
   sparql <-"
             select ?broader
             where {
             ?concept skos:prefLabel ?broader .
           }"
   relations <- rdflib::rdf_query(rdf, sparql)
+  relations <- rdflib::rdf_query(rdf, sparq.l$prefLabel$q)
   # iris2 <- head(iris2, 10)
   # gsub(prefix, "", head(iris2$broader), fixed = T)
   relations <- relations %>%

@@ -20,10 +20,10 @@
 #' prj_map(export.map = F, prj.highlight = 'eamena')
 #'
 #' @export
-prj_map <- function(root.gh =  "https://raw.githubusercontent.com/achp-project/",
-                    gh.dir = "cultural-heritage/main/map-projects/",
+prj_map <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/",
+                    inDir = "cultural-heritage/main/map-projects/",
                     list.projects = "list-projects.tsv",
-                    bck = paste0(root.gh, gh.dir, "bckgrd/globalsouth-1.geojson"),
+                    bck = paste0(rootGH, inDir, "bckgrd/globalsouth-1.geojson"),
                     basemap = "Terrain",
                     map.title = "<a href='https://www.archesproject.org/'>Arches-based</a> projects in the Global South",
                     col.ramp = "Set1",
@@ -34,7 +34,7 @@ prj_map <- function(root.gh =  "https://raw.githubusercontent.com/achp-project/"
                     fileOut = "arches-global-south.html",
                     verbose = TRUE){
   `%>%` <- dplyr::`%>%` # used to not load dplyr
-  root.project <- paste0(root.gh, gh.dir)
+  root.project <- paste0(rootGH, inDir)
   if(verbose){
     print(paste0("Will create a leaflet map (HTML widget) showing the extension of different Arches-powered projects"))
   }

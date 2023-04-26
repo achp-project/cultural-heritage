@@ -1,0 +1,57 @@
+---
+title: "Sparql on Arches thesauri"
+# subtitle: "**A front-end changelog from <img src='https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/master/www/app-arches.png' style='height: 35px;vertical-align: middle;'> v5.2 to <img src='https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/master/www/app-arches.png' style='height: 35px;vertical-align: middle;'> v7.3**"
+# author: "Thomas Huet, EAMENA DB manager"
+# date: 2023-04-25
+# logo: https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/master/www/inst-uni-prj-eamena.png
+# footer: "<img src='https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/master/www/logo.png' style='height: 35px;vertical-align: middle;'> v4 showcase <http://34.242.111.3:8000> 25<sup>th</sup> April 2023"
+# title-slide-attributes:
+#     data-background-image: "https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/master/www/APAAME_kite.jpg"
+#     data-background-size: "120%"
+#     data-background-opacity: "0.7"
+format:
+  revealjs: 
+    css: https://zoometh.github.io/thomashuet/css/quarto.css
+    code-fold: true
+    code-summary: "<small>Code</small>"
+    code-overflow: "scroll"
+    slide-number: true
+    chalkboard: true
+    scrollable: true
+    preview-links: auto
+    reference-location: document
+    footnotes-hover: true
+margin: 0
+width: 1400
+---
+
+## XML
+
+::: {.panel-tabset}
+
+`Chalcolithic (Northern Iran)`
+
+<skos:narrower>
+skos:Concept
+### in Arches
+
+<center>
+<div class="captiontext">RDM</div>
+<img src="https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/master/www/rdm-culturalperiods-northern-iran-chalco.png" height="500">
+
+</center>
+
+
+### Raw data
+
+https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/reference_data/concepts/EAMENA.xml
+
+<center>
+<div class="captiontext">Hosted on GitHub</div>
+<img src="https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/master/www/rdm-culturalperiods-northern-iran-chalco-raw.png" height="500">
+
+</center>
+
+:::
+
+
