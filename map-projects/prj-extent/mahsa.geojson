@@ -3,6 +3,6 @@
 "name": "mahsa",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "project": "MHS", "description": "Maldives Heritage Survey" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 71.518506826651532, 12.638005419204234 ], [ 74.57361955125225, 12.638005419204234 ], [ 74.57361955125225, -1.861994580795766 ], [ 71.518506826651532, -1.861994580795766 ], [ 71.518506826651532, 12.638005419204234 ] ] ] ] } }
+{ "type": "Feature", "properties": { "project": "MAHSA", "description": "Mapping Archaeological Heritage in South Asia" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 68.874500454947224, 30.050466242049254 ], [ 85.874500454947224, 30.050466242049254 ], [ 85.874500454947224, 7.850466242049253 ], [ 68.874500454947224, 7.850466242049253 ], [ 68.874500454947224, 30.050466242049254 ] ] ] ] } }
 ]
 }

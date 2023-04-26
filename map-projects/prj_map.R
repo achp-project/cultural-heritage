@@ -69,7 +69,8 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
                          opacity = .5,
                          fillOpacity = .5)
   if(verbose){
-    print(paste0("loop over '", list.projects, "' to add the project layers"))
+    print(paste0("loop over '", list.projects, "' (",  nrow(l.projects),
+                 "projects) to add the ROI layers"))
   }
   #
   for(i in seq(1, nrow(l.projects))){
@@ -125,6 +126,6 @@ prj_map <- function(root.project = "https://raw.githubusercontent.com/achp-proje
   }
 }
 
-# prj_map()
+prj_map(export.map = F)
 
 
