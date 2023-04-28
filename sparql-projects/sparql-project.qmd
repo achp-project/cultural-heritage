@@ -29,7 +29,7 @@ width: 1400
 
 ::: {.panel-tabset}
 
-`Chalcolithic (Northern Iran)`
+`Chalcolithic (Northern Iran)` son of `Chalcolithic`
 
 <skos:narrower>
 skos:Concept
