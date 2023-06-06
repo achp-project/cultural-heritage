@@ -1,0 +1,200 @@
+{
+          "nodes": [
+            {
+            "id": 223,
+            "type": "Parent",
+            "properties": {
+
+            }
+          }, {
+            "id": 136525,
+            "type": "Child",
+            "properties": {
+              "patient": "6090",
+              "batch": "70"
+            }
+          }, {
+            "id": 136448,
+            "type": "Child",
+            "properties": {
+              "patient": "6094",
+              "batch": "70"
+            }
+          }, {
+            "id": 136328,
+            "type": "Child",
+            "properties": {
+              "patient": "6082",
+              "batch": "70"
+            }
+          }, {
+            "id": 136305,
+            "type": "Child",
+            "properties": {
+              "patient": "6096",
+              "batch": "70"
+            }
+          }, {
+            "id": 136303,
+            "type": "Child",
+            "properties": {
+              "patient": "6093",
+              "batch": "70"
+            }
+          }, {
+            "id": 136299,
+            "type": "Child",
+            "properties": {
+              "patient": "6091",
+              "batch": "70"
+            }
+          }, {
+            "id": 136261,
+            "type": "Child",
+            "properties": {
+              "patient": "6089",
+              "batch": "70"
+            }
+          }, {
+            "id": 136212,
+            "type": "Child",
+            "properties": {
+              "patient": "6087",
+              "batch": "70"
+            }
+          }, {
+            "id": 136115,
+            "type": "Child",
+            "properties": {
+              "patient": "6078",
+              "batch": "70"
+            }
+          }, {
+            "id": 136113,
+            "type": "Child",
+            "properties": {
+              "patient": "6088",
+              "batch": "70"
+            }
+          }, {
+            "id": 135843,
+            "type": "Child",
+            "properties": {
+              "patient": "6072",
+              "batch": "70"
+            }
+          }, {
+            "id": 555,
+            "type": "Grandchild",
+            "properties": {
+
+            }
+          }, {
+            "id": 100,
+            "type": "My Type",
+            "properties": {
+
+            }
+          }],
+          "edges": [
+            {
+            "id": 0,
+            "from": 136113,
+            "to": 555,
+            "properties": {
+
+            }
+          },
+            {
+            "id": 0,
+            "from": 136525,
+            "to": 555,
+            "properties": {
+
+            }
+          },{
+            "id": 0,
+            "from": 223,
+            "to": 136525,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136448,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136328,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136305,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136303,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136299,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136261,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136212,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136115,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 136113,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 223,
+            "to": 135843,
+            "properties": {
+
+            }
+          }, {
+            "id": 0,
+            "from": 555,
+            "to": 100,
+            "properties": {
+
+            }
+          }]
+        }

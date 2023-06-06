@@ -1,0 +1,10 @@
+{
+	"EAMENA": {
+		"graph_dir_url": "graphs/EAMENA/",
+		"resource_type": "local"
+	},
+	"MAPPS": {
+		"graph_dir_url": "graphs/MAPPS/",
+		"resource_type": "local"
+	}
+}
