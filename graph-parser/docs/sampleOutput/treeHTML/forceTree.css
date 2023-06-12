@@ -1,0 +1,44 @@
+.node {
+  cursor: pointer;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.node .text {
+  fill: white;
+}
+
+.ORG .circle {
+  fill: #1d3649;
+}
+
+.EMR .circle {
+  fill: #B2D0F5;
+  stroke: #5596e6;
+  stroke-dasharray: 3px, 3px;
+  opacity: .5;
+}
+
+.EMR .circle:hover {
+  fill: #5596e6;
+}
+
+.link {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 1.5px;
+  font: 10px sans-serif;
+}
+
+.link.active {
+  stroke: #ddd;
+  stroke-width: 2;
+}
+
+.arrow {
+  fill: #666;
+}
+
+.arrow.active {
+  stroke-width: 0 !important;
+}
