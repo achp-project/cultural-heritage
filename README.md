@@ -12,7 +12,7 @@ Global South Arches-based projects are (roughly) mapped here: https://achp-proje
 Vizualise an Arches-based thesaurus in a form of an interactive collapsible tree: **https://achp-project.github.io/cultural-heritage/sparql-projects/EAMENA.html** [^2]
 
 ## Graph
-> [graph-parser](https://github.com/achp-project/cultural-heritage/tree/main/sparql-projects): to model the semantic structure of the graph of resource data from different Arches-based projects
+> [graph-parser](https://github.com/achp-project/cultural-heritage/tree/main/graph-parser): to model the semantic structure of the graph of resource data from different Arches-based projects
 
 Visualize an Arches-based graph in a form of an interactive collapsible tree: **[EAMENA Heritage Place](https://achp-project.github.io/cultural-heritage/graph-parser/docs/sampleOutput/EAMENA_Heritage%20Place.html)** [^3]
 
