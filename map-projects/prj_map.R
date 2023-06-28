@@ -122,7 +122,7 @@ prj_map <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/",
                         position = "topright")
   if(export.map){
     dir.create(file.path(dirOut), showWarnings = F)
-    mapOut <- paste0(dirOut, "/", fileOut)
+    mapOut <- paste0(dirOut, fileOut)
     htmlwidgets::saveWidget(ggs, mapOut)
     if(verbose){
       print(paste0(fileOut, " has been saved into: ", dirOut))
