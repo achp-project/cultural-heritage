@@ -154,14 +154,20 @@ def get_interactive_tree_graph_node(node_data: dict, soup_parser: BeautifulSoup,
 
     if len(node_data['children_edge_data']) > 0:
         children_tag_list = soup_parser.new_tag(name='ul')
-        for cn in node_data['children_edge_data']:
-            cn_data = get_node_data(cn['id'], node_dict, edges)
+
+        # Create a list of tuples containing each of the child node's CIDOC relationship and associated data
+        children_node_data = [(cnd['cidoc_class'],
+                              get_node_data(cnd['id'], node_dict, edges)) for cnd in node_data['children_edge_data']]
+        # Sort child noes by name
+        children_node_data = sorted(children_node_data, key=lambda d: d[1]['name'])
+
+        for cnd in children_node_data:
             children_tag_list.append(get_interactive_tree_graph_node(
-                cn_data,
+                cnd[1], # Child node data
                 soup_parser,
                 node_dict,
                 edges,
-                cn['cidoc_class']
+                cnd[0] # Child node CIDOC relationship
             ))
 
         tag.append(children_tag_list)
