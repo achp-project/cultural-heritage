@@ -39,6 +39,11 @@ prj_map <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/",
     print(paste0("Will create a leaflet map (HTML widget) showing the extension of different Arches-powered projects"))
   }
   l.projects <- read.table(paste0(root.project, list.projects))
+
+  if(verbose){
+    print(paste0("Projects (n= ", nrow(l.projects), "): ", paste0(l.projects[ , 1], collapse = ", ")))
+  }
+
   # l.projects <- read.csv(paste0(root.project, list.projects), header = F)
   # l.projects <- l.projects[ , 1]
   # projects.colors <- RColorBrewer::brewer.pal(nrow(l.projects), col.ramp)
@@ -61,8 +66,7 @@ prj_map <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/",
                           width = "100%",
                           height = "100vh") %>%
     leaflet::addProviderTiles(bmap.leaflet,
-                              options = leaflet::providerTileOptions(noWrap = TRUE)
-    ) %>%
+                              options = leaflet::providerTileOptions(noWrap = TRUE)) %>%
     leaflet::setView(lng = 53,
                      lat = 25,
                      zoom = 3) %>%
