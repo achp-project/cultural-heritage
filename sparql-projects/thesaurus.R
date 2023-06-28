@@ -9,7 +9,7 @@
 #' @param prefix,suffix the prefix and suffix to remove.
 #' @param root the node under which the subgraph will be filtered
 #' @param outPlot the type of interactive plot.
-#' @param export.plot if TRUE will export into outDir.
+#' @param export.plot if TRUE will export into outDir. Default: FALSE
 #' @param outDir the output directory.
 #'
 #' @verbose if TRUE, print messages
@@ -18,9 +18,13 @@
 #'
 #' @examples
 #'
-#' ## export the subgraph of 'artefact' in a collapsibleTree layout
-#' thesaurus(root = "artefact",
-#'           outPlot = "collapsibleTree",
+#' ## plot "EAMENA.xml" concepts as a collapsibleTree layout
+#' thesaurus()
+#'
+#' thesaurus(height = 1400, fontSize = 7, nodeSize = 10)
+#'
+#' ## export "EAMENA.xml" concepts as a collapsibleTree layout
+#' thesaurus(outPlot = "collapsibleTree",
 #'           export.plot = T,
 #'           outDir = "C:/Rprojects/itineRis/results/")
 #'
@@ -34,8 +38,12 @@ thesaurus <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/
                       # mod = "read",
                       # prefix = "https://thesaurus.mom.fr:443/opentheso/?idc=",
                       # suffix = "&idt=th101",
+                      # nodeSize = NA,
+                      fontSize = 10,
+                      width = 1400,
+                      height = 800,
                       outPlot = "collapsibleTree",
-                      export.plot = TRUE,
+                      export.plot = FALSE,
                       outDir = paste0(getwd(), "/sparql-projects/"),
                       outFile = NA,
                       verbose = TRUE){
@@ -48,7 +56,7 @@ thesaurus <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/
                            inSPARQL,"'"))}
   source(paste0(inSPARQL, SPARQLfile))
   if(verbose){print(paste0("  done"))}
-  if(verbose){print(paste0("Parse the XML file with the SPARQL query"))}
+  if(verbose){print(paste0("Parse the XML file with the SPARQL query (..it takes time..)"))}
   # nodes <- rdflib::rdf_query(rdf, sparq.l$prefLabel$q) # WORKS
   nodes <- rdflib::rdf_query(rdf, sparq.l$narrowerLabel$q) # WORKS but very long
   if(verbose){print(paste0("  done")) }
@@ -108,8 +116,10 @@ thesaurus <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/
     # g.df <- as_data_frame(subg, what = "edges")
     if(verbose){print(paste0("Convert tree to collapsibleTree (could take a while)"))}
     gph <- collapsibleTree::collapsibleTree(tree.Node,
-                                            width = 1400,
-                                            height = 800) # could take a long time
+                                            # nodeSize = nodeSize,
+                                            fontSize = fontSize,
+                                            width = width,
+                                            height = height) # could take a long time
     if(verbose){print(paste0("  done")) }
     # gph <- collapsibleTree::collapsibleTree(tree.Node,
     #                                         c("from", "to"),
@@ -134,13 +144,13 @@ thesaurus <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/
     edges.igraph <- igraph::as_data_frame(g, what = "edges")
     gph <- visNetwork::visNetwork(nodes.igraph, edges.igraph) %>%
       visNetwork::visEdges(arrows = "to") %>%
-      visNetwork::visOptions(highlightNearest = T)
+      visNetwork::visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE)
     if(export.plot){
       if(verbose){print(paste0("Export to visNetwork"))}
       dir.create(outDir, showWarnings = FALSE)
       if(is.na(outFile)){outFile <- root}
       outName <- paste0(outDir, outFile, "_viz.html")
-      htmlwidgets::saveWidget(gph, outName)
+      htmlwidgets::saveWidget(gph, outName, selfcontained = T)
       if(verbose){print(paste0("  done")) }
       if(verbose){print(paste0("Exported to '", outName, "'"))}
     } else {
@@ -149,3 +159,5 @@ thesaurus <- function(rootGH =  "https://raw.githubusercontent.com/achp-project/
 
   }
 }
+
+# thesaurus(height = 1400, fontSize = 7)
