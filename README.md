@@ -4,6 +4,8 @@
 ## Map
 > [map-projects](https://github.com/achp-project/cultural-heritage/tree/main/map-projects): to map the region of interest of different Arches-based projects
 
+![](www/map-extent.png)
+
 Global South Arches-based projects are (roughly) mapped here: https://achp-project.github.io/cultural-heritage/map-projects/arches-global-south.html [^1]
 
 ## Thesauri
