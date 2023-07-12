@@ -55,41 +55,6 @@ def get_node_data(node_id: str, node_dict: dict, edges: list) -> dict:
       'linked_instance_data': linked_instance_data
     }
 
-def print_raw(nodes: list, edges: list, output_file_path: pathlib.Path, input_file: pathlib.Path):
-    """
-    Print the .csv files of nodes and edges for the provided graph. Function copied from print_gexf
-
-    :param nodes: A list containing all the nodes for the original graph.
-    :param edges: A list containing all the edges for the original graph.
-    :param output_file_path: pathlib Path for the output folder.
-    :param input_file: pathlib Path object for the input file.
-    """
-    for n in nodes:
-        cidoc_class_name = n['ontologyclass']
-        cidoc_class_name = str(cidoc_class_name).split("/")[-1]
-        n['graph_label'] = f"{cidoc_class_name} - {n['name']}"
-
-    for e in edges:
-        e['graph_label'] = str(e['ontologyproperty']).split("/")[-1]
-
-    G = nx.Graph()
-
-    for node in nodes:
-        G.add_node(node['nodeid'], data=node, label=node['graph_label'])
-    nodes_file = str(output_file_path) + "\\" + input_file.name.replace('.json', '') + "_g_nodes.csv"
-    G_nodes = list(G.nodes())
-    with open(nodes_file, 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(['Node'])
-        for node in nodes:
-            writer.writerow([node])
-
-    edge_label_properties = {}
-    for e in edges:
-        G.add_edge(e['domainnode_id'], e['rangenode_id'], label=e['graph_label'])
-        edge_label_properties[(e['domainnode_id'], e['rangenode_id'])] = e['graph_label']
-    edges_file = str(output_file_path) + "\\" + input_file.name.replace('.json', '') + "_g_edges.csv"
-    nx.write_edgelist(G, edges_file, delimiter=',')
 
 def print_gexf(nodes: list, edges: list, output_file_path: pathlib.Path, input_file: pathlib.Path):
     """
@@ -126,6 +91,41 @@ def print_gexf(nodes: list, edges: list, output_file_path: pathlib.Path, input_f
 
     nx.write_gexf(G, pathlib.Path(output_file_path) / input_file.name.replace('.json', '.gexf'))
 
+def print_raw(nodes: list, edges: list, output_file_path: pathlib.Path, input_file: pathlib.Path):
+    """
+    Print the .csv files of nodes and edges for the provided graph. Function copied from print_gexf
+
+    :param nodes: A list containing all the nodes for the original graph.
+    :param edges: A list containing all the edges for the original graph.
+    :param output_file_path: pathlib Path for the output folder.
+    :param input_file: pathlib Path object for the input file.
+    """
+    for n in nodes:
+        cidoc_class_name = n['ontologyclass']
+        cidoc_class_name = str(cidoc_class_name).split("/")[-1]
+        n['graph_label'] = f"{cidoc_class_name} - {n['name']}"
+
+    for e in edges:
+        e['graph_label'] = str(e['ontologyproperty']).split("/")[-1]
+
+    G = nx.Graph()
+
+    for node in nodes:
+        G.add_node(node['nodeid'], data=node, label=node['graph_label'])
+    nodes_file = str(output_file_path) + "\\" + input_file.name.replace('.json', '') + "_g_nodes.csv"
+    G_nodes = list(G.nodes())
+    with open(nodes_file, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['Node'])
+        for node in nodes:
+            writer.writerow([node])
+
+    edge_label_properties = {}
+    for e in edges:
+        G.add_edge(e['domainnode_id'], e['rangenode_id'], label=e['graph_label'])
+        edge_label_properties[(e['domainnode_id'], e['rangenode_id'])] = e['graph_label']
+    edges_file = str(output_file_path) + "\\" + input_file.name.replace('.json', '') + "_g_edges.csv"
+    nx.write_edgelist(G, edges_file, delimiter=',')
 
 def get_interactive_tree_graph_node(node_data: dict, soup_parser: BeautifulSoup, node_dict: dict, edges: list,
                                     edge_class: str = "") -> bs4.Tag:
@@ -357,9 +357,6 @@ def process_graph_data(graph_data: dict, input_file: pathlib.Path, output_file_p
 
     # Find and build the root node
     root_node = get_node_data(root_node_id, node_dict, edges)
-
-    # Print the .csv files of nodes and edges
-    print_raw(nodes=nodes, edges=edges, output_file_path=output_file_path, input_file=input_file)
 
     # Print the .gexf file for Gephy usage (no metadata for ordering, use Gephy to sort and color)
     print_gexf(nodes=nodes, edges=edges, output_file_path=output_file_path, input_file=input_file)
