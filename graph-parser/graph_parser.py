@@ -359,7 +359,9 @@ def process_graph_data(graph_data: dict, input_file: pathlib.Path, output_file_p
     root_node = get_node_data(root_node_id, node_dict, edges)
 
     # Print the .csv files of nodes and edges
-    print_raw(nodes=nodes, edges=edges, output_file_path=output_file_path, input_file=input_file)
+    run_raw = False
+    if run_raw:
+        print_raw(nodes=nodes, edges=edges, output_file_path=output_file_path, input_file=input_file)
 
     # Print the .gexf file for Gephy usage (no metadata for ordering, use Gephy to sort and color)
     print_gexf(nodes=nodes, edges=edges, output_file_path=output_file_path, input_file=input_file)
@@ -455,58 +457,62 @@ def validate_parameters(parameters: argparse.Namespace) -> argparse.Namespace:
 
     return parameters
 
+def main():
 
-# Location for the HTML tree templates
-TREE_TEMPLATE_SOURCE = pathlib.Path("templates/treeHTML/")
-# Names of the HTML dependencies that need to be moved
-HTML_DEPENDENCIES = ['tree.js', 'tree.css', 'forceTree.js', 'forceTree.css']
-# Folder to store temporary remote data
-REMOTE_TEMPORARY_FOLDER = 'remoteTempData'
+    # Location for the HTML tree templates
+    TREE_TEMPLATE_SOURCE = pathlib.Path("templates/treeHTML/")
+    # Names of the HTML dependencies that need to be moved
+    HTML_DEPENDENCIES = ['tree.js', 'tree.css', 'forceTree.js', 'forceTree.css']
+    # Folder to store temporary remote data
+    REMOTE_TEMPORARY_FOLDER = 'remoteTempData'
 
-# TODO Add proper help messages and usage examples
-parser = argparse.ArgumentParser()
-# List of input files, will be ignored if remote URL is provided in the following parameter
-parser.add_argument('input_files', nargs='*', type=pathlib.Path, help='local input graph files')
-# A remote URL to be fetched, does not support multiple values
-parser.add_argument('-w', nargs='?', type=str, help='remote input graph files')
-# A path to place the output files, will make a new one if needed
-parser.add_argument('-o', nargs='?', type=pathlib.Path, default=os.getcwd(), help='output folder')
+    # TODO Add proper help messages and usage examples
+    parser = argparse.ArgumentParser()
+    # List of input files, will be ignored if remote URL is provided in the following parameter
+    parser.add_argument('input_files', nargs='*', type=pathlib.Path, help='local input graph files')
+    # A remote URL to be fetched, does not support multiple values
+    parser.add_argument('-w', nargs='?', type=str, help='remote input graph files')
+    # A path to place the output files, will make a new one if needed
+    parser.add_argument('-o', nargs='?', type=pathlib.Path, default=os.getcwd(), help='output folder')
 
-# Parse input to match with specs
-args = parser.parse_args()
-# Validate parameters in terms of remote priority as well as local file and dirtree existence
-args = validate_parameters(args)
+    # Parse input to match with specs
+    args = parser.parse_args()
+    # Validate parameters in terms of remote priority as well as local file and dirtree existence
+    args = validate_parameters(args)
 
-# Fetch any required remote content
-if args.w:
-    # Load actual JSON
-    remote_data = json.loads(requests.get(args.w).text)
-    # Create temporary folder if not present
-    if not os.path.exists(REMOTE_TEMPORARY_FOLDER):
-        os.mkdir(REMOTE_TEMPORARY_FOLDER)
+    # Fetch any required remote content
+    if args.w:
+        # Load actual JSON
+        remote_data = json.loads(requests.get(args.w).text)
+        # Create temporary folder if not present
+        if not os.path.exists(REMOTE_TEMPORARY_FOLDER):
+            os.mkdir(REMOTE_TEMPORARY_FOLDER)
 
-    # Create the remote JSON file path for the local replica (will be deleted)
-    remote_file_path = f"{REMOTE_TEMPORARY_FOLDER}/{args.w.split('/')[-1]}"
-    # Dump remote data into a local intermediate JSON file
-    with open(remote_file_path, 'w', encoding='utf8') as json_file:
-        json.dump(remote_data, json_file, ensure_ascii=False)
+        # Create the remote JSON file path for the local replica (will be deleted)
+        remote_file_path = f"{REMOTE_TEMPORARY_FOLDER}/{args.w.split('/')[-1]}"
+        # Dump remote data into a local intermediate JSON file
+        with open(remote_file_path, 'w', encoding='utf8') as json_file:
+            json.dump(remote_data, json_file, ensure_ascii=False)
 
-    # Overwrite CLI arg local input with the intermediate JSON file created TODO consider proper multiplex refactor
-    args.input_files = [pathlib.Path(remote_file_path)]
+        # Overwrite CLI arg local input with the intermediate JSON file created TODO consider proper multiplex refactor
+        args.input_files = [pathlib.Path(remote_file_path)]
 
-# Generate a data dictionary with one entry per file, indexed by their actual name
-file_data_batch = {in_file: process_graph_file(in_file) for in_file in args.input_files}
+    # Generate a data dictionary with one entry per file, indexed by their actual name
+    file_data_batch = {in_file: process_graph_file(in_file) for in_file in args.input_files}
 
-# If no input has been found to process, exit gracefully
-if len(file_data_batch) == 0:
-    exit("Missing input parameter")
+    # If no input has been found to process, exit gracefully
+    if len(file_data_batch) == 0:
+        exit("Missing input parameter")
 
-# Process the input data to generate the files for every Graph
-for in_file_path, in_file_data in file_data_batch.items():
-    process_graph_data(in_file_data, in_file_path, args.o)
+    # Process the input data to generate the files for every Graph
+    for in_file_path, in_file_data in file_data_batch.items():
+        process_graph_data(in_file_data, in_file_path, args.o)
 
-# Clean any existing remote file fetched, comment to keep remote data
-if os.path.exists(REMOTE_TEMPORARY_FOLDER):
-    shutil.rmtree(REMOTE_TEMPORARY_FOLDER)
+    # Clean any existing remote file fetched, comment to keep remote data
+    if os.path.exists(REMOTE_TEMPORARY_FOLDER):
+        shutil.rmtree(REMOTE_TEMPORARY_FOLDER)
+
+if __name__ == "__main__":
+    main()
 
 # TODO Add capabilities to load from project metadata file for remote batch generation, and stat gathering
