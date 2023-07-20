@@ -36,8 +36,8 @@ and:
 |    | source   | target   | property   |
 |---:|:---------|:---------|:-----------|
 |  0 | E39      | E55      | P3         |
-|  1 | E55      | E2       | P4         |
-|  2 | E2       | E7       | P5         |
+|  1 | E55      | E2       | P1         |
+|  2 | E7       | E2       | P5         |
 
 (see [🐍](https://github.com/achp-project/cultural-heritage/blob/7329f1e970a9e5ab3f217961e47bb743fe56d2dc/test-projects/ged_example_2.py#L47-L78
 ))
