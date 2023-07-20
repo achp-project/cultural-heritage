@@ -1,6 +1,6 @@
 # Comparing Resource Models
 
-Given Arches Resource Models (RM) CIDOC-CRM compliants coming from different projects, the aim is to identify which edges are commons subgraphs (ie, same minimal common semantisation).
+Given Arches Resource Models (RM) CIDOC-CRM compliants coming from different projects, the aim is to identify which are the commons subgraphs (ie, same minimal common semantisation).
 
 corresponding code chunks are provided (click on 🐍)
 
