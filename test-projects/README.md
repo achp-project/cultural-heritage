@@ -6,6 +6,6 @@ Given two Arches Resource Models (RM) CIDOC-CRM compliants, the aim is to identi
   <img alt="img-name" src="../www/rm-compar-g1.png" width="500">
   <img alt="img-name" src="../www/rm-compar-g2.png" width="500">
   <br>
-    <em>Comparison between `G1`` and `G2`</em>
+    <em>Comparison between `G1` and `G2`</em>
 </p>
 
