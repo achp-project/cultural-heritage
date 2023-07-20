@@ -2,7 +2,7 @@
 
 Given Arches Resource Models (RM) CIDOC-CRM compliants coming from different projects, the aim is to identify which are the commons subgraphs (ie, same minimal common semantisation).
 
-corresponding code chunks are provided (click on 🐍)
+Corresponding Python code chunks are provided (click on 🐍)
 
 ## Pairwise comparison
 
