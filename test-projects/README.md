@@ -13,7 +13,7 @@ The only common subgraph between G1 and G2 is
 
 ```mermaid
 flowchart LR
-    A[E39] -P3--> B[E55];
+    A[E39] --P3--> B[E55];
 ```
 Indeed:
 * the second edges (`E55` -- `E2`) have different proprieties (`P1` and `P4`);
