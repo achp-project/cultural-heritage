@@ -45,11 +45,46 @@ nx.draw(G2, pos=p, labels = G2_labels_nodes, with_labels = True)
 nx.draw_networkx_edge_labels(G2, pos=p, edge_labels = G2_labels_edges)
 
 # %%
-# Calculate the number of common edges between G1 and G2
-common_edges = set(G1.edges()).intersection(G2.edges())
-print(common_edges)
-num_common_edges = len(common_edges)
-print("Number of common edges:", num_common_edges)
+# store
+lg = []
+lg.append(G1)
+lg.append(G2)
+lg_out = []
+
+for i in lg:
+	df_edges = nx.to_pandas_edgelist(i)
+	df_nodes = []
+	for a,b in i.nodes(data = True):
+		df_nodes.append(
+			{
+				'id': a,
+				'entity': b['entity']
+			}
+		)
+	df_nodes=pd.DataFrame(df_nodes)
+	# map
+	id_to_entity = dict(zip(df_nodes['id'], df_nodes['entity']))
+	df_subgraph = df_edges
+	df_subgraph['source'] = df_edges['source'].map(id_to_entity)
+	df_subgraph['target'] = df_edges['target'].map(id_to_entity)
+	lg_out.append(df_subgraph)
+
+# %%
+# print Markdown views
+df_G1 = lg_out[0]
+df_G2 = lg_out[1]
+
+print(df_G1.to_markdown())
+print(df_G2.to_markdown())
+
+
+# %%
+# common row(s)
+
+identical_rows = df_G1.merge(df_G2, on=list(df_G1.columns), how='inner', indicator=True)
+df_G1xG2 = identical_rows[identical_rows['_merge'] == 'both'].drop(columns=['_merge'])
+
+print(df_G1xG2.to_markdown())
 
 # %%
 # edges to pandas dataframe
@@ -60,10 +95,10 @@ print(df_edges)
 # nodes to pandas dataframe
 df_nodes = []
 for a,b in G1.nodes(data = True):
-    df_nodes.append(
-        {
-            'id': a,
-            'entity': b['entity']
+	df_nodes.append(
+		{
+			'id': a,
+			'entity': b['entity']
 		}
 	)
 df_nodes=pd.DataFrame(df_nodes)
