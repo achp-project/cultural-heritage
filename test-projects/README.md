@@ -16,7 +16,7 @@ The only common subgraph between G1 and G2 is
 
 ```mermaid
 flowchart LR
-    A(E39):::pydef --P3--> B(E55):::pydef;
+    A((E39)):::pydef --P3--> B((E55)):::pydef;
 	classDef pydef fill:#1f78b4;
 ```
 Indeed:
