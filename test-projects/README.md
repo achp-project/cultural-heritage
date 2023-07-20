@@ -43,6 +43,4 @@ The common row (ie common subgraph) between G1 and G2 is:
 |  0 | E39      | E55      | P3         |
 
 
-[^1]: Indeed:
-* the second edges (`E55` -- `E2`) have different proprieties (`P4` and `P1`);
-* the third edges (`E2` -- `E7`) have the same proprieties (`P5`) but different directions (`E2` --> `E7`; `E2` <-- `E7`)
+[^1]: Indeed, the second edges (`E55` -- `E2`) have different proprieties (`P4` and `P1`); the third edges (`E2` -- `E7`) have the same proprieties (`P5`) but different directions (`E2` --> `E7`; `E2` <-- `E7`)
