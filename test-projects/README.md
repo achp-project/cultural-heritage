@@ -46,13 +46,15 @@ Given these two directed graphs
     <em>Comparison between G1 and G2, where 'E' are CIDOC-CRM entities and 'P' are CIDOC-CRM properties</em>
 </p>
 
-There's only one MCS between G1 and G2[^1]:
+There's only one MCS between G1 and G2:
 
 ```mermaid
 flowchart LR
     A((E27)):::pydef --P53--> B((E53)):::pydef;
 	classDef pydef fill:#1f78b4;
 ```
+
+Indeed, the second edges (`E55` -- `E2`) have different proprieties (`P4` and `P1`); the third edges (`E2` -- `E7`) have the same proprieties (`P5`) but different directions (`E2` --> `E7`; `E2` <-- `E7`)
 
 The dataframe views of G1 and G2 are respectively:
 
@@ -84,5 +86,3 @@ The common row (ie MCS) between G1 and G2 is:
     <em>G1 (red) and G2 (green) merged graphs on their MCS (in black)</em>
 </p>
 
-
-[^1]: Indeed, the second edges (`E55` -- `E2`) have different proprieties (`P4` and `P1`); the third edges (`E2` -- `E7`) have the same proprieties (`P5`) but different directions (`E2` --> `E7`; `E2` <-- `E7`)
