@@ -2,9 +2,9 @@
 
 Given Arches Resource Models (RM) CIDOC-CRM compliants coming from different projects, the aim is to identify which are the commons subgraphs. 
 
-## Common subgraph definition
+## Minimal Subgraph
 
-Common subgraph are minimal common semantisation shared by two different graphs. That is to say, a commom triple '*subject-predicate-object*' For example:
+Minimal Subgraphs (MS) are single triples '*subject-predicate-object*' For example:
 
 <p align="center">
   <img src="../www/lod-cidoc-arches-ex1.png" width="750">
@@ -32,7 +32,10 @@ This is the dataframe representation of this semantisation:
 |---:|:---------|:---------|:-----------|
 |  0 | E27      | E53      | P53        |
 
-## Pairwise comparison
+## Common Minimal Subgraph
+
+Common Minimal Subgraph (CMS) are MS identical in two different graphs. 
+### Pairwise comparison
 
 Given these two directed graphs
 
@@ -43,7 +46,7 @@ Given these two directed graphs
     <em>Comparison between G1 and G2, where 'E' are CIDOC-CRM entities and 'P' are CIDOC-CRM properties</em>
 </p>
 
-There's only one common subgraph between G1 and G2[^1]:
+There's only one CMS between G1 and G2[^1]:
 
 ```mermaid
 flowchart LR
@@ -67,23 +70,19 @@ and:
 |  1 | E53      | E2       | P1         |
 |  2 | E7       | E2       | P5         |
 
-### Common subgraph
-
-The common row (ie common subgraph) between G1 and G2 is:
+The common row (ie CMS) between G1 and G2 is:
 
 |    | source   | target   | property   |
 |---:|:---------|:---------|:-----------|
 |  0 | E27      | E53      | P53        |
-
 
 ### Plot
 
 <p align="center">
   <img src="../www/rm-compar-g_both.png" width="750">
   <br>
-    <em>Merged graphs on their common subgraph (in black)</em>
+    <em>G1 (red) and G2 (green) merged graphs on their CMS (in black)</em>
 </p>
-
 
 
 [^1]: Indeed, the second edges (`E55` -- `E2`) have different proprieties (`P4` and `P1`); the third edges (`E2` -- `E7`) have the same proprieties (`P5`) but different directions (`E2` --> `E7`; `E2` <-- `E7`)
