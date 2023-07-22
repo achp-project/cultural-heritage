@@ -19,7 +19,7 @@ from graph_parser import extract_graph_structures, process_graph_file
 resource_models = {'MAPHSA':"C:/Rprojects/achp-ch/graph-parser/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json", 
 	'EAMENA':"C:/Rprojects/achp-ch/graph-parser/sourceGraphData/EAMENA/Heritage Place.json"}
 
-# %%
+
 lg = []
 for k,v in resource_models.items():
 	print(v)
