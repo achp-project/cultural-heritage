@@ -2,6 +2,8 @@
 
 Given Arches Resource Models (RM) CIDOC-CRM compliants coming from different projects, the aim is to identify which are the minimal common subgraphs (MCS). 
 
+This README file reuses results from this [Python script](https://github.com/achp-project/cultural-heritage/blob/main/test-projects/cmn_subgraph.py)
+
 ## Minimal Subgraph
 
 Minimal Subgraphs (MS) are single triples '*subject-predicate-object*' For example:
