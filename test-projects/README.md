@@ -1,6 +1,6 @@
 # Comparing Resource Models
 
-Given Arches Resource Models (RM) CIDOC-CRM compliants coming from different projects, the aim is to identify which are the commons subgraphs. 
+Given Arches Resource Models (RM) CIDOC-CRM compliants coming from different projects, the aim is to identify which are the minimal common subgraphs (MCS). 
 
 ## Minimal Subgraph
 
@@ -34,7 +34,7 @@ This is the dataframe representation of this semantisation:
 
 ## Common Minimal Subgraph
 
-Common Minimal Subgraph (CMS) are MS identical in two different graphs. 
+Minimal common subgraph (MCS) are MS identical in two different graphs. 
 ### Pairwise comparison
 
 Given these two directed graphs
@@ -46,7 +46,7 @@ Given these two directed graphs
     <em>Comparison between G1 and G2, where 'E' are CIDOC-CRM entities and 'P' are CIDOC-CRM properties</em>
 </p>
 
-There's only one CMS between G1 and G2[^1]:
+There's only one MCS between G1 and G2[^1]:
 
 ```mermaid
 flowchart LR
@@ -70,7 +70,7 @@ and:
 |  1 | E53      | E2       | P1         |
 |  2 | E7       | E2       | P5         |
 
-The common row (ie CMS) between G1 and G2 is:
+The common row (ie MCS) between G1 and G2 is:
 
 |    | source   | target   | property   |
 |---:|:---------|:---------|:-----------|
@@ -81,7 +81,7 @@ The common row (ie CMS) between G1 and G2 is:
 <p align="center">
   <img src="../www/rm-compar-g_both.png" width="750">
   <br>
-    <em>G1 (red) and G2 (green) merged graphs on their CMS (in black)</em>
+    <em>G1 (red) and G2 (green) merged graphs on their MCS (in black)</em>
 </p>
 
 
