@@ -18,7 +18,7 @@ Where:
 * E53_Place: is the *predicate*
 * P53_has_former_or_current_location: is the *object*
 
-This is the graph representation of this semantisation:
+This is the graph (directed graph) representation of this semantisation:
 
 ```mermaid
 flowchart LR
@@ -54,7 +54,7 @@ flowchart LR
 	classDef pydef fill:#1f78b4;
 ```
 
-Indeed, the second edges (`E55` -- `E2`) have different proprieties (`P4` and `P1`); the third edges (`E2` -- `E7`) have the same proprieties (`P5`) but different directions (`E2` --> `E7`; `E2` <-- `E7`)
+Indeed, the second edges (`E55` -- `E2`) have different properties (`P4` and `P1`); the third edges (`E2` -- `E7`) have the same properties (`P5`) but different directions (`E2` --> `E7`; `E2` <-- `E7`)
 
 The dataframe views of G1 and G2 are respectively:
 
