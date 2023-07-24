@@ -18,7 +18,7 @@ An example of the `Predynastic` JSON is here: https://github.com/eamena-project/
 We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv
 
 <p align="center">
-  <img alt="img-name" src="../www/periodo-periods-eamena.png" width="800">
+  <img alt="img-name" src="../www/periodo-periods-eamena.png" width="700">
   <br>
     <em>EAMENA periods (filtered)</em>
 </p>
@@ -27,7 +27,7 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
 @yourvick mapped the spatial extent of these periods:
 
 <p align="center">
-  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena.png" width="800">
+  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena.png" width="1000">
   <br>
     <em>Spatial coverage of EAMENA periods</em>
 </p>
