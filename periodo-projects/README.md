@@ -27,9 +27,9 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
 `@yourvick` mapped the spatial extent of these periods:
 
 <p align="center">
-  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena-1.png" width="900">
+  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena-1.png" width="800">
   <br>
-    <em>Spatial coverage of EAMENA periods</em>
+    <em>Correspondances between spatial coverage of EAMENA periods and wikidata URI</em>
 </p>
 
 * PeriodO (`@rybesh`) sent this [template](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json) for data entry into PeriodO
