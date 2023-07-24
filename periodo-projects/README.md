@@ -24,12 +24,13 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
 </p>
 
 
-`@yourvick` mapped the spatial extent of these periods:
+`@yourvick` mapped these periods with their spatial coverage:
 
 <p align="center">
-  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena-1.png" width="800">
+  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena.png" width="600">
+  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena-1.png" width="600">
   <br>
-    <em>Correspondances between spatial coverage of EAMENA periods and wikidata URI</em>
+    <em>Correspondances between EAMENA periods' spatial coverage and wikidata URI</em>
 </p>
 
 * PeriodO (`@rybesh`) sent this [template](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json) for data entry into PeriodO
@@ -111,7 +112,7 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
 
 ### Automated creation of PeriodO files
 
-1. match EAMENA geographical entities[^2] with `@yourvick` table to fill PeriodO `spatialCoverage` id and label
+1. match EAMENA periods' spatial coverage[^2] with `@yourvick` table to fill PeriodO `spatialCoverage` id and label
 2. collect EAMENA `ea.duration.taq` and `ea.duration.tpq` to fill PeriodO (time) `start` and `stop`
 3. use a [temporal annotation / entity recognition tool](https://github.com/historical-time/projects-tools-standards#temporal-annotation--entity-recognition) to add PeriodO (time) `label`[^4] 
 
