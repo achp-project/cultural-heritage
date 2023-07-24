@@ -1,6 +1,10 @@
 # Arches cultural periods to PeriodO temporal gazetteer
 
-The aim is to export Arches cultural periods, and subperiods, as new entries in the temporal gazetteer [PeriodO](https://perio.do/en/) [^4]. In PeriodO, each period is composed of:
+Our goal is to export Arches cultural periods, and subperiods, as new entries in PeriodO in an automated way. 
+
+## PeriodO
+
+[PeriodO](https://perio.do/en/) is a temporal gazetteer. In PeriodO, each period is composed of:
 - a duration (`start` and `stop`)
 - a geographical extension (`spatialCoverage`)
 - an authority (`authorities`)
@@ -27,8 +31,8 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
 `@yourvick` mapped these periods with their spatial coverage:
 
 <p align="center">
-  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena.png" width="600">
-  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena-1.png" width="600">
+  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena.png" width="800">
+  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena-1.png" width="800">
   <br>
     <em>Correspondances between EAMENA periods' spatial coverage and wikidata URI</em>
 </p>
@@ -114,9 +118,9 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
 
 1. match EAMENA periods' spatial coverage[^2] with `@yourvick` table to fill PeriodO `spatialCoverage` id and label
 2. collect EAMENA `ea.duration.taq` and `ea.duration.tpq` to fill PeriodO (time) `start` and `stop`
-3. use a [temporal annotation / entity recognition tool](https://github.com/historical-time/projects-tools-standards#temporal-annotation--entity-recognition) to add PeriodO (time) `label`[^4] 
+3. use a [temporal annotation / entity recognition tool](https://github.com/historical-time/projects-tools-standards#temporal-annotation--entity-recognition) to add PeriodO (time) `label`[^3] 
 
 
 [^1]: This example corresponding to the URL: https://client.perio.do/?page=period-view&backendID=web-https%3A%2F%2Fdata.perio.do%2F&authorityID=p0cp447&periodID=p0cp44786m7
 [^2]: in parentesis in the [cultural_periods.tsv](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv)'s `ea.name` field. For example 'Egypt'
-[^4]: For example, PeriodO `"earliestYear": "0901"` gives `"label": "late seventh century"`
+[^3]: For example, PeriodO `"earliestYear": "0901"` gives `"label": "late seventh century"`
