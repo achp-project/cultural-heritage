@@ -1,6 +1,6 @@
 # Arches periods to PeriodO
 
-Our goal is to export Arches cultural periods, and subperiods, as new entries in PeriodO in an automated way. 
+Our goal is to export Arches cultural periods, and subperiods, as new entries in [PeriodO](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects#periodo) in an [automated way](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects#automated-creation-of-periodo-files). 
 
 ## PeriodO
 
