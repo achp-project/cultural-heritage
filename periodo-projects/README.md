@@ -4,9 +4,9 @@ The aim is to export EAMENA cultural periods and subperiods as new entries in th
 
 ## Workflow
 
-* EAMENA has these periods or subperiods: https://github.com/eamena-project/eamena-arches-dev/blob/main/projects/periodo/cultural_periods.tsv
+* EAMENA has these periods or subperiods: https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv
 * Ryan Shaw (`@rybesh`) sent a JSON [template](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json) for data entry into PeriodO
-* This template has been updated with EAMENA data[^2]: https://github.com/eamena-project/eamena-arches-dev/blob/main/projects/periodo/template_eamena.json
+* This template has been updated with EAMENA data[^2]: https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/template_eamena.json
 * **TODO**: this process has to automated to all EAMENA periods and subperiods[^3]
 
 ## PeriodO Example
@@ -14,7 +14,7 @@ The aim is to export EAMENA cultural periods and subperiods as new entries in th
 An example of the `Predynastic` JSON is here: https://github.com/eamena-project/eamena-arches-dev/blob/main/projects/periodo/periodo-period-cp44786m7.json [^1].
 
 <p align="center">
-  <img alt="img-name" src="../../www/periodo-json-template-predynastic.png" width="400">
+  <img alt="img-name" src="../www/periodo-json-template-predynastic.png" width="400">
   <br>
     <em>screenshot of the `Predynastic` record in PeriodO</em>
 </p>
