@@ -221,3 +221,5 @@ G_labels_nodes = nx.get_node_attributes(G, 'entity')
 G_labels_edges = nx.get_edge_attributes(G, 'property')
 nx.draw(G, pos=p, labels = G_labels_nodes, with_labels = True, edge_color=colors, width=weights)
 nx.draw_networkx_edge_labels(G, pos=p, edge_labels = G_labels_edges)
+
+# %%
