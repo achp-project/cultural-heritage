@@ -10,6 +10,13 @@ import bs4
 import networkx as nx
 from bs4 import BeautifulSoup
 
+# Location for the HTML tree templates
+TREE_TEMPLATE_SOURCE = pathlib.Path("templates/treeHTML/")
+# Names of the HTML dependencies that need to be moved
+HTML_DEPENDENCIES = ['tree.js', 'tree.css', 'forceTree.js', 'forceTree.css']
+# Folder to store temporary remote data
+REMOTE_TEMPORARY_FOLDER = 'remoteTempData'
+
 
 def get_children_node_edge_data(node_id: str, edges: list) -> list:
     """
@@ -458,13 +465,6 @@ def validate_parameters(parameters: argparse.Namespace) -> argparse.Namespace:
     return parameters
 
 def main():
-
-    # Location for the HTML tree templates
-    TREE_TEMPLATE_SOURCE = pathlib.Path("templates/treeHTML/")
-    # Names of the HTML dependencies that need to be moved
-    HTML_DEPENDENCIES = ['tree.js', 'tree.css', 'forceTree.js', 'forceTree.css']
-    # Folder to store temporary remote data
-    REMOTE_TEMPORARY_FOLDER = 'remoteTempData'
 
     # TODO Add proper help messages and usage examples
     parser = argparse.ArgumentParser()

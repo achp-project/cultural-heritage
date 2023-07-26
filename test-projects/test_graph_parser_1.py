@@ -16,9 +16,10 @@ sys.path.append(graph_parser)
 from graph_parser import extract_graph_structures, process_graph_file
 
 
-resource_models = {'MAPHSA':"C:/Rprojects/achp-ch/graph-parser/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json", 
-	'EAMENA':"C:/Rprojects/achp-ch/graph-parser/sourceGraphData/EAMENA/Heritage Place.json"}
-
+resource_models = {
+	'MAPHSA': graph_parser + "/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json",
+	'EAMENA': graph_parser + "/sourceGraphData/EAMENA/Heritage Place.json"
+}
 
 lg = []
 for k,v in resource_models.items():
@@ -47,11 +48,11 @@ for k,v in resource_models.items():
 
 	lg.append(G)
 
-G=lg[0]
-p = nx.spring_layout(G)
-nx.draw(G, pos=p)
-# nx.draw_networkx_edge_labels(G, pos=p, edge_labels=edge_label_properties)
-plt.show()
+for G in lg:
+	p = nx.spring_layout(G)
+	nx.draw(G, pos=p)
+	# nx.draw_networkx_edge_labels(G, pos=p, edge_labels=edge_label_properties)
+	plt.show()
 
 
 

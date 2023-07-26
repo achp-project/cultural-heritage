@@ -3,6 +3,7 @@
 import networkx as nx
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 # %%
 # Create the Directed graphs G1 and G2
@@ -34,7 +35,7 @@ G1_labels_nodes = nx.get_node_attributes(G1, 'entity')
 G1_labels_edges = nx.get_edge_attributes(G1, 'property')
 nx.draw(G1, pos=p, labels = G1_labels_nodes, with_labels = True)
 nx.draw_networkx_edge_labels(G1, pos=p, edge_labels = G1_labels_edges)
-
+plt.show()
 # %%
 # Plot G2
 
@@ -42,7 +43,7 @@ G2_labels_nodes = nx.get_node_attributes(G2, 'entity')
 G2_labels_edges = nx.get_edge_attributes(G2, 'property')
 nx.draw(G2, pos=p, labels = G2_labels_nodes, with_labels = True)
 nx.draw_networkx_edge_labels(G2, pos=p, edge_labels = G2_labels_edges)
-
+plt.show()
 # %%
 # store
 lg = []
@@ -221,5 +222,5 @@ G_labels_nodes = nx.get_node_attributes(G, 'entity')
 G_labels_edges = nx.get_edge_attributes(G, 'property')
 nx.draw(G, pos=p, labels = G_labels_nodes, with_labels = True, edge_color=colors, width=weights)
 nx.draw_networkx_edge_labels(G, pos=p, edge_labels = G_labels_edges)
-
+plt.show()
 # %%
