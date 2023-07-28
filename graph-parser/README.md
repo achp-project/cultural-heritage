@@ -1,5 +1,6 @@
 # Arches Graph Parser
-Generates interactive HTML graph visualizations and Gephi files from Arches resource models.
+
+Generates interactive HTML graph visualizations and Gephi files from Arches resource models (RM). Allow to [compare](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/README.md#using-the-graph-comparator) RM.
 Supports single local file loading (with wildcard support) as well as remote URL loading.
 
 ## Version
