@@ -169,7 +169,7 @@ or
 py graph_comparator.py "sourceGraphData/EAMENA/Heritage Place.json" "sourceGraphData/EAMENA/Heritage Place.json" -o output/comparisonResults.json
 ```
 
-Will give this file
+Will give this file: [comparisonResults.json](https://github.com/achp-project/cultural-heritage/blob/main/www/comparisonResults.json)
 
 Or even pipe it to an output file if your OS supports it:
 
@@ -181,7 +181,7 @@ python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGra
 
 The output is a serialized JSON structure with a loose schema.
 
-```json
+```json5
 {
     # Dict containing individual CIDOC graph minimal subgraph metrics
     "minimal_subgraph_data": {...},
