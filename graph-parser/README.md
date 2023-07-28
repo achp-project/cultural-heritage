@@ -181,11 +181,11 @@ python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGra
 
 The output is a serialized JSON structure with a loose schema.
 
-```json5
+```json
 {
-    # Dict containing individual CIDOC graph minimal subgraph metrics
+    // Dict containing individual CIDOC graph minimal subgraph metrics
     "minimal_subgraph_data": {...},
-    # Dict containing pair CIDOC graph common minimal subgraph metrics 
+    // Dict containing pair CIDOC graph common minimal subgraph metrics 
     "graph_comparison_data": {...}
 }
 ```
