@@ -14,7 +14,7 @@ Tested under the following versions:
 
 To build env from **settings.txt**:
 
-```
+```bash
 # Supports paths for env
 python -m venv newEnv
 # Go into the graph parser directory
@@ -27,38 +27,46 @@ pip install -r requirements.txt
 
 The parser can be run for a single file in the local filesystem.
 For instance, to load the sample MAPHSA toy model:
-```
-python graph_parser.py "sourceGraphData/MAPHSA/MAPHSA Heritage Item.json"
 
+```bash
+python graph_parser.py "sourceGraphData/MAPHSA/MAPHSA Heritage Item.json"
 ```
+
 This command will generate the output HTML and Gephi files, as well as the HTML dependencies, in the current directory.
 To control the output placement, the parameter -o can be used:
-```
+
+```bash
 python graph_parser.py "sourceGraphData/MAPHSA/MAPHSA Heritage Item.json" -o output/MAPHSA
 ```
+
 This allows to place all the output in the provided directory.
 
 ### Batch Processing
 
 Alternatively, the wildcard operator can be used to generate for all JSON in the same folder.
 If several graph files were present in the same location, this command would process them simultaneously:
-```
+
+```bash
 python graph_parser.py sourceGraphData/EAMENA/*.json -o output/EAMENA
 ```
 
 ### Remote Graph Load
 
 The parser also supports loading through a textual URL as shown in the next example:
-```
+
+```bash
 python graph_parser.py https://github.com/achp-project/prj-mapss/blob/main/pkg/graphs/Geoarchaeology.json -o output/MAPPS
 ```
+
 Note that this mode does not support multiple URLs to be batch processed at the moment.
 
 ### Command Line Interface Help
+
 This would work if the [JSON data for the EAMENA graphs](https://github.com/achp-project/prj-eamena-marea/tree/main/resource_models) is placed in the provided folder.
 
 The help message for the CLI interface can also be read by running with the -h parameter.
-```
+
+```bash
 python graph_parser.py -h
 
 usage: graph_parser.py [-h] [-w [W]] [-o [O]] [input_files [input_files ...]]
@@ -105,6 +113,7 @@ The list contains a simple hierarchical view of the model with the links to the 
 
 Shows all nodes and allows to collapse them with a simple click.
 This visualization is currently work in progress, its lack of styling and interactions renders it mostly useless.
+
 ![force1](docs/force1.png)
 
 ## Examples
@@ -116,9 +125,9 @@ Here are some exaples in case you want to skip ahead and see results generated w
 
 ## Graph Comparator
 
-The graph comparator allows to get metrics on CIDOC CRM Common Minimal Subgraphs between two Arches Resource Models.
-It uses the same ENV [requirements](requirements.txt) file that the graph parser from the previous sections.
-```
+The graph comparator allows to get metrics on CIDOC-CRM Common Minimal Subgraphs (CMS) between two resource models (RM). It uses the same ENV [requirements](requirements.txt) file that the graph parser from the previous sections.
+
+```bash
 # Supports paths for env
 python -m venv newEnv
 # Go into the graph parser directory
@@ -126,31 +135,31 @@ cd cultural-heritage/graph-parser
 source newEnv/bin/activate
 pip install -r requirements.txt
 ```
-
 ### Running the Comparator using the CLI
 
 The most straightforward way to compare graphs would be to use the command line interface to generate the metrics
 (perhaps to process later).
 
-```
+```bash
 python graph_comparator.py ExportedResourceGraph1.json ExportedResourceGraph2.json
 ```
 
 For instance, we could compare two of the graphs present in the repo (watch for space character encoding):
-```
-python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json
 
+```bash
+python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json
 ```
 
 Would print a long data structure containing all the comparison metrics and instances.
 To better control the output, you could use the -o parameter:
 
-```
+```bash
 python graph_comitage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json -o output/comparisonResults.json
 ```
 
 Or even pipe it to an output file if your OS supports it:
-```
+
+```bash
 python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json > output/comparisonResults.json
 ```
 
