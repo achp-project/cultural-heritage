@@ -150,12 +150,26 @@ For instance, we could compare two of the graphs present in the repo (watch for 
 python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json
 ```
 
+or
+
+```bash
+py graph_comparator.py "sourceGraphData/EAMENA/Heritage Place.json" "sourceGraphData/EAMENA/Heritage Place.json"
+```
+
 Would print a long data structure containing all the comparison metrics and instances.
-To better control the output, you could use the -o parameter:
+To better control the output, you could use the `-o` parameter:
 
 ```bash
 python graph_comitage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json -o output/comparisonResults.json
 ```
+
+or 
+
+```bash
+py graph_comparator.py "sourceGraphData/EAMENA/Heritage Place.json" "sourceGraphData/EAMENA/Heritage Place.json" -o output/comparisonResults.json
+```
+
+Will give this file
 
 Or even pipe it to an output file if your OS supports it:
 
