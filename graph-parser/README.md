@@ -192,75 +192,77 @@ The output is a serialized JSON structure with a loose schema.
 
 For instance, an entry potential entry of *minimal_subgraph_data*:
 
-```json
-# Name of the Resource model graph referenced
+```json5
+// Name of the Resource model graph referenced
 "Heritage Place":
         {
-            # Composed key, composed by the CIDOC parent node class, relation class, and child class
+            // Composed key, composed by the CIDOC parent node class, relation class, and child class
             "E27_Site$P53_has_former_or_current_location$E53_Place":
-            { # List containing split CIDOC parent nodeclass , relation, and child CIDOC class 
+            { // List containing split CIDOC parent nodeclass , relation, and child CIDOC class 
                 "cms":
                 [
                     "E27_Site",
                     "P53_has_former_or_current_location",
                     "E53_Place"
                 ], 
-                    # Instances, containing the actual ids of the parent node, child node, and graph
-                    #(all belong to the same graph)
+                    // Instances, containing the actual ids of the parent node, child node, and graph
+                    //(all belong to the same graph)
                 "instances":
                 [
                     [
-                        "34cfea3b-c2c0-11ea-9026-02e7594ce0a0", # E27_Site node id
-                        "34cfe9b6-c2c0-11ea-9026-02e7594ce0a0", # E53_Place node id
-                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" # All belong to Heritage Place
+                        "34cfea3b-c2c0-11ea-9026-02e7594ce0a0", // E27_Site node id
+                        "34cfe9b6-c2c0-11ea-9026-02e7594ce0a0", // E53_Place node id
+                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // All belong to Heritage Place
                     ],
                     [
-                        "34cfea3b-c2c0-11ea-9026-02e7594ce0a0", # E27_Site node id
-                        "3080eebe-c2c5-11ea-9026-02e7594ce0a0", # E53_Place node id
-                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" # All belong to Heritage Place
+                        "34cfea3b-c2c0-11ea-9026-02e7594ce0a0", // E27_Site node id
+                        "3080eebe-c2c5-11ea-9026-02e7594ce0a0", // E53_Place node id
+                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // All belong to Heritage Place
                     ],
-                    ...
+                    //...
                 ]
             },
-            ...
-
+            //...
           }
 ```
 Note that the node and graph ids can be retrieved from the original Arches resource model graph JSON files used for input.
 
 For the *graph_comparison_data* file, a similar structure exists:
-```json
-       # Composed key made of the names of the two compared graphs
+
+```json5
+       // Composed key made of the names of the two compared graphs
         "Heritage Place$MAPHSA Heritage Item":
-        {   # Composed key, composed by the CIDOC parent node class, relation class, and child class
+        {   // Composed key, composed by the CIDOC parent node class, relation class, and child class
             "E53_Place$P2_has_type$E55_Type":
             {
-            # Instances, containing the actual ids of the parent node, child node, and graph
-            #(they belong to either of the two compared graphs)    
+            // Instances, containing the actual ids of the parent node, child node, and graph
+            //(they belong to either of the two compared graphs)    
            "instances":
                 [
                     [
-                        "34cfe9dd-c2c0-11ea-9026-02e7594ce0a0", # E53_Place node id
-                        "34cfea97-c2c0-11ea-9026-02e7594ce0a0", # E55_Type node id
-                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" # Belongs to Heritage Place
+                        "34cfe9dd-c2c0-11ea-9026-02e7594ce0a0", // E53_Place node id
+                        "34cfea97-c2c0-11ea-9026-02e7594ce0a0", // E55_Type node id
+                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // Belongs to Heritage Place
                     ],
                     [
-                        "4158c3e6-efe1-11ed-a506-4bd9db6d2413", # E53_Place node id
-                        "73f8e4ca-efe1-11ed-a506-4bd9db6d2413", # E55_Type node id
-                        "f72fa003-859f-46ef-8bc2-41d0051c2c76" # Belongs to MAPHSA Heritage Item
+                        "4158c3e6-efe1-11ed-a506-4bd9db6d2413", // E53_Place node id
+                        "73f8e4ca-efe1-11ed-a506-4bd9db6d2413", // E55_Type node id
+                        "f72fa003-859f-46ef-8bc2-41d0051c2c76" // Belongs to MAPHSA Heritage Item
                     ],
-                    ...
+                    //...
                 ]
             },
-            ...
+            //...
 
 ```
 Keep in mind that the script allows multiple inputs beyond two graphs, so theoretically you could do something like:
+
 ```commandline
 python graph_comparator.py ExportedResourceGraph1.json ExportedResourceGraph2.json ExportedResourceGraph3.json ExportedResourceGraph4.json
 ```
 
 Or if your OS supports wildcard operators:
+
 ```commandline
 python graph_comparator.py *.json > comparisonResults.json
 ```
@@ -270,6 +272,7 @@ python graph_comparator.py *.json > comparisonResults.json
 A [simple file](../test-projects/test_graph_comparator.py) has been included to showcase how to use the graph comparator.
 It is a simple routine that compares two or more Arches resource models and prints the common minimal subgraphs.
 The main body can be tuned to get the desired comparison.
+
 ```python
 # Resource model graphs to be loaded, the program supports as many as desired, although the output gets tricky to read
 resource_models = [
@@ -295,6 +298,7 @@ Also, the commented *print_individual_minimal_subgraph_metrics()* method prints 
 This can easily flood the output console, so it is disabled by default.
 
 Running this just requires a virtualenv with the [included requirements](requirements.txt):
+
 ```commandline
 python test_graph_comparator.py 
 ```
