@@ -1,6 +1,6 @@
 # Arches Graph Parser
 
-Generates interactive HTML graph visualizations and Gephi files from Arches resource models (RM). Allow to [compare](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/README.md#using-the-graph-comparator) RM.
+[Graph Parser](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/README.md#graph-parser) and [Graph Comparator](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/README.md#graph-comparator) allow to parse and compare Arches resource models (RM). Outputs are interactive HTML graph visualizations and Gephi files. 
 Supports single local file loading (with wildcard support) as well as remote URL loading.
 
 ## Version
@@ -23,7 +23,7 @@ source newEnv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Running the Parser
+## Graph Parser
 
 The parser can be run for a single file in the local filesystem.
 For instance, to load the sample MAPHSA toy model:
@@ -114,7 +114,7 @@ Here are some exaples in case you want to skip ahead and see results generated w
 * [MAPPS's Geoarchaeology circa 06/06/23](docs/sampleOutput/MAPPS_Geoarchaeology.html)
 
 
-## Using the Graph Comparator
+## Graph Comparator
 
 The graph comparator allows to get metrics on CIDOC CRM Common Minimal Subgraphs between two Arches Resource Models.
 It uses the same ENV [requirements](requirements.txt) file that the graph parser from the previous sections.
