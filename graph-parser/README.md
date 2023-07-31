@@ -190,7 +190,7 @@ The output is a serialized JSON structure with a loose schema.
 }
 ```
 
-For instance, an entry potential entry of *minimal_subgraph_data*:
+For instance, a potential entry of *minimal_subgraph_data*:
 
 ```json5
 // Name of the Resource model graph referenced
@@ -198,7 +198,7 @@ For instance, an entry potential entry of *minimal_subgraph_data*:
         {
             // Composed key, composed by the CIDOC parent node class, relation class, and child class
             "E27_Site$P53_has_former_or_current_location$E53_Place":
-            { // List containing split CIDOC parent nodeclass , relation, and child CIDOC class 
+            { // List containing split CIDOC parent nodeclass, relation, and child CIDOC class 
                 "cms":
                 [
                     "E27_Site",

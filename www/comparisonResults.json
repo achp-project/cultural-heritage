@@ -1,5 +1,397 @@
 {
 	"minimal_subgraph_data": {
+	  "MAPHSA Heritage Item": {
+		"E53_Place$P140i_was_attributed_by$E16_Measurement": {
+		  "cms": [
+			"E53_Place",
+			"P140i_was_attributed_by",
+			"E16_Measurement"
+		  ],
+		  "instances": [
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "a0c2f98c-efff-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "07f01d2e-f000-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "5fbe208c-f000-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E53_Place$P1_is_identified_by$E44_Place_Appellation": {
+		  "cms": [
+			"E53_Place",
+			"P1_is_identified_by",
+			"E44_Place_Appellation"
+		  ],
+		  "instances": [
+			[
+			  "9eb088e8-f000-11ed-a506-4bd9db6d2413",
+			  "ccd1a9be-f000-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E52_Time-Span$P62i_is_depicted_by$E24_Physical_Man-Made_Thing": {
+		  "cms": [
+			"E52_Time-Span",
+			"P62i_is_depicted_by",
+			"E24_Physical_Man-Made_Thing"
+		  ],
+		  "instances": [
+			[
+			  "64c8c2f6-efdf-11ed-a506-4bd9db6d2413",
+			  "98ea6ad6-efe3-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E52_Time-Span$P82a_begin_of_the_begin$E61_Time_Primitive": {
+		  "cms": [
+			"E52_Time-Span",
+			"P82a_begin_of_the_begin",
+			"E61_Time_Primitive"
+		  ],
+		  "instances": [
+			[
+			  "bc346ea4-eff9-11ed-a506-4bd9db6d2413",
+			  "ef5d2136-eff9-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E52_Time-Span$P140i_was_attributed_by$S5_Inference_Making": {
+		  "cms": [
+			"E52_Time-Span",
+			"P140i_was_attributed_by",
+			"S5_Inference_Making"
+		  ],
+		  "instances": [
+			[
+			  "64c8c2f6-efdf-11ed-a506-4bd9db6d2413",
+			  "27731e72-efeb-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E53_Place$P1_is_identified_by$E47_Spatial_Coordinates": {
+		  "cms": [
+			"E53_Place",
+			"P1_is_identified_by",
+			"E47_Spatial_Coordinates"
+		  ],
+		  "instances": [
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "ca2f4b8e-effc-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E53_Place$P140i_was_attributed_by$E15_Identifier_Assignment": {
+		  "cms": [
+			"E53_Place",
+			"P140i_was_attributed_by",
+			"E15_Identifier_Assignment"
+		  ],
+		  "instances": [
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "72ed7758-efff-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E13_Attribute_Assignment$P2_has_type$E55_Type": {
+		  "cms": [
+			"E13_Attribute_Assignment",
+			"P2_has_type",
+			"E55_Type"
+		  ],
+		  "instances": [
+			[
+			  "784cf606-effa-11ed-a506-4bd9db6d2413",
+			  "35c90274-effb-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E53_Place$P2_has_type$E58_Measurement_Unit": {
+		  "cms": [
+			"E53_Place",
+			"P2_has_type",
+			"E58_Measurement_Unit"
+		  ],
+		  "instances": [
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "c949bc02-effe-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "621ff4ca-effd-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "44a44724-effe-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E14_Condition_Assessment$P2_has_type$E55_Type": {
+		  "cms": [
+			"E14_Condition_Assessment",
+			"P2_has_type",
+			"E55_Type"
+		  ],
+		  "instances": [
+			[
+			  "4fad9d92-efe9-11ed-a506-4bd9db6d2413",
+			  "bff06c46-efea-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "4fad9d92-efe9-11ed-a506-4bd9db6d2413",
+			  "af5bedc4-efea-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E52_Time-Span$P140i_was_attributed_by$E13_Attribute_Assignment": {
+		  "cms": [
+			"E52_Time-Span",
+			"P140i_was_attributed_by",
+			"E13_Attribute_Assignment"
+		  ],
+		  "instances": [
+			[
+			  "64c8c2f6-efdf-11ed-a506-4bd9db6d2413",
+			  "784cf606-effa-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E24_Physical_Man-Made_Thing$P2_has_type$E55_Type": {
+		  "cms": [
+			"E24_Physical_Man-Made_Thing",
+			"P2_has_type",
+			"E55_Type"
+		  ],
+		  "instances": [
+			[
+			  "98ea6ad6-efe3-11ed-a506-4bd9db6d2413",
+			  "a7b1925c-efe7-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "98ea6ad6-efe3-11ed-a506-4bd9db6d2413",
+			  "4e20fab6-efe7-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "98ea6ad6-efe3-11ed-a506-4bd9db6d2413",
+			  "07e6f0bc-efe4-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E52_Time-Span$L54_is_same-as$E53_Place": {
+		  "cms": [
+			"E52_Time-Span",
+			"L54_is_same-as",
+			"E53_Place"
+		  ],
+		  "instances": [
+			[
+			  "64c8c2f6-efdf-11ed-a506-4bd9db6d2413",
+			  "9eb088e8-f000-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "64c8c2f6-efdf-11ed-a506-4bd9db6d2413",
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E24_Physical_Man-Made_Thing$P140i_was_attributed_by$E13_Attribute_Assignment": {
+		  "cms": [
+			"E24_Physical_Man-Made_Thing",
+			"P140i_was_attributed_by",
+			"E13_Attribute_Assignment"
+		  ],
+		  "instances": [
+			[
+			  "98ea6ad6-efe3-11ed-a506-4bd9db6d2413",
+			  "e298f216-efe7-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"S5_Inference_Making$P140_assigned_attribute_to$S9_Property_Type": {
+		  "cms": [
+			"S5_Inference_Making",
+			"P140_assigned_attribute_to",
+			"S9_Property_Type"
+		  ],
+		  "instances": [
+			[
+			  "27731e72-efeb-11ed-a506-4bd9db6d2413",
+			  "a5e827a8-eff4-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E41_Appellation$P2_has_type$E55_Type": {
+		  "cms": [
+			"E41_Appellation",
+			"P2_has_type",
+			"E55_Type"
+		  ],
+		  "instances": [
+			[
+			  "4158c3e6-efe1-11ed-a506-4bd9db6d2413",
+			  "73f8e4ca-efe1-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E52_Time-Span$P140i_was_attributed_by$E14_Condition_Assessment": {
+		  "cms": [
+			"E52_Time-Span",
+			"P140i_was_attributed_by",
+			"E14_Condition_Assessment"
+		  ],
+		  "instances": [
+			[
+			  "64c8c2f6-efdf-11ed-a506-4bd9db6d2413",
+			  "4fad9d92-efe9-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"S5_Inference_Making$P4_has_time-span$E52_Time-Span": {
+		  "cms": [
+			"S5_Inference_Making",
+			"P4_has_time-span",
+			"E52_Time-Span"
+		  ],
+		  "instances": [
+			[
+			  "27731e72-efeb-11ed-a506-4bd9db6d2413",
+			  "bc346ea4-eff9-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E53_Place$P136i_supported_type_creation$E83_Type_Creation": {
+		  "cms": [
+			"E53_Place",
+			"P136i_supported_type_creation",
+			"E83_Type_Creation"
+		  ],
+		  "instances": [
+			[
+			  "9210b8b4-effc-11ed-a506-4bd9db6d2413",
+			  "f4624bfc-effe-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E52_Time-Span$P81b_begin_of_the_end$E61_Time_Primitive": {
+		  "cms": [
+			"E52_Time-Span",
+			"P81b_begin_of_the_end",
+			"E61_Time_Primitive"
+		  ],
+		  "instances": [
+			[
+			  "bc346ea4-eff9-11ed-a506-4bd9db6d2413",
+			  "14a8632e-effa-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E52_Time-Span$P1_is_identified_by$E41_Appellation": {
+		  "cms": [
+			"E52_Time-Span",
+			"P1_is_identified_by",
+			"E41_Appellation"
+		  ],
+		  "instances": [
+			[
+			  "64c8c2f6-efdf-11ed-a506-4bd9db6d2413",
+			  "4158c3e6-efe1-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E13_Attribute_Assignment$P15_was_influenced_by$I2_Belief": {
+		  "cms": [
+			"E13_Attribute_Assignment",
+			"P15_was_influenced_by",
+			"I2_Belief"
+		  ],
+		  "instances": [
+			[
+			  "784cf606-effa-11ed-a506-4bd9db6d2413",
+			  "d77cd5e6-effb-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"S5_Inference_Making$P140_assigned_attribute_to$S4_Observation": {
+		  "cms": [
+			"S5_Inference_Making",
+			"P140_assigned_attribute_to",
+			"S4_Observation"
+		  ],
+		  "instances": [
+			[
+			  "27731e72-efeb-11ed-a506-4bd9db6d2413",
+			  "8c07f038-efeb-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"S5_Inference_Making$P140_assigned_attribute_to$S21_Measurement": {
+		  "cms": [
+			"S5_Inference_Making",
+			"P140_assigned_attribute_to",
+			"S21_Measurement"
+		  ],
+		  "instances": [
+			[
+			  "27731e72-efeb-11ed-a506-4bd9db6d2413",
+			  "88cdadfc-eff7-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		},
+		"E53_Place$P2_has_type$E55_Type": {
+		  "cms": [
+			"E53_Place",
+			"P2_has_type",
+			"E55_Type"
+		  ],
+		  "instances": [
+			[
+			  "9eb088e8-f000-11ed-a506-4bd9db6d2413",
+			  "02fb3ee2-f001-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			]
+		  ]
+		}
+	  },
 	  "Heritage Place": {
 		"E27_Site$P53_has_former_or_current_location$E53_Place": {
 		  "cms": [
@@ -1644,5 +2036,89 @@
 		}
 	  }
 	},
-	"graph_comparison_data": {}
+	"graph_comparison_data": {
+	  "MAPHSA Heritage Item$Heritage Place": {
+		"E52_Time-Span$P82a_begin_of_the_begin$E61_Time_Primitive": {
+		  "instances": [
+			[
+			  "bc346ea4-eff9-11ed-a506-4bd9db6d2413",
+			  "ef5d2136-eff9-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "d9abdfde-c6a3-11ea-a292-02e7594ce0a0",
+			  "d9abdfe0-c6a3-11ea-a292-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			],
+			[
+			  "e3cc8c57-c772-11ea-a292-02e7594ce0a0",
+			  "e3cc8c5c-c772-11ea-a292-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			],
+			[
+			  "34cfe9cb-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfea83-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			],
+			[
+			  "34cfe9da-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfea65-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			]
+		  ]
+		},
+		"E13_Attribute_Assignment$P2_has_type$E55_Type": {
+		  "instances": [
+			[
+			  "784cf606-effa-11ed-a506-4bd9db6d2413",
+			  "35c90274-effb-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "34cfe9c8-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfea91-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			]
+		  ]
+		},
+		"E41_Appellation$P2_has_type$E55_Type": {
+		  "instances": [
+			[
+			  "4158c3e6-efe1-11ed-a506-4bd9db6d2413",
+			  "73f8e4ca-efe1-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "34cfe9dd-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfea97-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			]
+		  ]
+		},
+		"E53_Place$P2_has_type$E55_Type": {
+		  "instances": [
+			[
+			  "9eb088e8-f000-11ed-a506-4bd9db6d2413",
+			  "02fb3ee2-f001-11ed-a506-4bd9db6d2413",
+			  "f72fa003-859f-46ef-8bc2-41d0051c2c76"
+			],
+			[
+			  "34cfe9b6-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfea69-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			],
+			[
+			  "34cfe9b6-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfea73-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			],
+			[
+			  "34cfea78-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfea87-c2c0-11ea-9026-02e7594ce0a0",
+			  "34cfe98e-c2c0-11ea-9026-02e7594ce0a0"
+			]
+		  ]
+		}
+	  }
+	}
   }
