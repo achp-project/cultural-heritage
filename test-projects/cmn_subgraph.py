@@ -36,6 +36,7 @@ G1_labels_edges = nx.get_edge_attributes(G1, 'property')
 nx.draw(G1, pos=p, labels = G1_labels_nodes, with_labels = True)
 nx.draw_networkx_edge_labels(G1, pos=p, edge_labels = G1_labels_edges)
 plt.show()
+
 # %%
 # Plot G2
 
@@ -44,6 +45,7 @@ G2_labels_edges = nx.get_edge_attributes(G2, 'property')
 nx.draw(G2, pos=p, labels = G2_labels_nodes, with_labels = True)
 nx.draw_networkx_edge_labels(G2, pos=p, edge_labels = G2_labels_edges)
 plt.show()
+
 # %%
 # store
 lg = []
@@ -78,14 +80,12 @@ dn_all = pd.concat([dn[0], dn[1]])
 dn_all = dn_all.reset_index()
 dn_all = dn_all.drop('index', axis = 1)
 
-
 # %%
 # print Markdown tables views
 
 print(df_G1.to_markdown())
 print("\n")
 print(df_G2.to_markdown())
-
 
 # %%
 # find different and common row(s)
@@ -96,7 +96,6 @@ df_G2_only = df_G1xG2[df_G1xG2['_merge'] == 'right_only']
 df_G_both = df_G1xG2[df_G1xG2['_merge'] == 'both']
 
 print(df_G_both.to_markdown())
-
 
 # %%
 # nodes with create 'match' column
@@ -130,7 +129,6 @@ df_all_match['source_id'] = df_all_match["source"] + '_' + df_all_match["G"]
 df_all_match['target_id'] = df_all_match["target"] + '_' + df_all_match["G"]
 
 print(df_all_match)
-
 
 # %%
 # split 'both' between 1 and 2
