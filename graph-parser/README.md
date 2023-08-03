@@ -22,7 +22,7 @@ cd cultural-heritage/graph-parser
 source newEnv/bin/activate
 pip install -r requirements.txt
 ```
-
+---
 ## Graph Parser
 
 The parser can be run for a single file in the local filesystem.
@@ -122,6 +122,7 @@ Here are some exaples in case you want to skip ahead and see results generated w
 * [EAMENA's Heritage Place circa 06/06/23](docs/sampleOutput/EAMENA_Heritage%20Place.html)
 * [MAPPS's Geoarchaeology circa 06/06/23](docs/sampleOutput/MAPPS_Geoarchaeology.html)
 
+---
 
 ## Graph Comparator
 
@@ -191,7 +192,11 @@ python graph_comparator.py *.json > comparisonResults.json
 
 ### Graph Comparator Output
 
-The output is a serialized JSON structure with a loose schema.
+The output is a serialized JSON structure with a loose schema:
+
+* [minimal_subgraph_data](#minimal_subgraph_data)
+
+* [graph_comparison_data](#graph_comparison_data)
 
 ```json5
 {
