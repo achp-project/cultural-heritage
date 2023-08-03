@@ -169,12 +169,24 @@ or
 py graph_comparator.py "sourceGraphData/EAMENA/Heritage Place.json" "sourceGraphData/EAMENA/Heritage Place.json" -o output/comparisonResults.json
 ```
 
-Will give this file: [comparisonResults.json](https://github.com/achp-project/cultural-heritage/blob/main/www/comparisonResults.json)
+Will give this file: [comparisonResults.json](../www/comparisonResults.json)
 
 Or even pipe it to an output file if your OS supports it:
 
 ```bash
 python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json > output/comparisonResults.json
+```
+
+Keep in mind that the script allows multiple inputs beyond two graphs, so theoretically you could do something like:
+
+```bash
+python graph_comparator.py ExportedResourceGraph1.json ExportedResourceGraph2.json ExportedResourceGraph3.json ExportedResourceGraph4.json
+```
+
+Or if your OS supports wildcard operators:
+
+```bash
+python graph_comparator.py *.json > comparisonResults.json
 ```
 
 ### Graph Comparator Output
@@ -184,13 +196,19 @@ The output is a serialized JSON structure with a loose schema.
 ```json5
 {
     // Dict containing individual CIDOC graph minimal subgraph metrics
-    "minimal_subgraph_data": {...},
+    "minimal_subgraph_data": {
+        ...
+        },
     // Dict containing pair CIDOC graph common minimal subgraph metrics 
-    "graph_comparison_data": {...}
+    "graph_comparison_data": {
+        ...
+        }
 }
 ```
 
-For instance, a potential entry of *minimal_subgraph_data*:
+#### minimal_subgraph_data
+
+This dictionary contains individual CIDOC graph minimal subgraph (ms) metrics. For instance, a potential entry of *minimal_subgraph_data*:
 
 ```json5
 // Name of the Resource model graph referenced
@@ -227,6 +245,8 @@ For instance, a potential entry of *minimal_subgraph_data*:
 ```
 Note that the node and graph ids can be retrieved from the original Arches resource model graph JSON files used for input.
 
+#### graph_comparison_data
+
 For the *graph_comparison_data* file, a similar structure exists:
 
 ```json5
@@ -254,17 +274,6 @@ For the *graph_comparison_data* file, a similar structure exists:
             },
             //...
 
-```
-Keep in mind that the script allows multiple inputs beyond two graphs, so theoretically you could do something like:
-
-```commandline
-python graph_comparator.py ExportedResourceGraph1.json ExportedResourceGraph2.json ExportedResourceGraph3.json ExportedResourceGraph4.json
-```
-
-Or if your OS supports wildcard operators:
-
-```commandline
-python graph_comparator.py *.json > comparisonResults.json
 ```
 
 ### Graph Comparator Usage Example
@@ -299,7 +308,7 @@ This can easily flood the output console, so it is disabled by default.
 
 Running this just requires a virtualenv with the [included requirements](requirements.txt):
 
-```commandline
+```bash
 python test_graph_comparator.py 
 ```
 The output shows the overlap between the usage of CIDOC classes and relations, the common minimal subgraphs:

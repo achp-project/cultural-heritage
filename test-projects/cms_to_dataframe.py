@@ -1,3 +1,7 @@
+#%%
+
+# this chunk is a direct copy from 'graph_comparator.py'
+
 import os
 import sys
 import json
@@ -7,25 +11,27 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-current = os.path.dirname(os.path.abspath("__file__"))
-graph_parser = current+"/graph-parser"
+current = os.path.dirname(os.path.realpath(__file__))
+graph_parser = os.path.dirname(current)+"/graph-parser"
 sys.path.append(graph_parser)
 
-# call of functions
 from graph_parser import extract_graph_structures, process_graph_file
-from graph_comparator import get_comparison_data
+from graph_comparator import get_comparison_data, print_individual_minimal_subgraph_metrics
 
 resource_models = [
 	graph_parser + "/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json",
 	graph_parser + "/sourceGraphData/EAMENA/Heritage Place.json",
 ]
 
-# Gather input file URLs
 input_files: list = [Path(r) for r in resource_models]
-
-# Run the graph comparator
 result_data = get_comparison_data(input_files)
 
+#%% Gather input file URLs
+
+print_individual_minimal_subgraph_metrics(result_data)
+
+
+#%%
 # print(result_data['minimal_subgraph_data']['MAPHSA Heritage Item']['E53_Place$P140i_was_attributed_by$E16_Measurement']['cms'])
 
 # print(len(result_data['minimal_subgraph_data']['MAPHSA Heritage Item']))
