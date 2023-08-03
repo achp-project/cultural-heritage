@@ -119,7 +119,7 @@ This visualization is currently work in progress, its lack of styling and intera
 ## Examples
 
 Here are some exaples in case you want to skip ahead and see results generated with the parser:
-* [EAMENA's Heritage Place circa 06/06/23](docs/sampleOutput/EAMENA_Heritage%20Place.html)
+* [EAMENA's EAMENA Heritage Place circa 06/06/23](docs/sampleOutput/EAMENA_Heritage%20Place.html)
 * [MAPPS's Geoarchaeology circa 06/06/23](docs/sampleOutput/MAPPS_Geoarchaeology.html)
 
 ---
@@ -154,7 +154,7 @@ python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGra
 or
 
 ```bash
-py graph_comparator.py "sourceGraphData/EAMENA/Heritage Place.json" "sourceGraphData/EAMENA/Heritage Place.json"
+py graph_comparator.py "sourceGraphData/EAMENA/EAMENA Heritage Place.json" "sourceGraphData/EAMENA/EAMENA Heritage Place.json"
 ```
 
 Would print a long data structure containing all the comparison metrics and instances.
@@ -167,7 +167,7 @@ python graph_comitage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json so
 or 
 
 ```bash
-py graph_comparator.py "sourceGraphData/EAMENA/Heritage Place.json" "sourceGraphData/EAMENA/Heritage Place.json" -o output/comparisonResults.json
+py graph_comparator.py "sourceGraphData/EAMENA/EAMENA Heritage Place.json" "sourceGraphData/EAMENA/EAMENA Heritage Place.json" -o output/comparisonResults.json
 ```
 
 Will give this file: [comparisonResults.json](../www/comparisonResults.json)
@@ -213,11 +213,11 @@ The output is a serialized JSON structure with a loose schema:
 
 #### minimal_subgraph_data
 
-This dictionary contains individual CIDOC graph minimal subgraph (ms) metrics. For instance, a potential entry of *minimal_subgraph_data*:
+This dictionary contains individual CIDOC graph minimal subgraph metrics. For instance, a potential entry of *minimal_subgraph_data* [^1]:
 
 ```json5
 // Name of the Resource model graph referenced
-"Heritage Place":
+"EAMENA Heritage Place":
         {
             // Composed key, composed by the CIDOC parent node class, relation class, and child class
             "E27_Site$P53_has_former_or_current_location$E53_Place":
@@ -235,12 +235,12 @@ This dictionary contains individual CIDOC graph minimal subgraph (ms) metrics. F
                     [
                         "34cfea3b-c2c0-11ea-9026-02e7594ce0a0", // E27_Site node id
                         "34cfe9b6-c2c0-11ea-9026-02e7594ce0a0", // E53_Place node id
-                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // All belong to Heritage Place
+                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // All belong to EAMENA Heritage Place
                     ],
                     [
                         "34cfea3b-c2c0-11ea-9026-02e7594ce0a0", // E27_Site node id
                         "3080eebe-c2c5-11ea-9026-02e7594ce0a0", // E53_Place node id
-                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // All belong to Heritage Place
+                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // All belong to EAMENA Heritage Place
                     ],
                     //...
                 ]
@@ -248,7 +248,8 @@ This dictionary contains individual CIDOC graph minimal subgraph (ms) metrics. F
             //...
           }
 ```
-Note that the node and graph ids can be retrieved from the original Arches resource model graph JSON files used for input.
+
+see [JSON example](https://github.com/achp-project/cultural-heritage/blob/1fbe85ab0e6eb9498c0c9beaa6f1dfa463b5141c/www/comparisonResults.json#L2-L2038)
 
 #### graph_comparison_data
 
@@ -256,7 +257,7 @@ For the *graph_comparison_data* file, a similar structure exists:
 
 ```json5
        // Composed key made of the names of the two compared graphs
-        "Heritage Place$MAPHSA Heritage Item":
+        "EAMENA Heritage Place$MAPHSA Heritage Item":
         {   // Composed key, composed by the CIDOC parent node class, relation class, and child class
             "E53_Place$P2_has_type$E55_Type":
             {
@@ -267,7 +268,7 @@ For the *graph_comparison_data* file, a similar structure exists:
                     [
                         "34cfe9dd-c2c0-11ea-9026-02e7594ce0a0", // E53_Place node id
                         "34cfea97-c2c0-11ea-9026-02e7594ce0a0", // E55_Type node id
-                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // Belongs to Heritage Place
+                        "34cfe98e-c2c0-11ea-9026-02e7594ce0a0" // Belongs to EAMENA Heritage Place
                     ],
                     [
                         "4158c3e6-efe1-11ed-a506-4bd9db6d2413", // E53_Place node id
@@ -281,6 +282,8 @@ For the *graph_comparison_data* file, a similar structure exists:
 
 ```
 
+see [JSON example](https://github.com/achp-project/cultural-heritage/blob/1fbe85ab0e6eb9498c0c9beaa6f1dfa463b5141c/www/comparisonResults.json#L2039-L2123C3)
+
 ### Graph Comparator Usage Example
 
 A [simple file](../test-projects/test_graph_comparator.py) has been included to showcase how to use the graph comparator.
@@ -291,7 +294,7 @@ The main body can be tuned to get the desired comparison.
 # Resource model graphs to be loaded, the program supports as many as desired, although the output gets tricky to read
 resource_models = [
 	graph_parser + "/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json",
-	graph_parser + "/sourceGraphData/EAMENA/Heritage Place.json",
+	graph_parser + "/sourceGraphData/EAMENA/EAMENA Heritage Place.json",
 ]
 
 # Gather input file URLs
@@ -322,26 +325,28 @@ The output shows the overlap between the usage of CIDOC classes and relations, t
 [5] common instance(s) of Minimal Subgraph for E52_Time-Span => P82a_begin_of_the_begin => E61_Time_Primitive
 
     [MAPHSA Heritage Item]	(E52_Time-Span) Cultural Affiliation Duration => P82a_begin_of_the_begin => (E61_Time_Primitive) Cultural Affiliation from Date
-    [Heritage Place]	(E52_Time-Span) Designation Event Timespan => P82a_begin_of_the_begin => (E61_Time_Primitive) Designation From Date
-    [Heritage Place]	(E52_Time-Span) Disturbance Event Timespan => P82a_begin_of_the_begin => (E61_Time_Primitive) Disturbance Date From
-    [Heritage Place]	(E52_Time-Span) Archaeological Timespace => P82a_begin_of_the_begin => (E61_Time_Primitive) Archaeological From Date
-    [Heritage Place]	(E52_Time-Span) Disturbance Event Timespan => P82a_begin_of_the_begin => (E61_Time_Primitive) Disturbance Date From
+    [EAMENA Heritage Place]	(E52_Time-Span) Designation Event Timespan => P82a_begin_of_the_begin => (E61_Time_Primitive) Designation From Date
+    [EAMENA Heritage Place]	(E52_Time-Span) Disturbance Event Timespan => P82a_begin_of_the_begin => (E61_Time_Primitive) Disturbance Date From
+    [EAMENA Heritage Place]	(E52_Time-Span) Archaeological Timespace => P82a_begin_of_the_begin => (E61_Time_Primitive) Archaeological From Date
+    [EAMENA Heritage Place]	(E52_Time-Span) Disturbance Event Timespan => P82a_begin_of_the_begin => (E61_Time_Primitive) Disturbance Date From
 
 [2] common instance(s) of Minimal Subgraph for E13_Attribute_Assignment => P2_has_type => E55_Type
 
     [MAPHSA Heritage Item]	(E13_Attribute_Assignment) Related Features Summary => P2_has_type => (E55_Type) Feature Type
-    [Heritage Place]	(E13_Attribute_Assignment) Description Assignment => P2_has_type => (E55_Type) General Description Type
+    [EAMENA Heritage Place]	(E13_Attribute_Assignment) Description Assignment => P2_has_type => (E55_Type) General Description Type
 
 [2] common instance(s) of Minimal Subgraph for E41_Appellation => P2_has_type => E55_Type
 
     [MAPHSA Heritage Item]	(E41_Appellation) Site Name => P2_has_type => (E55_Type) Name Type
-    [Heritage Place]	(E41_Appellation) Resource Name => P2_has_type => (E55_Type) Name Type
+    [EAMENA Heritage Place]	(E41_Appellation) Resource Name => P2_has_type => (E55_Type) Name Type
 
 [4] common instance(s) of Minimal Subgraph for E53_Place => P2_has_type => E55_Type
 
     [MAPHSA Heritage Item]	(E53_Place) Administrative Subdivision => P2_has_type => (E55_Type) Type
-    [Heritage Place]	(E53_Place) Geography => P2_has_type => (E55_Type) Overall Site Shape Type
-    [Heritage Place]	(E53_Place) Geography => P2_has_type => (E55_Type) Resource Orientation
-    [Heritage Place]	(E53_Place) Administrative Division  => P2_has_type => (E55_Type) Administrative Division Type
+    [EAMENA Heritage Place]	(E53_Place) Geography => P2_has_type => (E55_Type) Overall Site Shape Type
+    [EAMENA Heritage Place]	(E53_Place) Geography => P2_has_type => (E55_Type) Resource Orientation
+    [EAMENA Heritage Place]	(E53_Place) Administrative Division  => P2_has_type => (E55_Type) Administrative Division Type
 
 ```
+
+[^1]: Note that the node and graph ids can be retrieved from the original Arches resource model graph JSON files used for input.

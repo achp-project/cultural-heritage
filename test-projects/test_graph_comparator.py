@@ -54,7 +54,7 @@ def print_comparison_common_minimal_subgraph_metrics(results: dict):
 		graph_url1 = [url for url in resource_models if graph_name1 in url][0]
 		graph_url2 = [url for url in resource_models if graph_name2 in url][0]
 
-		# Get node data for both grahs being compared
+		# Get node data for both graphs being compared
 		in_file_data_graph1 = process_graph_file(graph_url1)
 		root_node_id_graph1, nodes_graph1, node_dict_graph1, edges_graph1 = extract_graph_structures(in_file_data_graph1)
 		indexed_nodes_graph1 = {n['nodeid']: n for n in nodes_graph1}
