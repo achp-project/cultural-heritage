@@ -1,10 +1,12 @@
 # tests on graph_parser.py
+#%% 
 
 import os
 import sys
 from pathlib import Path
 import networkx as nx
 import matplotlib.pyplot as plt
+import json
 
 current = os.path.dirname(os.path.realpath(__file__))
 graph_parser = os.path.dirname(current)+"/graph-parser"
@@ -12,14 +14,24 @@ print(graph_parser)
 
 sys.path.append(graph_parser)
 
-# call of functions
 from graph_parser import extract_graph_structures, process_graph_file
-
 
 resource_models = {
 	'MAPHSA': graph_parser + "/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json",
-	'EAMENA': graph_parser + "/sourceGraphData/EAMENA/Heritage Place.json"
+	'EAMENA': graph_parser + "/sourceGraphData/EAMENA/EAMENA Heritage Place.json"
 }
+
+#%%
+lg = []
+for k,v in resource_models.items():
+	print(k)
+	print(v)
+	dict_data = json.loads(Path(v)) 
+	# a_dic=process_graph_file(Path(v))
+
+a_dic["graph"].keys()
+
+#%%
 
 lg = []
 for k,v in resource_models.items():

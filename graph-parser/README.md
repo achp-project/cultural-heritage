@@ -9,7 +9,6 @@ Tested under the following versions:
 * Python 3.8
 * Arches 7.3 Exported Graph JSON files
 
-
 ## Installing env & dependencies
 
 To build env from **settings.txt**:
@@ -23,10 +22,18 @@ source newEnv/bin/activate
 pip install -r requirements.txt
 ```
 ---
+
+## Dataset
+
+Arches resource models from: 
+
+* EAMENA Heritage Place ([here](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/sourceGraphData/EAMENA/EAMENA%20Heritage%20Place.json))
+* MAPHSA Heritage item ([here](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/sourceGraphData/MAPHSA/MAPHSA%20Heritage%20Item.json))
+* ...
+
 ## Graph Parser
 
-The parser can be run for a single file in the local filesystem.
-For instance, to load the sample MAPHSA toy model:
+The parser can be run for a single file in the local filesystem. For instance, to load the sample MAPHSA toy model:
 
 ```bash
 python graph_parser.py "sourceGraphData/MAPHSA/MAPHSA Heritage Item.json"
@@ -49,6 +56,7 @@ If several graph files were present in the same location, this command would pro
 ```bash
 python graph_parser.py sourceGraphData/EAMENA/*.json -o output/EAMENA
 ```
+
 
 ### Remote Graph Load
 
@@ -148,7 +156,7 @@ python graph_comparator.py ExportedResourceGraph1.json ExportedResourceGraph2.js
 For instance, we could compare two of the graphs present in the repo (watch for space character encoding):
 
 ```bash
-python graph_comparator.py sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json
+python graph_comparator.py sourceGraphData/EAMENA/EAMENA\ Heritage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json
 ```
 
 or
@@ -161,7 +169,7 @@ Would print a long data structure containing all the comparison metrics and inst
 To better control the output, you could use the `-o` parameter:
 
 ```bash
-python graph_comitage\ Place.json sourceGraphData/EAMENA/Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json -o output/comparisonResults.json
+python graph_comitage\ Place.json sourceGraphData/EAMENA/EAMENA\ Heritage\ Place.json sourceGraphData/MAPHSA/MAPHSA\ Heritage\ Item.json -o output/comparisonResults.json
 ```
 
 or 
@@ -213,7 +221,7 @@ The output is a serialized JSON structure with a loose schema:
 
 #### minimal_subgraph_data
 
-This dictionary contains individual CIDOC graph minimal subgraph metrics. For instance, a potential entry of *minimal_subgraph_data* [^1]:
+This dictionary contains individual CIDOC graph minimal subgraph metrics. For instance, a potential entry of EAMENA Heritage Place[^1]:
 
 ```json5
 // Name of the Resource model graph referenced
@@ -253,7 +261,7 @@ see [JSON example](https://github.com/achp-project/cultural-heritage/blob/1fbe85
 
 #### graph_comparison_data
 
-For the *graph_comparison_data* file, a similar structure exists:
+This dictionary contains what is common to the two graphs:
 
 ```json5
        // Composed key made of the names of the two compared graphs
