@@ -16,7 +16,7 @@ graph_parser = os.path.dirname(current)+"/graph-parser"
 sys.path.append(graph_parser)
 
 from graph_parser import extract_graph_structures, process_graph_file
-from graph_comparator import get_comparison_data, print_individual_minimal_subgraph_metrics
+from graph_comparator import get_comparison_data
 
 resource_models = [
 	graph_parser + "/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json",
@@ -28,10 +28,10 @@ result_data = get_comparison_data(input_files)
 
 #%% Gather input file URLs
 
+from test_graph_comparator import print_individual_minimal_subgraph_metrics
+
 print_individual_minimal_subgraph_metrics(result_data)
 
-
-#%%
 # print(result_data['minimal_subgraph_data']['MAPHSA Heritage Item']['E53_Place$P140i_was_attributed_by$E16_Measurement']['cms'])
 
 # print(len(result_data['minimal_subgraph_data']['MAPHSA Heritage Item']))
@@ -39,6 +39,8 @@ print_individual_minimal_subgraph_metrics(result_data)
 # print(result_data['minimal_subgraph_data']['MAPHSA Heritage Item'].keys())
 
 # print(len(result_data['minimal_subgraph_data']['MAPHSA Heritage Item']['E53_Place$P140i_was_attributed_by$E16_Measurement']['instances']))
+
+#%% 
 
 df_both = pd.DataFrame(columns=['G', 'source', 'target', 'property', 'id_source', 'id_target', 'id_property'])
 
@@ -100,3 +102,4 @@ plt.show()
 
 
      
+# %%

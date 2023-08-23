@@ -21,15 +21,24 @@ resource_models = {
 	'EAMENA': graph_parser + "/sourceGraphData/EAMENA/EAMENA Heritage Place.json"
 }
 
+
 #%%
-lg = []
-for k,v in resource_models.items():
-	print(k)
-	print(v)
-	dict_data = json.loads(Path(v)) 
+
+from graph_parser import get_graph_id
+
+
+get_graph_id(rms = None, rm = "EAMENA")
+
+	# dict_data = json.loads(v) 
 	# a_dic=process_graph_file(Path(v))
 
-a_dic["graph"].keys()
+# # a_dic["graph"].keys()
+# a_path = str(Path(v))
+# # a_path = a_path.replace("\\","/")
+# print(a_path)
+# # dict_data = json.loads(a_path)
+
+
 
 #%%
 

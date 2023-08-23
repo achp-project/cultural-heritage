@@ -21,15 +21,34 @@ cd cultural-heritage/graph-parser
 source newEnv/bin/activate
 pip install -r requirements.txt
 ```
----
-
-## Dataset
+## Datasets
 
 Arches resource models from: 
 
 * EAMENA Heritage Place ([here](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/sourceGraphData/EAMENA/EAMENA%20Heritage%20Place.json))
 * MAPHSA Heritage item ([here](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/sourceGraphData/MAPHSA/MAPHSA%20Heritage%20Item.json))
 * ...
+
+---
+
+## Introducing resource models
+
+Arches resources models (RM) are directed graphs where the relationships between the nodes[^2] are bi-lateral, this order gives the semantics. Relationships between nodes, as well as the nodes, are CIDOC entities and properties. 
+
+### Basic functions
+
+In a Python script, after running:
+
+```Python
+from graph_parser import get_graph_id
+```
+
+|  purpose 	| python code  	|   result	|  description 	| 
+|---	|---	|---	|---	|
+|   collecting the UUID of a RM	|  `get_graph_id(rm = "EAMENA")` 	|   	|  return the UUID of EAMENA's RM 	|
+| | | | |
+
+--- 
 
 ## Graph Parser
 
@@ -358,3 +377,4 @@ The output shows the overlap between the usage of CIDOC classes and relations, t
 ```
 
 [^1]: Note that the node and graph ids can be retrieved from the original Arches resource model graph JSON files used for input.
+[^2]: equivalent to columns in a relational databases

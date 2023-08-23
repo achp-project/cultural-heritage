@@ -12,7 +12,7 @@ graph_parser = os.path.dirname(current)+"/graph-parser"
 sys.path.append(graph_parser)
 
 # call of functions
-from graph_parser import extract_graph_structures, process_graph_file
+from graph_parser import extract_graph_structures, process_graph_file, 
 from graph_comparator import get_comparison_data
 
 

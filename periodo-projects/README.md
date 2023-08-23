@@ -27,7 +27,6 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
     <em>EAMENA periods (filtered on 'Pre-Dynastic')</em>
 </p>
 
-
 `@yourvick` mapped these periods with their spatial coverage:
 
 <p align="center">
@@ -116,9 +115,15 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
 
 ### Automated creation of PeriodO files
 
-1. match EAMENA periods' spatial coverage[^2] with `@yourvick` table to fill PeriodO `spatialCoverage` id and label
+1. match EAMENA periods' spatial coverage
 2. collect EAMENA `ea.duration.taq` and `ea.duration.tpq` to fill PeriodO (time) `start` and `stop`
 3. use a [temporal annotation / entity recognition tool](https://github.com/historical-time/projects-tools-standards#temporal-annotation--entity-recognition) to add PeriodO (time) `label`[^3] 
+
+
+#### EAMENA periods' spatial coverage
+
+Match EAMENA periods' spatial coverage[^2] with `@yourvick` table to fill PeriodO `spatialCoverage` id and label
+
 
 
 [^1]: This example corresponding to the URL: https://client.perio.do/?page=period-view&backendID=web-https%3A%2F%2Fdata.perio.do%2F&authorityID=p0cp447&periodID=p0cp44786m7
