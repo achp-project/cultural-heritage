@@ -19,7 +19,7 @@ Vizualise an Arches-based thesaurus in a form of an interactive collapsible tree
 Visualize an Arches-based graph in a form of an interactive collapsible tree: **[EAMENA Heritage Place](https://achp-project.github.io/cultural-heritage/graph-parser/docs/sampleOutput/EAMENA_Heritage%20Place.html)** [^3]
 
 ## PeriodO
-> [map-projects](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects): to map Arches cultural periods to the PeriodO gazetteer
+> [periodo-projects](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects): to map Arches cultural periods to the PeriodO gazetteer
 
 
 [^1]: [prj_map.R](https://github.com/achp-project/cultural-heritage/blob/main/map-projects/prj_map.R)
