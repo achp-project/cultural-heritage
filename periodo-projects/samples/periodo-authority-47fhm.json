@@ -1,0 +1,1220 @@
+{
+	"source": {
+	  "title": "The royal city of Susa : ancient Near Eastern treasures in the Louvre",
+	  "contributors": [
+		{
+		  "name": "Tallon, Françoise.",
+		  "id": "http://viaf.org/viaf/29669674"
+		},
+		{
+		  "name": "Metropolitan Museum of Art (New York, N.Y.)",
+		  "id": "http://viaf.org/viaf/126238294"
+		},
+		{
+		  "name": "Aruz, Joan.",
+		  "id": "http://viaf.org/viaf/5045840"
+		},
+		{
+		  "name": "Harper, Prudence Oliver.",
+		  "id": "http://viaf.org/viaf/17264182"
+		}
+	  ],
+	  "yearPublished": 1992,
+	  "id": "http://www.worldcat.org/oclc/26257582",
+	  "creators": [
+		{
+		  "name": "Musée du Louvre.",
+		  "id": "http://experiment.worldcat.org/entity/work/data/793493821#Organization/musee_du_louvre"
+		}
+	  ]
+	},
+	"type": "Authority",
+	"id": "p047fhm",
+	"periods": {
+	  "p047fhmrstb": {
+		"start": {
+		  "in": {
+			"year": "-0499"
+		  },
+		  "label": "500 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmrstb",
+		"localizedLabels": {
+		  "en": [
+			"Achaemenid rule"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Achaemenid rule",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-0299"
+		  },
+		  "label": "300 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmzhs6": {
+		"start": {
+		  "in": {
+			"year": "-2333"
+		  },
+		  "label": "2334 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmzhs6",
+		"localizedLabels": {
+		  "en": [
+			"Akkad"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Akkad",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-2099"
+		  },
+		  "label": "2100 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm4kqv": {
+		"id": "p047fhm4kqv",
+		"stop": {
+		  "in": {
+			"year": "-3099"
+		  },
+		  "label": "3100 B.C."
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Susa II archaeological period",
+		"editorialNote": "unsure why listed in GeoDia with dates 3700-3500 B.C.",
+		"start": {
+		  "in": {
+			"year": "-3499"
+		  },
+		  "label": "3500 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"localizedLabels": {
+		  "en": [
+			"Susa II archaeological period",
+			"Susa II"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverageDescription": "Elam",
+		"note": "Prehistoric Susa II, corresponds to Mesopotamian Ubaid period.",
+		"languageTag": "en"
+	  },
+	  "p047fhm6w33": {
+		"start": {
+		  "in": {
+			"year": "-1999"
+		  },
+		  "label": "2000 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm6w33",
+		"localizedLabels": {
+		  "en": [
+			"Isin-Larsa"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Isin-Larsa",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-1799"
+		  },
+		  "label": "1800 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmwx27": {
+		"start": {
+		  "in": {
+			"year": "-1199"
+		  },
+		  "label": "1200 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmwx27",
+		"localizedLabels": {
+		  "en": [
+			"Iron Age"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Iron Age",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-0299"
+		  },
+		  "label": "300 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmgbnq": {
+		"start": {
+		  "in": {
+			"year": "-3999"
+		  },
+		  "label": "4000 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmgbnq",
+		"localizedLabels": {
+		  "en": [
+			"Chalcolithic Age"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Chalcolithic Age",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-2899"
+		  },
+		  "label": "2900 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm8f6q": {
+		"start": {
+		  "in": {
+			"year": "-1099"
+		  },
+		  "label": "1100 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm8f6q",
+		"localizedLabels": {
+		  "en": [
+			"Isin II"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Isin II",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-0899"
+		  },
+		  "label": "900 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm8h4n": {
+		"start": {
+		  "in": {
+			"year": "-2749"
+		  },
+		  "label": "2750 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm8h4n",
+		"localizedLabels": {
+		  "en": [
+			"Early Dynastic II"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Early Dynastic II",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-2599"
+		  },
+		  "label": "2600 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm2b8x": {
+		"start": {
+		  "in": {
+			"year": "-0599"
+		  },
+		  "label": "600 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm2b8x",
+		"localizedLabels": {
+		  "en": [
+			"Neo-Elamite II"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Neo-Elamite II",
+		"spatialCoverageDescription": "Elam",
+		"stop": {
+		  "in": {
+			"year": "-0549"
+		  },
+		  "label": "550 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmxww6": {
+		"id": "p047fhmxww6",
+		"stop": {
+		  "in": {
+			"year": "-2699"
+		  },
+		  "label": "2700 B.C."
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Protoliterate: Proto-Elamite",
+		"editorialNote": "Listed as historic period, not archaeological period.",
+		"start": {
+		  "in": {
+			"year": "-3499"
+		  },
+		  "label": "3500 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"localizedLabels": {
+		  "en": [
+			"Protoliterate: Proto-Elamite",
+			"Protoliterate",
+			"Proto-Elamite"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverageDescription": "Elam",
+		"note": "This period corresponds to Proto-Literate period in Mesopotamia.",
+		"languageTag": "en"
+	  },
+	  "p047fhmwtjz": {
+		"start": {
+		  "in": {
+			"year": "-2899"
+		  },
+		  "label": "2900 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmwtjz",
+		"localizedLabels": {
+		  "en": [
+			"Bronze Age"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Bronze Age",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-1199"
+		  },
+		  "label": "1200 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmbvkg": {
+		"start": {
+		  "in": {
+			"year": "-2599"
+		  },
+		  "label": "2600 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmbvkg",
+		"localizedLabels": {
+		  "en": [
+			"Early Dynastic III"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Early Dynastic III",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-2333"
+		  },
+		  "label": "2334 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm96xw": {
+		"start": {
+		  "in": {
+			"year": "-0599"
+		  },
+		  "label": "600 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm96xw",
+		"localizedLabels": {
+		  "en": [
+			"Neo-Babylonian"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Neo-Babylonian",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-0499"
+		  },
+		  "label": "500 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmjvmc": {
+		"start": {
+		  "in": {
+			"year": "-0549"
+		  },
+		  "label": "550 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmjvmc",
+		"localizedLabels": {
+		  "en": [
+			"Achaemenid"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Achaemenid",
+		"spatialCoverageDescription": "Elam",
+		"stop": {
+		  "in": {
+			"year": "-0299"
+		  },
+		  "label": "300 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm6724": {
+		"start": {
+		  "in": {
+			"year": "-1499"
+		  },
+		  "label": "1500 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm6724",
+		"localizedLabels": {
+		  "en": [
+			"Middle Elamite"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Middle Elamite",
+		"spatialCoverageDescription": "Elam",
+		"stop": {
+		  "in": {
+			"year": "-0899"
+		  },
+		  "label": "900 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmd9qk": {
+		"start": {
+		  "in": {
+			"year": "-3499"
+		  },
+		  "label": "3500 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmd9qk",
+		"localizedLabels": {
+		  "en": [
+			"Late Uruk"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Late Uruk",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-3099"
+		  },
+		  "label": "3100 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm6zwb": {
+		"id": "p047fhm6zwb",
+		"stop": {
+		  "in": {
+			"year": "-3499"
+		  },
+		  "label": "3500 B.C."
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Susa I archaeological period",
+		"editorialNote": "GeoDia listed the two archaeological periods of Susa I (4200-3700 B.C.) and Susa II (3700-3500 B.C.).",
+		"start": {
+		  "in": {
+			"year": "-3999"
+		  },
+		  "label": "4000 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"localizedLabels": {
+		  "en": [
+			"Susa I archaeological period",
+			"Susa I"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverageDescription": "Elam",
+		"note": "This period designates prehistoric Susa and corresponds to Ubaid period in Mesopotamia.",
+		"languageTag": "en"
+	  },
+	  "p047fhmz25b": {
+		"start": {
+		  "in": {
+			"year": "-1599"
+		  },
+		  "label": "1600 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmz25b",
+		"localizedLabels": {
+		  "en": [
+			"Kassite"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Kassite",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-1099"
+		  },
+		  "label": "1100 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmj72p": {
+		"start": {
+		  "in": {
+			"year": "-2099"
+		  },
+		  "label": "2100 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmj72p",
+		"localizedLabels": {
+		  "en": [
+			"Ur III"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Ur III",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-1999"
+		  },
+		  "label": "2000 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmk34f": {
+		"start": {
+		  "in": {
+			"year": "-1799"
+		  },
+		  "label": "1800 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmk34f",
+		"localizedLabels": {
+		  "en": [
+			"Old Babylonian"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Old Babylonian",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-1699"
+		  },
+		  "label": "1700 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm2cdk": {
+		"start": {
+		  "in": {
+			"year": "-3099"
+		  },
+		  "label": "3100 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm2cdk",
+		"localizedLabels": {
+		  "en": [
+			"Jamdat Nasr"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Jamdat Nasr",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-2899"
+		  },
+		  "label": "2900 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmcj3d": {
+		"start": {
+		  "in": {
+			"year": "-3999"
+		  },
+		  "label": "4000 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmcj3d",
+		"localizedLabels": {
+		  "en": [
+			"Prehistoric"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Prehistoric",
+		"spatialCoverageDescription": "Elam",
+		"stop": {
+		  "in": {
+			"year": "-3499"
+		  },
+		  "label": "3500 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmdzd7": {
+		"start": {
+		  "in": {
+			"year": "-0899"
+		  },
+		  "label": "900 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmdzd7",
+		"localizedLabels": {
+		  "en": [
+			"Neo-Elamite I"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Neo-Elamite I",
+		"spatialCoverageDescription": "Elam",
+		"stop": {
+		  "in": {
+			"year": "-0599"
+		  },
+		  "label": "600 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmn3c9": {
+		"start": {
+		  "in": {
+			"year": "-0899"
+		  },
+		  "label": "900 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmn3c9",
+		"localizedLabels": {
+		  "en": [
+			"Neo-Assyrian"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Neo-Assyrian",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-0599"
+		  },
+		  "label": "600 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm2753": {
+		"start": {
+		  "in": {
+			"year": "-3999"
+		  },
+		  "label": "4000 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm2753",
+		"localizedLabels": {
+		  "en": [
+			"Early Uruk"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Early Uruk",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-3499"
+		  },
+		  "label": "3500 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhmtmw2": {
+		"start": {
+		  "in": {
+			"year": "-2899"
+		  },
+		  "label": "2900 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhmtmw2",
+		"localizedLabels": {
+		  "en": [
+			"Early Dynastic I"
+		  ]
+		},
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xix"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Early Dynastic I",
+		"spatialCoverageDescription": "Mesopotamia",
+		"stop": {
+		  "in": {
+			"year": "-2749"
+		  },
+		  "label": "2750 B.C."
+		},
+		"languageTag": "en"
+	  },
+	  "p047fhm3bjv": {
+		"start": {
+		  "in": {
+			"year": "-2699"
+		  },
+		  "label": "2700 B.C."
+		},
+		"type": "Period",
+		"language": "http://lexvo.org/id/iso639-1/en",
+		"id": "p047fhm3bjv",
+		"localizedLabels": {
+		  "en": [
+			"Old Elamite"
+		  ]
+		},
+		"editorialNote": "unsure why GeoDia listed this twice, both inaccurate to the text (2400-2200 B.C. & 2200-2000 B.C.).",
+		"source": {
+		  "partOf": "http://www.worldcat.org/oclc/26257582",
+		  "locator": "page xviii"
+		},
+		"spatialCoverage": [
+		  {
+			"id": "http://www.wikidata.org/entity/Q794",
+			"label": "Iran"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q796",
+			"label": "Iraq"
+		  },
+		  {
+			"id": "http://www.wikidata.org/entity/Q43",
+			"label": "Turkey"
+		  }
+		],
+		"label": "Old Elamite",
+		"spatialCoverageDescription": "Elam",
+		"stop": {
+		  "in": {
+			"year": "-1499"
+		  },
+		  "label": "1500 B.C."
+		},
+		"languageTag": "en"
+	  }
+	},
+	"@context": [
+	  "http://n2t.net/ark:/99152/p0c",
+	  {
+		"@base": "http://n2t.net/ark:/99152/"
+	  }
+	],
+	"primaryTopicOf": {
+	  "id": "p047fhm.json",
+	  "inDataset": {
+		"id": "p0d",
+		"changes": "p0h#changes"
+	  }
+	}
+  }

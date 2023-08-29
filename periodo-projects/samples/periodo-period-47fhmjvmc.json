@@ -1,0 +1,57 @@
+{
+	"start": {
+	  "in": {
+		"year": "-0549"
+	  },
+	  "label": "550 B.C."
+	},
+	"type": "Period",
+	"language": "http://lexvo.org/id/iso639-1/en",
+	"id": "p047fhmjvmc",
+	"localizedLabels": {
+	  "en": [
+		"Achaemenid"
+	  ]
+	},
+	"source": {
+	  "partOf": "http://www.worldcat.org/oclc/26257582",
+	  "locator": "page xviii"
+	},
+	"spatialCoverage": [
+	  {
+		"id": "http://www.wikidata.org/entity/Q794",
+		"label": "Iran"
+	  },
+	  {
+		"id": "http://www.wikidata.org/entity/Q796",
+		"label": "Iraq"
+	  },
+	  {
+		"id": "http://www.wikidata.org/entity/Q43",
+		"label": "Turkey"
+	  }
+	],
+	"label": "Achaemenid",
+	"spatialCoverageDescription": "Elam",
+	"stop": {
+	  "in": {
+		"year": "-0299"
+	  },
+	  "label": "300 B.C."
+	},
+	"languageTag": "en",
+	"authority": "p047fhm",
+	"@context": [
+	  "http://n2t.net/ark:/99152/p0c",
+	  {
+		"@base": "http://n2t.net/ark:/99152/"
+	  }
+	],
+	"primaryTopicOf": {
+	  "id": "p047fhmjvmc.json",
+	  "inDataset": {
+		"id": "p0d",
+		"changes": "p0h#changes"
+	  }
+	}
+  }
