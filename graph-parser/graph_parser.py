@@ -17,27 +17,27 @@ HTML_DEPENDENCIES = ['tree.js', 'tree.css', 'forceTree.js', 'forceTree.css']
 # Folder to store temporary remote data
 REMOTE_TEMPORARY_FOLDER = 'remoteTempData'
 
-# def get_graph_id(rms: dict = None, rm: str = "EAMENA"):
-# 	"""
-# 	Retrun the UUID of a ressource model
+def get_graph_id(rms: dict = None, rm: str = "EAMENA"):
+	"""
+	Retrun the UUID of a ressource model
 
-# 	:param rms: A dictionary with the paths to different resources models.
-# 	:param rm: A string with the key name of the selected resource model (EAMENA, MAPHSA, etc.).
-# 	:return: A UUID.
-# 	"""
+	:param rms: A dictionary with the paths to different resources models.
+	:param rm: A string with the key name of the selected resource model (EAMENA, MAPHSA, etc.).
+	:return: A UUID.
+	"""
 
-# 	if(rms is None):
-# 		resource_models = {
-# 			'MAPHSA': os.path.dirname(os.path.abspath(__file__)) + "/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json",
-# 			'EAMENA': os.path.dirname(os.path.abspath(__file__)) + "/sourceGraphData/EAMENA/EAMENA Heritage Place.json"
-# 			}
-# 		rms = resource_models
+	if(rms is None):
+		resource_models = {
+			'MAPHSA': os.path.dirname(os.path.abspath(__file__)) + "/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json",
+			'EAMENA': os.path.dirname(os.path.abspath(__file__)) + "/sourceGraphData/EAMENA/EAMENA Heritage Place.json"
+			}
+		rms = resource_models
 	
-# 	print(rms[rm])
-# 	with open(rms[rm], 'r') as j:
-# 		content = json.loads(j.read())
+	print(rms[rm])
+	with open(rms[rm], 'r') as j:
+		content = json.loads(j.read())
 	
-# 	return content["graph"][0]['graphid']
+	return content["graph"][0]['graphid']
 
 
 def get_children_node_edge_data(node_id: str, edges: list) -> list:

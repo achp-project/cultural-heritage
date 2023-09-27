@@ -20,7 +20,7 @@ from graph_comparator import get_comparison_data
 
 resource_models = [
 	graph_parser + "/sourceGraphData/MAPHSA/MAPHSA Heritage Item.json",
-	graph_parser + "/sourceGraphData/EAMENA/Heritage Place.json",
+	graph_parser + "/sourceGraphData/EAMENA/EAMENA Heritage Place.json",
 ]
 
 input_files: list = [Path(r) for r in resource_models]
