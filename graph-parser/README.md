@@ -16,9 +16,9 @@ To build env from **settings.txt**:
 ```bash
 # Supports paths for env
 python -m venv newEnv
+source newEnv/bin/activate
 # Go into the graph parser directory
 cd cultural-heritage/graph-parser
-source newEnv/bin/activate
 pip install -r requirements.txt
 ```
 ## Datasets
