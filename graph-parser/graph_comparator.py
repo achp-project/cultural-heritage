@@ -1,9 +1,12 @@
 import argparse
 import json
+import csv
 import pathlib
 import os
 import itertools as it
 import sys
+
+import pandas as pd
 
 # Import required methods from the original Arches graph parser
 from graph_parser import process_graph_file, extract_graph_structures
@@ -49,12 +52,13 @@ def validate_parameters(parameters: argparse.Namespace) -> argparse.Namespace:
     return parameters
 
 
-def get_comparison_data(input_graph_urls: list) -> dict:
+def get_comparison_data(input_graph_urls: list) -> (dict, dict):
     # Generate a data dictionary with one entry per file, indexed by their actual name
     file_data_batch = {in_file: process_graph_file(in_file) for in_file in input_graph_urls}
 
-    # Create a structure to store all the results
+    # Create a structure to store all the results and the relevant metadata
     results: dict = {}
+    graph_metadata = {}
 
     # Create a substructure to store the triples
     results['minimal_subgraph_data'] = {}
@@ -62,7 +66,7 @@ def get_comparison_data(input_graph_urls: list) -> dict:
     # Process the input data to extract the relevant graph data
     for in_file_path, in_file_data in file_data_batch.items():
 
-        root_node_id, nodes, node_dict, edges = extract_graph_structures(in_file_data)
+        root_node_id, nodes, node_dict, edges, graph_id = extract_graph_structures(in_file_data)
 
         indexed_nodes = {n['nodeid']: n for n in nodes}
 
@@ -93,23 +97,61 @@ def get_comparison_data(input_graph_urls: list) -> dict:
                 }
                 # Add to the cms index
                 minimal_subgraphs[key_string] = minimal_subgraph_metrics
+        # Get the graph name
+        graph_name = str(in_file_path.name.replace('.json', ''))
         # Add to the global graph index
-        results['minimal_subgraph_data'][str(in_file_path.name.replace('.json', ''))] = minimal_subgraphs
+        results['minimal_subgraph_data'][graph_name] = minimal_subgraphs
+        # Add relevant graph_metadata
+        graph_metadata[graph_name] = {
+            'graph_id': graph_id,
+            'indexed_nodes': indexed_nodes
+        }
 
     # Create an iterator containing all permutations of graphs to compare
     graph_pair_permutations = it.combinations(list(results['minimal_subgraph_data'].keys()), 2)
 
     # Create an empty data structure to store the comparisons
-    results['graph_comparison_data'] = {}
+    comparison_results = {}
 
     # Iterate through the permutations and gather data
     for g1, g2 in graph_pair_permutations:
-        comparison_results = compare_graphs(results['minimal_subgraph_data'][g1],
+        partial_comparison_results = compare_graphs(results['minimal_subgraph_data'][g1],
                                             results['minimal_subgraph_data'][g2])
         # Store the results in an indexed structure
-        results['graph_comparison_data'][f"{g1}${g2}"] = comparison_results
+        comparison_results[f"{g1}${g2}"] = partial_comparison_results
 
-    return results
+    return comparison_results, graph_metadata
+
+
+def get_comparison_results_dataframe(comparison_results: dict, graph_metadata) -> str:
+    data_source = []
+    for (graph_name, gcd) in comparison_results.items():
+        (g1_name, g2_name) = graph_name.split('$')
+
+        g1_uuid = graph_metadata[g1_name]['graph_id']
+        g2_uuid = graph_metadata[g2_name]['graph_id']
+
+        for (comparison_item_name, comparison_item) in gcd.items():
+            (source_property, target_proerty, relation_type) = comparison_item_name.split('$')
+
+            for instance in comparison_item['instances']:
+                graph_name = g1_name if instance[2] == g1_uuid else g2_name
+                indexed_nodes = graph_metadata[graph_name]['indexed_nodes']
+
+                data_source.append({
+                    'source_property': source_property,
+                    'target_property': target_proerty,
+                    'relation_type': relation_type,
+                    'graph_id': instance[2],
+                    'source_id': instance[0],
+                    'target_id': instance[1],
+                    'graph_name': graph_name,
+                    'source_name': indexed_nodes[instance[0]],
+                    'target_name': indexed_nodes[instance[1]]
+                })
+
+    df = pd.read_json(json.dumps(data_source))
+    return df.to_csv()
 
 
 def main():
@@ -117,16 +159,23 @@ def main():
     parser = argparse.ArgumentParser()
     # List of input files, and an optional output file
     parser.add_argument('input_files', nargs='+', type=pathlib.Path, help='local input graph files')
+    parser.add_argument('-d', action='store_true')
     parser.add_argument('-o', nargs='?', type=argparse.FileType('w'), default=sys.stdout)
+
 
     # Parse input to match with specs
     args = parser.parse_args()
     # Validate parameters in terms of remote priority as well as local file and dirtree existence
     args = validate_parameters(args)
     # Get the comparison metrics
-    results = get_comparison_data(args.input_files)
-    # Output the results
-    args.o.write(json.dumps(results, cls=SetEncoder))
+    comparison_results, graph_metadata = get_comparison_data(args.input_files)
+    # Check if the output is a dataframe
+    if args.d:
+        out_data = get_comparison_results_dataframe(comparison_results, graph_metadata)
+    else:
+        out_data = json.dumps(comparison_results, cls=SetEncoder, indent=2)
+    # Output the results as JSON
+    args.o.write(out_data)
 
 
 if __name__ == "__main__":

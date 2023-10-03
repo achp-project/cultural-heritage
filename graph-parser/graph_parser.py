@@ -355,7 +355,7 @@ def process_graph_file(input_file: pathlib.Path) -> dict:
 	return file_data
 
 
-def extract_graph_structures(graph_data: dict) -> (str, list, dict, list):
+def extract_graph_structures(graph_data: dict) -> (str, list, dict, list, str):
 	"""
 	Get a new nested data structured with the essential data for graph rendering.
 	This includes names and CIDOC classes.
@@ -367,8 +367,9 @@ def extract_graph_structures(graph_data: dict) -> (str, list, dict, list):
 	nodes = graph_data['graph'][0]['nodes']
 	node_dict = {n['nodeid']: n for n in nodes}
 	edges = graph_data['graph'][0]['edges']
+	graph_id = graph_data['graph'][0]['graphid']
 
-	return root_node_id, nodes, node_dict, edges
+	return root_node_id, nodes, node_dict, edges, graph_id
 
 
 def process_graph_data(graph_data: dict, input_file: pathlib.Path, output_file_path: pathlib.Path):
