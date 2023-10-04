@@ -146,8 +146,8 @@ def get_comparison_results_dataframe(comparison_results: dict, graph_metadata) -
                     'source_id': instance[0],
                     'target_id': instance[1],
                     'graph_name': graph_name,
-                    'source_name': indexed_nodes[instance[0]],
-                    'target_name': indexed_nodes[instance[1]]
+                    'source_name': indexed_nodes[instance[0]]['name'],
+                    'target_name': indexed_nodes[instance[1]]['name']
                 })
 
     df = pd.read_json(json.dumps(data_source))
