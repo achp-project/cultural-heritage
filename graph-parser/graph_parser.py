@@ -383,7 +383,7 @@ def process_graph_data(graph_data: dict, input_file: pathlib.Path, output_file_p
 	"""
 
 	# Extract the essential relevant data into intermediate structures
-	root_node_id, nodes, node_dict, edges = extract_graph_structures(graph_data)
+	root_node_id, nodes, node_dict, edges, graph_id = extract_graph_structures(graph_data)
 
 	# Find and build the root node
 	root_node = get_node_data(root_node_id, node_dict, edges)
@@ -422,7 +422,7 @@ def gather_statistics(overall_graph_data):
 
 	statistics_block = {}
 	for graph_name, graph_data in overall_graph_data.items():
-		root_node_id, nodes, node_dict, edges = extract_graph_structures(graph_data)
+		root_node_id, nodes, node_dict, edges, graph_id = extract_graph_structures(graph_data)
 
 		data_types = {}
 
@@ -487,6 +487,7 @@ def validate_parameters(parameters: argparse.Namespace) -> argparse.Namespace:
 
 	return parameters
 
+
 def main():
 
 	# TODO Add proper help messages and usage examples
@@ -534,6 +535,7 @@ def main():
 	# Clean any existing remote file fetched, comment to keep remote data
 	if os.path.exists(REMOTE_TEMPORARY_FOLDER):
 		shutil.rmtree(REMOTE_TEMPORARY_FOLDER)
+
 
 if __name__ == "__main__":
 	main()
