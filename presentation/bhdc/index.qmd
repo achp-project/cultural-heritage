@@ -1,0 +1,38 @@
+---
+title: "BHDC"
+subtitle: "lorem"
+author: "Thomas Huet (University of Oxford, EAMENA project), ..."
+title-slide-attributes:
+    data-background-image: "https://raw.githubusercontent.com/zoometh/thomashuet/master/teach/stats/images/stat-fa-camel-2.png"
+    data-background-size: "20%"
+    data-background-opacity: "0.2"
+format:
+  revealjs: 
+    css: https://zoometh.github.io/thomashuet/css/quarto.css
+    code-fold: true
+    code-summary: "<small>Code</small>"
+    slide-number: true
+    # chalkboard: true
+    scrollable: true
+    preview-links: auto
+    reference-location: document
+    footnotes-hover: true
+    # self-contained: true
+    # embed-resources: true
+    logo: https://raw.githubusercontent.com/zoometh/thomashuet/master/teach/stats/images/inst-uni-oxford_.png
+    footer: "<em>Big Historical Data Conference</em> <img src='https://raw.githubusercontent.com/zoometh/neonet/master/doc/presentation/bhdc/img/bhdc_avatar.png' style='height: 35px;vertical-align: middle;'> <https://bhdc.earth/> Université Paul-Valéry, Feb 2023 - Thomas Huet"
+    margin: 0
+    width: 1200
+---
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+### XXXX
+
+```{=html}
+<iframe width="780" height="500" src="https://colab.research.google.com/github/achp-project/cultural-heritage/blob/main/test-projects/graph_parser_comparator_example.ipynb" title="Quarto Documentation"></iframe>
+```
+
+
+## readthedocs {data-background-iframe="https://colab.research.google.com/github/achp-project/cultural-heritage/blob/main/test-projects/graph_parser_comparator_example.ipynb" background-interactive="true"}
