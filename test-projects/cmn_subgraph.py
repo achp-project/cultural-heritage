@@ -88,6 +88,10 @@ print("\n")
 print(df_G2.to_markdown())
 
 # %%
+# print all
+print(dn_all.to_markdown())
+
+# %%
 # find different and common row(s)
 
 df_G1xG2 = df_G1.merge(df_G2, how='outer', indicator=True)
