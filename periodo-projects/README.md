@@ -126,6 +126,23 @@ The [list of wikidata links for each period region](https://github.com/achp-proj
 
 Match EAMENA periods' spatial coverage[^2] with `@yourvick` table to fill PeriodO `spatialCoverage` id and label
 
+## Questions
+
+What to do  with:
+
+* `locator`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L14
+* `spatialCoverageDescription` : https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L26
+* `label`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L38
+* `note` and `editorialNote`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L47-L48
+* `source - locator`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L61
+* `editorialNote` :https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L63
+
+Is is better to point to a DOI rather than the DB url?:
+* `url`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L54
+
+
+
+---
 
 [^1]: This example corresponding to the URL: https://client.perio.do/?page=period-view&backendID=web-https%3A%2F%2Fdata.perio.do%2F&authorityID=p0cp447&periodID=p0cp44786m7
 [^2]: in parentesis in the [cultural_periods.tsv](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv)'s `ea.name` field. For example 'Egypt'
