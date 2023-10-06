@@ -36,6 +36,8 @@ We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: 
     <em>Correspondances between EAMENA periods' spatial coverage and wikidata URI</em>
 </p>
 
+The [list of wikidata links for each period region](../wikidata_period.tsv) and a [polygon file for mapping the wkt regions](../period_regions.tsv) are in tsv format.
+
 * PeriodO (`@rybesh`) sent this [template](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json) for data entry into PeriodO
 
   - a duration ([example](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L35-L36))
