@@ -52,7 +52,7 @@ The [list of wikidata links for each period region](https://github.com/achp-proj
 The script [create_periodo_json.py](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/create_periodo_json.py) automated the creation of JSON file by:
 
 1. collecting EAMENA `ea.duration.taq` and `ea.duration.tpq` to fill PeriodO (time) `start` and `stop`
-2. collecting wikidata URI spatial coverages
+2. collecting wikidata URI spatial coverages 
 
 Results are in: https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects/exports
 
