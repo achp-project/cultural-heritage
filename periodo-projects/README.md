@@ -44,91 +44,26 @@ The [list of wikidata links for each period region](https://github.com/achp-proj
   - a geographical extension ([example](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L27-L32))
   - an authority ([example](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L7-L8))
 
-```json
-{
-  "type": "rdf:Bag",
-  "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
-  "@context": "http://n2t.net/ark:/99152/p0c",
-  "authorities": {
-    "https://client.perio.do/.well-known/genid/eamena-authority": {
-      "id": "https://client.perio.do/.well-known/genid/eamena-authority",
-      "type": "Authority",
-      "periods": {
-        "https://client.perio.do/.well-known/genid/eamena-period-1": {
-          "id": "https://client.perio.do/.well-known/genid/eamena-period-1",
-          "type": "Period",
-          "source": {
-            "locator": "page 13"
-          },
-          "label": "Transitional Period",
-          "language": "http://lexvo.org/id/iso639-1/en",
-          "languageTag": "en",
-          "localizedLabels": {
-            "en": [
-              "age of Iconoclasm",
-              "Byzantine Dark Ages",
-              "Transitional Period"
-            ]
-          },
-          "spatialCoverageDescription": "The name Cappadocia refers to a historical region of central Anatolia.",
-          "spatialCoverage": [
-            {
-              "id": "http://www.wikidata.org/entity/Q51614",
-              "label": "Anatolia"
-            }
-          ],
-          "start": {
-            "in": {
-              "earliestYear": "0667",
-              "latestYear": "0700"
-            },
-            "label": "late seventh century"
-          },
-          "stop": {
-            "in": {
-              "earliestYear": "0901",
-              "latestYear": "0934"
-            },
-            "label": "early tenth century"
-          },
-          "note": "\"Sometimes called the 'age of Iconoclasm' or simply the \"dark ages,\" I prefer the more neutral nomenclature and thus refer to the late seventh through the early tenth centuries as the transitional period.\" (Ousterhout, 13). ",
-          "editorialNote": "I agree with Ousterhout's reasoning that the label \"transitional period\" is preferable to the Iconoclastic period (which may not represent Cappadocian experience) or dark age (which is perceived as derogatory, even when it refers to the dearth of extant sources from the seventh to ninth centuries in Anatolia). "
-        }
-      },
-      "source": {
-        "citation": "Ousterhout Robert G. 2017. Visualizing Community: Art Material Culture and Settlement in Byzantine Cappadocia. Washington D.C: Dumbarton Oaks Research Library and Collection.",
-        "title": "Visualizing Community: Art, Material Culture, and Settlement in Byzantine Cappadocia",
-        "url": "https://worldcat.org/en/title/934100132",
-        "yearPublished": "2017",
-        "creators": [
-          {
-            "name": "Robert G. Ousterhout"
-          }
-        ],
-        "locator": "13"
-      },
-      "editorialNote": "This book was written by a scholar of Byzantine architecture, and is the most up to date and comprehensive study of Cappadocian architecture during the Byzantine period. "
-    }
-  }
-}
-```
 
 * This template has been updated with for the `Chalcolithic (Northern Iran)` cultural period: https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/template_eamena.json
 
 ### Automated creation of PeriodO files
 
-1. [match EAMENA periods' spatial coverage](#eamena-periods-spatial-coverage)
-2. collect EAMENA `ea.duration.taq` and `ea.duration.tpq` to fill PeriodO (time) `start` and `stop`
+The script [create_periodo_json.py](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/create_periodo_json.py) automated the creation of JSON file by:
+
+1. collecting EAMENA `ea.duration.taq` and `ea.duration.tpq` to fill PeriodO (time) `start` and `stop`
+2. collecting wikidata URI spatial coverages
+
+Results are in: https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects/exports
+
+## TODO
+
+1. [matching EAMENA periods' spatial coverage](#eamena-periods-spatial-coverage)
 3. use a [temporal annotation / entity recognition tool](https://github.com/historical-time/projects-tools-standards#temporal-annotation--entity-recognition) to add PeriodO (time) `label`[^3] 
-
-
-#### EAMENA periods' spatial coverage
-
-Match EAMENA periods' spatial coverage[^2] with `@yourvick` table to fill PeriodO `spatialCoverage` id and label
 
 ## Questions
 
-What to do  with:
+What to do with:
 
 * `locator`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L14
 * `spatialCoverageDescription` : https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L26
@@ -140,6 +75,8 @@ What to do  with:
 Is is better to point to a DOI rather than the DB url?:
 * `url`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L54
 
+What is the wikidata id of geographical regions such as:
+* `Levant/Mesopotamia/Arabia`: https://github.com/achp-project/cultural-heritage/blob/05fdec5eca38b12c2a3945cb96ee6b5cbcea9f25/periodo-projects/exports/eamena_palaeolithic_levant_mesopotamia_arabia.json#L28
 
 
 ---
