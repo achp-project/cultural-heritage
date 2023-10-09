@@ -66,17 +66,24 @@ Results are in: https://github.com/achp-project/cultural-heritage/tree/main/peri
 What to do with:
 
 * `locator`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L14
+  * I think this is just for page or figure references - so leave it out/blank?
 * `spatialCoverageDescription` : https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L26
+  * This might be a useful field to be more precise about the boundaries of the regions - it would involve a bit of work, but it would probably need writing for each region indivisually
 * `label`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L38
+  * Maybe we could strip out the region in brackets for the labels
 * `note` and `editorialNote`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L47-L48
+  * We don't have to use these if we don't have anything to say in them? 'note' is used rarely in the canon examples and editorial-note is used for a range of things so I guess we can leave both blank?
 * `source - locator`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L61
+  * see above in list
 * `editorialNote` :https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L63
-
+  * see above in list
 Is is better to point to a DOI rather than the DB url?:
 * `url`: https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L54
+  * as we do not have a standard DOI for the database I think it makes more sense to use the general url
 
 What is the wikidata id of geographical regions such as:
 * `Levant/Mesopotamia/Arabia`: https://github.com/achp-project/cultural-heritage/blob/05fdec5eca38b12c2a3945cb96ee6b5cbcea9f25/periodo-projects/exports/eamena_palaeolithic_levant_mesopotamia_arabia.json#L28
+  * a list of all the countries that make up these super-regions - they have already been generated
 
 
 ---
