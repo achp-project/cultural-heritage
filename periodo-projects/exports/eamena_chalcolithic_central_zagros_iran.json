@@ -7,13 +7,13 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-0": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-0",
+                "https://client.perio.do/.well-known/genid/eamena-period-3": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-3",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Chalcolithic (Northern Iran)",
+                    "label": "Chalcolithic (Central Zagros, Iran)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -25,20 +25,20 @@
                     "spatialCoverage": [
                         {
                             "id": "",
-                            "label": "Northern Iran"
+                            "label": "Central Zagros, Iran"
                         }
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -5200,
-                            "latestYear": -5200
+                            "earliestYear": -5500,
+                            "latestYear": -5500
                         },
                         "label": ""
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -3300,
-                            "latestYear": -3300
+                            "earliestYear": -3000,
+                            "latestYear": -3000
                         },
                         "label": ""
                     },
@@ -56,9 +56,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "a0b2afe4-e3d3-4565-901c-4bd00ae360b7"
+                "locator": "5de9594e-4f42-488b-80bb-1c300c1cdf30"
             },
-            "editorialNote": "The locator 'a0b2afe4-e3d3-4565-901c-4bd00ae360b7' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a0b2afe4-e3d3-4565-901c-4bd00ae360b7' "
+            "editorialNote": "The locator '5de9594e-4f42-488b-80bb-1c300c1cdf30' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5de9594e-4f42-488b-80bb-1c300c1cdf30' "
         }
     }
 }

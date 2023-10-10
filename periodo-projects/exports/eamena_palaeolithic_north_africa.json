@@ -24,7 +24,7 @@
                     "spatialCoverageDescription": "",
                     "spatialCoverage": [
                         {
-                            "id": "http://www.wikidata.org/entity/Q262",
+                            "id": "",
                             "label": "North Africa"
                         }
                     ],
@@ -56,9 +56,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": ""
+                "locator": "ca643895-075f-4d2c-a405-24ce3daa1003"
             },
-            "editorialNote": ""
+            "editorialNote": "The locator 'ca643895-075f-4d2c-a405-24ce3daa1003' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/ca643895-075f-4d2c-a405-24ce3daa1003' "
         }
     }
 }

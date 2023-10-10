@@ -24,7 +24,7 @@
                     "spatialCoverageDescription": "",
                     "spatialCoverage": [
                         {
-                            "id": "http://www.wikidata.org/entity/Q796",
+                            "id": "",
                             "label": "Mesopotamia"
                         }
                     ],
@@ -56,9 +56,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": ""
+                "locator": "45e937f2-f483-4f23-a756-277b120a441a"
             },
-            "editorialNote": ""
+            "editorialNote": "The locator '45e937f2-f483-4f23-a756-277b120a441a' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/45e937f2-f483-4f23-a756-277b120a441a' "
         }
     }
 }

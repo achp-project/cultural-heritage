@@ -49,6 +49,7 @@ print(df_wiki_region.to_markdown())
 for i in range(10):
 	print(i)
 	json_periodo = copy.deepcopy(template_periodo)
+	uuid = df_cultural_periods.iloc[i]['ea.uuid']
 	culture_region = df_cultural_periods.iloc[i]['ea.name']
 	region = re.findall(r'\((.*?)\)', culture_region)[0]
 	print(region)
@@ -76,7 +77,11 @@ for i in range(10):
 	# - spatialCoverageDescription
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverageDescription'] = ''
 	# - spatialCoverage - id
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['id'] = wikidata_id
+	## wikidata id only if it is a single region unit (ie, no "/" in its name)
+	if not re.search(r"/", region):
+		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['id'] = ''
+	else:
+		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['id'] = wikidata_id
 	# - spatialCoverage - label
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['label'] = region
 	# - start - early
@@ -106,13 +111,14 @@ for i in range(10):
 	# - creators - name
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['source']['creators'][0]['name'] = 'University of Oxford, University of Southampton'
 	# - locator
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['source']['locator'] = ''
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['source']['locator'] = uuid
 	# - editorialNote
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['editorialNote'] = ''
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['editorialNote'] = "The locator '%s' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/%s' " % (uuid, uuid)
 	filename = culture_region.replace('(', ' ').replace(')', '')
 	filename = filename.replace('/', '_')
 	filename = filename.replace(' ', '_')
 	filename = filename.replace('__', '_')
+	filename = filename.replace(',', '')
 	filename = filename.lower()
 	file_path = os.getcwd() + "\\exports\\eamena_" + filename + ".json"
 	json_string = json.dumps(json_periodo, cls=NpEncoder)

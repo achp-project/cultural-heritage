@@ -24,7 +24,7 @@
                     "spatialCoverageDescription": "",
                     "spatialCoverage": [
                         {
-                            "id": "http://www.wikidata.org/entity/Q398",
+                            "id": "",
                             "label": "Arabia"
                         }
                     ],
@@ -56,9 +56,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": ""
+                "locator": "ec975d99-e9c3-467e-b896-fb179bcac712"
             },
-            "editorialNote": ""
+            "editorialNote": "The locator 'ec975d99-e9c3-467e-b896-fb179bcac712' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/ec975d99-e9c3-467e-b896-fb179bcac712' "
         }
     }
 }

@@ -24,7 +24,7 @@
                     "spatialCoverageDescription": "",
                     "spatialCoverage": [
                         {
-                            "id": "http://www.wikidata.org/entity/Q794",
+                            "id": "",
                             "label": "Southern Iran"
                         }
                     ],
@@ -56,9 +56,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": ""
+                "locator": "5a2c038d-393f-4601-99c7-0e4abe5788cc"
             },
-            "editorialNote": ""
+            "editorialNote": "The locator '5a2c038d-393f-4601-99c7-0e4abe5788cc' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5a2c038d-393f-4601-99c7-0e4abe5788cc' "
         }
     }
 }

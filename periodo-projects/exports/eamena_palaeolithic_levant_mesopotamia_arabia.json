@@ -56,9 +56,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": ""
+                "locator": "c989a7b9-559e-4923-8c67-f366fe44524f"
             },
-            "editorialNote": ""
+            "editorialNote": "The locator 'c989a7b9-559e-4923-8c67-f366fe44524f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/c989a7b9-559e-4923-8c67-f366fe44524f' "
         }
     }
 }
