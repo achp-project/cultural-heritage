@@ -136,7 +136,7 @@ def get_comparison_results_dataframe(processing_results: dict, graph_metadata: d
     for (result_key, result_value) in processing_results.items():
 
         for (comparison_item_name, comparison_item) in result_value.items():
-            (source_property, target_property, relation_type) = comparison_item_name.split('$')
+            (source_property, relation_type, target_property) = comparison_item_name.split('$')#TODO Potential mistake
 
             if args.m == 'list':
 
