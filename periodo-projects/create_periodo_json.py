@@ -115,17 +115,17 @@ for i in range(10):
 	# - editorialNote
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['editorialNote'] = "The locator '%s' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/%s' " % (uuid, uuid)
 	filename = culture_region.replace('(', ' ').replace(')', '')
-	print(filename)
+	# print(filename)
 	filename = filename.replace('/', '_')
 	filename = filename.replace(' ', '_')
 	filename = filename.replace('__', '_')
 	filename = filename.replace(',', '')
 	filename = filename.lower()
-	print(filename)
+	# print(filename)
 	file_path = os.getcwd() + "\\exports\\eamena_" + filename + ".json"
 	json_string = json.dumps(json_periodo, cls=NpEncoder)
 	json_string = json.loads(json_string)
 	with open(file_path, 'w') as json_file:
 		json.dump(json_string, json_file, indent=4)
-		print(file_path + "has been exported")
+		print(file_path + " has been exported")
 # %%
