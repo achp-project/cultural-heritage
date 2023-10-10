@@ -9,14 +9,7 @@
     },
     "features": [
         {
-            "type": "Feature",
-            "properties": {
-                "fid": 3.0,
-                "id_0": 226.0,
-                "iso": null,
-                "name_0": null
-            },
-            "geometry": {
+            "type": "Feature", "properties": { "project": "CAAL", "description": "Central Asian Archaeological Landscapes" }, "geometry": {
                 "type": "MultiPolygon",
                 "coordinates": [
                     [
