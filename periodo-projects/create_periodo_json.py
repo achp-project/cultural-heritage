@@ -32,7 +32,7 @@ print(pretty_json)
 # Read the cultural periods data
 
 cultural_periods_url = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/periodo-projects/cultural_periods.tsv"
-df_cultural_periods = pd.read_csv(cultural_periods_url, index_col=0, sep='\t')
+df_cultural_periods = pd.read_csv(cultural_periods_url, sep='\t')
 print(df_cultural_periods.to_markdown())
 
 # %%
@@ -78,7 +78,7 @@ for i in range(10):
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverageDescription'] = ''
 	# - spatialCoverage - id
 	## wikidata id only if it is a single region unit (ie, no "/" in its name)
-	if not re.search(r"/", region):
+	if re.search(r"/", region):
 		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['id'] = ''
 	else:
 		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['id'] = wikidata_id
