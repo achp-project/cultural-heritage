@@ -114,7 +114,7 @@ for i in range(len(df_cultural_periods)):
 	# - localizedLabels
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["localizedLabels"]['en'] = [culture]
 	# - spatialCoverageDescription
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverageDescription'] = ''
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverageDescription'] = region
 	# - spatialCoverage
 	# call get_wikidata()
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0] = get_wikidata(region)
