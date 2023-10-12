@@ -1,0 +1,66 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-160": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-160",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Chalcolithic, Late Bakun/Yahya VA (Southern Iran)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Chalcolithic, Late Bakun/Yahya VA"
+                        ]
+                    },
+                    "spatialCoverageDescription": "",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q794",
+                                "label": "Iran"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": -4400,
+                            "latestYear": -4400
+                        },
+                        "label": ""
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": -4000,
+                            "latestYear": -4000
+                        },
+                        "label": ""
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "d433732f-a9f3-4ba0-84dd-55c50c3133e0"
+            },
+            "editorialNote": "The locator 'd433732f-a9f3-4ba0-84dd-55c50c3133e0' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/d433732f-a9f3-4ba0-84dd-55c50c3133e0' "
+        }
+    }
+}
