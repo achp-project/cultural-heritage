@@ -7,18 +7,18 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-203": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-203",
+                "https://client.perio.do/.well-known/genid/eamena-period-178": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-178",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Epipalaeolithic (North Africa)",
+                    "label": "Islamic, Late [Ayyubid/Hafsid/Marinid/Zayyanid/Mamluk] (North Africa)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Epipalaeolithic"
+                            "Islamic, Late [Ayyubid/Hafsid/Marinid/Zayyanid/Mamluk]"
                         ]
                     },
                     "spatialCoverageDescription": "",
@@ -56,15 +56,15 @@
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -10000,
-                            "latestYear": -10000
+                            "earliestYear": 1200,
+                            "latestYear": 1200
                         },
                         "label": ""
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -7000,
-                            "latestYear": -7000
+                            "earliestYear": 1500,
+                            "latestYear": 1500
                         },
                         "label": ""
                     },
@@ -82,9 +82,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "5c92b00e-a94f-4c00-ac14-91acffa651ae"
+                "locator": "aa4dd772-91ad-4e47-98f6-786f7fd3f002"
             },
-            "editorialNote": "The locator '5c92b00e-a94f-4c00-ac14-91acffa651ae' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5c92b00e-a94f-4c00-ac14-91acffa651ae' "
+            "editorialNote": "The locator 'aa4dd772-91ad-4e47-98f6-786f7fd3f002' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/aa4dd772-91ad-4e47-98f6-786f7fd3f002' "
         }
     }
 }

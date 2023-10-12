@@ -7,64 +7,60 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-203": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-203",
+                "https://client.perio.do/.well-known/genid/eamena-period-200": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-200",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Epipalaeolithic (North Africa)",
+                    "label": "Epipalaeolithic, Early (Arabia)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Epipalaeolithic"
+                            "Epipalaeolithic, Early"
                         ]
                     },
                     "spatialCoverageDescription": "",
                     "spatialCoverage": [
                         [
                             {
-                                "id": "http://www.wikidata.org/entity/Q262",
-                                "label": "Algeria"
+                                "id": "http://www.wikidata.org/entity/Q398",
+                                "label": "Bahrain"
                             },
                             {
-                                "id": "http://www.wikidata.org/entity/Q79",
-                                "label": "Egypt"
+                                "id": "http://www.wikidata.org/entity/Q842",
+                                "label": "Oman"
                             },
                             {
-                                "id": "http://www.wikidata.org/entity/Q1016",
-                                "label": "Libya"
+                                "id": "http://www.wikidata.org/entity/Q846",
+                                "label": "Qatar"
                             },
                             {
-                                "id": "http://www.wikidata.org/entity/Q1025",
-                                "label": "Mauritania"
+                                "id": "http://www.wikidata.org/entity/Q851",
+                                "label": "Saudi Arabia"
                             },
                             {
-                                "id": "http://www.wikidata.org/entity/Q1028",
-                                "label": "Morocco"
+                                "id": "http://www.wikidata.org/entity/Q878",
+                                "label": "United Arab Emirates"
                             },
                             {
-                                "id": "http://www.wikidata.org/entity/Q948",
-                                "label": "Tunisia"
-                            },
-                            {
-                                "id": "https://www.wikidata.org/wiki/Q6250",
-                                "label": "Western Sahara"
+                                "id": "http://www.wikidata.org/entity/Q805",
+                                "label": "Yemen"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -10000,
-                            "latestYear": -10000
+                            "earliestYear": -18000,
+                            "latestYear": -18000
                         },
                         "label": ""
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -7000,
-                            "latestYear": -7000
+                            "earliestYear": -9000,
+                            "latestYear": -9000
                         },
                         "label": ""
                     },
@@ -82,9 +78,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "5c92b00e-a94f-4c00-ac14-91acffa651ae"
+                "locator": "451e7c8e-ce1b-498d-a952-9809e5a46674"
             },
-            "editorialNote": "The locator '5c92b00e-a94f-4c00-ac14-91acffa651ae' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5c92b00e-a94f-4c00-ac14-91acffa651ae' "
+            "editorialNote": "The locator '451e7c8e-ce1b-498d-a952-9809e5a46674' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/451e7c8e-ce1b-498d-a952-9809e5a46674' "
         }
     }
 }
