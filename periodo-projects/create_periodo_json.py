@@ -43,35 +43,60 @@ df_wiki_region = pd.read_csv(wiki_region_url, sep='\t')
 print(df_wiki_region.to_markdown())
 
 # %%
-# TESTS TO RECOVER SPATIAL
-
-a_spat = 'MENA'
-regions = dict(id = df_wiki_region.loc[df_wiki_region['region'] == a_spat,
- 'wikidata'].values, label = df_wiki_region.loc[df_wiki_region['region'] == a_spat, 'country'].values)
-units = dict(id = df_wiki_region.loc[df_wiki_region['unit'] == a_spat,
- 'wikidata'].values, label = df_wiki_region.loc[df_wiki_region['unit'] == a_spat, 'country'].values)
-countries = dict(id = df_wiki_region.loc[df_wiki_region['country'] == a_spat,
- 'wikidata'].values, label = df_wiki_region.loc[df_wiki_region['country'] == a_spat, 'country'].values)
-print(regions)
-print(units)
-print(countries)
+# recover wikidata spatial regions from EAMENA regions, the smallest wikidata geographical unit is 'country'
+# tested on: region = 'Algeria'; region = 'MENA'; region = 'Levant/Arabia/Mesopotamia'
+       
+def get_wikidata(region):
+	print(region)
+	if re.search(r"/", region):
+		# If "/" exists, it means the region is a conpound of smaller regions
+		region = re.split(r"/", region)
+	else:
+		region = list([region])
+	df_region = pd.DataFrame(columns=['id', 'label'])
+	for reg in range(0, len(region)):
+		a_reg = region[reg]
+		region_id = df_wiki_region.loc[df_wiki_region['region'] == a_reg, 'wikidata'].values
+		region_id = region_id.flatten().tolist()
+		region_label = df_wiki_region.loc[df_wiki_region['region'] == a_reg, 'country']
+		region_label = region_label.tolist()
+		unit_id = df_wiki_region.loc[df_wiki_region['unit'] == a_reg, 'wikidata'].values
+		unit_id = unit_id.flatten().tolist()
+		unit_label = df_wiki_region.loc[df_wiki_region['unit'] == a_reg, 'country']
+		unit_label = unit_label.tolist()
+		country_id = df_wiki_region.loc[df_wiki_region['country'] == a_reg, 'wikidata'].values    
+		country_id = country_id.flatten().tolist()                 
+		country_label = df_wiki_region.loc[df_wiki_region['country'] == a_reg, 'country']
+		country_label = country_label.tolist()
+		df_wiki = pd.DataFrame(
+			{'id': region_id + unit_id + country_id,
+			'label': region_label + unit_label + country_label
+			})
+		# print(df_wiki.to_markdown())
+		df_region = pd.concat([df_region, df_wiki], axis=0)
+	# drop dupliactes
+	df_region = df_region.drop_duplicates()
+	# convert to dict
+	dict_region = df_region.to_dict(orient='records')
+	return(dict_region) # return a list of dictionaries
+# region = 'Levant/Arabia/Mesopotamia'
+# adict = get_wikidata(region)
 
 # %%
-# create the JSON
+# create the JSON looping over cultural periods
 
-# 10 first
-for i in range(25):
-	print(i)
+for i in range(len(df_cultural_periods)):
+	# one copy each loop, to create 1 file
 	json_periodo = copy.deepcopy(template_periodo)
 	uuid = df_cultural_periods.iloc[i]['ea.uuid']
 	culture_region = df_cultural_periods.iloc[i]['ea.name']
+	print(" - " + str(i) + " " + culture_region)
 	region = re.findall(r'\((.*?)\)', culture_region)[0]
-	print(region)
+	# print(region)
 	culture = re.sub(r'\([^)]*\)', '', culture_region).strip()
-	print(culture)
+	# print(culture)
 	start = df_cultural_periods.iloc[i]['ea.duration.taq']
 	stop = df_cultural_periods.iloc[i]['ea.duration.tpq']
-
 	# replace values
 	# change keys
 	genid_template = "https://client.perio.do/.well-known/genid/eamena-period-1"
@@ -91,38 +116,8 @@ for i in range(25):
 	# - spatialCoverageDescription
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverageDescription'] = ''
 	# - spatialCoverage
-	# If "/" exists, it means the region is a conpound of smaller regions
-	if re.search(r"/", region):
-		regions = re.split(r"/", region)
-		# update the file with the first region
-		wikidata_id = df_wiki_region.loc[df_wiki_region['region'] == regions[0], 'wikidata'].values[0]
-		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['id'] = wikidata_id
-		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['label'] = regions[0]
-		print(json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'])
-		# loop through the other regions and create new entries
-		regs = []
-		# skip the first region
-		for j in range(1, len(regions)-1):
-			# will add a dict
-			a_spatialCoverage = {} 
-			a_region = regions[j]
-			a_wikidata_id = df_wiki_region.loc[df_wiki_region['region'] == a_region, 'wikidata'].values[0]
-			a_spatialCoverage["id"] = a_wikidata_id
-			a_spatialCoverage["label"] = a_region
-			# regs.append[a_spatialCoverage]
-			# a_wikidata_id = df_wiki_region.loc[df_wiki_region['region'] == a_region, 'wikidata'].values[0]
-			# print(str(j) + " " + a_region + " " + a_wikidata_id)
-			# print(a_spatialCoverage)
-			# - spatialCoverage - id
-			# json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][j]['id'] = a_wikidata_id
-			# # - spatialCoverage - label
-			# json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][j]['label'] = a_region
-			json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'].append(a_spatialCoverage)
-	else:
-		# - spatialCoverage - id
-		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['id'] = wikidata_id
-		# - spatialCoverage - label
-		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0]['label'] = region
+	# call get_wikidata()
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverage'][0] = get_wikidata(region)
 	# - start - early
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['start']['in']['earliestYear'] = start
 	# - start - early
