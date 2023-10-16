@@ -280,7 +280,7 @@ see [JSON example](https://github.com/achp-project/cultural-heritage/blob/1fbe85
 
 #### graph_comparison_data
 
-This dictionary contains what is common to the two graphs:
+This dictionary contains what is common (subgraphs) to the two graphs:
 
 ```json5
        // Composed key made of the names of the two compared graphs
