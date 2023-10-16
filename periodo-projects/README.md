@@ -58,8 +58,8 @@ Results are in: https://github.com/achp-project/cultural-heritage/tree/main/peri
 
 ## TODO
 
-1. [matching EAMENA periods' spatial coverage](#eamena-periods-spatial-coverage)
-3. use a [temporal annotation / entity recognition tool](https://github.com/historical-time/projects-tools-standards#temporal-annotation--entity-recognition) to add PeriodO (time) `label`[^3] 
+1. add records to the `broader` field
+3. ~~use a [temporal annotation / entity recognition tool](https://github.com/historical-time/projects-tools-standards#temporal-annotation--entity-recognition) to add PeriodO (time) `label`[^3] ~~
 
 ---
 
