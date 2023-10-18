@@ -43,6 +43,14 @@ df_wiki_region = pd.read_csv(wiki_region_url, sep='\t')
 print(df_wiki_region.to_markdown())
 
 # %%
+# Read the broader and Arabic labels
+
+boader_cultural_periods_url = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/periodo-projects/rdm-bu-period-levels.tsv"
+boader_cultural_periods = pd.read_csv(boader_cultural_periods_url, sep='\t')
+print(boader_cultural_periods.to_markdown())
+
+
+# %%
 # recover wikidata spatial regions from EAMENA regions, the smallest wikidata geographical unit is 'country'
 # tested on: region = 'Algeria'; region = 'MENA'; region = 'Levant/Arabia/Mesopotamia'
        
@@ -82,11 +90,17 @@ def get_wikidata(region):
 # region = 'Levant/Arabia/Mesopotamia'
 # adict = get_wikidata(region)
 
+
+
 # %%
 # create the JSON looping over cultural periods
 
-for i in range(len(df_cultural_periods)):
+df_broader = pd.DataFrame(columns=['file_pp', 'genid_new_name', 'culture_region'])
+
+# len(df_cultural_periods)
+for i in range(10):
 	# one copy each loop, to create 1 file
+	# i = 1
 	json_periodo = copy.deepcopy(template_periodo)
 	uuid = df_cultural_periods.iloc[i]['ea.uuid']
 	culture_region = df_cultural_periods.iloc[i]['ea.name']
@@ -100,7 +114,8 @@ for i in range(len(df_cultural_periods)):
 	# replace values
 	# change keys
 	genid_template = "https://client.perio.do/.well-known/genid/eamena-period-1"
-	genid_new = "https://client.perio.do/.well-known/genid/eamena-period-" + str(i)
+	genid_new_name = "eamena-period-" + str(i)
+	genid_new = "https://client.perio.do/.well-known/genid/" + genid_new_name
 	wikidata_id = df_wiki_region.loc[df_wiki_region['region'] == region, 'wikidata'].values[0]
 	# replace 
 	# - genid key
@@ -156,10 +171,71 @@ for i in range(len(df_cultural_periods)):
 	filename = filename.replace(',', '')
 	filename = filename.lower()
 	# print(filename)
-	file_path = os.getcwd() + "\\exports\\eamena_" + filename + ".json"
+	file_pp = "eamena_" + filename + ".json"
+	file_path = os.getcwd() + "\\exports\\" + file_pp
 	json_string = json.dumps(json_periodo, cls=NpEncoder)
 	json_string = json.loads(json_string)
+	# create the JSON file
 	with open(file_path, 'w') as json_file:
 		json.dump(json_string, json_file, indent=4)
 		print(file_path + " has been exported")
+	# store the 'genid_new' and 'culture_region' in a dataframe for broder addition
+	df_broader.loc[i] = [file_pp, genid_new_name, culture_region]
+
 # %%
+
+# `boader_cultural_periods` file
+# get main columns indices
+level1_en = boader_cultural_periods.columns.get_loc("level1-en")
+level1_ar = boader_cultural_periods.columns.get_loc("level1-ar")
+level2_en = boader_cultural_periods.columns.get_loc("level2-en")
+level2_ar = boader_cultural_periods.columns.get_loc("level2-ar")
+level3_en = boader_cultural_periods.columns.get_loc("level3-en")
+level3_ar = boader_cultural_periods.columns.get_loc("level3-ar")
+# find this record in 'boader_cultural_periods'
+d = dict(zip(boader_cultural_periods.columns, range(len(boader_cultural_periods.columns))))
+s = boader_cultural_periods.rename(columns=d).stack()
+
+# loop through `df_broader` rows to re-open JSON files one by one
+# for index, row in df_broader.iterrows():
+for index in range(0,1):
+	# index = 0 ; culture_region = "Chalcolithic (Levant)"
+	culture_region = df_broader.loc[index]['culture_region']
+	genid_new_name = df_broader.loc[index]['genid_new_name']
+	file_pp = df_broader.loc[index]['file_pp']
+	print(str(index) + " " + culture_region)
+	# df_broader.loc[index]['file_pp']
+	file_path = os.getcwd() + "\\exports\\" + file_pp
+	# student_details = json.loads(file_path)[0]
+	with open(file_path) as f:
+		periodo_period = json.load(f)
+	# print(periodo_period)
+	# get the location of the value in x,y (row, column)
+	cell_loc = (s == culture_region).idxmax() # the opposite: boader_cultural_periods.iloc[cell_loc[0]][cell_loc[1]]
+	# print(cell_loc)
+	# will only consider the broader of level3 periods (that is to say level2), indeed level2 broader periods are level1 and are too much generic (Chalcolithic, Palaelithic, etc.) and do not exist in cultural_periods.tsv, so only existing in EAMENA has place holders
+	if cell_loc == (0,0):
+		print("The period %s hasn't be found in 'rdm-bu-period-levels.tsv'" % culture_region)
+	# if cell_loc[1] == level1_en and cell_loc[1] != 0:
+	# 	print("The period %s is one of the broader category 'rdm-bu-period-levels.tsv'" % culture_region)
+	# 	arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level1_ar]
+	# if cell_loc[1] == level2_en:
+	# 	# same row, different column
+	# 	arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level2_ar]
+	# 	broaderPeriod = boader_cultural_periods.iloc[cell_loc[0]][level1_en]
+	if cell_loc[1] == level3_en:
+		# same row, different column
+		arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level3_ar]
+		broaderPeriod = boader_cultural_periods.iloc[cell_loc[0]][level2_en]
+	# broader = 
+	# - localizedLabels
+	# lang_ar = {"ar": [arabicPeriod]}
+		periodo_period['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new_name]["localizedLabels"]['ar'] = [arabicPeriod]
+
+
+# %%
+# add Arabic and broader columns
+
+
+
+
