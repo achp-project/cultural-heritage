@@ -19,6 +19,9 @@
                     "localizedLabels": {
                         "en": [
                             "Islamic, Early [Umayyad/Abbasid/Fatimid]"
+                        ],
+                        "ar": [
+                            "إسلامي، مبكر"
                         ]
                     },
                     "spatialCoverageDescription": "Levant/Arabia",

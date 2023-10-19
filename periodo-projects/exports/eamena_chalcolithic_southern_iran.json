@@ -7,24 +7,24 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-6": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-6",
+                "https://client.perio.do/.well-known/genid/eamena-period-234": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-234",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Chalcolithic (Southern Iran)",
+                    "label": "Chalcolithic, Middle (Northern Iran)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Chalcolithic"
+                            "Chalcolithic, Middle"
                         ],
                         "ar": [
-                            "العصر النحاسي"
+                            "العصر النحاسي، وسيط"
                         ]
                     },
-                    "spatialCoverageDescription": "Southern Iran",
+                    "spatialCoverageDescription": "Northern Iran",
                     "spatialCoverage": [
                         [
                             {
@@ -35,17 +35,17 @@
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -5000,
-                            "latestYear": -5000
+                            "earliestYear": -4000,
+                            "latestYear": -4000
                         },
-                        "label": "-5000"
+                        "label": "-4000"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -2900,
-                            "latestYear": -2900
+                            "earliestYear": -3700,
+                            "latestYear": -3700
                         },
-                        "label": "-2900"
+                        "label": "-3700"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +61,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "5a2c038d-393f-4601-99c7-0e4abe5788cc"
+                "locator": "a28e8adf-7d14-48e8-89d1-9feeb362f3d1"
             },
-            "editorialNote": "The locator '5a2c038d-393f-4601-99c7-0e4abe5788cc' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5a2c038d-393f-4601-99c7-0e4abe5788cc' "
+            "editorialNote": "The locator 'a28e8adf-7d14-48e8-89d1-9feeb362f3d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a28e8adf-7d14-48e8-89d1-9feeb362f3d1' "
         }
     }
 }
