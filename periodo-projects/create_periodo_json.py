@@ -8,7 +8,6 @@ import numpy as np
 import re
 import copy
 
-# %%
 # needed to export as JSON
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -42,20 +41,13 @@ wiki_region_url = "https://raw.githubusercontent.com/achp-project/cultural-herit
 df_wiki_region = pd.read_csv(wiki_region_url, sep='\t')
 print(df_wiki_region.to_markdown())
 
-# %%
-# Read the broader and Arabic labels
-
-boader_cultural_periods_url = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/periodo-projects/rdm-bu-period-levels.tsv"
-boader_cultural_periods = pd.read_csv(boader_cultural_periods_url, sep='\t')
-print(boader_cultural_periods.to_markdown())
-
 
 # %%
 # recover wikidata spatial regions from EAMENA regions, the smallest wikidata geographical unit is 'country'
 # tested on: region = 'Algeria'; region = 'MENA'; region = 'Levant/Arabia/Mesopotamia'
        
 def get_wikidata(region):
-	print(region)
+	# print(region)
 	if re.search(r"/", region):
 		# If "/" exists, it means the region is a conpound of smaller regions
 		region = re.split(r"/", region)
@@ -93,12 +85,31 @@ def get_wikidata(region):
 
 
 # %%
-# create the JSON looping over cultural periods
+# Read the broader and Arabic labels
 
+boader_cultural_periods_url = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/periodo-projects/rdm-bu-period-levels.tsv"
+boader_cultural_periods = pd.read_csv(boader_cultural_periods_url, sep='\t')
+print(boader_cultural_periods.to_markdown())
+# get main columns indices
+level1_en = boader_cultural_periods.columns.get_loc("level1-en")
+level1_ar = boader_cultural_periods.columns.get_loc("level1-ar")
+level2_en = boader_cultural_periods.columns.get_loc("level2-en")
+level2_ar = boader_cultural_periods.columns.get_loc("level2-ar")
+level3_en = boader_cultural_periods.columns.get_loc("level3-en")
+level3_ar = boader_cultural_periods.columns.get_loc("level3-ar")
+# `boader_cultural_periods` file
+# create an accessible structure to retrieve the data by coordinates
+d = dict(zip(boader_cultural_periods.columns, range(len(boader_cultural_periods.columns))))
+s = boader_cultural_periods.rename(columns=d).stack()
+
+# create the JSON looping over cultural periods
 df_broader = pd.DataFrame(columns=['file_pp', 'genid_new_name', 'culture_region'])
 
 # len(df_cultural_periods)
-for i in range(10):
+rg = (60,80)
+rg = (60,61)
+
+for i in range(len(df_cultural_periods)):
 	# one copy each loop, to create 1 file
 	# i = 1
 	json_periodo = copy.deepcopy(template_periodo)
@@ -126,8 +137,32 @@ for i in range(10):
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["source"]['locator'] = ''
 	# - label
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['label'] = culture_region
-	# - localizedLabels
+	# - localizedLabels - en
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["localizedLabels"]['en'] = [culture]
+	# - localizedLabels - ar
+	cell_loc = (s == culture_region).idxmax() # the opposite: boader_cultural_periods.iloc[cell_loc[0]][cell_loc[1]]
+	# print(cell_loc)
+	if cell_loc == (0,0):
+		print("/!\ The period %s hasn't be found in 'rdm-bu-period-levels.tsv'" % culture_region)
+	if cell_loc[1] == level3_en:
+		# same row, different column
+		arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level3_ar]
+		arabicPeriod = re.sub(r'\([^)]*\)', '', arabicPeriod).strip()
+		# arabicPeriod = arabicPeriod.encode("utf-8").decode("utf-8")
+		# print(arabicPeriod)
+		# arabicPeriod = arabicPeriod.encode(encoding = 'UTF-8')
+		# lang_ar = {"ar": [arabicPeriod]}
+		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["localizedLabels"]['ar'] = [arabicPeriod]
+	if cell_loc[1] == level2_en:
+		# same row, different column
+		arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level2_ar]
+		arabicPeriod = re.sub(r'\([^)]*\)', '', arabicPeriod).strip()
+		# arabicPeriod = arabicPeriod.encode("utf-8").decode("utf-8")
+		# print(arabicPeriod)
+		# arabicPeriod = arabicPeriod.encode(encoding = 'UTF-8')
+		json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["localizedLabels"]['ar'] = [arabicPeriod]
+		# skip broader category which is too generic
+	# print(arabicPeriod)
 	# - spatialCoverageDescription
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['spatialCoverageDescription'] = region
 	# - spatialCoverage
@@ -138,13 +173,13 @@ for i in range(10):
 	# - start - early
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['start']['in']['latestYear'] = start
 	# - start - label
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['start']['label'] = ''
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['start']['label'] = str(start)
 	# - stop - early
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['stop']['in']['earliestYear'] = stop
 	# - stop - early
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['stop']['in']['latestYear'] = stop
 	# - stop - label
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['stop']['label'] = ''
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['stop']['label'] = str(stop)
 	# - note
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['note'] = ''
 	# - editorialNote
@@ -164,49 +199,49 @@ for i in range(10):
 	# - editorialNote
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['editorialNote'] = "The locator '%s' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/%s' " % (uuid, uuid)
 	filename = culture_region.replace('(', ' ').replace(')', '')
-	# print(filename)
+	filename = filename.replace(',', '')
 	filename = filename.replace('/', '_')
 	filename = filename.replace(' ', '_')
 	filename = filename.replace('__', '_')
-	filename = filename.replace(',', '')
+	filename = filename.replace('__', '-')
+	# for c in ["/", " ", "_", "-", "__"]:
+	# 	filename = filename.replace(c, "_" + c)
 	filename = filename.lower()
-	# print(filename)
 	file_pp = "eamena_" + filename + ".json"
 	file_path = os.getcwd() + "\\exports\\" + file_pp
+	# save
 	json_string = json.dumps(json_periodo, cls=NpEncoder)
 	json_string = json.loads(json_string)
 	# create the JSON file
-	with open(file_path, 'w') as json_file:
-		json.dump(json_string, json_file, indent=4)
-		print(file_path + " has been exported")
-	# store the 'genid_new' and 'culture_region' in a dataframe for broder addition
+	with open(file_path, 'w', encoding='utf8') as json_file:
+		# beware of the encoding, see: https://stackoverflow.com/questions/18337407/saving-utf-8-texts-with-json-dumps-as-utf-8-not-as-a-u-escape-sequence
+		json.dump(json_string, json_file, indent=4, ensure_ascii=False)
+		print(file_pp + " has been exported")
+	# store the 'genid_new' and 'culture_region' in a dataframe for broader addition
 	df_broader.loc[i] = [file_pp, genid_new_name, culture_region]
 
 # %%
 
-# `boader_cultural_periods` file
-# get main columns indices
-level1_en = boader_cultural_periods.columns.get_loc("level1-en")
-level1_ar = boader_cultural_periods.columns.get_loc("level1-ar")
-level2_en = boader_cultural_periods.columns.get_loc("level2-en")
-level2_ar = boader_cultural_periods.columns.get_loc("level2-ar")
-level3_en = boader_cultural_periods.columns.get_loc("level3-en")
-level3_ar = boader_cultural_periods.columns.get_loc("level3-ar")
-# find this record in 'boader_cultural_periods'
-d = dict(zip(boader_cultural_periods.columns, range(len(boader_cultural_periods.columns))))
-s = boader_cultural_periods.rename(columns=d).stack()
+df_broader
+# broaderPeriod = 'Chalcolithic (Mesopotamia)'
+# genid_new_name_broader = df_broader['genid_new_name'][df_broader.index[df_broader['culture_region']== broaderPeriod].tolist()[0]]
+
+# %%
+# TODO: add broader periods using `df_broader`
 
 # loop through `df_broader` rows to re-open JSON files one by one
 # for index, row in df_broader.iterrows():
-for index in range(0,1):
+for index in range(rg[0], 61):
 	# index = 0 ; culture_region = "Chalcolithic (Levant)"
+	# index = 60 ; culture_region = "Chalcolithic, Late 4 (Northern Mesopotamia)"
 	culture_region = df_broader.loc[index]['culture_region']
 	genid_new_name = df_broader.loc[index]['genid_new_name']
 	file_pp = df_broader.loc[index]['file_pp']
-	print(str(index) + " " + culture_region)
 	# df_broader.loc[index]['file_pp']
 	file_path = os.getcwd() + "\\exports\\" + file_pp
+	print(str(index) + " read: " + file_path)
 	# student_details = json.loads(file_path)[0]
+	# file_path = os.getcwd() + "\\exports\\" + "eamena_classical_pre-islamic_levant_mesopotamia_iran_northern_arabia.json"
 	with open(file_path) as f:
 		periodo_period = json.load(f)
 	# print(periodo_period)
@@ -215,27 +250,49 @@ for index in range(0,1):
 	# print(cell_loc)
 	# will only consider the broader of level3 periods (that is to say level2), indeed level2 broader periods are level1 and are too much generic (Chalcolithic, Palaelithic, etc.) and do not exist in cultural_periods.tsv, so only existing in EAMENA has place holders
 	if cell_loc == (0,0):
+		print("level1")
 		print("The period %s hasn't be found in 'rdm-bu-period-levels.tsv'" % culture_region)
-	# if cell_loc[1] == level1_en and cell_loc[1] != 0:
-	# 	print("The period %s is one of the broader category 'rdm-bu-period-levels.tsv'" % culture_region)
-	# 	arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level1_ar]
-	# if cell_loc[1] == level2_en:
-	# 	# same row, different column
-	# 	arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level2_ar]
-	# 	broaderPeriod = boader_cultural_periods.iloc[cell_loc[0]][level1_en]
+	if cell_loc[1] == level2_en:
+		print("level2")
 	if cell_loc[1] == level3_en:
+		print("level3")
 		# same row, different column
-		arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level3_ar]
 		broaderPeriod = boader_cultural_periods.iloc[cell_loc[0]][level2_en]
-	# broader = 
-	# - localizedLabels
-	# lang_ar = {"ar": [arabicPeriod]}
-		periodo_period['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new_name]["localizedLabels"]['ar'] = [arabicPeriod]
-
+		genid_broader = df_broader['genid_new_name'][df_broader.index[df_broader['culture_region']== broaderPeriod].tolist()[0]]
+		genid_broader = "https://client.perio.do/.well-known/genid/" + genid_broader
+		genid_new_name = "https://client.perio.do/.well-known/genid/" + genid_new_name
+		# - broader
+		# will add the new record at the correct place
+		# subset the dict
+		mykeys = list(periodo_period['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new_name].keys())
+		mydict = periodo_period['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new_name]
+		# insert a key and a value
+		pos = list(mydict.keys()).index('languageTag')
+		items = list(mydict.items())
+		items.insert(pos + 1, ('broader', genid_broader))
+		mydict = dict(items)
+		# print(mydict)
+		# mykeys.insert(mykeys.index('languageTag')+1, 'broader')
+		# mydict['broader'] = genid_broader
+		# add the updated dict to the main record
+		periodo_period['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new_name] = mydict
+		# json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['broader'] = genid_broader
+		print("'" + culture_region + "' broader period '", broaderPeriod, "' has been added")
+	# TODO: overwrite the JSON
+	# pretty_json = json.dumps(json_periodo, indent=4)
+	# print(pretty_json)
+	json_string = json.dumps(json_periodo, cls=NpEncoder)
+	json_string = json.loads(json_string)
+	# create the JSON file
+	with open(file_path, 'w', encoding='utf8') as json_file:
+		# beware of the encoding, see: https://stackoverflow.com/questions/18337407/saving-utf-8-texts-with-json-dumps-as-utf-8-not-as-a-u-escape-sequence
+		json.dump(json_string, json_file, indent=4, ensure_ascii=False)
+		print(file_pp + " has been exported")
 
 # %%
-# add Arabic and broader columns
+mydict = {"ar": ""}
+ar = "العصر الحجري القديم"
+mydict["ar"] = ar
+mydict
 
-
-
-
+# %%
