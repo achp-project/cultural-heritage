@@ -35,6 +35,10 @@ These these periods and subperiods have [these hierachical reltionships](https:/
     <em>EAMENA periods hierachical relationships (level1, level2, etc.)</em>
 </p>
 
+Alignement between EAMENA and wikidata regions can be done using [this mapping table]((https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/wikidata_period.tsv))
+
+
+
 `@yourvick` mapped these periods with their spatial coverage:
 
 <p align="center">
@@ -44,7 +48,7 @@ These these periods and subperiods have [these hierachical reltionships](https:/
     <em>Correspondances between EAMENA periods' spatial coverage and wikidata URI</em>
 </p>
 
-The [list of wikidata links for each period region](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/wikidata_period.tsv) and a [polygon file for mapping the wkt regions](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/period_regions.tsv) are in tsv format.
+The list of wikidata links for each period region and a [polygon file for mapping the wkt regions](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/period_regions.tsv) are in tsv format.
 
 * PeriodO (`@rybesh`) sent this [template](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json) for data entry into PeriodO
 
