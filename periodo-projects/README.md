@@ -5,7 +5,7 @@ Our goal is to export EAMENA/Arches cultural periods, and subperiods, as new ent
 ## PeriodO
 
 <p align="center">
-  <img alt="img-name" src="../www/periodo-json-template-predynastic.png" width="400">
+  <img alt="img-name" src="../www/periodo-json-template-predynastic.png" width="300">
   <br>
     <em>screenshot of the `Predynastic` record in PeriodO</em>
 </p>
