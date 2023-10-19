@@ -43,17 +43,6 @@ Alignement between EAMENA and wikidata regions can be done using [this mapping t
     <em>List of wikidata links for each period region</em>
 </p>
 
-
-
-* PeriodO (`@rybesh`) sent this  for data entry into PeriodO
-
-  - a duration ([example](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L35-L36))
-  - a geographical extension ([example](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L27-L32))
-  - an authority ([example](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L7-L8))
-
-
-* This template has been updated with for the `Chalcolithic (Northern Iran)` cultural period: https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/template_eamena.json
-
 ### Automated creation of PeriodO files
 
 The script [create_periodo_json.py](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/create_periodo_json.py) automated the creation of JSON file by:
@@ -66,7 +55,18 @@ The script [create_periodo_json.py](https://github.com/achp-project/cultural-her
   - Arabic translation
   - broader periods (ie, parent period)
 
-Results are in: https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects/exports
+### Results
+
+Results are in the [export/ folder](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects/exports)
+
+The file [df_broader](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/df_broader.tsv) list the correspondances between the files name (`file_pp`), their PeriodO id (`genid_new_name`) and the period recorded in this file (`culture_region`)
+
+<p align="center">
+  <img alt="img-name" src="../www/periodo-periods-eamena-mapping.png" width="700">
+  <br>
+    <em>Mapping table between periods, files and PeriodO ids</em>
+</p>
+
 
 ## Wikidata
 
