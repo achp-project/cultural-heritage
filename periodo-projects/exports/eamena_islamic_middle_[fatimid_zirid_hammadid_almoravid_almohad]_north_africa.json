@@ -1,0 +1,90 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-176": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-176",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Islamic, Middle [Fatimid/Zirid/Hammadid/Almoravid/Almohad] (North Africa)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Islamic, Middle [Fatimid/Zirid/Hammadid/Almoravid/Almohad]"
+                        ]
+                    },
+                    "spatialCoverageDescription": "North Africa",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q262",
+                                "label": "Algeria"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q79",
+                                "label": "Egypt"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1016",
+                                "label": "Libya"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1025",
+                                "label": "Mauritania"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1028",
+                                "label": "Morocco"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q948",
+                                "label": "Tunisia"
+                            },
+                            {
+                                "id": "https://www.wikidata.org/wiki/Q6250",
+                                "label": "Western Sahara"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": 900,
+                            "latestYear": 900
+                        },
+                        "label": "900"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": 1200,
+                            "latestYear": 1200
+                        },
+                        "label": "1200"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "b96c1fef-146d-43bd-86bb-e9566bd16dde"
+            },
+            "editorialNote": "The locator 'b96c1fef-146d-43bd-86bb-e9566bd16dde' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/b96c1fef-146d-43bd-86bb-e9566bd16dde' "
+        }
+    }
+}

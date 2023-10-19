@@ -1,0 +1,69 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-29": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-29",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Islamic (Iraq)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Islamic"
+                        ],
+                        "ar": [
+                            "إسلامي"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Iraq",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q796",
+                                "label": "Iraq"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": 640,
+                            "latestYear": 640
+                        },
+                        "label": "640"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": 1900,
+                            "latestYear": 1900
+                        },
+                        "label": "1900"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "e51d7e51-7b1a-4de7-ab94-990b7bc65714"
+            },
+            "editorialNote": "The locator 'e51d7e51-7b1a-4de7-ab94-990b7bc65714' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/e51d7e51-7b1a-4de7-ab94-990b7bc65714' "
+        }
+    }
+}

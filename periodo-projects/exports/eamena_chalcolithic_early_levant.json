@@ -1,0 +1,85 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-77": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-77",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Chalcolithic, Early (Levant)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Chalcolithic, Early"
+                        ],
+                        "ar": [
+                            "العصر النحاسي، مبكر"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Levant",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q801",
+                                "label": "Israel"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q810",
+                                "label": "Jordan"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q822",
+                                "label": "Lebanon"
+                            },
+                            {
+                                "id": "https://www.wikidata.org/wiki/Q219060",
+                                "label": "Palestine"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q858",
+                                "label": "Syria"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": -5200,
+                            "latestYear": -5200
+                        },
+                        "label": "-5200"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": -4500,
+                            "latestYear": -4500
+                        },
+                        "label": "-4500"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "8c3eb073-7914-407a-975d-6ecfb315624c"
+            },
+            "editorialNote": "The locator '8c3eb073-7914-407a-975d-6ecfb315624c' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/8c3eb073-7914-407a-975d-6ecfb315624c' "
+        }
+    }
+}

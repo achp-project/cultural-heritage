@@ -1,0 +1,69 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-66": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-66",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Late South Arabian (Southern Arabia)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Late South Arabian"
+                        ],
+                        "ar": [
+                            "الجنوب العربي المتأخر"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Southern Arabia",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q805",
+                                "label": "Yemen"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": 300,
+                            "latestYear": 300
+                        },
+                        "label": "300"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": 640,
+                            "latestYear": 640
+                        },
+                        "label": "640"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "0b32429d-650b-4e3a-89e8-1a143b7a35dc"
+            },
+            "editorialNote": "The locator '0b32429d-650b-4e3a-89e8-1a143b7a35dc' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/0b32429d-650b-4e3a-89e8-1a143b7a35dc' "
+        }
+    }
+}

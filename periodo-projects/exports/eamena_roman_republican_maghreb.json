@@ -1,0 +1,89 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-51": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-51",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Roman, Republican (Maghreb)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Roman, Republican"
+                        ],
+                        "ar": [
+                            "روماني/ جمهوري"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Maghreb",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q262",
+                                "label": "Algeria"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1016",
+                                "label": "Libya"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1025",
+                                "label": "Mauritania"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1028",
+                                "label": "Morocco"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q948",
+                                "label": "Tunisia"
+                            },
+                            {
+                                "id": "https://www.wikidata.org/wiki/Q6250",
+                                "label": "Western Sahara"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": -150,
+                            "latestYear": -150
+                        },
+                        "label": "-150"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": -50,
+                            "latestYear": -50
+                        },
+                        "label": "-50"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "dea28ebc-74f9-4636-a25c-dbf0318bfa0b"
+            },
+            "editorialNote": "The locator 'dea28ebc-74f9-4636-a25c-dbf0318bfa0b' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/dea28ebc-74f9-4636-a25c-dbf0318bfa0b' "
+        }
+    }
+}

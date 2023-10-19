@@ -1,0 +1,69 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-154": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-154",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Neolithic, Early/Aceramic/Pre-pottery (Southern Zagros, Iran)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Neolithic, Early/Aceramic/Pre-pottery"
+                        ],
+                        "ar": [
+                            "العصر الحجري الحديث، مبكر/ بدون خزف/ قبل الفخار"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Southern Zagros, Iran",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q794",
+                                "label": "Iran"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": -7100,
+                            "latestYear": -7100
+                        },
+                        "label": "-7100"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": -6300,
+                            "latestYear": -6300
+                        },
+                        "label": "-6300"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "541e7028-2b9c-4a3c-9e94-7b69d38cc027"
+            },
+            "editorialNote": "The locator '541e7028-2b9c-4a3c-9e94-7b69d38cc027' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/541e7028-2b9c-4a3c-9e94-7b69d38cc027' "
+        }
+    }
+}

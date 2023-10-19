@@ -52,7 +52,10 @@ The [list of wikidata links for each period region](https://github.com/achp-proj
 The script [create_periodo_json.py](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/create_periodo_json.py) automated the creation of JSON file by:
 
 1. collecting EAMENA `ea.duration.taq` and `ea.duration.tpq` to fill PeriodO (time) `start` and `stop`
-2. collecting wikidata URI spatial coverages 
+2. collecting wikidata URI for spatial coverages 
+3. use the file [rdm-bu-period.check.xlsx](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/rdm-bu-period-check.xlsx)[^4] to gather:
+  - Arabic translation
+  - broader periods (ie, parent period)
 
 Results are in: https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects/exports
 
@@ -66,3 +69,4 @@ Results are in: https://github.com/achp-project/cultural-heritage/tree/main/peri
 [^1]: This example corresponding to the URL: https://client.perio.do/?page=period-view&backendID=web-https%3A%2F%2Fdata.perio.do%2F&authorityID=p0cp447&periodID=p0cp44786m7
 [^2]: in parentesis in the [cultural_periods.tsv](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv)'s `ea.name` field. For example 'Egypt'
 [^3]: For example, PeriodO `"earliestYear": "0901"` gives `"label": "late seventh century"`
+[^4]: This XLSX file is exported to a TSV using the Python script [convert_xlsx_to_tsv.py](./convert_xlsx_to_tsv.py)

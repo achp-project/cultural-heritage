@@ -89,7 +89,7 @@ def get_wikidata(region):
 
 boader_cultural_periods_url = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/periodo-projects/rdm-bu-period-levels.tsv"
 boader_cultural_periods = pd.read_csv(boader_cultural_periods_url, sep='\t')
-print(boader_cultural_periods.to_markdown())
+# print(boader_cultural_periods.to_markdown())
 # get main columns indices
 level1_en = boader_cultural_periods.columns.get_loc("level1-en")
 level1_ar = boader_cultural_periods.columns.get_loc("level1-ar")
@@ -115,7 +115,7 @@ for i in range(len(df_cultural_periods)):
 	json_periodo = copy.deepcopy(template_periodo)
 	uuid = df_cultural_periods.iloc[i]['ea.uuid']
 	culture_region = df_cultural_periods.iloc[i]['ea.name']
-	print(" - " + str(i) + " " + culture_region)
+	print(" - " + str(i) + " '" + culture_region + "'")
 	region = re.findall(r'\((.*?)\)', culture_region)[0]
 	# print(region)
 	culture = re.sub(r'\([^)]*\)', '', culture_region).strip()
@@ -143,7 +143,7 @@ for i in range(len(df_cultural_periods)):
 	cell_loc = (s == culture_region).idxmax() # the opposite: boader_cultural_periods.iloc[cell_loc[0]][cell_loc[1]]
 	# print(cell_loc)
 	if cell_loc == (0,0):
-		print("/!\ The period %s hasn't be found in 'rdm-bu-period-levels.tsv'" % culture_region)
+		print("/!\ The period '%s' hasn't be found in 'rdm-bu-period-levels.tsv'" % culture_region)
 	if cell_loc[1] == level3_en:
 		# same row, different column
 		arabicPeriod = boader_cultural_periods.iloc[cell_loc[0]][level3_ar]

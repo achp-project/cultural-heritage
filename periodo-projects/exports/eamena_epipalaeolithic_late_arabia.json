@@ -1,0 +1,89 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-199": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-199",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Epipalaeolithic, Late (Arabia)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Epipalaeolithic, Late"
+                        ],
+                        "ar": [
+                            "العصر الحجري القديم  الأوسط، متأخر"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Arabia",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q398",
+                                "label": "Bahrain"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q842",
+                                "label": "Oman"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q846",
+                                "label": "Qatar"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q851",
+                                "label": "Saudi Arabia"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q878",
+                                "label": "United Arab Emirates"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q805",
+                                "label": "Yemen"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": -9000,
+                            "latestYear": -9000
+                        },
+                        "label": "-9000"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": -6500,
+                            "latestYear": -6500
+                        },
+                        "label": "-6500"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "876caf69-4881-4b0f-bdf7-bce7580b10ed"
+            },
+            "editorialNote": "The locator '876caf69-4881-4b0f-bdf7-bce7580b10ed' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/876caf69-4881-4b0f-bdf7-bce7580b10ed' "
+        }
+    }
+}

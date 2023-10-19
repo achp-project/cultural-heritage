@@ -1,0 +1,69 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-17": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-17",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Bronze Age (Khuzestan, Iran)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Bronze Age"
+                        ],
+                        "ar": [
+                            "االعصر البرونزي"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Khuzestan, Iran",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q794",
+                                "label": "Iran"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": -3100,
+                            "latestYear": -3100
+                        },
+                        "label": "-3100"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": -1100,
+                            "latestYear": -1100
+                        },
+                        "label": "-1100"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "e1dd7811-cdcc-43eb-a912-b9deec663bcc"
+            },
+            "editorialNote": "The locator 'e1dd7811-cdcc-43eb-a912-b9deec663bcc' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/e1dd7811-cdcc-43eb-a912-b9deec663bcc' "
+        }
+    }
+}
