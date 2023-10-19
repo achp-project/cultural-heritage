@@ -19,6 +19,9 @@
                     "localizedLabels": {
                         "en": [
                             "Islamic, Middle [Fatimid/Ayyubid/Crusader]"
+                        ],
+                        "ar": [
+                            "إسلامي، وسيط"
                         ]
                     },
                     "spatialCoverageDescription": "Levant/Arabia",
