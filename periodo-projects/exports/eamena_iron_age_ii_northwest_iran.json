@@ -1,0 +1,69 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-179": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-179",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "Iron Age II (Northwest Iran)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "Iron Age II"
+                        ],
+                        "ar": [
+                            "العصر الحديدي 2"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Northwest Iran",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q794",
+                                "label": "Iran"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": -1050,
+                            "latestYear": -1050
+                        },
+                        "label": "-1050"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": -800,
+                            "latestYear": -800
+                        },
+                        "label": "-800"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "20219518-39ef-417e-9a84-f8df3da2eb25"
+            },
+            "editorialNote": "The locator '20219518-39ef-417e-9a84-f8df3da2eb25' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/20219518-39ef-417e-9a84-f8df3da2eb25' "
+        }
+    }
+}

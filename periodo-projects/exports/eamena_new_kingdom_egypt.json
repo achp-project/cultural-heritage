@@ -1,0 +1,69 @@
+{
+    "type": "rdf:Bag",
+    "id": "https://client.perio.do/.well-known/genid/eamena-dataset",
+    "@context": "http://n2t.net/ark:/99152/p0c",
+    "authorities": {
+        "https://client.perio.do/.well-known/genid/eamena-authority": {
+            "id": "https://client.perio.do/.well-known/genid/eamena-authority",
+            "type": "Authority",
+            "periods": {
+                "https://client.perio.do/.well-known/genid/eamena-period-227": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-227",
+                    "type": "Period",
+                    "source": {
+                        "locator": ""
+                    },
+                    "label": "New Kingdom (Egypt)",
+                    "language": "http://lexvo.org/id/iso639-1/en",
+                    "languageTag": "en",
+                    "localizedLabels": {
+                        "en": [
+                            "New Kingdom"
+                        ],
+                        "ar": [
+                            "المملكة الحديثة"
+                        ]
+                    },
+                    "spatialCoverageDescription": "Egypt",
+                    "spatialCoverage": [
+                        [
+                            {
+                                "id": "http://www.wikidata.org/entity/Q79",
+                                "label": "Egypt"
+                            }
+                        ]
+                    ],
+                    "start": {
+                        "in": {
+                            "earliestYear": -1550,
+                            "latestYear": -1550
+                        },
+                        "label": "-1550"
+                    },
+                    "stop": {
+                        "in": {
+                            "earliestYear": -1050,
+                            "latestYear": -1050
+                        },
+                        "label": "-1050"
+                    },
+                    "note": "",
+                    "editorialNote": ""
+                }
+            },
+            "source": {
+                "citation": "University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).",
+                "title": "EAMENA Database",
+                "url": "https://database.eamena.org/",
+                "yearPublished": "2021",
+                "creators": [
+                    {
+                        "name": "University of Oxford, University of Southampton"
+                    }
+                ],
+                "locator": "aabd0e9f-4c26-427d-8afd-bd3ef3be28d5"
+            },
+            "editorialNote": "The locator 'aabd0e9f-4c26-427d-8afd-bd3ef3be28d5' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/aabd0e9f-4c26-427d-8afd-bd3ef3be28d5' "
+        }
+    }
+}

@@ -85,7 +85,7 @@ def get_wikidata(region):
 
 
 # %%
-# Read the broader and Arabic labels
+# Create the JSON files
 
 boader_cultural_periods_url = "https://raw.githubusercontent.com/achp-project/cultural-heritage/main/periodo-projects/rdm-bu-period-levels.tsv"
 boader_cultural_periods = pd.read_csv(boader_cultural_periods_url, sep='\t')
@@ -230,22 +230,18 @@ df_broader
 # genid_new_name_broader = df_broader['genid_new_name'][df_broader.index[df_broader['culture_region']== broaderPeriod].tolist()[0]]
 
 # %%
-# TODO: add broader periods using `df_broader`
-
-# loop through `df_broader` rows to re-open JSON files one by one
+# Retrieve the broader period and Arabic labels from 'rdm-bu-period-levels.tsv' looping through `df_broader` rows to re-open JSON files one by one
 # for index, row in df_broader.iterrows():
 for index in range(len(df_cultural_periods)):
 	# index = 0 ; culture_region = "Chalcolithic (Levant)"
 	# index = 60 ; culture_region = "Chalcolithic, Late 4 (Northern Mesopotamia)"
+	# index = 25 ; index = 32
 	culture_region = df_broader.loc[index]['culture_region']
 	genid_new_name = df_broader.loc[index]['genid_new_name']
 	file_pp = df_broader.loc[index]['file_pp']
-	# df_broader.loc[index]['file_pp']
 	file_path = os.getcwd() + "\\exports\\" + file_pp
 	print(str(index) + " read: " + file_path)
-	# student_details = json.loads(file_path)[0]
-	# file_path = os.getcwd() + "\\exports\\" + "eamena_classical_pre-islamic_levant_mesopotamia_iran_northern_arabia.json"
-	with open(file_path) as f:
+	with open(file_path, encoding='utf8') as f:
 		periodo_period = json.load(f)
 	# print(periodo_period)
 	# get the location of the value in x,y (row, column)
