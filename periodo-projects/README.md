@@ -48,12 +48,9 @@ Alignement between EAMENA and wikidata regions can be done using [this mapping t
 The script [create_periodo_json.py](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/create_periodo_json.py) automated the creation of JSON file by:
 
 1. reading this [PeriodO template](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json)
-2. replacing the values with:
-  - EAMENA `ea.duration.taq` and `ea.duration.tpq` (PeriodO `start` and `stop`), etc.
+2. replacing the values with: EAMENA `ea.duration.taq` and `ea.duration.tpq` (PeriodO `start` and `stop`), etc.
 3. collecting wikidata URI for spatial coverages 
-4. use the file [rdm-bu-period.check.xlsx](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/rdm-bu-period-check.xlsx)[^4] to gather:
-  - Arabic translation
-  - broader periods (ie, parent period)
+4. use the file [rdm-bu-period.check.xlsx](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/rdm-bu-period-check.xlsx)[^4] to gather: Arabic translation, broader periods (ie, parent period)
 
 ### Results
 
