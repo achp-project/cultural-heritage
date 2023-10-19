@@ -50,7 +50,7 @@ The script [create_periodo_json.py](https://github.com/achp-project/cultural-her
 
 Results are in the [export/ folder](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects/exports)
 
-The file [df_broader](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/df_broader.tsv) list the correspondances between the files name (`file_pp`), their PeriodO id (`genid_new_name`) and the period recorded in this file (`culture_region`)
+The file [df_broader](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/df_broader.tsv) list the correspondances between filenames (column `file_pp`), their PeriodO id (`genid_new_name`) and the period recorded in this file (`culture_region`)
 
 <p align="center">
   <img alt="img-name" src="../www/periodo-periods-eamena-mapping.png" width="700">
