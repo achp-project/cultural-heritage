@@ -7,45 +7,50 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-234": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-234",
+                "https://client.perio.do/.well-known/genid/eamena-period-135": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-135",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Chalcolithic, Middle (Northern Iran)",
+                    "label": "Bronze Age, Kassite (Southern Mesopotamia)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
+                    "broader": "https://client.perio.do/.well-known/genid/eamena-period-19",
                     "localizedLabels": {
                         "en": [
-                            "Chalcolithic, Middle"
+                            "Bronze Age, Kassite"
                         ],
                         "ar": [
-                            "العصر النحاسي، وسيط"
+                            "العصر البرونزي، كيشي"
                         ]
                     },
-                    "spatialCoverageDescription": "Northern Iran",
+                    "spatialCoverageDescription": "Southern Mesopotamia",
                     "spatialCoverage": [
                         [
                             {
-                                "id": "http://www.wikidata.org/entity/Q794",
-                                "label": "Iran"
+                                "id": "http://www.wikidata.org/entity/Q796",
+                                "label": "Iraq"
+                            },
+                            {
+                                "id": "https://www.wikidata.org/wiki/Q817",
+                                "label": "Kuwait"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -4000,
-                            "latestYear": -4000
+                            "earliestYear": -1550,
+                            "latestYear": -1550
                         },
-                        "label": "-4000"
+                        "label": "-1550"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -3700,
-                            "latestYear": -3700
+                            "earliestYear": -1100,
+                            "latestYear": -1100
                         },
-                        "label": "-3700"
+                        "label": "-1100"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +66,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "a28e8adf-7d14-48e8-89d1-9feeb362f3d1"
+                "locator": "694e613c-0318-42e9-8add-4fda3fe3698e"
             },
-            "editorialNote": "The locator 'a28e8adf-7d14-48e8-89d1-9feeb362f3d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a28e8adf-7d14-48e8-89d1-9feeb362f3d1' "
+            "editorialNote": "The locator '694e613c-0318-42e9-8add-4fda3fe3698e' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/694e613c-0318-42e9-8add-4fda3fe3698e' "
         }
     }
 }

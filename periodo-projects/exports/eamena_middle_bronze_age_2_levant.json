@@ -7,45 +7,62 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-234": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-234",
+                "https://client.perio.do/.well-known/genid/eamena-period-119": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-119",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Chalcolithic, Middle (Northern Iran)",
+                    "label": "Middle Bronze Age 2 (Levant)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
+                    "broader": "https://client.perio.do/.well-known/genid/eamena-period-21",
                     "localizedLabels": {
                         "en": [
-                            "Chalcolithic, Middle"
+                            "Middle Bronze Age 2"
                         ],
                         "ar": [
-                            "العصر النحاسي، وسيط"
+                            "العصر البرونزي الوسيط 2"
                         ]
                     },
-                    "spatialCoverageDescription": "Northern Iran",
+                    "spatialCoverageDescription": "Levant",
                     "spatialCoverage": [
                         [
                             {
-                                "id": "http://www.wikidata.org/entity/Q794",
-                                "label": "Iran"
+                                "id": "http://www.wikidata.org/entity/Q801",
+                                "label": "Israel"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q810",
+                                "label": "Jordan"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q822",
+                                "label": "Lebanon"
+                            },
+                            {
+                                "id": "https://www.wikidata.org/wiki/Q219060",
+                                "label": "Palestine"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q858",
+                                "label": "Syria"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -4000,
-                            "latestYear": -4000
+                            "earliestYear": -1800,
+                            "latestYear": -1800
                         },
-                        "label": "-4000"
+                        "label": "-1800"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -3700,
-                            "latestYear": -3700
+                            "earliestYear": -1600,
+                            "latestYear": -1600
                         },
-                        "label": "-3700"
+                        "label": "-1600"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +78,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "a28e8adf-7d14-48e8-89d1-9feeb362f3d1"
+                "locator": "77f7c756-4ba1-422e-bcc3-89d6b3346217"
             },
-            "editorialNote": "The locator 'a28e8adf-7d14-48e8-89d1-9feeb362f3d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a28e8adf-7d14-48e8-89d1-9feeb362f3d1' "
+            "editorialNote": "The locator '77f7c756-4ba1-422e-bcc3-89d6b3346217' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/77f7c756-4ba1-422e-bcc3-89d6b3346217' "
         }
     }
 }

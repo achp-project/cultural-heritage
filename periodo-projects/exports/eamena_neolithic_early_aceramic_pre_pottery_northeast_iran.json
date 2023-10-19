@@ -16,6 +16,7 @@
                     "label": "Neolithic, Early/Aceramic/Pre-pottery (Northeast Iran)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
+                    "broader": "https://client.perio.do/.well-known/genid/eamena-period-235",
                     "localizedLabels": {
                         "en": [
                             "Neolithic, Early/Aceramic/Pre-pottery"

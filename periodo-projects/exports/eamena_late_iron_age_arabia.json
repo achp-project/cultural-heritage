@@ -7,45 +7,66 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-234": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-234",
+                "https://client.perio.do/.well-known/genid/eamena-period-74": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-74",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Chalcolithic, Middle (Northern Iran)",
+                    "label": "Late Iron Age (Arabia)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
+                    "broader": "https://client.perio.do/.well-known/genid/eamena-period-38",
                     "localizedLabels": {
                         "en": [
-                            "Chalcolithic, Middle"
+                            "Late Iron Age"
                         ],
                         "ar": [
-                            "العصر النحاسي، وسيط"
+                            "العصر الحديدي المتأخر"
                         ]
                     },
-                    "spatialCoverageDescription": "Northern Iran",
+                    "spatialCoverageDescription": "Arabia",
                     "spatialCoverage": [
                         [
                             {
-                                "id": "http://www.wikidata.org/entity/Q794",
-                                "label": "Iran"
+                                "id": "http://www.wikidata.org/entity/Q398",
+                                "label": "Bahrain"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q842",
+                                "label": "Oman"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q846",
+                                "label": "Qatar"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q851",
+                                "label": "Saudi Arabia"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q878",
+                                "label": "United Arab Emirates"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q805",
+                                "label": "Yemen"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -4000,
-                            "latestYear": -4000
+                            "earliestYear": -600,
+                            "latestYear": -600
                         },
-                        "label": "-4000"
+                        "label": "-600"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -3700,
-                            "latestYear": -3700
+                            "earliestYear": -100,
+                            "latestYear": -100
                         },
-                        "label": "-3700"
+                        "label": "-100"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +82,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "a28e8adf-7d14-48e8-89d1-9feeb362f3d1"
+                "locator": "2dd3e68d-54a4-479c-8c6d-a9df806c1916"
             },
-            "editorialNote": "The locator 'a28e8adf-7d14-48e8-89d1-9feeb362f3d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a28e8adf-7d14-48e8-89d1-9feeb362f3d1' "
+            "editorialNote": "The locator '2dd3e68d-54a4-479c-8c6d-a9df806c1916' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/2dd3e68d-54a4-479c-8c6d-a9df806c1916' "
         }
     }
 }

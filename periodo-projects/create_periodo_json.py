@@ -279,7 +279,7 @@ for index in range(len(df_cultural_periods)):
 	# TODO: overwrite the JSON
 	# pretty_json = json.dumps(json_periodo, indent=4)
 	# print(pretty_json)
-	json_string = json.dumps(json_periodo, cls=NpEncoder)
+	json_string = json.dumps(periodo_period, cls=NpEncoder)
 	json_string = json.loads(json_string)
 	# create the JSON file
 	with open(file_path, 'w', encoding='utf8') as json_file:

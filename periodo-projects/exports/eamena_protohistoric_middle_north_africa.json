@@ -7,45 +7,70 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-234": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-234",
+                "https://client.perio.do/.well-known/genid/eamena-period-52": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-52",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Chalcolithic, Middle (Northern Iran)",
+                    "label": "Protohistoric, Middle (North Africa)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
+                    "broader": "https://client.perio.do/.well-known/genid/eamena-period-26",
                     "localizedLabels": {
                         "en": [
-                            "Chalcolithic, Middle"
+                            "Protohistoric, Middle"
                         ],
                         "ar": [
-                            "العصر النحاسي، وسيط"
+                            "فجر التاريخ، وسيط"
                         ]
                     },
-                    "spatialCoverageDescription": "Northern Iran",
+                    "spatialCoverageDescription": "North Africa",
                     "spatialCoverage": [
                         [
                             {
-                                "id": "http://www.wikidata.org/entity/Q794",
-                                "label": "Iran"
+                                "id": "http://www.wikidata.org/entity/Q262",
+                                "label": "Algeria"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q79",
+                                "label": "Egypt"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1016",
+                                "label": "Libya"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1025",
+                                "label": "Mauritania"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q1028",
+                                "label": "Morocco"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q948",
+                                "label": "Tunisia"
+                            },
+                            {
+                                "id": "https://www.wikidata.org/wiki/Q6250",
+                                "label": "Western Sahara"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -4000,
-                            "latestYear": -4000
+                            "earliestYear": -50,
+                            "latestYear": -50
                         },
-                        "label": "-4000"
+                        "label": "-50"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -3700,
-                            "latestYear": -3700
+                            "earliestYear": 300,
+                            "latestYear": 300
                         },
-                        "label": "-3700"
+                        "label": "300"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +86,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "a28e8adf-7d14-48e8-89d1-9feeb362f3d1"
+                "locator": "b7e81c89-ee76-4022-add6-dac8df35bdd1"
             },
-            "editorialNote": "The locator 'a28e8adf-7d14-48e8-89d1-9feeb362f3d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a28e8adf-7d14-48e8-89d1-9feeb362f3d1' "
+            "editorialNote": "The locator 'b7e81c89-ee76-4022-add6-dac8df35bdd1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/b7e81c89-ee76-4022-add6-dac8df35bdd1' "
         }
     }
 }

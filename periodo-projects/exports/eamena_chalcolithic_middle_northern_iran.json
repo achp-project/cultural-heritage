@@ -16,6 +16,7 @@
                     "label": "Chalcolithic, Middle (Northern Iran)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
+                    "broader": "https://client.perio.do/.well-known/genid/eamena-period-0",
                     "localizedLabels": {
                         "en": [
                             "Chalcolithic, Middle"
