@@ -4,18 +4,18 @@ Our goal is to export Arches cultural periods, and subperiods, as new entries in
 
 ## PeriodO
 
+<p align="center">
+  <img alt="img-name" src="../www/periodo-json-template-predynastic.png" width="400">
+  <br>
+    <em>screenshot of the `Predynastic` record in PeriodO</em>
+</p>
+
 [PeriodO](https://perio.do/en/) is a temporal gazetteer. In PeriodO, each period is composed of:
 - a duration (`start` and `stop`)
 - a geographical extension (`spatialCoverage`)
 - an authority (`authorities`)
 
 An example of the `Predynastic` JSON is [here](https://github.com/eamena-project/eamena-arches-dev/blob/main/projects/periodo/periodo-period-cp44786m7.json) [^1].
-
-<p align="center">
-  <img alt="img-name" src="../www/periodo-json-template-predynastic.png" width="400">
-  <br>
-    <em>screenshot of the `Predynastic` record in PeriodO</em>
-</p>
 
 ## Workflow
 
