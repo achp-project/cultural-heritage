@@ -7,45 +7,53 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-183": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-183",
+                "https://client.perio.do/.well-known/genid/eamena-period-143": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-143",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Median (Central Zagros, Iran)",
+                    "label": "Iron Age, Neo-Babylonian (Mesopotamia)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Median"
+                            "Iron Age, Neo-Babylonian"
                         ],
                         "ar": [
-                            "وسيط"
+                            "العصر الحديدي، بابلي حديث"
                         ]
                     },
-                    "spatialCoverageDescription": "Central Zagros, Iran",
+                    "spatialCoverageDescription": "Mesopotamia",
                     "spatialCoverage": [
                         [
                             {
-                                "id": "http://www.wikidata.org/entity/Q794",
-                                "label": "Iran"
+                                "id": "http://www.wikidata.org/entity/Q796",
+                                "label": "Iraq"
+                            },
+                            {
+                                "id": "https://www.wikidata.org/wiki/Q817",
+                                "label": "Kuwait"
+                            },
+                            {
+                                "id": "http://www.wikidata.org/entity/Q858",
+                                "label": "Syria"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -800,
-                            "latestYear": -800
+                            "earliestYear": -650,
+                            "latestYear": -650
                         },
-                        "label": "-800"
+                        "label": "-650"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -585,
-                            "latestYear": -585
+                            "earliestYear": -550,
+                            "latestYear": -550
                         },
-                        "label": "-585"
+                        "label": "-550"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +69,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "f9a3958a-d7af-445f-b7b1-d751f2044446"
+                "locator": "c8a1a6c0-8bd7-477f-a58a-339014a79d7f"
             },
-            "editorialNote": "The locator 'f9a3958a-d7af-445f-b7b1-d751f2044446' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/f9a3958a-d7af-445f-b7b1-d751f2044446' "
+            "editorialNote": "The locator 'c8a1a6c0-8bd7-477f-a58a-339014a79d7f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/c8a1a6c0-8bd7-477f-a58a-339014a79d7f' "
         }
     }
 }

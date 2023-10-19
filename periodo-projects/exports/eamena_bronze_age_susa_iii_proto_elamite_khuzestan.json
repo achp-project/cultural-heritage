@@ -7,24 +7,24 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-183": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-183",
+                "https://client.perio.do/.well-known/genid/eamena-period-173": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-173",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Median (Central Zagros, Iran)",
+                    "label": "Bronze Age, Susa III/Proto-Elamite (Khuzestan)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Median"
+                            "Bronze Age, Susa III/Proto-Elamite"
                         ],
                         "ar": [
-                            "وسيط"
+                            "العصر البرونزي، شوشان 3/ بروتو إيلامي"
                         ]
                     },
-                    "spatialCoverageDescription": "Central Zagros, Iran",
+                    "spatialCoverageDescription": "Khuzestan",
                     "spatialCoverage": [
                         [
                             {
@@ -35,17 +35,17 @@
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -800,
-                            "latestYear": -800
+                            "earliestYear": -3100,
+                            "latestYear": -3100
                         },
-                        "label": "-800"
+                        "label": "-3100"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -585,
-                            "latestYear": -585
+                            "earliestYear": -2675,
+                            "latestYear": -2675
                         },
-                        "label": "-585"
+                        "label": "-2675"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +61,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "f9a3958a-d7af-445f-b7b1-d751f2044446"
+                "locator": "c093d051-7bf9-43b7-bdd8-3c1cf4c1a2d1"
             },
-            "editorialNote": "The locator 'f9a3958a-d7af-445f-b7b1-d751f2044446' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/f9a3958a-d7af-445f-b7b1-d751f2044446' "
+            "editorialNote": "The locator 'c093d051-7bf9-43b7-bdd8-3c1cf4c1a2d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/c093d051-7bf9-43b7-bdd8-3c1cf4c1a2d1' "
         }
     }
 }

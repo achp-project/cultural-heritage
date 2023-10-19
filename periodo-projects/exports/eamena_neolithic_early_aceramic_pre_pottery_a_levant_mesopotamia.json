@@ -7,24 +7,24 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-159": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-159",
+                "https://client.perio.do/.well-known/genid/eamena-period-167": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-167",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Sasanian (Levant/Mesopotamia/Iran/Northern Arabia)",
+                    "label": "Neolithic, Early/Aceramic/Pre-Pottery A (Levant/Mesopotamia)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Sasanian"
+                            "Neolithic, Early/Aceramic/Pre-Pottery A"
                         ],
                         "ar": [
-                            "ساساني"
+                            "العصر الحجري الحديث، مبكر/ بدون خزف/ قبل الفخار أ"
                         ]
                     },
-                    "spatialCoverageDescription": "Levant/Mesopotamia/Iran/Northern Arabia",
+                    "spatialCoverageDescription": "Levant/Mesopotamia",
                     "spatialCoverage": [
                         [
                             {
@@ -54,30 +54,22 @@
                             {
                                 "id": "https://www.wikidata.org/wiki/Q817",
                                 "label": "Kuwait"
-                            },
-                            {
-                                "id": "http://www.wikidata.org/entity/Q794",
-                                "label": "Iran"
-                            },
-                            {
-                                "id": "http://www.wikidata.org/entity/Q851",
-                                "label": "Saudi Arabia"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": 225,
-                            "latestYear": 225
+                            "earliestYear": -10000,
+                            "latestYear": -10000
                         },
-                        "label": "225"
+                        "label": "-10000"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": 640,
-                            "latestYear": 640
+                            "earliestYear": -8550,
+                            "latestYear": -8550
                         },
-                        "label": "640"
+                        "label": "-8550"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -93,9 +85,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "4e5e3766-8c62-4f73-b794-508532ac96d9"
+                "locator": "d40307ee-1d5d-4f9c-b722-0f87ca754250"
             },
-            "editorialNote": "The locator '4e5e3766-8c62-4f73-b794-508532ac96d9' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/4e5e3766-8c62-4f73-b794-508532ac96d9' "
+            "editorialNote": "The locator 'd40307ee-1d5d-4f9c-b722-0f87ca754250' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/d40307ee-1d5d-4f9c-b722-0f87ca754250' "
         }
     }
 }

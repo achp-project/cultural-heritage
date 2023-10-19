@@ -199,11 +199,12 @@ for i in range(len(df_cultural_periods)):
 	# - editorialNote
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['editorialNote'] = "The locator '%s' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/%s' " % (uuid, uuid)
 	filename = culture_region.replace('(', ' ').replace(')', '')
+	filename = filename.replace('[', ' ').replace(']', '')
 	filename = filename.replace(',', '')
 	filename = filename.replace('/', '_')
 	filename = filename.replace(' ', '_')
 	filename = filename.replace('__', '_')
-	filename = filename.replace('__', '-')
+	filename = filename.replace('-', '_')
 	# for c in ["/", " ", "_", "-", "__"]:
 	# 	filename = filename.replace(c, "_" + c)
 	filename = filename.lower()

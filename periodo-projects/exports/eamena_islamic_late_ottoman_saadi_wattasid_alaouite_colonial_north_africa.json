@@ -7,21 +7,21 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-89": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-89",
+                "https://client.perio.do/.well-known/genid/eamena-period-177": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-177",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Palaeolithic, Lower (North Africa)",
+                    "label": "Islamic, Late [Ottoman/Saadi/Wattasid/Alaouite/Colonial] (North Africa)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Palaeolithic, Lower"
+                            "Islamic, Late [Ottoman/Saadi/Wattasid/Alaouite/Colonial]"
                         ],
                         "ar": [
-                            "العصر الحجري القديم، سفلي"
+                            "إسلامي، متأخر"
                         ]
                     },
                     "spatialCoverageDescription": "North Africa",
@@ -59,17 +59,17 @@
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -700000,
-                            "latestYear": -700000
+                            "earliestYear": 1500,
+                            "latestYear": 1500
                         },
-                        "label": "-700000"
+                        "label": "1500"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -250000,
-                            "latestYear": -250000
+                            "earliestYear": 1900,
+                            "latestYear": 1900
                         },
-                        "label": "-250000"
+                        "label": "1900"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -85,9 +85,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "294c91da-bf74-47df-87a5-9006dae43f0e"
+                "locator": "3d070ce3-6a05-48ca-81d3-169235aa5e34"
             },
-            "editorialNote": "The locator '294c91da-bf74-47df-87a5-9006dae43f0e' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/294c91da-bf74-47df-87a5-9006dae43f0e' "
+            "editorialNote": "The locator '3d070ce3-6a05-48ca-81d3-169235aa5e34' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/3d070ce3-6a05-48ca-81d3-169235aa5e34' "
         }
     }
 }

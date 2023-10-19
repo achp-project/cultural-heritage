@@ -7,45 +7,45 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-183": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-183",
+                "https://client.perio.do/.well-known/genid/eamena-period-212": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-212",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Median (Central Zagros, Iran)",
+                    "label": "Islamic, Early [Early Caliphate/Umayyad] (Iraq)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Median"
+                            "Islamic, Early [Early Caliphate/Umayyad]"
                         ],
                         "ar": [
-                            "وسيط"
+                            "إسلامي، مبكر"
                         ]
                     },
-                    "spatialCoverageDescription": "Central Zagros, Iran",
+                    "spatialCoverageDescription": "Iraq",
                     "spatialCoverage": [
                         [
                             {
-                                "id": "http://www.wikidata.org/entity/Q794",
-                                "label": "Iran"
+                                "id": "http://www.wikidata.org/entity/Q796",
+                                "label": "Iraq"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -800,
-                            "latestYear": -800
+                            "earliestYear": 640,
+                            "latestYear": 640
                         },
-                        "label": "-800"
+                        "label": "640"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -585,
-                            "latestYear": -585
+                            "earliestYear": 750,
+                            "latestYear": 750
                         },
-                        "label": "-585"
+                        "label": "750"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +61,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "f9a3958a-d7af-445f-b7b1-d751f2044446"
+                "locator": "21927140-2a97-44d8-bc65-b9294fc16957"
             },
-            "editorialNote": "The locator 'f9a3958a-d7af-445f-b7b1-d751f2044446' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/f9a3958a-d7af-445f-b7b1-d751f2044446' "
+            "editorialNote": "The locator '21927140-2a97-44d8-bc65-b9294fc16957' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/21927140-2a97-44d8-bc65-b9294fc16957' "
         }
     }
 }
