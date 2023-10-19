@@ -19,12 +19,20 @@ An example of the `Predynastic` JSON is [here](https://github.com/eamena-project
 
 ## Workflow
 
-EAMENA has these periods or subperiods: https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv
+EAMENA has [this list](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv) of periods and subperiods: 
 
 <p align="center">
   <img alt="img-name" src="../www/periodo-periods-eamena.png" width="700">
   <br>
     <em>EAMENA periods (filtered on 'Pre-Dynastic')</em>
+</p>
+
+These these periods and subperiods have [these hierachical reltionships](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/rdm-bu-period-levels.tsv):
+
+<p align="center">
+  <img alt="img-name" src="../www/periodo-periods-rel-eamena.png" width="700">
+  <br>
+    <em>EAMENA periods hierachical relationships (level1, level2, etc.)</em>
 </p>
 
 `@yourvick` mapped these periods with their spatial coverage:
