@@ -108,6 +108,8 @@ df_broader = pd.DataFrame(columns=['file_pp', 'genid_new_name', 'culture_region'
 # len(df_cultural_periods)
 rg = (60,80)
 rg = (60,61)
+rg = (210,212)
+# rg[0], rg[1]
 
 for i in range(len(df_cultural_periods)):
 	# one copy each loop, to create 1 file
@@ -232,7 +234,7 @@ df_broader
 
 # loop through `df_broader` rows to re-open JSON files one by one
 # for index, row in df_broader.iterrows():
-for index in range(rg[0], 61):
+for index in range(len(df_cultural_periods)):
 	# index = 0 ; culture_region = "Chalcolithic (Levant)"
 	# index = 60 ; culture_region = "Chalcolithic, Late 4 (Northern Mesopotamia)"
 	culture_region = df_broader.loc[index]['culture_region']
