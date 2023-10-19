@@ -35,7 +35,7 @@ These these periods and subperiods have [these hierachical reltionships](https:/
     <em>EAMENA periods hierachical relationships (level1, level2, etc.)</em>
 </p>
 
-Alignement between EAMENA and wikidata regions can be done using [this mapping table]((https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/wikidata_period.tsv))
+Alignement between EAMENA and wikidata regions can be done using [this mapping table](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/wikidata_period.tsv)
 
 <p align="center">
   <img alt="img-name" src="../www/wikidata-regions.png" width="700">
