@@ -225,6 +225,8 @@ for i in range(len(df_cultural_periods)):
 # %%
 
 df_broader
+df_broader_path = os.getcwd() + "\\df_broader.tsv" 
+df_broader.to_csv(df_broader_path, sep="\t") 
 # broaderPeriod = 'Chalcolithic (Mesopotamia)'
 # genid_new_name_broader = df_broader['genid_new_name'][df_broader.index[df_broader['culture_region']== broaderPeriod].tolist()[0]]
 

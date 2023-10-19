@@ -1,6 +1,6 @@
-# Arches periods to PeriodO
+# EAMENA/Arches periods to PeriodO
 
-Our goal is to export Arches cultural periods, and subperiods, as new entries in [PeriodO](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects#periodo) in an [automated way](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects#automated-creation-of-periodo-files). 
+Our goal is to export Arches cultural periods, and subperiods, as new entries in [PeriodO](#periodo) in an [automated way](#automated-creation-of-periodo-files). 
 
 ## PeriodO
 
@@ -9,7 +9,7 @@ Our goal is to export Arches cultural periods, and subperiods, as new entries in
 - a geographical extension (`spatialCoverage`)
 - an authority (`authorities`)
 
-An example of the `Predynastic` JSON is here: https://github.com/eamena-project/eamena-arches-dev/blob/main/projects/periodo/periodo-period-cp44786m7.json [^1].
+An example of the `Predynastic` JSON is [here](https://github.com/eamena-project/eamena-arches-dev/blob/main/projects/periodo/periodo-period-cp44786m7.json) [^1].
 
 <p align="center">
   <img alt="img-name" src="../www/periodo-json-template-predynastic.png" width="400">
@@ -19,7 +19,7 @@ An example of the `Predynastic` JSON is here: https://github.com/eamena-project/
 
 ## Workflow
 
-We start to work on the EAMENA dataset. EAMENA has these periods or subperiods: https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv
+EAMENA has these periods or subperiods: https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/cultural_periods.tsv
 
 <p align="center">
   <img alt="img-name" src="../www/periodo-periods-eamena.png" width="700">
