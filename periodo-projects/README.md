@@ -37,6 +37,11 @@ These these periods and subperiods have [these hierachical reltionships](https:/
 
 Alignement between EAMENA and wikidata regions can be done using [this mapping table]((https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/wikidata_period.tsv))
 
+<p align="center">
+  <img alt="img-name" src="../www/wikidata-regions.png" width="700">
+  <br>
+    <em>List of wikidata links for each period region</em>
+</p>
 
 
 `@yourvick` mapped these periods with their spatial coverage:
