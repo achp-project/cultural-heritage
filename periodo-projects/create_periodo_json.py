@@ -83,7 +83,6 @@ def get_wikidata(region):
 # adict = get_wikidata(region)
 
 
-
 # %%
 # Create the JSON files
 
@@ -230,12 +229,15 @@ df_broader
 # genid_new_name_broader = df_broader['genid_new_name'][df_broader.index[df_broader['culture_region']== broaderPeriod].tolist()[0]]
 
 # %%
-# Retrieve the broader period and Arabic labels from 'rdm-bu-period-levels.tsv' looping through `df_broader` rows to re-open JSON files one by one
-# for index, row in df_broader.iterrows():
+# Retrieve the broader period and Arabic labels from 'rdm-bu-period-levels.tsv' looping through `df_broader` rows to re-open JSON files one by one. Will only consider the broader of level3 periods (that is to say level2), indeed level2 broader periods are level1 and are too much generic (Chalcolithic, Palaelithic, etc.) and do not exist in cultural_periods.tsv, so only existing in EAMENA has place holders
+
+# Errors with Iran: 147 - 155
+# 155, len(df_cultural_periods)
+
 for index in range(len(df_cultural_periods)):
 	# index = 0 ; culture_region = "Chalcolithic (Levant)"
 	# index = 60 ; culture_region = "Chalcolithic, Late 4 (Northern Mesopotamia)"
-	# index = 25 ; index = 32
+	# index = 25 ; index = 32 ; index = 147
 	culture_region = df_broader.loc[index]['culture_region']
 	genid_new_name = df_broader.loc[index]['genid_new_name']
 	file_pp = df_broader.loc[index]['file_pp']
@@ -243,11 +245,8 @@ for index in range(len(df_cultural_periods)):
 	print(str(index) + " read: " + file_path)
 	with open(file_path, encoding='utf8') as f:
 		periodo_period = json.load(f)
-	# print(periodo_period)
 	# get the location of the value in x,y (row, column)
-	cell_loc = (s == culture_region).idxmax() # the opposite: boader_cultural_periods.iloc[cell_loc[0]][cell_loc[1]]
-	# print(cell_loc)
-	# will only consider the broader of level3 periods (that is to say level2), indeed level2 broader periods are level1 and are too much generic (Chalcolithic, Palaelithic, etc.) and do not exist in cultural_periods.tsv, so only existing in EAMENA has place holders
+	cell_loc = (s == culture_region).idxmax() # the opposite: 
 	if cell_loc == (0,0):
 		print("level1")
 		print("The period %s hasn't be found in 'rdm-bu-period-levels.tsv'" % culture_region)
@@ -288,10 +287,5 @@ for index in range(len(df_cultural_periods)):
 		json.dump(json_string, json_file, indent=4, ensure_ascii=False)
 		print(file_pp + " has been exported")
 
-# %%
-mydict = {"ar": ""}
-ar = "العصر الحجري القديم"
-mydict["ar"] = ar
-mydict
 
 # %%

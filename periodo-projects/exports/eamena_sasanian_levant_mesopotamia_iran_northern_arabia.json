@@ -7,77 +7,45 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-159": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-159",
+                "https://client.perio.do/.well-known/genid/eamena-period-234": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-234",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Sasanian (Levant/Mesopotamia/Iran/Northern Arabia)",
+                    "label": "Chalcolithic, Middle (Northern Iran)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Sasanian"
+                            "Chalcolithic, Middle"
                         ],
                         "ar": [
-                            "ساساني"
+                            "العصر النحاسي، وسيط"
                         ]
                     },
-                    "spatialCoverageDescription": "Levant/Mesopotamia/Iran/Northern Arabia",
+                    "spatialCoverageDescription": "Northern Iran",
                     "spatialCoverage": [
                         [
                             {
-                                "id": "http://www.wikidata.org/entity/Q801",
-                                "label": "Israel"
-                            },
-                            {
-                                "id": "http://www.wikidata.org/entity/Q810",
-                                "label": "Jordan"
-                            },
-                            {
-                                "id": "http://www.wikidata.org/entity/Q822",
-                                "label": "Lebanon"
-                            },
-                            {
-                                "id": "https://www.wikidata.org/wiki/Q219060",
-                                "label": "Palestine"
-                            },
-                            {
-                                "id": "http://www.wikidata.org/entity/Q858",
-                                "label": "Syria"
-                            },
-                            {
-                                "id": "http://www.wikidata.org/entity/Q796",
-                                "label": "Iraq"
-                            },
-                            {
-                                "id": "https://www.wikidata.org/wiki/Q817",
-                                "label": "Kuwait"
-                            },
-                            {
                                 "id": "http://www.wikidata.org/entity/Q794",
                                 "label": "Iran"
-                            },
-                            {
-                                "id": "http://www.wikidata.org/entity/Q851",
-                                "label": "Saudi Arabia"
                             }
                         ]
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": 225,
-                            "latestYear": 225
+                            "earliestYear": -4000,
+                            "latestYear": -4000
                         },
-                        "label": "225"
+                        "label": "-4000"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": 640,
-                            "latestYear": 640
+                            "earliestYear": -3700,
+                            "latestYear": -3700
                         },
-                        "label": "640"
+                        "label": "-3700"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -93,9 +61,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "4e5e3766-8c62-4f73-b794-508532ac96d9"
+                "locator": "a28e8adf-7d14-48e8-89d1-9feeb362f3d1"
             },
-            "editorialNote": "The locator '4e5e3766-8c62-4f73-b794-508532ac96d9' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/4e5e3766-8c62-4f73-b794-508532ac96d9' "
+            "editorialNote": "The locator 'a28e8adf-7d14-48e8-89d1-9feeb362f3d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a28e8adf-7d14-48e8-89d1-9feeb362f3d1' "
         }
     }
 }

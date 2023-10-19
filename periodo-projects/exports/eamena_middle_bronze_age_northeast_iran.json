@@ -7,24 +7,24 @@
             "id": "https://client.perio.do/.well-known/genid/eamena-authority",
             "type": "Authority",
             "periods": {
-                "https://client.perio.do/.well-known/genid/eamena-period-206": {
-                    "id": "https://client.perio.do/.well-known/genid/eamena-period-206",
+                "https://client.perio.do/.well-known/genid/eamena-period-234": {
+                    "id": "https://client.perio.do/.well-known/genid/eamena-period-234",
                     "type": "Period",
                     "source": {
                         "locator": ""
                     },
-                    "label": "Middle Bronze Age (Northeast Iran)",
+                    "label": "Chalcolithic, Middle (Northern Iran)",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
                         "en": [
-                            "Middle Bronze Age"
+                            "Chalcolithic, Middle"
                         ],
                         "ar": [
-                            "العصر البرونزي الوسيط"
+                            "العصر النحاسي، وسيط"
                         ]
                     },
-                    "spatialCoverageDescription": "Northeast Iran",
+                    "spatialCoverageDescription": "Northern Iran",
                     "spatialCoverage": [
                         [
                             {
@@ -35,17 +35,17 @@
                     ],
                     "start": {
                         "in": {
-                            "earliestYear": -2200,
-                            "latestYear": -2200
+                            "earliestYear": -4000,
+                            "latestYear": -4000
                         },
-                        "label": "-2200"
+                        "label": "-4000"
                     },
                     "stop": {
                         "in": {
-                            "earliestYear": -1800,
-                            "latestYear": -1800
+                            "earliestYear": -3700,
+                            "latestYear": -3700
                         },
-                        "label": "-1800"
+                        "label": "-3700"
                     },
                     "note": "",
                     "editorialNote": ""
@@ -61,9 +61,9 @@
                         "name": "University of Oxford, University of Southampton"
                     }
                 ],
-                "locator": "763b524a-1fad-4248-98be-dbefa86cf68b"
+                "locator": "a28e8adf-7d14-48e8-89d1-9feeb362f3d1"
             },
-            "editorialNote": "The locator '763b524a-1fad-4248-98be-dbefa86cf68b' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/763b524a-1fad-4248-98be-dbefa86cf68b' "
+            "editorialNote": "The locator 'a28e8adf-7d14-48e8-89d1-9feeb362f3d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a28e8adf-7d14-48e8-89d1-9feeb362f3d1' "
         }
     }
 }
