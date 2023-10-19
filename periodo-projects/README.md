@@ -1,6 +1,6 @@
 # EAMENA/Arches periods to PeriodO
 
-Our goal is to export Arches cultural periods, and subperiods, as new entries in [PeriodO](#periodo) in an [automated way](#automated-creation-of-periodo-files). 
+Our goal is to export EAMENA/Arches cultural periods, and subperiods, as new entries in [PeriodO](#periodo) in an automated way. 
 
 ## PeriodO
 
