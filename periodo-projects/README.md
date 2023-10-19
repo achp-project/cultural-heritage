@@ -44,18 +44,8 @@ Alignement between EAMENA and wikidata regions can be done using [this mapping t
 </p>
 
 
-`@yourvick` mapped these periods with their spatial coverage:
 
-<p align="center">
-  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena.png" width="800">
-  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena-1.png" width="800">
-  <br>
-    <em>Correspondances between EAMENA periods' spatial coverage and wikidata URI</em>
-</p>
-
-The list of wikidata links for each period region and a [polygon file for mapping the wkt regions](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/period_regions.tsv) are in tsv format.
-
-* PeriodO (`@rybesh`) sent this [template](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json) for data entry into PeriodO
+* PeriodO (`@rybesh`) sent this  for data entry into PeriodO
 
   - a duration ([example](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L35-L36))
   - a geographical extension ([example](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json-L27-L32))
@@ -68,7 +58,9 @@ The list of wikidata links for each period region and a [polygon file for mappin
 
 The script [create_periodo_json.py](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/create_periodo_json.py) automated the creation of JSON file by:
 
-1. collecting EAMENA `ea.duration.taq` and `ea.duration.tpq` to fill PeriodO (time) `start` and `stop`
+1. reading this [PeriodO template](https://gist.github.com/rybesh/9f64c127ad8eeb69619896f22064bb0e#file-example-dataset-json)
+1. replacing the values with
+  - EAMENA `ea.duration.taq` and `ea.duration.tpq` (PeriodO `start` and `stop`), etc.
 2. collecting wikidata URI for spatial coverages 
 3. use the file [rdm-bu-period.check.xlsx](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/rdm-bu-period-check.xlsx)[^4] to gather:
   - Arabic translation
@@ -76,10 +68,18 @@ The script [create_periodo_json.py](https://github.com/achp-project/cultural-her
 
 Results are in: https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects/exports
 
-## TODO
+## Wikidata
 
-1. add records to the `broader` field
-3. ~~use a [temporal annotation / entity recognition tool](https://github.com/historical-time/projects-tools-standards#temporal-annotation--entity-recognition) to add PeriodO (time) `label`[^3] ~~
+Wikidata spatial coverages:
+
+<p align="center">
+  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena.png" width="800">
+  <img alt="img-name" src="../www/periodo-spatialCoverage-eamena-1.png" width="800">
+  <br>
+    <em>Correspondances between EAMENA periods' spatial coverage and wikidata URI</em>
+</p>
+
+The list of wikidata links for each period region and a [polygon file for mapping the wkt regions](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/period_regions.tsv) are in tsv format.
 
 ---
 
