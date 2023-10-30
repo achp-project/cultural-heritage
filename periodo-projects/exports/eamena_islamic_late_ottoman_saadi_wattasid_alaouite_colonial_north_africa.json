@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-177",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "3d070ce3-6a05-48ca-81d3-169235aa5e34"
                     },
-                    "label": "Islamic, Late [Ottoman/Saadi/Wattasid/Alaouite/Colonial] (North Africa)",
+                    "label": "Islamic, Late [Ottoman/Saadi/Wattasid/Alaouite/Colonial]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-31",
@@ -73,7 +73,7 @@
                         "label": "1900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '3d070ce3-6a05-48ca-81d3-169235aa5e34' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/3d070ce3-6a05-48ca-81d3-169235aa5e34' "
                 }
             },
             "source": {

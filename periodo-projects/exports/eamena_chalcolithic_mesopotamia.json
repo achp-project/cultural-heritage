@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-4",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "45e937f2-f483-4f23-a756-277b120a441a"
                     },
-                    "label": "Chalcolithic (Mesopotamia)",
+                    "label": "Chalcolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -56,7 +56,7 @@
                         "label": "-3000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '45e937f2-f483-4f23-a756-277b120a441a' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/45e937f2-f483-4f23-a756-277b120a441a' "
                 }
             },
             "source": {

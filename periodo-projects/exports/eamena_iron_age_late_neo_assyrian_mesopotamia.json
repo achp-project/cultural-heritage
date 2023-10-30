@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-144",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "ff5e8d1f-81c7-4564-b2b0-fb4ac4e4130f"
                     },
-                    "label": "Iron Age, Late/Neo-Assyrian (Mesopotamia)",
+                    "label": "Iron Age, Late/Neo-Assyrian",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-37",
@@ -57,7 +57,7 @@
                         "label": "-600"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'ff5e8d1f-81c7-4564-b2b0-fb4ac4e4130f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/ff5e8d1f-81c7-4564-b2b0-fb4ac4e4130f' "
                 }
             },
             "source": {

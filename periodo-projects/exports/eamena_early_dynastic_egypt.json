@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-229",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "2e7a37ae-40a8-4517-805f-b38be315a57c"
                     },
-                    "label": "Early Dynastic (Egypt)",
+                    "label": "Early Dynastic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-32",
@@ -49,7 +49,7 @@
                         "label": "-2700"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '2e7a37ae-40a8-4517-805f-b38be315a57c' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/2e7a37ae-40a8-4517-805f-b38be315a57c' "
                 }
             },
             "source": {

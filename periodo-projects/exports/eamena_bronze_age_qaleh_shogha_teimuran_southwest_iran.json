@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-195",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "28d77fa3-e895-4793-b3f3-861fecd7d634"
                     },
-                    "label": "Bronze Age, Qaleh/Shogha-Teimuran (Southwest Iran)",
+                    "label": "Bronze Age, Qaleh/Shogha-Teimuran",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-23",
@@ -49,7 +49,7 @@
                         "label": "-1000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '28d77fa3-e895-4793-b3f3-861fecd7d634' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/28d77fa3-e895-4793-b3f3-861fecd7d634' "
                 }
             },
             "source": {

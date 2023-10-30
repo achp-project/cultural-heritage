@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-190",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "ca13e033-9922-4248-9184-ba5ae9fb0845"
                     },
-                    "label": "Iron Age 3 (Southern Levant)",
+                    "label": "Iron Age 3",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-37",
@@ -57,7 +57,7 @@
                         "label": "-550"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'ca13e033-9922-4248-9184-ba5ae9fb0845' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/ca13e033-9922-4248-9184-ba5ae9fb0845' "
                 }
             },
             "source": {

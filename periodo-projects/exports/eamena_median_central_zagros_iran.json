@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-183",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "f9a3958a-d7af-445f-b7b1-d751f2044446"
                     },
-                    "label": "Median (Central Zagros, Iran)",
+                    "label": "Median",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-39",
@@ -49,7 +49,7 @@
                         "label": "-585"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'f9a3958a-d7af-445f-b7b1-d751f2044446' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/f9a3958a-d7af-445f-b7b1-d751f2044446' "
                 }
             },
             "source": {

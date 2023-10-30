@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-19",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "47ba6821-311f-41a9-ba55-cf2d3e65824d"
                     },
-                    "label": "Bronze Age (Southern Mesopotamia)",
+                    "label": "Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -52,7 +52,7 @@
                         "label": "-900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '47ba6821-311f-41a9-ba55-cf2d3e65824d' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/47ba6821-311f-41a9-ba55-cf2d3e65824d' "
                 }
             },
             "source": {

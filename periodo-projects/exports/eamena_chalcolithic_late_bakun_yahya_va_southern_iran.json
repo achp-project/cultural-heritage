@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-160",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "d433732f-a9f3-4ba0-84dd-55c50c3133e0"
                     },
-                    "label": "Chalcolithic, Late Bakun/Yahya VA (Southern Iran)",
+                    "label": "Chalcolithic, Late Bakun/Yahya VA",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-6",
@@ -49,7 +49,7 @@
                         "label": "-4000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'd433732f-a9f3-4ba0-84dd-55c50c3133e0' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/d433732f-a9f3-4ba0-84dd-55c50c3133e0' "
                 }
             },
             "source": {

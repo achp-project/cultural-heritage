@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-66",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "0b32429d-650b-4e3a-89e8-1a143b7a35dc"
                     },
-                    "label": "Late South Arabian (Southern Arabia)",
+                    "label": "Late South Arabian",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-27",
@@ -49,7 +49,7 @@
                         "label": "640"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '0b32429d-650b-4e3a-89e8-1a143b7a35dc' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/0b32429d-650b-4e3a-89e8-1a143b7a35dc' "
                 }
             },
             "source": {

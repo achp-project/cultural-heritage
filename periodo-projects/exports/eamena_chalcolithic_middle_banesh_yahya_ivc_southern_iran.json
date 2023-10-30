@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-162",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "7f819beb-fa7d-4a95-867a-fdcf80ab9d95"
                     },
-                    "label": "Chalcolithic, Middle Banesh/Yahya IVC (Southern Iran)",
+                    "label": "Chalcolithic, Middle Banesh/Yahya IVC",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-6",
@@ -49,7 +49,7 @@
                         "label": "-2900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '7f819beb-fa7d-4a95-867a-fdcf80ab9d95' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/7f819beb-fa7d-4a95-867a-fdcf80ab9d95' "
                 }
             },
             "source": {

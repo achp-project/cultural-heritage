@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-180",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "c09c3ae6-86b9-44da-9e58-5514a7426e59"
                     },
-                    "label": "Early Iron Age (North Central Iran)",
+                    "label": "Early Iron Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-39",
@@ -49,7 +49,7 @@
                         "label": "-800"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'c09c3ae6-86b9-44da-9e58-5514a7426e59' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/c09c3ae6-86b9-44da-9e58-5514a7426e59' "
                 }
             },
             "source": {

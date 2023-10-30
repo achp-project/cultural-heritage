@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-165",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "d8c35eff-d572-4478-ba53-9b2787a3f149"
                     },
-                    "label": "Neolithic, Early/Aceramic/Pre-Pottery B (Levant/Mesopotamia)",
+                    "label": "Neolithic, Early/Aceramic/Pre-Pottery B",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-36",
@@ -73,7 +73,7 @@
                         "label": "-6800"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'd8c35eff-d572-4478-ba53-9b2787a3f149' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/d8c35eff-d572-4478-ba53-9b2787a3f149' "
                 }
             },
             "source": {

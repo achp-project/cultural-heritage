@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-157",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "f6f49f7f-198f-4b5e-b6ef-8ae1b34845cf"
                     },
-                    "label": "Nabataean (Levant/Northern Arabia)",
+                    "label": "Nabataean",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-25",
@@ -69,7 +69,7 @@
                         "label": "400"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'f6f49f7f-198f-4b5e-b6ef-8ae1b34845cf' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/f6f49f7f-198f-4b5e-b6ef-8ae1b34845cf' "
                 }
             },
             "source": {

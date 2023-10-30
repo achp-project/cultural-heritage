@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-123",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "b007aef8-a03d-49ca-a142-82d987e18145"
                     },
-                    "label": "Islamic, Middle [Fatimid/Ayyubid/Crusader] (Levant/Arabia)",
+                    "label": "Islamic, Middle [Fatimid/Ayyubid/Crusader]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-28",
@@ -89,7 +89,7 @@
                         "label": "1300"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'b007aef8-a03d-49ca-a142-82d987e18145' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/b007aef8-a03d-49ca-a142-82d987e18145' "
                 }
             },
             "source": {

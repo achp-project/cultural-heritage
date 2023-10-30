@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-188",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "a12b1ef7-5ede-4325-9d38-9d05e3733ca6"
                     },
-                    "label": "Iron Age, Pre-Achaemenid (Southeast Iran)",
+                    "label": "Iron Age, Pre-Achaemenid",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-39",
@@ -49,7 +49,7 @@
                         "label": "-500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'a12b1ef7-5ede-4325-9d38-9d05e3733ca6' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a12b1ef7-5ede-4325-9d38-9d05e3733ca6' "
                 }
             },
             "source": {

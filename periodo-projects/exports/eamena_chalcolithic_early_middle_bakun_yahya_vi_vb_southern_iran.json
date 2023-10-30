@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-163",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "32d06955-b1a5-4cc7-9b0f-4459c498a295"
                     },
-                    "label": "Chalcolithic, Early-Middle Bakun/Yahya VI-VB (Southern Iran)",
+                    "label": "Chalcolithic, Early-Middle Bakun/Yahya VI-VB",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-6",
@@ -49,7 +49,7 @@
                         "label": "-4400"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '32d06955-b1a5-4cc7-9b0f-4459c498a295' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/32d06955-b1a5-4cc7-9b0f-4459c498a295' "
                 }
             },
             "source": {

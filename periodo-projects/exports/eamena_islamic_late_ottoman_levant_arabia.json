@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-122",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "fcae014b-7d62-4469-8154-7cbfa4feb3cb"
                     },
-                    "label": "Islamic, Late [Ottoman] (Levant/Arabia)",
+                    "label": "Islamic, Late [Ottoman]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-28",
@@ -89,7 +89,7 @@
                         "label": "1900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'fcae014b-7d62-4469-8154-7cbfa4feb3cb' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/fcae014b-7d62-4469-8154-7cbfa4feb3cb' "
                 }
             },
             "source": {

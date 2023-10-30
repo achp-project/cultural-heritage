@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-129",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "bf68ff16-c5f2-418f-b22c-23bf43960e26"
                     },
-                    "label": "Second World War (MENA)",
+                    "label": "Second World War",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-10",
@@ -129,7 +129,7 @@
                         "label": "1945"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'bf68ff16-c5f2-418f-b22c-23bf43960e26' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/bf68ff16-c5f2-418f-b22c-23bf43960e26' "
                 }
             },
             "source": {

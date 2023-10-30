@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-148",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "3b64b2f3-e7bc-4cb3-9670-a45013c34f14"
                     },
-                    "label": "Neolithic, Late/Ceramic (Central Zagros/Khuzestan, Iran)",
+                    "label": "Neolithic, Late/Ceramic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-235",
@@ -49,7 +49,7 @@
                         "label": "-6000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '3b64b2f3-e7bc-4cb3-9670-a45013c34f14' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/3b64b2f3-e7bc-4cb3-9670-a45013c34f14' "
                 }
             },
             "source": {

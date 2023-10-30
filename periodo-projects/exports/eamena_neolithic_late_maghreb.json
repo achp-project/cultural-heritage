@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-126",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "0aa04137-b66f-40f7-b2d4-c05d6826176a"
                     },
-                    "label": "Neolithic, Late (Maghreb)",
+                    "label": "Neolithic, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-35",
@@ -69,7 +69,7 @@
                         "label": "-1000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '0aa04137-b66f-40f7-b2d4-c05d6826176a' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/0aa04137-b66f-40f7-b2d4-c05d6826176a' "
                 }
             },
             "source": {

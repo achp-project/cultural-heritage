@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-38",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "5bd42869-3320-49db-8d6d-0ada8e52c66d"
                     },
-                    "label": "Iron Age (Arabia)",
+                    "label": "Iron Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -68,7 +68,7 @@
                         "label": "-100"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '5bd42869-3320-49db-8d6d-0ada8e52c66d' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5bd42869-3320-49db-8d6d-0ada8e52c66d' "
                 }
             },
             "source": {

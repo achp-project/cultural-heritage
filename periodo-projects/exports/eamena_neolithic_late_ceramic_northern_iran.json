@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-147",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "88f3f8f8-4210-4662-9d95-c5697ca2ef5f"
                     },
-                    "label": "Neolithic, Late/Ceramic (Northern Iran)",
+                    "label": "Neolithic, Late/Ceramic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-235",
@@ -49,7 +49,7 @@
                         "label": "-5200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '88f3f8f8-4210-4662-9d95-c5697ca2ef5f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/88f3f8f8-4210-4662-9d95-c5697ca2ef5f' "
                 }
             },
             "source": {

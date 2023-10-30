@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-175",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "40dcc720-d5c8-4ab3-a055-bae2bc46eaaf"
                     },
-                    "label": "Islamic, Early [Umayyad/Abbasid] (North Africa)",
+                    "label": "Islamic, Early [Umayyad/Abbasid]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-31",
@@ -73,7 +73,7 @@
                         "label": "900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '40dcc720-d5c8-4ab3-a055-bae2bc46eaaf' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/40dcc720-d5c8-4ab3-a055-bae2bc46eaaf' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-227",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "aabd0e9f-4c26-427d-8afd-bd3ef3be28d5"
                     },
-                    "label": "New Kingdom (Egypt)",
+                    "label": "New Kingdom",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-32",
@@ -49,7 +49,7 @@
                         "label": "-1050"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'aabd0e9f-4c26-427d-8afd-bd3ef3be28d5' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/aabd0e9f-4c26-427d-8afd-bd3ef3be28d5' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-226",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "adac94ba-46c9-44db-9010-fa3fa5a85731"
                     },
-                    "label": "First Intermediate (Egypt)",
+                    "label": "First Intermediate",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-32",
@@ -49,7 +49,7 @@
                         "label": "-2050"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'adac94ba-46c9-44db-9010-fa3fa5a85731' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/adac94ba-46c9-44db-9010-fa3fa5a85731' "
                 }
             },
             "source": {

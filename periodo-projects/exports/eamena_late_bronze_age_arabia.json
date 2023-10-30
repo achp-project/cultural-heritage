@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-55",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "30320b5a-67ea-44f8-89d7-6ae460209b4b"
                     },
-                    "label": "Late Bronze Age (Arabia)",
+                    "label": "Late Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-20",
@@ -69,7 +69,7 @@
                         "label": "-1500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '30320b5a-67ea-44f8-89d7-6ae460209b4b' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/30320b5a-67ea-44f8-89d7-6ae460209b4b' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-28",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "d53b2f66-2731-476e-be40-8351742f6a18"
                     },
-                    "label": "Islamic (Levant/Arabia)",
+                    "label": "Islamic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -88,7 +88,7 @@
                         "label": "1900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'd53b2f66-2731-476e-be40-8351742f6a18' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/d53b2f66-2731-476e-be40-8351742f6a18' "
                 }
             },
             "source": {

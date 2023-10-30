@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-99",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "29e47f16-9491-403d-9093-eb710731c7ad"
                     },
-                    "label": "Palaeolithic, Lower (Iran)",
+                    "label": "Palaeolithic, Lower",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-9",
@@ -49,7 +49,7 @@
                         "label": "-250000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '29e47f16-9491-403d-9093-eb710731c7ad' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/29e47f16-9491-403d-9093-eb710731c7ad' "
                 }
             },
             "source": {

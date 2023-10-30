@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-16",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "6fd0bf51-554c-4572-81ca-c6f25543c77f"
                     },
-                    "label": "Bronze Age (Northwest Iran)",
+                    "label": "Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "-1250"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '6fd0bf51-554c-4572-81ca-c6f25543c77f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/6fd0bf51-554c-4572-81ca-c6f25543c77f' "
                 }
             },
             "source": {

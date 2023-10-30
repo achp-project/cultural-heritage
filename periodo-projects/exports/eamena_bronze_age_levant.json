@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-21",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "fb5d9c7e-ca5e-4324-97ac-bab673391ecd"
                     },
-                    "label": "Bronze Age (Levant)",
+                    "label": "Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -64,7 +64,7 @@
                         "label": "-1200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'fb5d9c7e-ca5e-4324-97ac-bab673391ecd' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/fb5d9c7e-ca5e-4324-97ac-bab673391ecd' "
                 }
             },
             "source": {

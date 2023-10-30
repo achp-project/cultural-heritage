@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-209",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "4a209a73-8e5f-4fa1-a21f-e4f7bc9f5baf"
                     },
-                    "label": "Early Bronze Age, 4 (Northern Levant)",
+                    "label": "Early Bronze Age, 4",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-21",
@@ -53,7 +53,7 @@
                         "label": "-2000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '4a209a73-8e5f-4fa1-a21f-e4f7bc9f5baf' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/4a209a73-8e5f-4fa1-a21f-e4f7bc9f5baf' "
                 }
             },
             "source": {

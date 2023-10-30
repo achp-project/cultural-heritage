@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-203",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "5c92b00e-a94f-4c00-ac14-91acffa651ae"
                     },
-                    "label": "Epipalaeolithic (North Africa)",
+                    "label": "Epipalaeolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -72,7 +72,7 @@
                         "label": "-7000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '5c92b00e-a94f-4c00-ac14-91acffa651ae' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5c92b00e-a94f-4c00-ac14-91acffa651ae' "
                 }
             },
             "source": {

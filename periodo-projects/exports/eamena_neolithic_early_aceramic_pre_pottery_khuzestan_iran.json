@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-150",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "0b9cef5e-6fd8-4121-bbc6-9e0d64e94d00"
                     },
-                    "label": "Neolithic, Early/Aceramic/Pre-pottery (Khuzestan, Iran)",
+                    "label": "Neolithic, Early/Aceramic/Pre-pottery",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-235",
@@ -49,7 +49,7 @@
                         "label": "-7000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '0b9cef5e-6fd8-4121-bbc6-9e0d64e94d00' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/0b9cef5e-6fd8-4121-bbc6-9e0d64e94d00' "
                 }
             },
             "source": {

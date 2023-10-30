@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-75",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "2b0508a2-7596-4455-b73a-07c4b455fa66"
                     },
-                    "label": "Early Iron Age (Arabia)",
+                    "label": "Early Iron Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-38",
@@ -69,7 +69,7 @@
                         "label": "-1000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '2b0508a2-7596-4455-b73a-07c4b455fa66' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/2b0508a2-7596-4455-b73a-07c4b455fa66' "
                 }
             },
             "source": {

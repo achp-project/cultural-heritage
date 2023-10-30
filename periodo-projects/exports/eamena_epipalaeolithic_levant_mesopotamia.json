@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-11",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "b9605ab4-aba0-4030-819a-0ca38e75c87e"
                     },
-                    "label": "Epipalaeolithic (Levant/Mesopotamia)",
+                    "label": "Epipalaeolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -72,7 +72,7 @@
                         "label": "-10000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'b9605ab4-aba0-4030-819a-0ca38e75c87e' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/b9605ab4-aba0-4030-819a-0ca38e75c87e' "
                 }
             },
             "source": {

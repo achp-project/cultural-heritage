@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-216",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "8d397953-83c4-478a-8387-04d89fe68408"
                     },
-                    "label": "Palaeolithic, Lower (Levant/Arabia/Mesopotamia)",
+                    "label": "Palaeolithic, Lower",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-8",
@@ -97,7 +97,7 @@
                         "label": "-250000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '8d397953-83c4-478a-8387-04d89fe68408' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/8d397953-83c4-478a-8387-04d89fe68408' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-3",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "5de9594e-4f42-488b-80bb-1c300c1cdf30"
                     },
-                    "label": "Chalcolithic (Central Zagros, Iran)",
+                    "label": "Chalcolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "-3000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '5de9594e-4f42-488b-80bb-1c300c1cdf30' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5de9594e-4f42-488b-80bb-1c300c1cdf30' "
                 }
             },
             "source": {

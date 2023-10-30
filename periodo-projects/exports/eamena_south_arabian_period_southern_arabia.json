@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-27",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "5a0c2fcb-1401-42e6-bdec-d0d8bc402524"
                     },
-                    "label": "South Arabian Period (Southern Arabia)",
+                    "label": "South Arabian Period",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "640"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '5a0c2fcb-1401-42e6-bdec-d0d8bc402524' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5a0c2fcb-1401-42e6-bdec-d0d8bc402524' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-143",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "c8a1a6c0-8bd7-477f-a58a-339014a79d7f"
                     },
-                    "label": "Iron Age, Neo-Babylonian (Mesopotamia)",
+                    "label": "Iron Age, Neo-Babylonian",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-37",
@@ -57,7 +57,7 @@
                         "label": "-550"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'c8a1a6c0-8bd7-477f-a58a-339014a79d7f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/c8a1a6c0-8bd7-477f-a58a-339014a79d7f' "
                 }
             },
             "source": {

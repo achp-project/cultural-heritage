@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-61",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "0648dc09-480d-4fa3-a819-21dee7a6d9f6"
                     },
-                    "label": "Chalcolithic, Late 2 (Northern Mesopotamia)",
+                    "label": "Chalcolithic, Late 2",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-4",
@@ -53,7 +53,7 @@
                         "label": "-3800"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '0648dc09-480d-4fa3-a819-21dee7a6d9f6' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/0648dc09-480d-4fa3-a819-21dee7a6d9f6' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-213",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "95f3ac82-e389-4bbe-9f89-7284b2888d63"
                     },
-                    "label": "Islamic, Middle [Abbasid] (Iraq)",
+                    "label": "Islamic, Middle [Abbasid]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-29",
@@ -49,7 +49,7 @@
                         "label": "1250"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '95f3ac82-e389-4bbe-9f89-7284b2888d63' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/95f3ac82-e389-4bbe-9f89-7284b2888d63' "
                 }
             },
             "source": {

@@ -135,9 +135,9 @@ for i in range(len(df_cultural_periods)):
 	# - genid value
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["id"] = genid_new
     # - locator
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["source"]['locator'] = ''
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["source"]['locator'] = uuid
 	# - label
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['label'] = culture_region
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['label'] = culture # culture_region
 	# - localizedLabels - en
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]["localizedLabels"]['en'] = [culture]
 	# - localizedLabels - ar
@@ -184,7 +184,7 @@ for i in range(len(df_cultural_periods)):
 	# - note
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['note'] = ''
 	# - editorialNote
-	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['editorialNote'] = ''
+	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['periods'][genid_new]['editorialNote'] = "The locator '%s' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/%s' " % (uuid, uuid)
 	# - citation
 	json_periodo['authorities']['https://client.perio.do/.well-known/genid/eamena-authority']['source']['citation'] = 'University of Oxford, University of Southampton. (2023). EAMENA Database. Retrieved from https://database.eamena.org (Accessed: 2023-10-01).'
 	# - title

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-222",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "79da95a0-63a4-4449-90c0-ba4f2d097f80"
                     },
-                    "label": "Neolithic, Late (Egypt)",
+                    "label": "Neolithic, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-33",
@@ -49,7 +49,7 @@
                         "label": "-4400"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '79da95a0-63a4-4449-90c0-ba4f2d097f80' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/79da95a0-63a4-4449-90c0-ba4f2d097f80' "
                 }
             },
             "source": {

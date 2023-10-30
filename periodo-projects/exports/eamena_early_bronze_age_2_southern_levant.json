@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-82",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "7b65e7b5-38c6-46fb-bee7-272bda43112d"
                     },
-                    "label": "Early Bronze Age 2 (Southern Levant)",
+                    "label": "Early Bronze Age 2",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-21",
@@ -57,7 +57,7 @@
                         "label": "-2800"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '7b65e7b5-38c6-46fb-bee7-272bda43112d' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/7b65e7b5-38c6-46fb-bee7-272bda43112d' "
                 }
             },
             "source": {

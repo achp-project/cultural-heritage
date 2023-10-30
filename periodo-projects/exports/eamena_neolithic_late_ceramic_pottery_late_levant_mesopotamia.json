@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-103",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "1a17e656-1352-4351-9afa-55c5ee87cc86"
                     },
-                    "label": "Neolithic, Late/Ceramic/Pottery, Late (Levant/Mesopotamia)",
+                    "label": "Neolithic, Late/Ceramic/Pottery, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-36",
@@ -73,7 +73,7 @@
                         "label": "-5000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '1a17e656-1352-4351-9afa-55c5ee87cc86' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/1a17e656-1352-4351-9afa-55c5ee87cc86' "
                 }
             },
             "source": {

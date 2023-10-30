@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-6",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "5a2c038d-393f-4601-99c7-0e4abe5788cc"
                     },
-                    "label": "Chalcolithic (Southern Iran)",
+                    "label": "Chalcolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "-2900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '5a2c038d-393f-4601-99c7-0e4abe5788cc' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5a2c038d-393f-4601-99c7-0e4abe5788cc' "
                 }
             },
             "source": {

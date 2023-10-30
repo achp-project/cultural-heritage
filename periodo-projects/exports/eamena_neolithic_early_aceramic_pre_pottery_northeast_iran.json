@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-149",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "60e41f61-ccd7-4239-bce0-bdc01b12eca7"
                     },
-                    "label": "Neolithic, Early/Aceramic/Pre-pottery (Northeast Iran)",
+                    "label": "Neolithic, Early/Aceramic/Pre-pottery",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-235",
@@ -49,7 +49,7 @@
                         "label": "-6200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '60e41f61-ccd7-4239-bce0-bdc01b12eca7' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/60e41f61-ccd7-4239-bce0-bdc01b12eca7' "
                 }
             },
             "source": {

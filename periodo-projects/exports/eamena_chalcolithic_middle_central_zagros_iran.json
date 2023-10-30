@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-63",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "3b950bb6-4a9e-4ca0-b234-41329183830f"
                     },
-                    "label": "Chalcolithic, Middle (Central Zagros, Iran)",
+                    "label": "Chalcolithic, Middle",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-3",
@@ -49,7 +49,7 @@
                         "label": "-3800"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '3b950bb6-4a9e-4ca0-b234-41329183830f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/3b950bb6-4a9e-4ca0-b234-41329183830f' "
                 }
             },
             "source": {

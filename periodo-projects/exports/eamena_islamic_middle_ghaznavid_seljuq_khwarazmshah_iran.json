@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-114",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "b4328a1f-1fde-4c78-aaf5-d2dbac673e4f"
                     },
-                    "label": "Islamic, Middle [Ghaznavid/Seljuq/Khwarazmshah] (Iran)",
+                    "label": "Islamic, Middle [Ghaznavid/Seljuq/Khwarazmshah]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-30",
@@ -49,7 +49,7 @@
                         "label": "1200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'b4328a1f-1fde-4c78-aaf5-d2dbac673e4f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/b4328a1f-1fde-4c78-aaf5-d2dbac673e4f' "
                 }
             },
             "source": {

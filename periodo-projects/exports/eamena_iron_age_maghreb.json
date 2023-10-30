@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-40",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "bea17415-14f7-4945-bfb9-d4e6a0f773d9"
                     },
-                    "label": "Iron Age (Maghreb)",
+                    "label": "Iron Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -68,7 +68,7 @@
                         "label": "-500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'bea17415-14f7-4945-bfb9-d4e6a0f773d9' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/bea17415-14f7-4945-bfb9-d4e6a0f773d9' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-233",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "0dcddf9a-d179-42b8-b76d-e947111af447"
                     },
-                    "label": "Chalcolithic, Late (Northern Iran)",
+                    "label": "Chalcolithic, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-0",
@@ -49,7 +49,7 @@
                         "label": "-3300"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '0dcddf9a-d179-42b8-b76d-e947111af447' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/0dcddf9a-d179-42b8-b76d-e947111af447' "
                 }
             },
             "source": {

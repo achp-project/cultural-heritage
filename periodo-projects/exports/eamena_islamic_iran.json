@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-30",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "1339bc8d-247f-4c72-994c-28aa61e4fe0d"
                     },
-                    "label": "Islamic (Iran)",
+                    "label": "Islamic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "1900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '1339bc8d-247f-4c72-994c-28aa61e4fe0d' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/1339bc8d-247f-4c72-994c-28aa61e4fe0d' "
                 }
             },
             "source": {

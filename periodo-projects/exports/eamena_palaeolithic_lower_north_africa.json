@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-89",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "294c91da-bf74-47df-87a5-9006dae43f0e"
                     },
-                    "label": "Palaeolithic, Lower (North Africa)",
+                    "label": "Palaeolithic, Lower",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-7",
@@ -73,7 +73,7 @@
                         "label": "-250000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '294c91da-bf74-47df-87a5-9006dae43f0e' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/294c91da-bf74-47df-87a5-9006dae43f0e' "
                 }
             },
             "source": {

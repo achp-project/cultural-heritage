@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-86",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "3a567584-e636-4afe-b7ca-ecd141475779"
                     },
-                    "label": "Chalcolithic, Early Susiana (Khuzestan, Iran)",
+                    "label": "Chalcolithic, Early Susiana",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-2",
@@ -49,7 +49,7 @@
                         "label": "-5700"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '3a567584-e636-4afe-b7ca-ecd141475779' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/3a567584-e636-4afe-b7ca-ecd141475779' "
                 }
             },
             "source": {

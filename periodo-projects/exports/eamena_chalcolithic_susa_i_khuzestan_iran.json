@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-83",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "d3b04833-7b3e-4f17-9135-1e647697a463"
                     },
-                    "label": "Chalcolithic, Susa I (Khuzestan, Iran)",
+                    "label": "Chalcolithic, Susa I",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-2",
@@ -49,7 +49,7 @@
                         "label": "-3700"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'd3b04833-7b3e-4f17-9135-1e647697a463' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/d3b04833-7b3e-4f17-9135-1e647697a463' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-228",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "19062f2f-f15e-4d2c-bc28-e7dfc05a7eb4"
                     },
-                    "label": "Old Kingdom (Egypt)",
+                    "label": "Old Kingdom",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-32",
@@ -49,7 +49,7 @@
                         "label": "2150"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '19062f2f-f15e-4d2c-bc28-e7dfc05a7eb4' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/19062f2f-f15e-4d2c-bc28-e7dfc05a7eb4' "
                 }
             },
             "source": {

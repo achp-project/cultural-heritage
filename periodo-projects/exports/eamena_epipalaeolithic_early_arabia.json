@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-200",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "451e7c8e-ce1b-498d-a952-9809e5a46674"
                     },
-                    "label": "Epipalaeolithic, Early (Arabia)",
+                    "label": "Epipalaeolithic, Early",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-12",
@@ -69,7 +69,7 @@
                         "label": "-9000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '451e7c8e-ce1b-498d-a952-9809e5a46674' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/451e7c8e-ce1b-498d-a952-9809e5a46674' "
                 }
             },
             "source": {

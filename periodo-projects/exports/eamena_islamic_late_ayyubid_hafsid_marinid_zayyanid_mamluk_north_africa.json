@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-178",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "aa4dd772-91ad-4e47-98f6-786f7fd3f002"
                     },
-                    "label": "Islamic, Late [Ayyubid/Hafsid/Marinid/Zayyanid/Mamluk] (North Africa)",
+                    "label": "Islamic, Late [Ayyubid/Hafsid/Marinid/Zayyanid/Mamluk]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-31",
@@ -73,7 +73,7 @@
                         "label": "1500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'aa4dd772-91ad-4e47-98f6-786f7fd3f002' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/aa4dd772-91ad-4e47-98f6-786f7fd3f002' "
                 }
             },
             "source": {

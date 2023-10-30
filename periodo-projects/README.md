@@ -9,6 +9,8 @@ Our goal is to export EAMENA/Arches cultural periods, and subperiods, as new ent
 - a geographical extension (`spatialCoverage`)
 - an authority (`authorities`)
 
+PeriodO has a [PeriodO client](https://client.perio.do/?page=open-backend)
+
 An example of the `Predynastic` JSON is [here](https://github.com/eamena-project/eamena-arches-dev/blob/main/projects/periodo/periodo-period-cp44786m7.json) [^1].
 
 ## EAMENA Data
@@ -21,7 +23,7 @@ EAMENA has [this list](https://github.com/achp-project/cultural-heritage/blob/ma
     <em>EAMENA periods (filtered on 'Pre-Dynastic')</em>
 </p>
 
-These these periods and subperiods have [these hierachical reltionships](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/rdm-bu-period-levels.tsv):
+These these periods and subperiods have [these hierachical relationships](https://github.com/achp-project/cultural-heritage/blob/main/periodo-projects/rdm-bu-period-levels.tsv):
 
 <p align="center">
   <img alt="img-name" src="../www/periodo-periods-rel-eamena.png" width="700">

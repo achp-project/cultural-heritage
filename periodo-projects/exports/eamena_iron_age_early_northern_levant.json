@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-111",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "92bb07c0-c7e0-4533-9f49-66432d0baa8e"
                     },
-                    "label": "Iron Age, Early (Northern Levant)",
+                    "label": "Iron Age, Early",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-37",
@@ -53,7 +53,7 @@
                         "label": "-900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '92bb07c0-c7e0-4533-9f49-66432d0baa8e' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/92bb07c0-c7e0-4533-9f49-66432d0baa8e' "
                 }
             },
             "source": {

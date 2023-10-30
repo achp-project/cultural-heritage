@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-15",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "14e3a478-1933-4343-9025-0ba1cc3dd0ec"
                     },
-                    "label": "Pre-Dynastic (Egypt)",
+                    "label": "Pre-Dynastic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "-3000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '14e3a478-1933-4343-9025-0ba1cc3dd0ec' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/14e3a478-1933-4343-9025-0ba1cc3dd0ec' "
                 }
             },
             "source": {

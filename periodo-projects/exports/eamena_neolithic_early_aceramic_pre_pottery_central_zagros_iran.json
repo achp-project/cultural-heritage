@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-153",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "59f266a3-b1b4-473f-80b6-fdf90d56e5f3"
                     },
-                    "label": "Neolithic, Early/Aceramic/Pre-pottery (Central Zagros, Iran)",
+                    "label": "Neolithic, Early/Aceramic/Pre-pottery",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-235",
@@ -49,7 +49,7 @@
                         "label": "-7000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '59f266a3-b1b4-473f-80b6-fdf90d56e5f3' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/59f266a3-b1b4-473f-80b6-fdf90d56e5f3' "
                 }
             },
             "source": {

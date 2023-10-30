@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-159",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "4e5e3766-8c62-4f73-b794-508532ac96d9"
                     },
-                    "label": "Sasanian (Levant/Mesopotamia/Iran/Northern Arabia)",
+                    "label": "Sasanian",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-25",
@@ -81,7 +81,7 @@
                         "label": "640"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '4e5e3766-8c62-4f73-b794-508532ac96d9' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/4e5e3766-8c62-4f73-b794-508532ac96d9' "
                 }
             },
             "source": {

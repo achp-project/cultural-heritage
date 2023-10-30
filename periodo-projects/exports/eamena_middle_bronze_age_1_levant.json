@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-120",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "e995d8b1-1aeb-4f21-be3f-fd029f51001c"
                     },
-                    "label": "Middle Bronze Age 1 (Levant)",
+                    "label": "Middle Bronze Age 1",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-21",
@@ -65,7 +65,7 @@
                         "label": "-1800"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'e995d8b1-1aeb-4f21-be3f-fd029f51001c' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/e995d8b1-1aeb-4f21-be3f-fd029f51001c' "
                 }
             },
             "source": {

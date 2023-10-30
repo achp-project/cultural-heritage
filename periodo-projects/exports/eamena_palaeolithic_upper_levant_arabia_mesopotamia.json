@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-217",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "01292037-a5e1-4789-9212-7171e3138b89"
                     },
-                    "label": "Palaeolithic, Upper (Levant/Arabia/Mesopotamia)",
+                    "label": "Palaeolithic, Upper",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-8",
@@ -97,7 +97,7 @@
                         "label": "-18000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '01292037-a5e1-4789-9212-7171e3138b89' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/01292037-a5e1-4789-9212-7171e3138b89' "
                 }
             },
             "source": {

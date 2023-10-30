@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-1",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "d763fbfa-1dad-438e-a6b1-d2291c453446"
                     },
-                    "label": "Chalcolithic (Levant)",
+                    "label": "Chalcolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -64,7 +64,7 @@
                         "label": "-3000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'd763fbfa-1dad-438e-a6b1-d2291c453446' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/d763fbfa-1dad-438e-a6b1-d2291c453446' "
                 }
             },
             "source": {

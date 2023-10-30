@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-115",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "17014583-8f0c-4962-972c-2dc8c9c9f014"
                     },
-                    "label": "Islamic, Late [Timurid/Safavid/Qajar] (Iran)",
+                    "label": "Islamic, Late [Timurid/Safavid/Qajar]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-30",
@@ -49,7 +49,7 @@
                         "label": "1900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '17014583-8f0c-4962-972c-2dc8c9c9f014' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/17014583-8f0c-4962-972c-2dc8c9c9f014' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-106",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "bd1eacf4-c316-4475-90c5-ce344799f695"
                     },
-                    "label": "Neolithic, Middle (Arabia)",
+                    "label": "Neolithic, Middle",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-34",
@@ -69,7 +69,7 @@
                         "label": "-4000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'bd1eacf4-c316-4475-90c5-ce344799f695' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/bd1eacf4-c316-4475-90c5-ce344799f695' "
                 }
             },
             "source": {

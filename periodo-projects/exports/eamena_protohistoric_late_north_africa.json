@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-46",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "6b5ef3f3-8c12-4d18-8767-b7f725eb0cf0"
                     },
-                    "label": "Protohistoric, Late (North Africa)",
+                    "label": "Protohistoric, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-26",
@@ -73,7 +73,7 @@
                         "label": "640"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '6b5ef3f3-8c12-4d18-8767-b7f725eb0cf0' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/6b5ef3f3-8c12-4d18-8767-b7f725eb0cf0' "
                 }
             },
             "source": {

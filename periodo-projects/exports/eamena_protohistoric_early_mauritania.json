@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-47",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "6307811e-6095-4dfd-b0cf-d1ca78bd67b4"
                     },
-                    "label": "Protohistoric, Early (Mauritania)",
+                    "label": "Protohistoric, Early",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-26",
@@ -49,7 +49,7 @@
                         "label": "1"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '6307811e-6095-4dfd-b0cf-d1ca78bd67b4' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/6307811e-6095-4dfd-b0cf-d1ca78bd67b4' "
                 }
             },
             "source": {

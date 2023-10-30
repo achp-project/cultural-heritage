@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-225",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "ff798b32-107c-446b-8078-ea909b79a815"
                     },
-                    "label": "Late Dynastic (Egypt)",
+                    "label": "Late Dynastic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-32",
@@ -49,7 +49,7 @@
                         "label": "-350"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'ff798b32-107c-446b-8078-ea909b79a815' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/ff798b32-107c-446b-8078-ea909b79a815' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-194",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "52dd9d5f-2639-4032-8eed-5ac475bed5e9"
                     },
-                    "label": "Bronze Age, Kaftari/Yahya IVA (Southern Iran)",
+                    "label": "Bronze Age, Kaftari/Yahya IVA",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-23",
@@ -49,7 +49,7 @@
                         "label": "-1500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '52dd9d5f-2639-4032-8eed-5ac475bed5e9' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/52dd9d5f-2639-4032-8eed-5ac475bed5e9' "
                 }
             },
             "source": {

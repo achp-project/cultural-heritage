@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-17",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "e1dd7811-cdcc-43eb-a912-b9deec663bcc"
                     },
-                    "label": "Bronze Age (Khuzestan, Iran)",
+                    "label": "Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "-1100"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'e1dd7811-cdcc-43eb-a912-b9deec663bcc' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/e1dd7811-cdcc-43eb-a912-b9deec663bcc' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-127",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "ed62666b-39db-4538-aadb-018af73781f7"
                     },
-                    "label": "Neolithic, Late (Mauritania)",
+                    "label": "Neolithic, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-35",
@@ -49,7 +49,7 @@
                         "label": "-300"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'ed62666b-39db-4538-aadb-018af73781f7' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/ed62666b-39db-4538-aadb-018af73781f7' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-33",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "8fd86562-4e30-4a3f-91d6-867ba506929e"
                     },
-                    "label": "Neolithic (Egypt)",
+                    "label": "Neolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "-4400"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '8fd86562-4e30-4a3f-91d6-867ba506929e' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/8fd86562-4e30-4a3f-91d6-867ba506929e' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-207",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "a132beb6-2145-4b41-a327-05ea21d0cd0a"
                     },
-                    "label": "Early Bronze Age (Northeast Iran)",
+                    "label": "Early Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-18",
@@ -49,7 +49,7 @@
                         "label": "-2200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'a132beb6-2145-4b41-a327-05ea21d0cd0a' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a132beb6-2145-4b41-a327-05ea21d0cd0a' "
                 }
             },
             "source": {

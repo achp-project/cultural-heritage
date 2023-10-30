@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-50",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "cfb68b57-982c-4aaa-8967-aceed2009e9f"
                     },
-                    "label": "Punic, Late (Maghreb)",
+                    "label": "Punic, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-26",
@@ -69,7 +69,7 @@
                         "label": "-150"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'cfb68b57-982c-4aaa-8967-aceed2009e9f' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/cfb68b57-982c-4aaa-8967-aceed2009e9f' "
                 }
             },
             "source": {

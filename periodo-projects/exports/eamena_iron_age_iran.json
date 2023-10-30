@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-39",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "d71f6c3d-5df3-482d-9b8f-57f2fe135b14"
                     },
-                    "label": "Iron Age (Iran)",
+                    "label": "Iron Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "-330"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'd71f6c3d-5df3-482d-9b8f-57f2fe135b14' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/d71f6c3d-5df3-482d-9b8f-57f2fe135b14' "
                 }
             },
             "source": {

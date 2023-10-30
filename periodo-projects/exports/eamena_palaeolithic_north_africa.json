@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-7",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "ca643895-075f-4d2c-a405-24ce3daa1003"
                     },
-                    "label": "Palaeolithic (North Africa)",
+                    "label": "Palaeolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -72,7 +72,7 @@
                         "label": "-10000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'ca643895-075f-4d2c-a405-24ce3daa1003' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/ca643895-075f-4d2c-a405-24ce3daa1003' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-101",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "dee11d1c-a0c2-4170-bca0-b69b87d1190d"
                     },
-                    "label": "Palaeolithic, Middle (Iran)",
+                    "label": "Palaeolithic, Middle",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-9",
@@ -49,7 +49,7 @@
                         "label": "-45000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'dee11d1c-a0c2-4170-bca0-b69b87d1190d' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/dee11d1c-a0c2-4170-bca0-b69b87d1190d' "
                 }
             },
             "source": {

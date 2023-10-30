@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-128",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "3acdef80-c036-42cd-bf78-29636133ebc9"
                     },
-                    "label": "First World War (MENA)",
+                    "label": "First World War",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-10",
@@ -129,7 +129,7 @@
                         "label": "1918"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '3acdef80-c036-42cd-bf78-29636133ebc9' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/3acdef80-c036-42cd-bf78-29636133ebc9' "
                 }
             },
             "source": {

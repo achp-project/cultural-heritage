@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-196",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "042dc03d-12a9-4247-998e-97c996b16ff0"
                     },
-                    "label": "Bronze Age, Late Banesh/Yayha IVB (Southern Iran)",
+                    "label": "Bronze Age, Late Banesh/Yayha IVB",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-23",
@@ -49,7 +49,7 @@
                         "label": "-2300"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '042dc03d-12a9-4247-998e-97c996b16ff0' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/042dc03d-12a9-4247-998e-97c996b16ff0' "
                 }
             },
             "source": {

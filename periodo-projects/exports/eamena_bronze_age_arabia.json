@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-20",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "4550d0f3-24c2-4ada-9fbe-52e5974db973"
                     },
-                    "label": "Bronze Age (Arabia)",
+                    "label": "Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -68,7 +68,7 @@
                         "label": "-1500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '4550d0f3-24c2-4ada-9fbe-52e5974db973' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/4550d0f3-24c2-4ada-9fbe-52e5974db973' "
                 }
             },
             "source": {

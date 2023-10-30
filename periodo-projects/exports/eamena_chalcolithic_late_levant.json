@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-78",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "b4faa8f0-6106-4999-b46d-aa5b14613748"
                     },
-                    "label": "Chalcolithic, Late (Levant)",
+                    "label": "Chalcolithic, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-1",
@@ -65,7 +65,7 @@
                         "label": "-3600"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'b4faa8f0-6106-4999-b46d-aa5b14613748' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/b4faa8f0-6106-4999-b46d-aa5b14613748' "
                 }
             },
             "source": {

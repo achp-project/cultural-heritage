@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-77",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "8c3eb073-7914-407a-975d-6ecfb315624c"
                     },
-                    "label": "Chalcolithic, Early (Levant)",
+                    "label": "Chalcolithic, Early",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-1",
@@ -65,7 +65,7 @@
                         "label": "-4500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '8c3eb073-7914-407a-975d-6ecfb315624c' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/8c3eb073-7914-407a-975d-6ecfb315624c' "
                 }
             },
             "source": {

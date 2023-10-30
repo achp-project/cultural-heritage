@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-133",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "5e1606ac-81ee-420a-9a27-b3d53f446602"
                     },
-                    "label": "Roman Imperial, Early (North Africa)",
+                    "label": "Roman Imperial, Early",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-26",
@@ -73,7 +73,7 @@
                         "label": "200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '5e1606ac-81ee-420a-9a27-b3d53f446602' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5e1606ac-81ee-420a-9a27-b3d53f446602' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-24",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "71144f54-34d1-4618-8a30-21c245d5718a"
                     },
-                    "label": "Bronze Age (Northern Mesopotamia)",
+                    "label": "Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -52,7 +52,7 @@
                         "label": "-1200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '71144f54-34d1-4618-8a30-21c245d5718a' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/71144f54-34d1-4618-8a30-21c245d5718a' "
                 }
             },
             "source": {

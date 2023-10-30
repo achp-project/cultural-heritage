@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-81",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "5094c591-8f0b-490f-80b1-34712c37ca05"
                     },
-                    "label": "Early Bronze Age 3 (Southern Levant)",
+                    "label": "Early Bronze Age 3",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-21",
@@ -57,7 +57,7 @@
                         "label": "-2500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '5094c591-8f0b-490f-80b1-34712c37ca05' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5094c591-8f0b-490f-80b1-34712c37ca05' "
                 }
             },
             "source": {

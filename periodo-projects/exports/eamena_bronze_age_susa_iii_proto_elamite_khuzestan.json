@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-173",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "c093d051-7bf9-43b7-bdd8-3c1cf4c1a2d1"
                     },
-                    "label": "Bronze Age, Susa III/Proto-Elamite (Khuzestan)",
+                    "label": "Bronze Age, Susa III/Proto-Elamite",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-17",
@@ -49,7 +49,7 @@
                         "label": "-2675"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'c093d051-7bf9-43b7-bdd8-3c1cf4c1a2d1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/c093d051-7bf9-43b7-bdd8-3c1cf4c1a2d1' "
                 }
             },
             "source": {

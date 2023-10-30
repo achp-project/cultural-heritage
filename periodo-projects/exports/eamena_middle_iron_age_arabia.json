@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-73",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "20c5f4b1-e808-450c-a5bb-fe414de49ca8"
                     },
-                    "label": "Middle Iron Age (Arabia)",
+                    "label": "Middle Iron Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-38",
@@ -69,7 +69,7 @@
                         "label": "-600"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '20c5f4b1-e808-450c-a5bb-fe414de49ca8' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/20c5f4b1-e808-450c-a5bb-fe414de49ca8' "
                 }
             },
             "source": {

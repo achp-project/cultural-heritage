@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-146",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "e3570739-9173-4dca-9edc-9f7e2c4170d3"
                     },
-                    "label": "Iron Age, Post-Assyrian/Achaemenid/Persian (Levant/Mesopotamia)",
+                    "label": "Iron Age, Post-Assyrian/Achaemenid/Persian",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-37",
@@ -73,7 +73,7 @@
                         "label": "-330"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'e3570739-9173-4dca-9edc-9f7e2c4170d3' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/e3570739-9173-4dca-9edc-9f7e2c4170d3' "
                 }
             },
             "source": {

@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-206",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "763b524a-1fad-4248-98be-dbefa86cf68b"
                     },
-                    "label": "Middle Bronze Age (Northeast Iran)",
+                    "label": "Middle Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-18",
@@ -49,7 +49,7 @@
                         "label": "-1800"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '763b524a-1fad-4248-98be-dbefa86cf68b' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/763b524a-1fad-4248-98be-dbefa86cf68b' "
                 }
             },
             "source": {

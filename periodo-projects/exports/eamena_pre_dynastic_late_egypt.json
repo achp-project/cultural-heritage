@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-169",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "feba7c48-521a-4c0a-931e-394804c172e5"
                     },
-                    "label": "Pre-Dynastic, Late (Egypt)",
+                    "label": "Pre-Dynastic, Late",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-15",
@@ -49,7 +49,7 @@
                         "label": "-3000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'feba7c48-521a-4c0a-931e-394804c172e5' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/feba7c48-521a-4c0a-931e-394804c172e5' "
                 }
             },
             "source": {

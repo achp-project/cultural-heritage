@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-14",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "eea3956d-406a-46b2-96c6-ebcbbf9f65b2"
                     },
-                    "label": "Epipalaeolithic (Iran)",
+                    "label": "Epipalaeolithic",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "localizedLabels": {
@@ -48,7 +48,7 @@
                         "label": "-8500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'eea3956d-406a-46b2-96c6-ebcbbf9f65b2' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/eea3956d-406a-46b2-96c6-ebcbbf9f65b2' "
                 }
             },
             "source": {

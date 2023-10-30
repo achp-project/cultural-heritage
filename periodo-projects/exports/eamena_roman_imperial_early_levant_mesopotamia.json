@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-201",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "8006f401-e648-41e4-b191-6b093f869c56"
                     },
-                    "label": "Roman Imperial, Early (Levant/Mesopotamia)",
+                    "label": "Roman Imperial, Early",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-25",
@@ -73,7 +73,7 @@
                         "label": "200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '8006f401-e648-41e4-b191-6b093f869c56' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/8006f401-e648-41e4-b191-6b093f869c56' "
                 }
             },
             "source": {

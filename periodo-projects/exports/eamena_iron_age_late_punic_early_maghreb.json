@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-131",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "cfddd03d-a1ac-4ba7-9f0d-d2050119e331"
                     },
-                    "label": "Iron Age, Late/Punic, Early (Maghreb)",
+                    "label": "Iron Age, Late/Punic, Early",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-40",
@@ -69,7 +69,7 @@
                         "label": "-500"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'cfddd03d-a1ac-4ba7-9f0d-d2050119e331' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/cfddd03d-a1ac-4ba7-9f0d-d2050119e331' "
                 }
             },
             "source": {

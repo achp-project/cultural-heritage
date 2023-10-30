@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-140",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "5b3d0c99-374c-4f1e-9235-f5a0910d4979"
                     },
-                    "label": "Late Bronze Age (Central Zagros, Iran)",
+                    "label": "Late Bronze Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-22",
@@ -49,7 +49,7 @@
                         "label": "-1200"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '5b3d0c99-374c-4f1e-9235-f5a0910d4979' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/5b3d0c99-374c-4f1e-9235-f5a0910d4979' "
                 }
             },
             "source": {

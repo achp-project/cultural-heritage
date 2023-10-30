@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-187",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "7e66ee8c-6c65-4a8a-9e65-dae416fcdede"
                     },
-                    "label": "Iron Age III/Late Iron Age (Northern Iran)",
+                    "label": "Iron Age III/Late Iron Age",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-39",
@@ -49,7 +49,7 @@
                         "label": "-550"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '7e66ee8c-6c65-4a8a-9e65-dae416fcdede' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/7e66ee8c-6c65-4a8a-9e65-dae416fcdede' "
                 }
             },
             "source": {

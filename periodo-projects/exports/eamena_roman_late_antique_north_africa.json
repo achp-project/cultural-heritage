@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-42",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "a0b9a543-0653-4202-a905-f799a7193d59"
                     },
-                    "label": "Roman/Late Antique (North Africa)",
+                    "label": "Roman/Late Antique",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-26",
@@ -73,7 +73,7 @@
                         "label": "640"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'a0b9a543-0653-4202-a905-f799a7193d59' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/a0b9a543-0653-4202-a905-f799a7193d59' "
                 }
             },
             "source": {

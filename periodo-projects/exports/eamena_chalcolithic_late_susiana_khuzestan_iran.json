@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-84",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "27882ec3-3559-4355-8d39-e51190f356f1"
                     },
-                    "label": "Chalcolithic, Late Susiana (Khuzestan, Iran)",
+                    "label": "Chalcolithic, Late Susiana",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-2",
@@ -49,7 +49,7 @@
                         "label": "-3900"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '27882ec3-3559-4355-8d39-e51190f356f1' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/27882ec3-3559-4355-8d39-e51190f356f1' "
                 }
             },
             "source": {

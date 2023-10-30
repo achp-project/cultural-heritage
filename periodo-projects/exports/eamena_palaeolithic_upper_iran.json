@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-100",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "25bbff59-9502-42c1-933f-71488905096d"
                     },
-                    "label": "Palaeolithic, Upper (Iran)",
+                    "label": "Palaeolithic, Upper",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-9",
@@ -49,7 +49,7 @@
                         "label": "-18000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '25bbff59-9502-42c1-933f-71488905096d' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/25bbff59-9502-42c1-933f-71488905096d' "
                 }
             },
             "source": {

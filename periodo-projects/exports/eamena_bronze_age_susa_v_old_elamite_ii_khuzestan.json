@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-172",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "83f2a63e-92d5-4d62-b239-927cf360190c"
                     },
-                    "label": "Bronze Age, Susa V/ Old Elamite II (Khuzestan)",
+                    "label": "Bronze Age, Susa V/ Old Elamite II",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-17",
@@ -49,7 +49,7 @@
                         "label": "-1800"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '83f2a63e-92d5-4d62-b239-927cf360190c' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/83f2a63e-92d5-4d62-b239-927cf360190c' "
                 }
             },
             "source": {

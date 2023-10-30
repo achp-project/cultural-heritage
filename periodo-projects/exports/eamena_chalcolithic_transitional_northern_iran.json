@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-232",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "813e169d-c5ad-46f0-bdb7-176f4d8a8cd8"
                     },
-                    "label": "Chalcolithic, Transitional (Northern Iran)",
+                    "label": "Chalcolithic, Transitional",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-0",
@@ -49,7 +49,7 @@
                         "label": "-4300"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '813e169d-c5ad-46f0-bdb7-176f4d8a8cd8' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/813e169d-c5ad-46f0-bdb7-176f4d8a8cd8' "
                 }
             },
             "source": {

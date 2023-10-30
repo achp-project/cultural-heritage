@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-189",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "04054bf7-939e-48aa-b5d4-d63e29401ebe"
                     },
-                    "label": "Iron Age 1 (Southern Levant)",
+                    "label": "Iron Age 1",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-37",
@@ -57,7 +57,7 @@
                         "label": "-1000"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '04054bf7-939e-48aa-b5d4-d63e29401ebe' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/04054bf7-939e-48aa-b5d4-d63e29401ebe' "
                 }
             },
             "source": {

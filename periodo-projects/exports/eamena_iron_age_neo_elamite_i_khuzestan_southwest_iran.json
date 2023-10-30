@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-181",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "e6ee627d-7d88-4dab-81d1-198010f73785"
                     },
-                    "label": "Iron Age, Neo-Elamite I (Khuzestan/Southwest Iran)",
+                    "label": "Iron Age, Neo-Elamite I",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-39",
@@ -49,7 +49,7 @@
                         "label": "-725"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator 'e6ee627d-7d88-4dab-81d1-198010f73785' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/e6ee627d-7d88-4dab-81d1-198010f73785' "
                 }
             },
             "source": {

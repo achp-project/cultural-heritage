@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-92",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "7683b9a6-3800-4984-a783-fab0ad6e9a87"
                     },
-                    "label": "Early Bronze Age/Early Transcaucasian (Northwest Iran)",
+                    "label": "Early Bronze Age/Early Transcaucasian",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-16",
@@ -49,7 +49,7 @@
                         "label": "-1600"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '7683b9a6-3800-4984-a783-fab0ad6e9a87' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/7683b9a6-3800-4984-a783-fab0ad6e9a87' "
                 }
             },
             "source": {

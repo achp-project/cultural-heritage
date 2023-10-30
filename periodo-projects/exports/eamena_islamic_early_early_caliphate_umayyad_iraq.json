@@ -11,9 +11,9 @@
                     "id": "https://client.perio.do/.well-known/genid/eamena-period-212",
                     "type": "Period",
                     "source": {
-                        "locator": ""
+                        "locator": "21927140-2a97-44d8-bc65-b9294fc16957"
                     },
-                    "label": "Islamic, Early [Early Caliphate/Umayyad] (Iraq)",
+                    "label": "Islamic, Early [Early Caliphate/Umayyad]",
                     "language": "http://lexvo.org/id/iso639-1/en",
                     "languageTag": "en",
                     "broader": "https://client.perio.do/.well-known/genid/eamena-period-29",
@@ -49,7 +49,7 @@
                         "label": "750"
                     },
                     "note": "",
-                    "editorialNote": ""
+                    "editorialNote": "The locator '21927140-2a97-44d8-bc65-b9294fc16957' is the UUID of the cultural period in EAMENA and can be accessed at 'https://database.eamena.org/concepts/21927140-2a97-44d8-bc65-b9294fc16957' "
                 }
             },
             "source": {
