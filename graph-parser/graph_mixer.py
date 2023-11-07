@@ -79,10 +79,6 @@ def rm_selected(checkboxes_dict, remote_source_files):
 			if key in remote_source_files:
 				subset_remote_source_files[key] = remote_source_files[key]
 		print("Selected RMs:", subset_remote_source_files)
-
-	!rm inputResourceModels -R
-	!mkdir -p inputResourceModels
-
 	for (project_name, resource_model_url) in subset_remote_source_files.items():
 		target_filename = f"{project_name}_{resource_model_url.split('/')[-1]}"
 		# print(target_filename)
