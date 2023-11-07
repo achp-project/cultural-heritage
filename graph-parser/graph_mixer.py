@@ -1,12 +1,10 @@
 
 def projects_extent(map_dir = 'cultural-heritage/map-projects/prj-extent/'):
 	"""
-	Return a dictionary of RMs
-
-	Project names as keys and GitHub URL as values
+	Plot GeoJSON project extents
 
 	:Example: 
-	>> remote_source_files = rm_list
+	>> projects_extent()
 	"""
 	import os
 	import folium
@@ -15,7 +13,7 @@ def projects_extent(map_dir = 'cultural-heritage/map-projects/prj-extent/'):
 	projects_geojson = os.listdir(map_dir)
 	for prj in projects_geojson:
 		# geom = json.load(open('cultural-heritage/map-projects/prj-extent/' + prj))
-		geojson_data = 'cultural-heritage/map-projects/prj-extent/' + prj
+		geojson_data = map_dir + prj
 		geojson_layer = folium.GeoJson(
 			geojson_data,
 			name='GeoJSON',
