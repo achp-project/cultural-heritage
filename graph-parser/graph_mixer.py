@@ -1,3 +1,48 @@
+
+def projects_extent(map_dir = 'cultural-heritage/map-projects/prj-extent/'):
+	"""
+	Return a dictionary of RMs
+
+	Project names as keys and GitHub URL as values
+
+	:Example: 
+	>> remote_source_files = rm_list
+	"""
+	import os
+	import folium
+
+	m = folium.Map(zoom_start=8)
+	projects_geojson = os.listdir(map_dir)
+	for prj in projects_geojson:
+		# geom = json.load(open('cultural-heritage/map-projects/prj-extent/' + prj))
+		geojson_data = 'cultural-heritage/map-projects/prj-extent/' + prj
+		geojson_layer = folium.GeoJson(
+			geojson_data,
+			name='GeoJSON',
+			style_function=lambda feature: {
+				'fillColor': 'green',
+				'color': 'black',
+				'weight': 2,
+				'fillOpacity': 0.5
+			},
+			highlight_function=lambda x: {
+				'fillOpacity':1
+			},
+			tooltip=folium.features.GeoJsonTooltip(
+				fields=['project'],
+				aliases=['Project Name:'],
+			),
+		)
+		# geom = folium.GeoJson(geom)
+		geojson_layer.add_to(m)
+	for feature in geojson_layer.data['features']:
+		project = feature['properties']['project']
+		description = feature['properties']['description']
+		popup_content = f'<strong>Project:</strong> {description}'
+		folium.Popup(popup_content).add_to(geojson_layer)
+	return(m)
+
+
 # ressource models
 def rm_list():
 	"""
