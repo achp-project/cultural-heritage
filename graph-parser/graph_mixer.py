@@ -1,5 +1,5 @@
 
-def projects_extent(map_dir = 'cultural-heritage/map-projects/prj-extent/'):
+def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-extent/'):
 	"""
 	Plot GeoJSON project extents
 
@@ -12,7 +12,6 @@ def projects_extent(map_dir = 'cultural-heritage/map-projects/prj-extent/'):
 	m = folium.Map(zoom_start=8)
 	projects_geojson = os.listdir(map_dir)
 	for prj in projects_geojson:
-		# geom = json.load(open('cultural-heritage/map-projects/prj-extent/' + prj))
 		geojson_data = map_dir + prj
 		geojson_layer = folium.GeoJson(
 			geojson_data,
@@ -31,7 +30,6 @@ def projects_extent(map_dir = 'cultural-heritage/map-projects/prj-extent/'):
 				aliases=['Project Name:'],
 			),
 		)
-		# geom = folium.GeoJson(geom)
 		geojson_layer.add_to(m)
 	for feature in geojson_layer.data['features']:
 		project = feature['properties']['project']
@@ -39,7 +37,6 @@ def projects_extent(map_dir = 'cultural-heritage/map-projects/prj-extent/'):
 		popup_content = f'<strong>Project:</strong> {description}'
 		folium.Popup(popup_content).add_to(geojson_layer)
 	return(m)
-
 
 # ressource models
 def rm_list():
