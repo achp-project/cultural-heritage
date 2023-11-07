@@ -176,14 +176,14 @@ def subgraph_comparison_merge(subgraph_metrics, comparison_metrics):
 	df_all_complete = pd.concat([df_both, df_all_match_copy])
 	return df_all_complete
 
-def create_graph(rm, subgraph_metrics, comparison_metrics, edge_width = .5):
+def create_graph(rm, subgraph_metrics, comparison_metrics, edge_width = .2):
 	"""
 	Concatenation of subgraphs and comparison metrics and drops duplicates.Get subgraphs in both RM, and remove duplicated subgraphs
      
 	:param rm: name of a RM
     :param subgraph_metrics: Pandas dataframe of subgraphs
 	:param comparison_metrics: Pandas dataframe of comparisons
-	:param edge_width: edge width for subgraphs (default: .5). The comparison edges will be the double.
+	:param edge_width: edge width for subgraphs (default: .2). The comparison edges will be the double.
 
 	:return: A directed networkx graph
 
@@ -232,14 +232,15 @@ def nodes_labels(dict):
 		newdict[node] = val
 	return newdict
 
-def plot_G(digraph, node_size = 200, node_color = "#add8e6", font_size = 10, edge_width = .5, fig_dim = 10):
+def plot_G(digraph, node_size = 200, node_color = "#add8e6", font_size = 10, edge_width = .2, fig_dim = 10):
 	"""
 	Plot a graph
 		
 	:param digraph: A directed networkx graph
 	:param node_size: Node size
 	:param node_color: Node color
-	:param font_size: Font size
+	:param font_size: Node font size
+	:param edge_width: Edge width for subgraphs (default: .2). The comparison edges will be the double.
 	:param fig_dim: Figure dimensions
 
 	:return: Plot a networkx graph
@@ -283,8 +284,7 @@ def plot_all_G(subgraph_metrics, comparison_metrics, node_size = 200, node_color
 		print(rm)
 		G = create_graph(rm, subgraph_metrics, comparison_metrics)
 		# graph_list.append(G)
-		plot_G(G, node_size, node_color, font_size, fig_dim)
-
+		plot_G(G, node_size = node_size, node_color = node_color, font_size = font_size, fig_dim = fig_dim)
 
 def all_nx_G(subgraph_metrics, comparison_metrics, colors = ['green', 'blue', 'red', 'yellow', 'purple']):
 	"""
