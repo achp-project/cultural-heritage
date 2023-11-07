@@ -111,6 +111,7 @@ def subgraph_metrics(subgraph_metrics = 'subgraphMetrics.csv'):
 	subgraph_metrics['source_id'] = subgraph_metrics['source'] + '_' + subgraph_metrics['G']
 	subgraph_metrics['target_id'] = subgraph_metrics['target'] + '_' + subgraph_metrics['G']
 	subgraph_metrics = subgraph_metrics[col_order]
+	subgraph_metrics['G'] = subgraph_metrics['G'].apply(lambda x: x.split('_')[0])
 	return subgraph_metrics
 
 def comparison_metrics(comparison_metrics = 'comparisonMetrics.csv'):
