@@ -19,21 +19,23 @@ def rm_list():
 
 # check boxes
 def generate_checkboxes_from_dict(input_dict):
-    """
+	import ipywidgets as widgets
+
+	"""
 	Generate checkboxes from dict
 
 	Check boxes
-     
-    :param input_dict: a dictionary of RMs
+		
+	:param input_dict: a dictionary of RMs
 
 	:Example: 
 	>> checkboxes_dict = generate_checkboxes_from_dict(remote_source_files)
 	"""
-    checkboxes = {key: widgets.Checkbox(description=key, value=False) for key in input_dict.keys()}
-    return checkboxes
+	checkboxes = {key: widgets.Checkbox(description=key, value=False) for key in input_dict.keys()}
+	return checkboxes
 
 def get_and_print_checked_values(**kwargs):
-    """
+	"""
 	Get responses from a checkboxes widget
 
 	Check boxes
@@ -45,8 +47,10 @@ def get_and_print_checked_values(**kwargs):
     >> interactive_widget = interactive(get_and_print_checked_values, **checkboxes_dict)
     >> display(interactive_widget)
 	"""
-    checked_values = {key: value for key, value in kwargs.items() if isinstance(value, widgets.Checkbox) and value.value}
-    return(checked_values)
+	import ipywidgets as widgets
+
+	checked_values = {key: value for key, value in kwargs.items() if isinstance(value, widgets.Checkbox) and value.value}
+	return(checked_values)
 
 # remote_source_files = rm_list()
 # checkboxes_dict = generate_checkboxes_from_dict(remote_source_files)
@@ -65,6 +69,8 @@ def rm_selected(checkboxes_dict, remote_source_files):
 	:Example: 
 	>> rm_selected(checkboxes_dict, remote_source_files)
 	"""
+	import urllib.request
+
 	selected_keys = []
 	for key, checkbox in checkboxes_dict.items():
 		if checkbox.value:
@@ -94,6 +100,8 @@ def subgraph_metrics(subgraph_metrics = 'subgraphMetrics.csv'):
 	>> subgraph_metrics = subgraph_metrics()
 	>> subgraph_metrics
 	"""
+	import pandas as pd		
+
 	subgraph_metrics = pd.read_csv(subgraph_metrics)
 	col_order = ['G', 'source', 'target', 'property', 'source_id', 'target_id', 'source_name', 'target_name']
 	subgraph_metrics.rename(columns={'graph_name': 'G', 
@@ -115,6 +123,8 @@ def comparison_metrics(comparison_metrics = 'comparisonMetrics.csv'):
 	>> comparison_metrics = comparison_metrics()
 	>> comparison_metrics
 	"""
+	import pandas as pd	
+
 	comparison_metrics = pd.read_csv(comparison_metrics)
 	col_order = ['G', 'source', 'target', 'property', 'source_id', 'target_id'] # without source_name and target_name
 	comparison_metrics.rename(columns={'graph_name': 'G',
@@ -137,6 +147,8 @@ def all_match(subgraph_metrics, comparison_metrics):
 	:Example: 
 	>> df_all_match = all_match(subgraph_metrics, comparison_metrics)
 	"""
+	import pandas as pd
+
 	df_all_match = pd.concat([subgraph_metrics, comparison_metrics])
 	df_all_match = df_all_match.drop_duplicates()
 	return(df_all_match)
@@ -152,6 +164,8 @@ def subgraph_comparison_merge(subgraph_metrics, comparison_metrics):
 	:Example: 
 	>> df_all_complete = subgraph_comparison_merge(subgraph_metrics, comparison_metrics)
 	"""
+	import pandas as pd
+
 	df_all_match = all_match(subgraph_metrics, comparison_metrics)
 	df_all_match_copy = df_all_match.copy() # deep copy
 	df_all_match_copy['uniq'] = df_all_match_copy['source'] + "_" + df_all_match_copy['property'] + df_all_match_copy['target'] # field with unique id
@@ -176,6 +190,9 @@ def create_graph(rm, subgraph_metrics, comparison_metrics, edge_width = .5):
 	:Example: 
 	>> G = create_graph(rm, subgraph_metrics, comparison_metrics)
 	"""
+	import networkx as nx
+	import re
+
 	# filter on graph label
 	# condition = df_all_match['G'] == rm
 	# condition = df_all_match['G'] in rm
@@ -196,22 +213,26 @@ def create_graph(rm, subgraph_metrics, comparison_metrics, edge_width = .5):
 	return G
 
 def edges_labels(dict):
-    newdict = {}
-    for ed, value in dict.items():
-      # short the name
-      val = re.sub(r'_.*', '',  value)
-      newdict[ed] = val
-    return newdict
+	import re
+
+	newdict = {}
+	for ed, value in dict.items():
+		# short the name
+		val = re.sub(r'_.*', '',  value)
+		newdict[ed] = val
+	return newdict
 
 def nodes_labels(dict):
-    newdict = {}
-    for node, value in dict.items():
-      # short the name
-      val = re.sub(r'_.*', '',  value)
-      newdict[node] = val
-    return newdict
+	import re
 
-def plot_G(digraph, node_size = 200, node_color = "#add8e6", font_size = 10, fig_dim = 10):
+	newdict = {}
+	for node, value in dict.items():
+		# short the name
+		val = re.sub(r'_.*', '',  value)
+		newdict[node] = val
+	return newdict
+
+def plot_G(digraph, node_size = 200, node_color = "#add8e6", font_size = 10, edge_width = .5, fig_dim = 10):
 	"""
 	Plot a graph
 		
@@ -226,6 +247,9 @@ def plot_G(digraph, node_size = 200, node_color = "#add8e6", font_size = 10, fig
 	:Example: 
 	>> plot_G(G)
 	"""
+	import networkx as nx
+	import matplotlib.pyplot as plt
+
 	p = nx.circular_layout(digraph)
 	labels_nodes = nx.get_node_attributes(digraph, 'entity')
 	labels_nodes = nodes_labels(labels_nodes)
@@ -275,6 +299,10 @@ def all_nx_G(subgraph_metrics, comparison_metrics, colors = ['green', 'blue', 'r
 	:Example: 
 	>> G = all_nx_G(subgraph_metrics, comparison_metrics)
 	"""
+	import pandas as pd
+	import networkx as nx
+	import re
+
 	df_all_complete = subgraph_comparison_merge(subgraph_metrics, comparison_metrics)
 	boths = df_all_complete['G'].unique().tolist()
 	boths.remove('both') #?
@@ -309,6 +337,9 @@ def plot_all_nx_G(G, node_size = 200, node_color = "#add8e6", font_size = 10, fi
 	>> G = all_nx_G(subgraph_metrics, comparison_metrics)
 	>> plot_all_nx_G(G)
 	"""
+	import networkx as nx
+	import matplotlib.pyplot as plt
+
 	edges = G.edges()
 	colors = list(nx.get_edge_attributes(G,'color').values())
 	weights = list(nx.get_edge_attributes(G,'weight').values())
@@ -338,6 +369,9 @@ def plot_all_pyvis_G(G, name = "pyvis-example", directed =True, notebook = True,
 	:Example: 
 	>> plot_all_pyvis_G(G, "pyvis-example")
 	"""
+	from pyvis import network as net
+	from IPython.display import HTML
+
 	g = net.Network(notebook = notebook, directed = directed, cdn_resources = cdn_resources)
 	g.show_buttons(filter_=["physics"])
 	g.from_nx(G)
