@@ -11,7 +11,7 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 
 	project_colors = {"BNRHP": "#7e5763", "CAAL": "#eaa416", "EAMENA": "#956d43", "HKHP": "#409a53", "IMAP": "#04096c", "JNIHP": "#83c963", "MAESAM": "#4bc3bf", "MAHSA": "#c354a1", "MAPHSA": "#fa7770", "MAPSS": "#f5a16c", "MHS": "#ab5a7d", "NHDP": "#6b78ae", "PHM": "#cbe095", "SDDP": "#88d1a9"}
 
-	m = folium.Map()
+	m = folium.Map(width=1200,height=700)
 	projects_geojson = os.listdir(map_dir)
 	for prj in projects_geojson:
 		geojson_data = map_dir + prj
