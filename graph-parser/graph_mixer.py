@@ -9,7 +9,9 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 	import os
 	import folium
 
-	m = folium.Map(zoom_start=8)
+	project_colors = {"BNRHP": "#7e5763", "CAAL": "#eaa416", "EAMENA": "#956d43", "HKHP": "#409a53", "IMAP": "#04096c", "JNIHP": "#83c963", "MAESAM": "#4bc3bf", "MAHSA": "#c354a1", "MAPHSA": "#fa7770", "MAPSS": "#f5a16c", "MHS": "#ab5a7d", "NHDP": "#6b78ae", "PHM": "#cbe095", "SDDP": "#88d1a9"}
+
+	m = folium.Map()
 	projects_geojson = os.listdir(map_dir)
 	for prj in projects_geojson:
 		geojson_data = map_dir + prj
@@ -17,7 +19,7 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 			geojson_data,
 			name='GeoJSON',
 			style_function=lambda feature: {
-				'fillColor': 'green',
+				'fillColor': project_colors[feature['properties']['project']],
 				'color': 'black',
 				'weight': 2,
 				'fillOpacity': 0.5
@@ -25,17 +27,14 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 			highlight_function=lambda x: {
 				'fillOpacity':1
 			},
-			tooltip=folium.features.GeoJsonTooltip(
-				fields=['project'],
-				aliases=['Project Name:'],
-			),
+			# tooltip=folium.features.GeoJsonTooltip(
+			# 	fields=['project'],
+			# 	aliases=['Project Name:'],
+			# ),
 		)
+		folium.features.GeoJsonPopup(fields=['description', 'url'], aliases=['Project Name:', 'Project Website'],labels=True, max_width=500, min_width=10).add_to(geojson_layer)
 		geojson_layer.add_to(m)
-	for feature in geojson_layer.data['features']:
-		project = feature['properties']['project']
-		description = feature['properties']['description']
-		popup_content = f'<strong>Project:</strong> {description}'
-		folium.Popup(popup_content).add_to(geojson_layer)
+		m.fit_bounds(m.get_bounds())
 	return(m)
 
 # ressource models
