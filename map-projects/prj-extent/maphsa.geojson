@@ -16,7 +16,8 @@
             "properties":
             {
                 "project": "MAPHSA",
-                "description": "Mapping Pre-Columbian Heritage in South America"
+                "description": "Mapping Pre-Columbian Heritage in South America",
+                "url": "<a href=https://www.upf.edu/web/maphsa/>https://www.upf.edu/web/maphsa/</a>"
             },
             "geometry":
             {

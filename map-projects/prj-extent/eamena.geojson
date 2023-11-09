@@ -3,7 +3,7 @@
 "name": "eamena",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "project": "EAMENA", "description": "Endangered Archaeology in the Middle East & North Africa" }, "geometry": {
+{ "type": "Feature", "properties": { "project": "EAMENA", "description": "Endangered Archaeology in the Middle East & North Africa", "url": "<a href=https://eamena.org/>https://eamena.org/</a>" }, "geometry": {
     "type": "Polygon",
     "coordinates": [
         [

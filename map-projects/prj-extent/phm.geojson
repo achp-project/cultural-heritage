@@ -3,6 +3,6 @@
 "name": "mahsa",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "project": "PHM", "description": "Philippine Heritage Map" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 117.213788355793923, 19.84120251 ], [ 127.322031562725314, 19.84120251 ], [ 127.322031562725314, 5.491269113548995 ], [ 117.213788355793923, 5.341202507541958 ], [ 117.213788355793923, 19.84120251 ] ] ] ] } }
+{ "type": "Feature", "properties": { "project": "PHM", "description": "Philippine Heritage Map", "url": "<a href=https://grupokalinangan.org/our-heritage-work/philippine-heritage-map/>https://grupokalinangan.org/our-heritage-work/philippine-heritage-map/</a>" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 117.213788355793923, 19.84120251 ], [ 127.322031562725314, 19.84120251 ], [ 127.322031562725314, 5.491269113548995 ], [ 117.213788355793923, 5.341202507541958 ], [ 117.213788355793923, 19.84120251 ] ] ] ] } }
 ]
 }
