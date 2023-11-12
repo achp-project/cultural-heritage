@@ -21,7 +21,7 @@ for index, row in df.iterrows():
 	outFile = outDir + row['map']
 	print(inFile)
 	# add values
-	logo = "<img src='" + row['inst-logo'] + "' style='height:50px;'>"
+	logo = "<img src='" + row['inst-logo'] + "' style='height:30px;'>"
 	# logo = row['inst-logo']
 	# map = maps_path + row['map']
 	color = row['color']
