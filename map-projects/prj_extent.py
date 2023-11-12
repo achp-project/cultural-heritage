@@ -6,24 +6,30 @@ import pandas as pd
 import json
 import requests
 
+## Read a TSV, use the style to update GeoJSON file. 
+
 # map folder
-extents = os.getcwd() + '\\prj-extent\\'
+outDir = os.getcwd() + '\\prj-extent\\'
+inDir = 'https://raw.githubusercontent.com/achp-project/cultural-heritage/main/map-projects/prj-extent/'
 # reference list
 github_tsv_url = 'https://raw.githubusercontent.com/achp-project/cultural-heritage/main/list.tsv'
 df = pd.read_csv(github_tsv_url, sep='\t')
 # 
 for index, row in df.iterrows():
 	name = row['name']
-	aFile = extents + row['map']
-	print(aFile)
+	inFile = inDir + row['map']
+	outFile = outDir + row['map']
+	print(inFile)
 	# add values
-	logo = row['inst-logo']
+	logo = "<img src='" + row['inst-logo'] + "' style='width:100px;height:100px;'>"
+	# logo = row['inst-logo']
 	# map = maps_path + row['map']
 	color = row['color']
-	response = requests.get(aFile)
+	response = requests.get(inFile)
 	extent = json.loads(response.text)
+	# extent = json.loads(aFile)
 	extent["features"][0]["properties"]['logo'] = logo
 	extent["features"][0]["properties"]['color'] = color
-	with open(aFile, "w") as outfile:
+	with open(outFile, "w") as outfile:
 		json.dump(extent, outfile)
 # %%
