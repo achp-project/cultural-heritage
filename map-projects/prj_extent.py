@@ -6,7 +6,7 @@ import pandas as pd
 import json
 import requests
 
-## Read a TSV, use the style to update GeoJSON file. 
+## Read a TSV, use the style to update GeoJSON file. For example, embed a logo in a popup for the function projects_extent()
 
 # map folder
 outDir = os.getcwd() + '\\prj-extent\\'
@@ -21,7 +21,7 @@ for index, row in df.iterrows():
 	outFile = outDir + row['map']
 	print(inFile)
 	# add values
-	logo = "<img src='" + row['inst-logo'] + "' style='width:100px;height:100px;'>"
+	logo = "<img src='" + row['inst-logo'] + "' style='height:50px;'>"
 	# logo = row['inst-logo']
 	# map = maps_path + row['map']
 	color = row['color']
