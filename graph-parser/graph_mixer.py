@@ -152,6 +152,7 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
   """
   import pandas as pd		
   import networkx as nx
+  import re
 
   rm_graph = pd.read_csv(subgraph_metrics)
   rm_graph.rename(columns={'graph_name': 'G', 
