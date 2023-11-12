@@ -129,6 +129,34 @@ def rm_selected(checkboxes_dict, remote_source_files):
 		# print(target_filename)
 		urllib.request.urlretrieve(resource_model_url, filename=f"inputResourceModels/{target_filename}")
 
+def rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None):
+	"""
+	Table for one RM
+     
+    :param subgraph_metrics: a CSV file
+
+	:Example: 
+	>> rm_graph = rm_graph(rm_project = 'EAMENA')
+	>> rm_graph
+	"""
+	import pandas as pd		
+
+	rm_graph = pd.read_csv(subgraph_metrics)
+	col_order = ['G', 'source', 'target', 'property', 'source_id', 'target_id', 'source_name', 'target_name']
+	rm_graph.rename(columns={'graph_name': 'G', 
+							'source_property': 'source', 
+							'target_property': 'target',
+							'relation_type': 'property'}, inplace=True)
+	rm_graph['source_id'] = rm_graph['source'] + '_' + rm_graph['G']
+	rm_graph['target_id'] = rm_graph['target'] + '_' + rm_graph['G']
+	rm_graph = rm_graph[col_order]
+	rm_graph['G'] = rm_graph['G'].apply(lambda x: x.split('_')[0])
+	if rm_project is None:
+		return rm_graph
+	else:
+		rm_graph = rm_graph.loc[rm_graph['G'] == rm_project]
+		return rm_graph
+
 def subgraph_metrics(subgraph_metrics = 'subgraphMetrics.csv'):
 	"""
 	Table of subgraph metrics
