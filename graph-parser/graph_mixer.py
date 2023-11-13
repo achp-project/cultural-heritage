@@ -165,13 +165,14 @@ def rm_one_selected(project_name, remote_source_files):
 	target_filename = f"{project_name}_{remote_source_files[project_name].split('/')[-1]}"
 	urllib.request.urlretrieve(remote_source_files[project_name], filename=f"inputResourceModels/{target_filename}")
 
-def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None, highlight_nodes = None, color_default = 'blue', color_highlight='red'):
+def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None, highlight_nodes = None, color_default = 'blue', color_highlight='red', color_fields = None):
   """
   Table for one RM. Return a networkx graph. Optional: highlight nodes (fields) listed in a list (UUIDs)
       
   :param subgraph_metrics: a CSV file
   :param rm_project: the name of one RM (ex. EAMENA)
   :param highlight_nodes: optional. A list of UUIDs
+  :param color_fields: optional. A dataframe of node UUIDs with their color 
 
   :Example: 
   >> # create graph
@@ -220,7 +221,16 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
     # if G.in_degree(n[1]) == 0:
     #   n[1]['shape'] = 'square'
     #   n[1]['color'] = 'grey'
-  # node colors
+  ## node colors
+  if color_fields is not None:
+    for n in G.nodes(data=True):
+      color_out = color_fields.loc[color_fields['uuid_sql'] == n[0], 'color']
+      if len(color_out) > 0:
+        color_out = color_out.iloc[0]
+        n[1]['color'] = color_out
+      else:
+        n[1]['color'] = color_default
+    # from highlight
   if type(highlight_nodes) == list:
     node_colors = {node: color_highlight if node in highlight_nodes else color_default for node in G.nodes}
     nx.set_node_attributes(G, values=node_colors, name='color')
