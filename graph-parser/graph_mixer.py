@@ -133,6 +133,22 @@ def rm_selected(checkboxes_dict, remote_source_files):
 		# print(target_filename)
 		urllib.request.urlretrieve(resource_model_url, filename=f"inputResourceModels/{target_filename}")
 
+def rm_one_selected(project_name, remote_source_files):
+	"""
+	Load one RM into the folder 'inputResourceModels/'
+
+     
+  :param project_name: name of the project
+	:param remote_source_files: list of the RMs
+
+	:Example: 
+	>> rm_one_selected('EAMENA', remote_source_files)
+	"""
+	import urllib.request
+
+	target_filename = f"{project_name}_{remote_source_files[project_name].split('/')[-1]}"
+	urllib.request.urlretrieve(remote_source_files[project_name], filename=f"inputResourceModels/{target_filename}")
+
 def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None, highlight_nodes = None, color_default = 'blue', color_highlight='red'):
   """
   Table for one RM. Return a networkx graph. Optional: highlight nodes (fields) listed in a list (UUIDs)
