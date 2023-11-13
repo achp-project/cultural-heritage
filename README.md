@@ -3,20 +3,20 @@
 
 | name    | inst-logo |
 |---------|-----------|
-| BNRHP   | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
-| CAAL    | ![inst-ucl](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-ucl.png) |
-| EAMENA  | ![inst-eamena](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-eamena.png) |
-| HKHP    | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
-| IMAP    | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
-| JNIHP   | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
-| MAESAM  | ![inst-cambridge](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png) |
-| MAHSA   | ![inst-cambridge](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png) |
-| MAPHSA  | ![inst-upf](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-upf.png) |
-| MAPSS   | ![inst-maxplanck](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-maxplanck.png) |
-| MHS     | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
-| NHDP    | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
-| PHM     | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
-| SDDP    | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+| BNRHP   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
+| CAAL    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-ucl.png" alt="inst-ucl" height="100px"> |
+| EAMENA  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-eamena.png" alt="inst-eamena" height="100px"> |
+| HKHP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
+| IMAP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
+| JNIHP   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
+| MAESAM  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png" alt="inst-cambridge" height="100px"> |
+| MAHSA   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png" alt="inst-cambridge" height="100px"> |
+| MAPHSA  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-upf.png" alt="inst-upf" height="100px"> |
+| MAPSS   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-maxplanck.png" alt="inst-maxplanck" height="100px"> |
+| MHS     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
+| NHDP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
+| PHM     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
+| SDDP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
 
 
 ## Graph
