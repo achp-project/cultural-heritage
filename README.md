@@ -3,20 +3,20 @@
 
 | name    | inst-logo |
 |---------|-----------|
-| BNRHP   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
-| CAAL    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-ucl.png" alt="inst-ucl" height="100px"> |
-| EAMENA  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-eamena.png" alt="inst-eamena" height="100px"> |
-| HKHP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
-| IMAP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
-| JNIHP   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
-| MAESAM  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png" alt="inst-cambridge" height="100px"> |
-| MAHSA   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png" alt="inst-cambridge" height="100px"> |
-| MAPHSA  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-upf.png" alt="inst-upf" height="100px"> |
-| MAPSS   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-maxplanck.png" alt="inst-maxplanck" height="100px"> |
-| MHS     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
-| NHDP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
-| PHM     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
-| SDDP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="100px"> |
+| BNRHP   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="50px"> |
+| CAAL    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-ucl.png" alt="inst-ucl" height="50px"> |
+| EAMENA  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-eamena.png" alt="inst-eamena" height="50px"> |
+| HKHP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="50px"> |
+| IMAP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="50px"> |
+| JNIHP   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="50px"> |
+| MAESAM  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png" alt="inst-cambridge" height="50px"> |
+| MAHSA   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png" alt="inst-cambridge" height="50px"> |
+| MAPHSA  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-upf.png" alt="inst-upf" height="50px"> |
+| MAPSS   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-maxplanck.png" alt="inst-maxplanck" height="50px"> |
+| MHS     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="50px"> |
+| NHDP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="50px"> |
+| PHM     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="50px"> |
+| SDDP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="50px"> |
 
 
 ## Graph
