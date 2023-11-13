@@ -49,7 +49,7 @@ def rm_list():
 	Project names as keys and GitHub URL as values
 
 	:Example: 
-	>> remote_source_files = rm_list
+	>> remote_source_files = rm_list()
 	"""
 	remote_source_files = {
 		"MAPSS": "https://raw.githubusercontent.com/achp-project/prj-mapss/main/pkg/graphs/Heritage%20Place%20(3).json",
@@ -59,6 +59,22 @@ def rm_list():
 		"EAMENA": "https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json",
 	}
 	return(remote_source_files)
+
+def square_matrix(remote_source_files = None):
+	"""
+	Create a square matrix from a dictionary of RMs
+
+	:Example: 
+	>> remote_source_files = rm_list
+	>> square_matrix(remote_source_files)
+	"""
+	import pandas as pd
+
+	df = pd.DataFrame(0, index=remote_source_files.keys(), columns=remote_source_files.keys())
+	for project, url in remote_source_files.items():
+		connected_projects = [p for p in remote_source_files.keys() if p != project and p in url]
+		df.loc[project, connected_projects] = 1
+	print(df)
 
 # check boxes
 def generate_checkboxes_from_dict(input_dict):
