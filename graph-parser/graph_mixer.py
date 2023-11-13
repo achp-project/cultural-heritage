@@ -1,5 +1,5 @@
 
-def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-extent/'):
+def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-extent/', width=1200, height=700):
 	"""
 	Plot GeoJSON project extents.
 
@@ -12,7 +12,7 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 	import folium
 	import geopandas as gpd
 
-	m = folium.Map(width=1200,height=700)
+	m = folium.Map(width=width, height=height)
 	projects_geojson = [f for f in os.listdir(map_dir) if os.path.isfile(os.path.join(map_dir, f))]
 	for prj in projects_geojson:
 
