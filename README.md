@@ -1,6 +1,24 @@
 # cultural-heritage
 > common repository
 
+| name    | inst-logo |
+|---------|-----------|
+| BNRHP   | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+| CAAL    | ![inst-ucl](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-ucl.png) |
+| EAMENA  | ![inst-eamena](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-eamena.png) |
+| HKHP    | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+| IMAP    | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+| JNIHP   | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+| MAESAM  | ![inst-cambridge](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png) |
+| MAHSA   | ![inst-cambridge](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png) |
+| MAPHSA  | ![inst-upf](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-upf.png) |
+| MAPSS   | ![inst-maxplanck](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-maxplanck.png) |
+| MHS     | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+| NHDP    | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+| PHM     | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+| SDDP    | ![inst-z](https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png) |
+
+
 ## Graph
 > [graph-parser](https://github.com/achp-project/cultural-heritage/tree/main/graph-parser): to model the semantic structure of the graph of resource data from different Arches-based projects
 

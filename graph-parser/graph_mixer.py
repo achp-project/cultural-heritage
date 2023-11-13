@@ -3,38 +3,60 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 	"""
 	Plot GeoJSON project extents
 
+  	:param map_dir: folder with the GeoJSON extents
+
 	:Example: 
 	>> projects_extent()
 	"""
 	import os
 	import folium
+	import geopandas as gpd
 
-	project_colors = {"BNRHP": "#7e5763", "CAAL": "#eaa416", "EAMENA": "#956d43", "HKHP": "#409a53", "IMAP": "#04096c", "JNIHP": "#83c963", "MAESAM": "#4bc3bf", "MAHSA": "#c354a1", "MAPHSA": "#fa7770", "MAPSS": "#f5a16c", "MHS": "#ab5a7d", "NHDP": "#6b78ae", "PHM": "#cbe095", "SDDP": "#88d1a9"}
+	# project_colors = {"BNRHP": "#7e5763", 
+	# 			   "CAAL": "#eaa416", 
+	# 			   "EAMENA": "#956d43", 
+	# 			   "HKHP": "#409a53", 
+	# 			   "IMAP": "#04096c", 
+	# 			   "JNIHP": "#83c963", 
+	# 			   "MAESAM": "#4bc3bf", 
+	# 			   "MAHSA": "#c354a1", 
+	# 			   "MAPHSA": "#fa7770", 
+	# 			   "MAPSS": "#f5a16c", 
+	# 			   "MHS": "#ab5a7d", 
+	# 			   "NHDP": "#6b78ae", 
+	# 			   "PHM": "#cbe095", 
+	# 			   "SDDP": "#88d1a9"}
 
 	m = folium.Map(width=1200,height=700)
-	projects_geojson = os.listdir(map_dir)
+	projects_geojson = [f for f in os.listdir(map_dir) if os.path.isfile(os.path.join(map_dir, f))]
+	# projects_geojson = [f for f in os.listdir(map_dir) if os.path.isfile(f)]
+	# print(projects_geojson)
+	# projects_geojson = os.listdir(map_dir)
 	for prj in projects_geojson:
-		geojson_data = map_dir + prj
-		geojson_layer = folium.GeoJson(
-			geojson_data,
-			name='GeoJSON',
-			style_function=lambda feature: {
-				'fillColor': project_colors[feature['properties']['project']],
-				'color': 'black',
-				'weight': 2,
-				'fillOpacity': 0.5
-			},
-			highlight_function=lambda x: {
-				'fillOpacity':1
-			},
-			# tooltip=folium.features.GeoJsonTooltip(
-			# 	fields=['project'],
-			# 	aliases=['Project Name:'],
-			# ),
-		)
-		folium.features.GeoJsonPopup(fields=['description', 'url'], aliases=['Project Name:', 'Project Website'],labels=True, max_width=500, min_width=10).add_to(geojson_layer)
-		geojson_layer.add_to(m)
-		m.fit_bounds(m.get_bounds())
+    # print(prj)
+			geojson_data = map_dir + prj
+			geojson_gdf = gpd.read_file(map_dir + projects_geojson[0])
+			# geojson_gdf['logo']
+			# logo = "<img src='" + geojson_gdf.loc[0, 'logo'] + "' style='width:100px;height:100px;'>"
+			geojson_layer = folium.GeoJson(
+			  geojson_data,
+        name='GeoJSON',
+        style_function=lambda feature: {
+          # 'fillColor': color,
+          'fillColor': project_colors[feature['properties']['project']],
+          'color': 'black',
+          'weight': 2,
+          'fillOpacity': 0.5
+        },
+        highlight_function=lambda x: {
+          'fillOpacity':1
+        },
+      )
+			folium.features.GeoJsonPopup(fields=['description', 'url', 'logo'], 
+                                aliases=['Project Name:', 'Project Website', 'Institution'],
+                                labels=True, max_width=500, min_width=10).add_to(geojson_layer)
+			geojson_layer.add_to(m)
+			m.fit_bounds(m.get_bounds())
 	return(m)
 
 # ressource models

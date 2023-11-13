@@ -6,7 +6,7 @@ import pandas as pd
 import json
 import requests
 
-## Read a TSV, use the style to update GeoJSON file. For example, embed a logo in a popup for the function projects_extent()
+## Read the TSV: https://github.com/achp-project/cultural-heritage/blob/main/list.tsv. Use the style to update GeoJSON file. For example, embed a logo in a popup for the function projects_extent()
 
 # map folder
 outDir = os.getcwd() + '\\prj-extent\\'
