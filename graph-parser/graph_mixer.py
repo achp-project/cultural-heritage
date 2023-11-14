@@ -244,7 +244,7 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
     # print(e)
   return(G)
 
-def plot_net_graph(G = None, show_buttons = False,   filename = "example.html", notebook = True, directed = True, cdn_resources = 'remote'):
+def plot_net_graph(G = None, show_buttons = False,   filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
 	"""
 	Load a pyvis netwokx graph in a HML layout that can be downloaded or plotted. Download using: `google.colab.files.download(filename)`, and plot s HTML using: `HTML(filename=filename)`
 		
@@ -258,7 +258,7 @@ def plot_net_graph(G = None, show_buttons = False,   filename = "example.html", 
 	from pyvis import network as net
 	from IPython.display import HTML
 
-	g = net.Network(notebook = notebook, directed = directed, cdn_resources = cdn_resources)
+	g = net.Network(notebook = notebook, width = width, height = height, directed = directed, cdn_resources = cdn_resources)
 	if show_buttons:
 		g.show_buttons(filter_=["physics"])
 	g.from_nx(G)
