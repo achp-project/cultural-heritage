@@ -8,6 +8,9 @@ import sys
 
 import pandas as pd
 
+from rdflib import Graph, Namespace as rdfns, URIRef, Literal
+from rdflib.namespace import RDF, RDFS, XSD, OWL, DC
+
 # Import required methods from the original Arches graph parser
 from graph_parser import process_graph_file, extract_graph_structures
 
@@ -181,6 +184,42 @@ def get_comparison_results_dataframe(processing_results: dict, graph_metadata: d
     df = pd.read_json(json.dumps(data_source))
     return df.to_csv()
 
+def get_comparison_results_rdf(processing_results: dict, graph_metadata: dict, args: argparse.Namespace) -> str:
+    rdf = Graph()
+    namespaces = args.ns
+    cidoc_crm_ns = "http://www.cidoc-crm.org/cidoc-crm/"
+    rdf.bind("cidoccrm", rdfns(cidoc_crm_ns))
+    for (result_key, result_value) in processing_results.items():
+
+        namespace_uri = namespaces.pop(0)
+        if not(namespace_uri.endswith('#') or namespace_uri.endswith('/')):
+            namespace_uri = namespace_uri + '#'
+        for (comparison_item_name, comparison_item) in result_value.items():
+            (source_property, relation_type, target_property) = comparison_item_name.split('$')#TODO Potential mistake
+
+            if args.m == 'list': # Nothing happens otherwise
+
+                for instance in comparison_item['instances']:
+
+                    graph_name = result_key
+                    indexed_nodes = graph_metadata[graph_name]['indexed_nodes']
+
+                    source_uri = namespace_uri + instance[0]
+                    target_uri = namespace_uri + instance[1]
+
+                    rdf.add((URIRef(source_uri), RDF.type, RDFS.Class))
+                    rdf.add((URIRef(source_uri), DC.title, Literal(indexed_nodes[instance[0]]['name'])))
+                    rdf.add((URIRef(source_uri), RDFS.subClassOf, URIRef(cidoc_crm_ns + source_property)))
+
+                    rdf.add((URIRef(target_uri), RDF.type, RDFS.Class))
+                    rdf.add((URIRef(target_uri), DC.title, Literal(indexed_nodes[instance[1]]['name'])))
+                    rdf.add((URIRef(target_uri), RDFS.subClassOf, URIRef(cidoc_crm_ns + target_property)))
+
+                    rdf.add((URIRef(cidoc_crm_ns + relation_type), RDF.type, OWL.ObjectProperty))
+                    rdf.add((URIRef(cidoc_crm_ns + relation_type), RDFS.domain, URIRef(source_uri)))
+                    rdf.add((URIRef(cidoc_crm_ns + relation_type), RDFS.range, URIRef(target_uri)))
+
+    return str(rdf.serialize(format='pretty-xml'))
 
 def main():
     # TODO Add proper help messages and usage examples
@@ -189,6 +228,8 @@ def main():
     parser.add_argument('input_files', nargs='+', type=pathlib.Path, help='local input graph files')
     # Flag for dataframe output
     parser.add_argument('-d', action='store_true')
+    # Flag for RDF namespaces
+    parser.add_argument('-ns', action='append')
     # Flag for mode
     parser.add_argument('-m', type=str, default='list', help='execution mode')
     # Flag for output to file
@@ -205,6 +246,13 @@ def main():
     # Check if the output is a dataframe
     if args.d:
         out_data = get_comparison_results_dataframe(results, graph_metadata, args)
+    # Check if the output is RDF
+    elif args.ns:
+        if len(args.input_files) == len(args.ns):
+            out_data = get_comparison_results_rdf(results, graph_metadata, args)
+        else:
+            sys.stderr.write("Number of namespaces must match number of input files.\n")
+            sys.exit(1)
     else:
         out_data = json.dumps(results, cls=SetEncoder, indent=2)
     # Output the results
