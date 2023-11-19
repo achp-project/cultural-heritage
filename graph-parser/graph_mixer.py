@@ -1,4 +1,34 @@
 
+def example_cidoc_subgraph(from_class = "E7_Activity", 
+						   from_label = "Assessment Activity",
+						   to_class = "E55_Type",
+						   to_label = "Morphology",
+						   property_class = "P2_has_type",
+						   width="700px", 
+						   height="200px"):
+	"""
+	Plot a simple CIDOC subgraph (node--edge--node).
+
+  	:param map_dir: folder with the GeoJSON extents
+
+	:Example: 
+	>> example_cidoc_subgraph()
+	"""
+
+	from IPython.display import HTML
+	from pyvis import network as net
+	import networkx as nx
+
+	G = nx.DiGraph()
+	G.add_node(from_class, title=from_label)
+	G.add_node(to_class, title=to_label)
+	G.add_edge(from_class, to_class, label=property_class)
+	g = net.Network(notebook = True, cdn_resources='remote', directed = True, width=width, height=height)
+	filename = "pyvis-example.html"
+	g.from_nx(G)
+	g.save_graph(filename)
+	return HTML(filename=filename)
+
 def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-extent/', width=1200, height=700):
 	"""
 	Plot GeoJSON project extents.
@@ -15,7 +45,6 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 	m = folium.Map(width=width, height=height)
 	projects_geojson = [f for f in os.listdir(map_dir) if os.path.isfile(os.path.join(map_dir, f))]
 	for prj in projects_geojson:
-
 			def style_function(feature):
 				# Extract color information from the GeoJSON feature properties
 				color = feature['properties'].get('color', '#ff0000')  # Default to red if color is not present
@@ -52,11 +81,12 @@ def rm_list():
 	>> remote_source_files = rm_list()
 	"""
 	remote_source_files = {
-		"MAPSS": "https://raw.githubusercontent.com/achp-project/prj-mapss/main/pkg/graphs/Heritage%20Place%20(3).json",
+		"CAAL": "https://raw.githubusercontent.com/achp-project/prj-caal/main/resource_models/arches/CAAL-SitesAndMonuments.json",
+		"EAMENA": "https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json",
 		"MAHS": "https://raw.githubusercontent.com/achp-project/prj-mahs/main/Site.json",
 		"MAHSA": "https://raw.githubusercontent.com/achp-project/prj-mahsa/main/resource-models/Heritage%20Location%20Resource%20Model.json",
 		"MAEASAM": "https://raw.githubusercontent.com/achp-project/prj-maeasam/main/Site.json",
-		"EAMENA": "https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json",
+		"MAPSS": "https://raw.githubusercontent.com/achp-project/prj-mapss/main/pkg/graphs/Heritage%20Place%20(3).json"
 	}
 	return(remote_source_files)
 
