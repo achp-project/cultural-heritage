@@ -33,3 +33,49 @@ for index, row in df.iterrows():
 	with open(outFile, "w") as outfile:
 		json.dump(extent, outfile)
 # %%
+
+# Try to create a GeoJSON file for MAHS project: https://maritimeasiaheritage.cseas.kyoto-u.ac.jp/country/indonesia/
+import geopandas as gpd
+from wikitables import import_tables
+
+def get_wikidata_id(country_name):
+    # Retrieve Wikidata ID for a given country
+    tables = import_tables(f"List of administrative divisions of {country_name}")
+    wikidata_id = None
+    for table in tables:
+        for row in table.rows:
+            if "wikidata" in row.values():
+                wikidata_id = row["wikidata"].value.strip()
+                break
+    return wikidata_id
+
+def get_country_boundary(wikidata_id):
+    # Retrieve country boundary from Wikidata
+    query = f"""
+    SELECT ?geometry WHERE {{
+      wd:{wikidata_id} wdt:P3896 ?geometry.
+    }}
+    """
+    url = f"https://query.wikidata.org/sparql?query={query}&format=geojson"
+    gdf = gpd.read_file(url)
+    return gdf
+
+# List of countries
+countries = ["Maldives", "Indonesia", "Vietnam"]
+
+# Create GeoJSON file
+for country in countries:
+    wikidata_id = get_wikidata_id(country)
+    if wikidata_id:
+        boundary_gdf = get_country_boundary(wikidata_id)
+        boundary_gdf.to_file(f"{country}_boundary.geojson", driver="GeoJSON")
+        print(f"{country} boundary GeoJSON file created.")
+    else:
+        print(f"Could not retrieve Wikidata ID for {country}.")
+
+# Export the combined GeoDataFrame to a GeoJSON file
+import os
+print(os.getcwd())
+combined_gdf.to_file("combined_boundaries.geojson", driver="GeoJSON")
+print("Combined GeoJSON file created.")
+# %%
