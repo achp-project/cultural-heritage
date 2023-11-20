@@ -11,7 +11,7 @@ def example_cidoc_subgraph(from_class = "E22_Man-Made_Object",
 						   width="800px", 
 						   height="300px"):
 	"""
-	Plot a simple CIDOC subgraph with two nodes an one edge (node--edge--node) 
+	Plot a simple CIDOC subgraph with two nodes an one edge (node--edge--node). By default, the example is for the use of basalt in the builing of Qsar al-Hallbat.
 
   	:param mass: a repulsion-like factor to make the edge label readable
 
@@ -154,11 +154,11 @@ def get_and_print_checked_values(**kwargs):
 
 def rm_selected(checkboxes_dict, remote_source_files):
 	"""
-	Load RMs into the folder 'inputResourceModels/'
+	Load RMs from their GitHub repository (remote) into the local folder 'inputResourceModels/'
 
 	Check boxes
      
-    :param checkboxes_dict: checkboxes with answers
+  	:param checkboxes_dict: checkboxes with answers
 	:param remote_source_files: list of the RMs
 
 	:Example: 
