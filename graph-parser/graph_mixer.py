@@ -1,31 +1,37 @@
 
-def example_cidoc_subgraph(from_class = "E7_Activity", 
-						   from_label = "Assessment Activity",
-						   to_class = "E55_Type",
-						   to_label = "Morphology",
-						   property_class = "P2_has_type",
-						   width="700px", 
-						   height="200px"):
+def example_cidoc_subgraph(from_class = "E22_Man-Made_Object", 
+						   from_label = "Building",
+						   to_class = "E57_Material",
+						   to_label = "Basalte",
+               property_class = "P2_has_type",
+               mass = 10,
+               size = 40,
+               from_image = "https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/main/www/arches-v7-hp-EAMENA-0184608.png",
+               to_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/20141107-jordanie-qsar_al_hallabat-027.jpg/1280px-20141107-jordanie-qsar_al_hallabat-027.jpg",
+						   width="800px", 
+						   height="300px"):
 	"""
-	Plot a simple CIDOC subgraph (node--edge--node).
+	Plot a simple CIDOC subgraph with two nodes an one edge (node--edge--node) 
 
-  	:param map_dir: folder with the GeoJSON extents
+  	:param mass: a repulsion-like factor to make the edge label readable
 
 	:Example: 
 	>> example_cidoc_subgraph()
 	"""
-
 	from IPython.display import HTML
 	from pyvis import network as net
 	import networkx as nx
 
 	G = nx.DiGraph()
-	G.add_node(from_class, title=from_label)
-	G.add_node(to_class, title=to_label)
+	# G.add_node(from_class, )
+	G.add_node(from_class, title = from_label, mass = mass, shape='image', image = from_image)
+	G.add_node(to_class, title=to_label, mass = mass, shape='image', image = to_image)
 	G.add_edge(from_class, to_class, label=property_class)
 	g = net.Network(notebook = True, cdn_resources='remote', directed = True, width=width, height=height)
 	filename = "pyvis-example.html"
 	g.from_nx(G)
+	g.nodes[0]['size'] = size
+	g.nodes[1]['size'] = size
 	g.save_graph(filename)
 	return HTML(filename=filename)
 
