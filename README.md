@@ -13,7 +13,7 @@
 | MAHSA   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-cambridge.png" alt="inst-cambridge" height="40px"> |
 | MAPHSA  | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-upf.png" alt="inst-upf" height="40px"> |
 | MAPSS   | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-maxplanck.png" alt="inst-maxplanck" height="40px"> |
-| MHS     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="40px"> |
+| MAHS     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-mahs.png" alt="inst-z" height="40px"> |
 | NHDP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="40px"> |
 | PHM     | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="40px"> |
 | SDDP    | <img src="https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-z.png" alt="inst-z" height="40px"> |
