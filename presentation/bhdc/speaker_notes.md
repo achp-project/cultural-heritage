@@ -18,7 +18,7 @@ In the Global South mainly, over large continuous geographical areas. From East 
 *   Mongolian Archaeology Project: Surveying the Steppes (**MAPSS**): A Max Planck Institute project on Mongolian steppes
 *   Central Asian Archaeological Landscapes (**CAAL**): A University College of London project on Eurasian steppes
 *   Mapping Archaeological Heritage in South Asia (**MAHSA**): A University of Cambridge project on the Indus River Basin and the surrounding areas
-*   Maldives Heritage Survey (**MAHS**): A Kyoto University "Maldives", "Indonesia", "Vietnam", "Thailand"
+*   Maldives Heritage Survey (**MAHS**): A Kyoto University on Indonesia, Vietnam, Thailand, and Maldives.
 *   Endangered Archaeology in the Middle East & North Africa / Maritime Endangered Archaeology (**EAMENA-MAREA**): A consortium of Universities project, with Oxford, Southampton, Durham and Leicester, on North Africa and the Middle East
 *   Mapping Africa's Endangered Sites and Monuments (**MAEASAM**): A University of Cambridge project on sub-Saharan Africa
 *   Mapping Pre-Columbian Heritage in South America (**MAPHSA**): A University Pompeu i Fabra project on Amazon-Andes
