@@ -1,78 +1,75 @@
-## "Shared heritage"
+## "Shared Heritage"
 
-"Shared heritage" is the definition of the cultural heritage when it comes to its first formalization, during the post-WWII World Heritage Convention in 1945. In the real world "shared heritage" means sharing narratives, while in the data world "shared heritage" only means only: how we made cultural heritage data interoperable? We are 7 universitary projects assessing cultural heritage in the Global South using the same Arches information system. We have created the GitHub organisation 'Arches Cultural Heritage Partners' to share reference data coming from our different project. The purpose of our communication iis to show how we attent to build shared semantics over Arches.
+"Shared heritage" is the definition of cultural heritage as first formalized during the post-WWII World Heritage Convention in 1945. In the political world, "shared heritage" means sharing narratives, while in the data world, it only refers to how we make cultural heritage data interoperable. We are seven university projects assessing cultural heritage in the Global South using the same Arches information system. We have created the GitHub organization 'Arches Cultural Heritage Partners' to share reference data from our different projects. The purpose of our communication is to show how we intend to build shared semantics over Arches.
 
-#### 🖥️ first..
+#### 🖥️ First...
 
-First thing first.. We chose Python and GitHub to share ressources and source code for the management of our reference data. Python is the world most popular programming language and GitHub one of the main web-platform for source code management. 
+First things first... We chose Python and GitHub to share resources and source code for the management of our reference data. Python is the world's most popular programming language, and GitHub is one of the main web platforms for source code management. This presentation is a Jupyter notebook hosted on our GitHub organization and mirrored on Google Colab (*share the URL*).
 
 ## Context
 
-I won't complete the journalistic triad with the question of "When" since our projects are massively based on use of remote sensing and seek more for a large-geographical scale coverage (mapping) than a in-depth time research
+I will only adress the Where and What question, and not complete the journalistic triad with the question of "When". Indeed our projects are mainly based on the use of remote sensing and seek more for large-geographical scale coverage (mapping) than in-depth chronological research.
 
 ### Where
 
-Our projects are mainly located in the Global South. From East to the West (the colored polygons are the projects contributing to ACHP):
-*   Mongolian Archaeology Project: Surveying the Steppes (**MAPSS**): A Max Planck Institute project on Mongolian steppes
-*   Central Asian Archaeological Landscapes (**CAAL**): A University College of London project on Eurasian steppes
-*   Mapping Archaeological Heritage in South Asia (**MAHSA**): A University of Cambridge project on the Indus River Basin and the surrounding areas
-*   Maldives Heritage Survey (**MAHS**): A Kyoto University on Indonesia, Vietnam, Thailand, and Maldives.
-*   The two projects: Endangered Archaeology in the Middle East & North Africa / Maritime Endangered Archaeology (**EAMENA-MAREA**) on North Africa and the Middle East, sharing the same database, and a project grouping 4 universities, Oxford, Southampton, Durham and Leicester. 
-*   Mapping Africa's Endangered Sites and Monuments (**MAEASAM**): A University of Cambridge project on sub-Saharan Africa
-*   Mapping Pre-Columbian Heritage in South America (**MAPHSA**): A University Pompeu i Fabra project on Amazon-Andes
+Our projects are mainly located in the Global South, from East to West (the colored polygons represent the projects contributing to ACHP):
+* Mongolian Archaeology Project: Surveying the Steppes (**MAPSS**): A Max Planck Institute project on Mongolian steppes.
+* Central Asian Archaeological Landscapes (**CAAL**): A University College of London project on Eurasian steppes.
+* Mapping Archaeological Heritage in South Asia (**MAHSA**): A University of Cambridge project on the Indus River Basin and the surrounding areas.
+* Maldives Heritage Survey (**MAHS**): A Kyoto University project on Indonesia, Vietnam, Thailand, and the Maldives.
+* The two projects: Endangered Archaeology in the Middle East & North Africa / Maritime Endangered Archaeology (**EAMENA-MAREA**) on North Africa and the Middle East, sharing the same database, and a project grouping 4 universities: Oxford, Southampton, Durham, and Leicester.
+* Mapping Africa's Endangered Sites and Monuments (**MAEASAM**): A University of Cambridge project on sub-Saharan Africa.
+* Mapping Pre-Columbian Heritage in South America (**MAPHSA**): A University Pompeu i Fabra project on the Amazon-Andes.
 
 ### What
 
-We are mostly mapping built heritage, and moreover endangered built heritage, so far not so much natural heritage or cultural landscape. 
+We are primarily mapping built heritage, with a particular focus on endangered built heritage, and to a lesser extent, natural heritage or cultural landscapes. However, there are no technical constraints for Arches-based projects to assess natural areas or landscape features. *Mutatis mutandis*, the workflow we present can be adapted for such kinds of data.
 
 ## Resource Models
 
-Resource Models (RMs), or graphs, are the models of any kind of resources. Like molds, they are not perfect. However, they allow copies to be shared. RM in Arches works the same way as a schema in a relational database. Subgraphs are the minimum semantised elements: having two nodes linked by a directed edge.
+Resource Models (RMs) or graphs are the models of any kind of resources. Like molds, they are not perfect but allow copies to be shared. RMs are CIDOC-CRM-based, with nodes connected to other nodes through directed edges (entities and properties). Within these RMs, a pair of two nodes linked by a directed edge -- or subgraphs -- are the minimum semantized units. To understand differences and similarities in cultural heritage assessment among our projects, subgraphs will be the main metric to do so.
 
-### Basic example
+### Basic Example
 
-Here is a basic example
+Here is a basic example: a building with construction material in basalt.
 
 ### Available Resource Models
 
-So far we sharing 6 Resource Models. These files are JSON. Record CIDOC CRM based tables, relations and thesauru. We usualy hsoted them on GitHub
+So far, we are sharing the Heritage places Resource Models of our projects. These files are JSON, recording CIDOC CRM-based tables, relations, and thesauri.
 
 ## Comparisons
 
 One can select RMs to compare (checkboxes). Here we select two of them:
 
-### Subgraph metrics
+### Subgraph Metrics
 
-Create subgraph and comparison dataframe in CSV files by running [graph-comparator.py](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/graph_comparator.py)
+Create subgraph and comparison data frames in CSV files by running `graph-comparator.py`. The overall structure can be considered as a list of edges, with the name of the RM, start node (source), end node (target), and edge property (property).
 
-### Graph drawing
+### Graph Drawing
 
-#### Individual graphs
+#### Individual Graphs
 
-We can draw the graph of the two selected RM in a circular layout. Nodes represent the CIDOC-CRM Entities, and edges represent CIDOC-CRM properties. This output represents an overall view of the semantisation of the different projects' RM.
+We can draw the graph of the two selected RMs in a circular layout. Nodes represent CIDOC-CRM Entities, and edges represent CIDOC-CRM properties. This output represents an overall view of the semantization of the different projects' RM.
 
-#### Combined graphs
+#### Combined Graphs
 
-Does the same but putting together the two RM. Indeed, the layout can be confusing
+Does the same but putting together the two RMs. Indeed, the layout can be confusing. But eventually, RMs can be analyzed through network analysis.
 
-#### Interactive graphs
+## Semantic Web
 
-Use of interactive tools better the rendering
+Finally, we can convert these graphs into the semantic web compliant structures.
 
-## RDF
+### RDF
 
-the graphs can be converted into *subject-predicate-object* RDF triples. This last step allows the RM to be queried with SPARQL
+Graphs can be converted into *subject-predicate-object* RDF triples with the same `graph-comparator.py` function and new arguments.
 
-### Triple store and SPARQL
+### Triple Store and SPARQL
 
-Eventually, these RDF triples can be stored in a triple store (like the Ariadne european infrastructure one) to be preserved over the long-term and making queriable through SPARQL. Here 
+Eventually, these RDF triples can be stored in a triple store (like the Ariadne European infrastructure one) to be preserved over the long-term and queried through SPARQL.
 
 ## Perspectives
 
-* Persistancy:
-	- Our work builds over the standards, or isostandards (CIDOC-CRM, RDF/SPARQL), embeded in Arches. Python and GitHub offered so far the best framework for collaboration. By pooling our reference data, we facilitate the interoperability of our projects
-* Bring closer cultural heritage data managers, stakeholders and researchers:
-	- Our work aims to narrow the digital gap between cultural heritage data managers and researchers. By delivering IT tools and workflow, we think it will make easier our colleagues from different countries of the Global South, to have their data work published and aknowledged.
-
-we coordinate to share cultural heritage data
-For example EAMENA and MAESAM. But our main funder, Arcadia, is now 
+* Persistency:
+  - Our work builds on standards or iso-standards (CIDOC-CRM, RDF/SPARQL) embedded in Arches. Python and GitHub have so far provided the best framework for collaboration. By pooling our reference data, we facilitate the interoperability of our projects.
+  - However, if the semantic web is the desirable future of the web, as mentioned by Peter Norvik, semantic web compliancy for cultural heritage management is not the most common approach, especially in the Global South.
+* Bringing closer cultural heritage data managers, stakeholders, and researchers

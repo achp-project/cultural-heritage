@@ -92,8 +92,10 @@ def rm_list():
 		"MAHS": "https://raw.githubusercontent.com/achp-project/prj-mahs/main/Site.json",
 		"MAHSA": "https://raw.githubusercontent.com/achp-project/prj-mahsa/main/resource-models/Heritage%20Location%20Resource%20Model.json",
 		"MAEASAM": "https://raw.githubusercontent.com/achp-project/prj-maeasam/main/Site.json",
-		"MAPSS": "https://raw.githubusercontent.com/achp-project/prj-mapss/main/pkg/graphs/Heritage%20Place%20(3).json"
+		"MAPSS": "https://raw.githubusercontent.com/achp-project/prj-mapss/main/pkg/graphs/Heritage%20Place%20(3).json",
+		"MAPHSA": "https://raw.githubusercontent.com/achp-project/prj-maphsa/heritage_branch/resource_model/MAPHSA%20Heritage%20Location%20Resource%20Model%20v0.44.json"
 	}
+	remote_source_files = dict(sorted(remote_source_files.items()))
 	return(remote_source_files)
 
 def square_matrix(remote_source_files = None):
