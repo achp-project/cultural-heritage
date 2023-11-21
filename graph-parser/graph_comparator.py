@@ -6,6 +6,7 @@ import os
 import itertools as it
 import sys
 
+import numpy as np
 import pandas as pd
 
 from rdflib import Graph, Namespace as rdfns, URIRef, Literal
@@ -221,6 +222,36 @@ def get_comparison_results_rdf(processing_results: dict, graph_metadata: dict, a
 
     return str(rdf.serialize(format='pretty-xml'))
 
+
+# Generate a matrix that compares the graphs from all the projects and computes the common predicates
+def get_comparison_results_matrix(results, graph_metadata, args):
+    # Get the graph names from the metrics structure
+    graph_names = list(graph_metadata.keys())
+
+    # Create and empty square matrix to store the results
+    comparison_matrix = np.zeros(shape=(len(graph_names), len(graph_names)), dtype=int)
+
+    # Helper function to compute the pairwise project comparisons
+    def get_metrics(graph_name_1, graph_name_2, result_data):
+        if graph_name_1 == graph_name_2:
+            # If diagonal, set to control value
+            return -1
+        else:
+            # If not diagonal, fetch the computed comparison value
+            key = f"{graph_name_1}${graph_name_2}" if f"{graph_name_1}${graph_name_2}" in result_data.keys() else f"{graph_name_2}${graph_name_1}"
+            return len(result_data[key])
+
+    # Iterate the matrix and fetch the metrics
+    for idx, v in np.ndenumerate(comparison_matrix):
+        comparison_matrix[idx[0], idx[1]] = get_metrics(graph_names[idx[0]], graph_names[idx[1]], results)
+
+    # Add the header and row values
+    comparison_matrix = pd.DataFrame(data=comparison_matrix, index=graph_names, columns=graph_names)
+
+    # Return as a csv to output
+    return comparison_matrix.to_csv()
+
+
 def main():
     # TODO Add proper help messages and usage examples
     parser = argparse.ArgumentParser()
@@ -230,6 +261,8 @@ def main():
     parser.add_argument('-d', action='store_true')
     # Flag for RDF namespaces
     parser.add_argument('-ns', action='append')
+    # Flag for comparison matrix output
+    parser.add_argument('-mo', action='store_true')
     # Flag for mode
     parser.add_argument('-m', type=str, default='list', help='execution mode')
     # Flag for output to file
@@ -253,6 +286,9 @@ def main():
         else:
             sys.stderr.write("Number of namespaces must match number of input files.\n")
             sys.exit(1)
+    # Check if the output is a comparison matrix
+    elif args.mo:
+        out_data = get_comparison_results_matrix(results, graph_metadata, args)
     else:
         out_data = json.dumps(results, cls=SetEncoder, indent=2)
     # Output the results
