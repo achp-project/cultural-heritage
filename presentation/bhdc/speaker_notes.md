@@ -1,31 +1,29 @@
 ## "Shared heritage"
 
-"Shared heritage" is the definition of the cultural heritage when it comes to its first formalization, during the post-WWII World Heritage Convention in 1945. 
-- In the real world ... 
-- In the digital world "Shared" means only: how we made cultural heritage interoperable?
-We are several university projects assessing cultural heritage in the Global South using the same Arches information system. We have created the GitHub organisation 'Arches Cultural Heritage Partners' to share reference data. 
-The purpose of this communication iis to show how we attent to build shared semantics over Arches.
+"Shared heritage" is the definition of the cultural heritage when it comes to its first formalization, during the post-WWII World Heritage Convention in 1945. In the real world "shared heritage" means sharing narratives, while in the data world "shared heritage" only means only: how we made cultural heritage data interoperable? We are 7 universitary projects assessing cultural heritage in the Global South using the same Arches information system. We have created the GitHub organisation 'Arches Cultural Heritage Partners' to share reference data coming from our different project. The purpose of our communication iis to show how we attent to build shared semantics over Arches.
 
 #### 🖥️ first..
 
-We chose Python and GitHub to share ressources and source code for the management of our reference data. Python is the world most popular programming language and GitHub one of the main web-platform for source code management. 
+First thing first.. We chose Python and GitHub to share ressources and source code for the management of our reference data. Python is the world most popular programming language and GitHub one of the main web-platform for source code management. 
 
 ## Context
 
+I won't complete the journalistic triad with the question of "When" since our projects are massively based on use of remote sensing and seek more for a large-geographical scale coverage (mapping) than a in-depth time research
+
 ### Where
 
-In the Global South mainly, over large continuous geographical areas. From East to the West (the colored polygons are the projects contributing to ACHP):
+Our projects are mainly located in the Global South. From East to the West (the colored polygons are the projects contributing to ACHP):
 *   Mongolian Archaeology Project: Surveying the Steppes (**MAPSS**): A Max Planck Institute project on Mongolian steppes
 *   Central Asian Archaeological Landscapes (**CAAL**): A University College of London project on Eurasian steppes
 *   Mapping Archaeological Heritage in South Asia (**MAHSA**): A University of Cambridge project on the Indus River Basin and the surrounding areas
 *   Maldives Heritage Survey (**MAHS**): A Kyoto University on Indonesia, Vietnam, Thailand, and Maldives.
-*   Endangered Archaeology in the Middle East & North Africa / Maritime Endangered Archaeology (**EAMENA-MAREA**): A consortium of Universities project, with Oxford, Southampton, Durham and Leicester, on North Africa and the Middle East
+*   The two projects: Endangered Archaeology in the Middle East & North Africa / Maritime Endangered Archaeology (**EAMENA-MAREA**) on North Africa and the Middle East, sharing the same database, and a project grouping 4 universities, Oxford, Southampton, Durham and Leicester. 
 *   Mapping Africa's Endangered Sites and Monuments (**MAEASAM**): A University of Cambridge project on sub-Saharan Africa
 *   Mapping Pre-Columbian Heritage in South America (**MAPHSA**): A University Pompeu i Fabra project on Amazon-Andes
 
 ### What
 
-We are mostly mapping built heritage, and moreover endangered built heritage, so far not so much natural heritage or cultural landscape. For example EAMENA and MAESAM. But our main funder, Arcadia, is now 
+We are mostly mapping built heritage, and moreover endangered built heritage, so far not so much natural heritage or cultural landscape. 
 
 ## Resource Models
 
@@ -77,3 +75,4 @@ Eventually, these RDF triples can be stored in a triple store (like the Ariadne 
 	- Our work aims to narrow the digital gap between cultural heritage data managers and researchers. By delivering IT tools and workflow, we think it will make easier our colleagues from different countries of the Global South, to have their data work published and aknowledged.
 
 we coordinate to share cultural heritage data
+For example EAMENA and MAESAM. But our main funder, Arcadia, is now 

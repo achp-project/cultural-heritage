@@ -185,16 +185,16 @@ def rm_selected(checkboxes_dict, remote_source_files):
 		# print(target_filename)
 		urllib.request.urlretrieve(resource_model_url, filename=f"inputResourceModels/{target_filename}")
 
-def rm_one_selected(project_name, remote_source_files):
+def rm_selected_one(project_name = None, remote_source_files = None, dir = '/content/cultural-heritage/graph-parser/inputResourceModels'):
 	"""
 	Load one RM into the folder 'inputResourceModels/'
-
      
-  :param project_name: name of the project
+  	:param project_name: name of the project
 	:param remote_source_files: list of the RMs
+	:param dir: destination folder for the RM to be
 
 	:Example: 
-	>> rm_one_selected('EAMENA', remote_source_files)
+	>> rm_selected_one('EAMENA', remote_source_files)
 	"""
 	import urllib.request
 
