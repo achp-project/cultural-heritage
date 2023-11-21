@@ -187,7 +187,7 @@ def rm_selected(checkboxes_dict, remote_source_files):
 
 def rm_selected_one(project_name = None, remote_source_files = None, dir = '/content/cultural-heritage/graph-parser/inputResourceModels'):
 	"""
-	Load one RM into the folder 'inputResourceModels/'
+	Load one RM into the folder 'inputResourceModels/'. Creates 'inputResourceModels/' if doesn't exist.
      
   	:param project_name: name of the project
 	:param remote_source_files: list of the RMs
@@ -197,7 +197,9 @@ def rm_selected_one(project_name = None, remote_source_files = None, dir = '/con
 	>> rm_selected_one('EAMENA', remote_source_files)
 	"""
 	import urllib.request
+	import pathlib
 
+	pathlib.Path(dir).mkdir(parents=True, exist_ok=True) 
 	target_filename = f"{project_name}_{remote_source_files[project_name].split('/')[-1]}"
 	urllib.request.urlretrieve(remote_source_files[project_name], filename=f"inputResourceModels/{target_filename}")
 
