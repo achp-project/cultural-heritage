@@ -220,7 +220,8 @@ def get_comparison_results_rdf(processing_results: dict, graph_metadata: dict, a
                     rdf.add((URIRef(cidoc_crm_ns + relation_type), RDFS.domain, URIRef(source_uri)))
                     rdf.add((URIRef(cidoc_crm_ns + relation_type), RDFS.range, URIRef(target_uri)))
 
-    return str(rdf.serialize(format='pretty-xml'))
+    # return str(rdf.serialize(format='pretty-xml'))
+    return str(rdf.serialize(format='turtle'))
 
 
 # Generate a matrix that compares the graphs from all the projects and computes the common predicates
