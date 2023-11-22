@@ -224,7 +224,7 @@ def get_comparison_results_rdf(processing_results: dict, graph_metadata: dict, a
 
 
 # Generate a matrix that compares the graphs from all the projects and computes the common predicates
-def get_comparison_results_matrix(results, graph_metadata, args):
+def get_comparison_results_matrix(results, graph_metadata, args, add_repeated_instances=True):
     # Get the graph names from the metrics structure
     graph_names = list(graph_metadata.keys())
 
@@ -239,7 +239,15 @@ def get_comparison_results_matrix(results, graph_metadata, args):
         else:
             # If not diagonal, fetch the computed comparison value
             key = f"{graph_name_1}${graph_name_2}" if f"{graph_name_1}${graph_name_2}" in result_data.keys() else f"{graph_name_2}${graph_name_1}"
-            return len(result_data[key])
+            # Do not add repeated instances
+            if not add_repeated_instances:
+                return len(result_data[key])
+            # Add repeated instances
+            else:
+                instance_count = 0
+                for cms in result_data[key].values():
+                    instance_count = instance_count + len(cms['instances'])
+                return instance_count
 
     # Iterate the matrix and fetch the metrics
     for idx, v in np.ndenumerate(comparison_matrix):
