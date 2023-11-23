@@ -1,14 +1,14 @@
 ## "Shared Heritage"
 
-"Shared heritage" is the definition of cultural heritage as first formalized during the post-WWII World Heritage Convention in 1945. In the political world, "shared heritage" means sharing narratives, while in the data world, it only refers to how we make cultural heritage data interoperable. We are seven university projects assessing cultural heritage in the Global South using the same Arches information system. We have created the GitHub organization 'Arches Cultural Heritage Partners' to share reference data from our different projects. The purpose of our communication is to show how we intend to build shared semantics over Arches.
+"Shared heritage" is the definition of cultural heritage as first formalized during the post-WWII World Heritage Convention in 1945. In the political world, "shared heritage" means sharing narratives, while in the data world, it only refers to how we make cultural heritage data interoperable. We are seven university projects assessing cultural heritage in the Global South using the same Arches information system. The purpose of our communication is to show how we intend to build shared semantics over Arches reference data.
 
 #### 🖥️ First...
 
-First things first... We chose Python and GitHub to share resources and source code for the management of our reference data. Python is the world's most popular programming language, and GitHub is one of the main web platforms for source code management. This presentation is a Jupyter notebook hosted on our GitHub organization and mirrored on Google Colab (*share the URL*).
+First things first... We chose Python and GitHub to share resources and source code for the management of our reference data. Python is the world's most popular programming language and is at the core of Arches. GitHub is one of the main web platforms for source code management.  We have created the GitHub organization 'Arches Cultural Heritage Partners'. This presentation is a Jupyter notebook hosted on our GitHub organization and mirrored on Google Colab (*share the URL*).
 
 ## Context
 
-I will only adress the Where and What question, and not complete the journalistic triad with the question of "When". Indeed our projects are mainly based on the use of remote sensing and seek more for large-geographical scale coverage (mapping) than in-depth chronological research.
+I will only adress the Where and What question, and not complete the triad of journalism assessimg the question: "When". Indeed our projects are mainly based on the use of remote sensing and seek more for large-geographical scale coverage (mapping) than in-depth chronological research.
 
 ### Where
 
@@ -23,7 +23,7 @@ Our projects are mainly located in the Global South, from East to West (the colo
 
 ### What
 
-We are primarily mapping built heritage, with a particular focus on endangered built heritage, and to a lesser extent, natural heritage or cultural landscapes. However, there are no technical constraints for Arches-based projects to assess natural areas or landscape features. *Mutatis mutandis*, the workflow we present can be adapted for such kinds of data.
+We are primarily mapping built heritage, with a particular focus on endangered built heritage, and to a lesser extent, natural heritage or cultural landscapes. However, there are no conceptual nor technical constraints for Arches-based projects to assess natural areas or landscape features. *Mutatis mutandis*, the workflow we present can be adapted for this kind of data.
 
 ## Resource Models
 
@@ -61,15 +61,22 @@ Finally, we can convert these graphs into the semantic web compliant structures.
 
 ### RDF
 
-Graphs can be converted into *subject-predicate-object* RDF triples with the same `graph-comparator.py` function and new arguments.
+Graphs can be converted into *subject-predicate-object* RDF triples with the same `graph-comparator.py` function and new arguments. Here is the output in a Turtle format.
 
 ### Triple Store and SPARQL
 
-Eventually, these RDF triples can be stored in a triple store (like the Ariadne European infrastructure one) to be preserved over the long-term and queried through SPARQL.
+Eventually, these RDF triples will be stored in a triple store (like the Ariadne European infrastructure one) to be preserved over the long-term and queried through SPARQL.
 
 ## Perspectives
 
-* Persistency:
+
   - Our work builds on standards or iso-standards (CIDOC-CRM, RDF/SPARQL) embedded in Arches. Python and GitHub have so far provided the best framework for collaboration. By pooling our reference data, we facilitate the interoperability of our projects.
-  - However, if the semantic web is the desirable future of the web, as mentioned by Peter Norvik, semantic web compliancy for cultural heritage management is not the most common approach, especially in the Global South.
-* Bringing closer cultural heritage data managers, stakeholders, and researchers
+  - However, if the semantic web is the desirable future of the web, as quoted by Peter Norvik, semantic web compliancy for cultural heritage management is not the most common approach, especially in the Global South.
+* Bringing closer cultural heritage data managers, stakeholders, and researchers:
+  - By developping middleware tools, we aim to favor curation of data and help data producers to use our tools for data driven researches. This could directly benefits to the professionals having their fieldwork in the Global South.
+
+* Persistency:
+Our work relies on standards such as ISO standards (CIDOC-CRM, RDF/SPARQL) embedded in Arches. Python and GitHub have been the most effective framework for collaboration thus far. By consolidating our reference data, we enhance the interoperability of our projects.
+*However, while the semantic web is envisioned as the future of the web, according to Peter Norvik, achieving semantic web compliance for cultural heritage management is not the predominant approach, particularly in the Global South.*
+* Bringing Closer Cultural Heritage Data Managers, Stakeholders, and Researchers:
+By developing middleware tools, we aim to promote the curation of data and assist data producers in utilizing our tools for data-driven research. This could directly benefit professionals conducting fieldwork in the Global South.
