@@ -42,3 +42,4 @@ Vizualise an Arches-based thesaurus in a form of an interactive collapsible tree
 [^1]: [prj_map.R](https://github.com/achp-project/cultural-heritage/blob/main/map-projects/prj_map.R)
 [^2]: [thesaurus.R](https://github.com/achp-project/cultural-heritage/blob/main/sparql-projects/thesaurus.R)
 [^3]: [graph_parser.py](https://github.com/achp-project/cultural-heritage/blob/main/graph-parser/graph_parser.py)
+
