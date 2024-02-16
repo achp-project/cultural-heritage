@@ -23,5 +23,5 @@ def to_rdf(	infile = 'https://raw.githubusercontent.com/achp-project/prj-maeasam
 	# g.serialize(destination=outfile, format='turtle')
 	return str(g.serialize(format='turtle'))
 
-# to_rdf(outfile = "C:/Rprojects/achp-ch/graph-parser/temp_1.ttl")
-print(to_rdf())
+# # to_rdf(outfile = "C:/Rprojects/achp-ch/graph-parser/temp_1.ttl")
+# print(to_rdf())
