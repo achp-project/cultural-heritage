@@ -1,0 +1,320 @@
+@prefix cidoccrm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://maeasam#0041d67a-bfe2-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Type of activity" ;
+    rdfs:subClassOf cidoccrm:E17_Type_Assignment .
+
+<http://maeasam#010f2ef2-77e1-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Source" ;
+    rdfs:subClassOf cidoccrm:E73_Information_Object .
+
+<http://maeasam#016ff4fe-bfcf-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Surface materials" ;
+    rdfs:subClassOf cidoccrm:E17_Type_Assignment .
+
+<http://maeasam#01ad0198-bfe6-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "area observed by remote sensing (figures/shape)" ;
+    rdfs:subClassOf cidoccrm:E16_Measurement .
+
+<http://maeasam#027d5ecd-77e0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Resource version control" ;
+    rdfs:subClassOf cidoccrm:E50_Date .
+
+<http://maeasam#027d5ed0-77e0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Resource last modified at" ;
+    rdfs:subClassOf cidoccrm:E50_Date .
+
+<http://maeasam#027d5ed1-77e0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Resource created at" ;
+    rdfs:subClassOf cidoccrm:E50_Date .
+
+<http://maeasam#04df5e6e-77e4-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Threat Severity " ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#091fdc30-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Chronology" ;
+    rdfs:subClassOf cidoccrm:E50_Date .
+
+<http://maeasam#1097b060-7ae3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Environment Description" ;
+    rdfs:subClassOf cidoccrm:E73_Information_Object .
+
+<http://maeasam#1513981c-bfe3-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Recorder role type" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#18236d8e-77e0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Function" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#1c04bbe2-7ae2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Description" ;
+    rdfs:subClassOf cidoccrm:E73_Information_Object .
+
+<http://maeasam#1c678206-bfe6-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Landowner" ;
+    rdfs:subClassOf cidoccrm:E39_Actor .
+
+<http://maeasam#1c777434-bfcf-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Surface material Type (artefactual material seen or collected)" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#1dbd09f2-bfd0-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Accession number" ;
+    rdfs:subClassOf cidoccrm:E42_Identifier .
+
+<http://maeasam#20103212-77e4-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Threat Type" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#242a8e5c-77e3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Relationships" ;
+    rdfs:subClassOf cidoccrm:E27_Site .
+
+<http://maeasam#284e7ec0-bfce-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Accuracy of Geographic Coordinates" ;
+    rdfs:subClassOf cidoccrm:E16_Measurement .
+
+<http://maeasam#289fc168-bfe2-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Researcher" ;
+    rdfs:subClassOf cidoccrm:E39_Actor .
+
+<http://maeasam#29d1c5d2-7ae0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Find type" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#2a0dc1ee-bfce-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Precision of Geographical Coordinates" ;
+    rdfs:subClassOf cidoccrm:E16_Measurement .
+
+<http://maeasam#2af3883e-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Absolute Dates" ;
+    rdfs:subClassOf cidoccrm:E18_Physical_Thing .
+
+<http://maeasam#326ed95a-bfe6-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Landowner name" ;
+    rdfs:subClassOf cidoccrm:E82_Actor_Appellation .
+
+<http://maeasam#34498c4e-bfe5-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Site dimension in Google Earth (in hectares)" ;
+    rdfs:subClassOf cidoccrm:E16_Measurement .
+
+<http://maeasam#35264f52-77e3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Connected to" ;
+    rdfs:subClassOf cidoccrm:E27_Site .
+
+<http://maeasam#3c30dc7e-77e1-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Site condition" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#3f95d676-bfd0-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Associated materials and features (Materials and features near the site)" ;
+    rdfs:subClassOf cidoccrm:E18_Physical_Thing .
+
+<http://maeasam#47a35232-ba60-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Descriptive Type Certainty" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#4819d38e-bfcf-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Type of collection" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#49c7603e-bfde-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Status" ;
+    rdfs:subClassOf cidoccrm:E13_Attribute_Assignment .
+
+<http://maeasam#4b827ac4-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Find description" ;
+    rdfs:subClassOf cidoccrm:E62_String .
+
+<http://maeasam#4e3e380e-77e0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Function Certainty" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#504536dc-ba5e-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Verification Status" ;
+    rdfs:subClassOf cidoccrm:E14_Condition_Assessment .
+
+<http://maeasam#532001ee-77e1-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Date of condition assessment " ;
+    rdfs:subClassOf cidoccrm:E50_Date .
+
+<http://maeasam#55354460-77e3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Relationship type" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#5558b71c-ba62-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Original Coordinates" ;
+    rdfs:subClassOf cidoccrm:E47_Spatial_Coordinates .
+
+<http://maeasam#650690ca-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Find ID" ;
+    rdfs:subClassOf cidoccrm:E42_Identifier .
+
+<http://maeasam#6e48d180-77e1-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Comment" ;
+    rdfs:subClassOf cidoccrm:E62_String .
+
+<http://maeasam#6ff8c03c-ba5b-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Site Summary" ;
+    rdfs:subClassOf cidoccrm:E13_Attribute_Assignment .
+
+<http://maeasam#76402cf2-ba68-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Editorial comment  on coordinates" ;
+    rdfs:subClassOf cidoccrm:E29_Design_or_Procedure .
+
+<http://maeasam#80b684be-77e3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Geometry" ;
+    rdfs:subClassOf cidoccrm:E53_Place .
+
+<http://maeasam#863636bc-bfcf-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Density of materials" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#896a11cc-77e1-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Descriptive type" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#8af66744-bfde-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Land Cover/Land Use" ;
+    rdfs:subClassOf cidoccrm:E14_Condition_Assessment .
+
+<http://maeasam#8c3149c0-bfe4-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Measurements" ;
+    rdfs:subClassOf cidoccrm:E16_Measurement .
+
+<http://maeasam#9911f846-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Find start date" ;
+    rdfs:subClassOf cidoccrm:E52_Time-Span .
+
+<http://maeasam#99417384-b8fa-11e6-84a5-026d961c88e6> a rdfs:Class ;
+    dc:title "Site" ;
+    rdfs:subClassOf cidoccrm:E27_Site .
+
+<http://maeasam#9d979b22-77e3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Geometry Type" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#9f09c014-77e0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Location" ;
+    rdfs:subClassOf cidoccrm:E53_Place .
+
+<http://maeasam#a2009fe8-bfe5-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "area observed by remote sensing (size range)" ;
+    rdfs:subClassOf cidoccrm:E16_Measurement .
+
+<http://maeasam#a2a692aa-bfe4-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Site dimension from publication (in hectares)" ;
+    rdfs:subClassOf cidoccrm:E16_Measurement .
+
+<http://maeasam#a790eb80-77e1-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Recorder" ;
+    rdfs:subClassOf cidoccrm:E39_Actor .
+
+<http://maeasam#aa51f630-bfcf-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Quantity of specimens collected" ;
+    rdfs:subClassOf cidoccrm:E16_Measurement .
+
+<http://maeasam#b373f7fe-77e0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Administrative division" ;
+    rdfs:subClassOf cidoccrm:E53_Place .
+
+<http://maeasam#b38274f2-bfe6-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Landowner contacts" ;
+    rdfs:subClassOf cidoccrm:E32_Authority_Document .
+
+<http://maeasam#b53745dc-c489-11ec-b4df-fa163e7d893d> a rdfs:Class ;
+    dc:title "Date of Threat assessment" ;
+    rdfs:subClassOf cidoccrm:E50_Date .
+
+<http://maeasam#b81ec282-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Comment on find" ;
+    rdfs:subClassOf cidoccrm:E62_String .
+
+<http://maeasam#c0497d4a-77e1-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Associated ID name" ;
+    rdfs:subClassOf cidoccrm:E42_Identifier .
+
+<http://maeasam#c6b565b6-77e3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Elevation " ;
+    rdfs:subClassOf cidoccrm:E54_Dimension .
+
+<http://maeasam#c777f098-ba66-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Nearest village" ;
+    rdfs:subClassOf cidoccrm:E53_Place .
+
+<http://maeasam#c8eb7b1a-ba5d-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Origin of site data" ;
+    rdfs:subClassOf cidoccrm:E73_Information_Object .
+
+<http://maeasam#c9822170-c48d-11ec-b4df-fa163e7d893d> a rdfs:Class ;
+    dc:title "New Node" ;
+    rdfs:subClassOf <http://www.ics.forth.gr/isl/CRMsci/S21_Measurement> .
+
+<http://maeasam#cabb6692-bfe1-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Research history" ;
+    rdfs:subClassOf cidoccrm:E7_Activity .
+
+<http://maeasam#cac282fc-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Dating method" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#ce5362ea-bfe2-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Date of activity" ;
+    rdfs:subClassOf cidoccrm:E50_Date .
+
+<http://maeasam#d84677e6-bfcf-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Location of collection" ;
+    rdfs:subClassOf cidoccrm:E27_Site .
+
+<http://maeasam#db446218-77e1-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Associated ID value" ;
+    rdfs:subClassOf cidoccrm:E62_String .
+
+<http://maeasam#e05113e2-ba5c-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Site Type Summary" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#e0c19110-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Find end date" ;
+    rdfs:subClassOf cidoccrm:E52_Time-Span .
+
+<http://maeasam#e0f2a220-7ae2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "General Description" ;
+    rdfs:subClassOf cidoccrm:E73_Information_Object .
+
+<http://maeasam#e1695232-77e3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Site Location Certainty" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#e4450a2d-77df-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Name" ;
+    rdfs:subClassOf cidoccrm:E41_Appellation .
+
+<http://maeasam#e4450a30-77df-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Name type" ;
+    rdfs:subClassOf cidoccrm:E55_Type .
+
+<http://maeasam#e4450a31-77df-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Name value" ;
+    rdfs:subClassOf cidoccrm:E41_Appellation .
+
+<http://maeasam#e4685350-77e0-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Address" ;
+    rdfs:subClassOf cidoccrm:E45_Address .
+
+<http://maeasam#e9c4b38a-bfe2-11ec-a58f-fa163e7d893d> a rdfs:Class ;
+    dc:title "Associated information" ;
+    rdfs:subClassOf cidoccrm:E13_Attribute_Assignment .
+
+<http://maeasam#f68b7758-77e3-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "Potential Threats" ;
+    rdfs:subClassOf cidoccrm:E7_Activity .
+
+<http://maeasam#fc9eed60-77e2-11ec-ba7b-fa163e7d893d> a rdfs:Class ;
+    dc:title "MAEASaM ID" ;
+    rdfs:subClassOf cidoccrm:E42_Identifier .
+
