@@ -3,11 +3,11 @@ def example_cidoc_subgraph(from_class = "E22_Man-Made_Object",
 						   from_label = "Building",
 						   to_class = "E57_Material",
 						   to_label = "Basalte",
-               property_class = "P2_has_type",
-               mass = 10,
-               size = 40,
-               from_image = "https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/main/www/arches-v7-hp-EAMENA-0184608.png",
-               to_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/20141107-jordanie-qsar_al_hallabat-027.jpg/1280px-20141107-jordanie-qsar_al_hallabat-027.jpg",
+			   property_class = "P2_has_type",
+			   mass = 10,
+			   size = 40,
+			   from_image = "https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/main/www/arches-v7-hp-EAMENA-0184608.png",
+			   to_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/20141107-jordanie-qsar_al_hallabat-027.jpg/1280px-20141107-jordanie-qsar_al_hallabat-027.jpg",
 						   width="800px", 
 						   height="300px"):
 	"""
@@ -35,11 +35,11 @@ def example_cidoc_subgraph(from_class = "E22_Man-Made_Object",
 	g.save_graph(filename)
 	return HTML(filename=filename)
 
-def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-extent/', width=1200, height=700):
+def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-extent/', width=1200, height=700, verbose=False):
 	"""
 	Plot GeoJSON project extents.
 
-  	:param map_dir: folder with the GeoJSON extents
+	:param map_dir: folder with the GeoJSON extents
 
 	:Example: 
 	>> projects_extent()
@@ -51,27 +51,38 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 	m = folium.Map(width=width, height=height)
 	projects_geojson = [f for f in os.listdir(map_dir) if os.path.isfile(os.path.join(map_dir, f))]
 	for prj in projects_geojson:
-			def style_function(feature):
-				# Extract color information from the GeoJSON feature properties
-				color = feature['properties'].get('color', '#ff0000')  # Default to red if color is not present
-				return {
-            'fillColor': color,
-            'color': 'black',
-            'weight': 2,
-            'fillOpacity': 0.5
-			  }
-			geojson_data = map_dir + prj
+		if verbose:
+			print("*read: " + prj)
+		def style_function(feature):
+			# Extract color information from the GeoJSON feature properties
+			color = feature['properties'].get('color', '#ff0000')  # Default to red if color is not present
+			return {
+		'fillColor': color,
+		'color': 'black',
+		'weight': 2,
+		'fillOpacity': 0.5
+		}
+		geojson_data = map_dir + prj
+		# test
+		try:
+			gdf = gpd.read_file(geojson_data)
+			if verbose:
+				print("GeoJSON file is OK.")
+		except Exception as e:
+			if verbose:
+				print("Error reading GeoJSON file:", e)
+		# small fix, to remove once MaEASAM is OK
+		if prj != 'maesam.geojson':
 			geojson_layer = folium.GeoJson(
-			  geojson_data,
-        name='GeoJSON',
-        style_function = style_function,
-        highlight_function=lambda x: {
-          'fillOpacity':1
-        },
-      )
+				geojson_data,
+				name='GeoJSON',
+				style_function = style_function,
+				highlight_function=lambda x: {
+				'fillOpacity':1
+				})
 			folium.features.GeoJsonPopup(fields=['description', 'url', 'logo'], 
-                                aliases=['Project Name:', 'Project Website', 'Institution'],
-                                labels=True, max_width=500, min_width=10).add_to(geojson_layer)
+									aliases=['Project Name:', 'Project Website', 'Institution'],
+									labels=True, max_width=500, min_width=10).add_to(geojson_layer)
 			geojson_layer.add_to(m)
 			m.fit_bounds(m.get_bounds())
 	return(m)
@@ -136,13 +147,13 @@ def get_and_print_checked_values(**kwargs):
 	Get responses from a checkboxes widget
 
 	Check boxes
-     
-    :param input_dict: a dictionary of RMs
+	 
+	:param input_dict: a dictionary of RMs
 
 	:Example: 
 	>> checkboxes_dict = generate_checkboxes_from_dict(remote_source_files)
-    >> interactive_widget = interactive(get_and_print_checked_values, **checkboxes_dict)
-    >> display(interactive_widget)
+	>> interactive_widget = interactive(get_and_print_checked_values, **checkboxes_dict)
+	>> display(interactive_widget)
 	"""
 	import ipywidgets as widgets
 
@@ -159,7 +170,7 @@ def rm_selected(checkboxes_dict, remote_source_files):
 	Load RMs from their GitHub repository (remote) into the local folder 'inputResourceModels/'
 
 	Check boxes
-     
+	 
   	:param checkboxes_dict: checkboxes with answers
 	:param remote_source_files: list of the RMs
 
@@ -190,7 +201,7 @@ def rm_selected(checkboxes_dict, remote_source_files):
 def rm_selected_one(project_name = None, remote_source_files = None, dir = '/content/cultural-heritage/graph-parser/inputResourceModels'):
 	"""
 	Load one RM into the folder 'inputResourceModels/'. Creates 'inputResourceModels/' if doesn't exist.
-     
+	 
   	:param project_name: name of the project
 	:param remote_source_files: list of the RMs
 	:param dir: destination folder for the RM to be
@@ -208,7 +219,7 @@ def rm_selected_one(project_name = None, remote_source_files = None, dir = '/con
 def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None, highlight_nodes = None, color_default = 'blue', color_highlight='red', color_fields = None):
   """
   Table for one RM. Return a networkx graph. Optional: highlight nodes (fields) listed in a list (UUIDs)
-      
+	  
   :param subgraph_metrics: a CSV file
   :param rm_project: the name of one RM (ex. EAMENA)
   :param highlight_nodes: optional. A list of UUIDs
@@ -233,9 +244,9 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 
   rm_graph = pd.read_csv(subgraph_metrics)
   rm_graph.rename(columns={'graph_name': 'G', 
-                           'source_property': 'source_crm', 
-                           'target_property': 'target_crm',
-                           'relation_type': 'property'}, inplace=True)
+						   'source_property': 'source_crm', 
+						   'target_property': 'target_crm',
+						   'relation_type': 'property'}, inplace=True)
   col_order = ['G', 'source_crm', 'target_crm', 'property', 'source_id', 'target_id', 'source_name', 'target_name']
   rm_graph = rm_graph[col_order]
   rm_graph['G'] = rm_graph['G'].apply(lambda x: x.split('_')[0])
@@ -244,44 +255,44 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
   G = nx.from_pandas_edgelist(rm_graph, 'source_id', 'target_id', edge_attr=['property'], create_using=nx.DiGraph())
   # Populate node attributes
   for _, row in rm_graph.iterrows():
-      source = row['source_id']
-      target = row['target_id']
-      source_attributes = {key[len('source_'):]: row[key] for key in rm_graph.columns if key.startswith('source_')}
-      target_attributes = {key[len('target_'):]: row[key] for key in rm_graph.columns if key.startswith('target_')}
-      # Update or add node attributes
-      if G.has_node(source):
-          G.nodes[source].update(source_attributes)
-      if G.has_node(target):
-          G.nodes[target].update(target_attributes)
+	  source = row['source_id']
+	  target = row['target_id']
+	  source_attributes = {key[len('source_'):]: row[key] for key in rm_graph.columns if key.startswith('source_')}
+	  target_attributes = {key[len('target_'):]: row[key] for key in rm_graph.columns if key.startswith('target_')}
+	  # Update or add node attributes
+	  if G.has_node(source):
+		  G.nodes[source].update(source_attributes)
+	  if G.has_node(target):
+		  G.nodes[target].update(target_attributes)
   ## nodes
   for n in G.nodes(data=True):
-    n[1]['label'] = n[1]['name'] # will show names
-    n[1]['title'] = re.sub(r'_', ' ', n[1]['crm'])
-    # TODO: if the has no incoming edges it has a semantic Datatype
-    # if G.in_degree(n[1]) == 0:
-    #   n[1]['shape'] = 'square'
-    #   n[1]['color'] = 'grey'
+	n[1]['label'] = n[1]['name'] # will show names
+	n[1]['title'] = re.sub(r'_', ' ', n[1]['crm'])
+	# TODO: if the has no incoming edges it has a semantic Datatype
+	# if G.in_degree(n[1]) == 0:
+	#   n[1]['shape'] = 'square'
+	#   n[1]['color'] = 'grey'
   ## node colors
   if color_fields is not None:
-    for n in G.nodes(data=True):
-      color_out = color_fields.loc[color_fields['uuid_sql'] == n[0], 'color']
-      if len(color_out) > 0:
-        color_out = color_out.iloc[0]
-        n[1]['color'] = color_out
-      else:
-        n[1]['color'] = color_default
-    # from highlight
+	for n in G.nodes(data=True):
+	  color_out = color_fields.loc[color_fields['uuid_sql'] == n[0], 'color']
+	  if len(color_out) > 0:
+		color_out = color_out.iloc[0]
+		n[1]['color'] = color_out
+	  else:
+		n[1]['color'] = color_default
+	# from highlight
   if type(highlight_nodes) == list:
-    node_colors = {node: color_highlight if node in highlight_nodes else color_default for node in G.nodes}
-    nx.set_node_attributes(G, values=node_colors, name='color')
+	node_colors = {node: color_highlight if node in highlight_nodes else color_default for node in G.nodes}
+	nx.set_node_attributes(G, values=node_colors, name='color')
   ## edges
   for e in G.edges(data=True):
-    e[2]['title'] = re.sub(r'_', ' ', e[2]['property']) # replace _ by spaces
-    # e[2]['title'] =  e[2]['label'] # popup labels: complete
-    property_label = re.search(r'_(.*)', e[2]['property'])[1] # get text after P53_...
-    property_label = re.sub(r'_', ' ', property_label) # replace _ by spaces
-    e[2]['label'] = property_label # permanent labels (text)
-    # print(e)
+	e[2]['title'] = re.sub(r'_', ' ', e[2]['property']) # replace _ by spaces
+	# e[2]['title'] =  e[2]['label'] # popup labels: complete
+	property_label = re.search(r'_(.*)', e[2]['property'])[1] # get text after P53_...
+	property_label = re.sub(r'_', ' ', property_label) # replace _ by spaces
+	e[2]['label'] = property_label # permanent labels (text)
+	# print(e)
   return(G)
 
 def plot_net_graph(G = None, show_buttons = False,   filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
@@ -309,8 +320,8 @@ def plot_net_graph(G = None, show_buttons = False,   filename = "example.html", 
 def subgraph_metrics(subgraph_metrics = 'subgraphMetrics.csv'):
 	"""
 	Table of subgraph metrics
-     
-    :param subgraph_metrics: a CSV file
+	 
+	:param subgraph_metrics: a CSV file
 
 	:Example: 
 	>> subgraph_metrics = subgraph_metrics()
@@ -333,8 +344,8 @@ def subgraph_metrics(subgraph_metrics = 'subgraphMetrics.csv'):
 def comparison_metrics(comparison_metrics = 'comparisonMetrics.csv'):
 	"""
 	Table of comparison metrics
-     
-    :param comparison_metrics: a CSV file
+	 
+	:param comparison_metrics: a CSV file
 
 	:Example: 
 	>> comparison_metrics = comparison_metrics()
@@ -357,8 +368,8 @@ def comparison_metrics(comparison_metrics = 'comparisonMetrics.csv'):
 def all_match(subgraph_metrics, comparison_metrics):
 	"""
 	Merge subgraph and comparisons
-     
-    :param subgraph_metrics: Pandas dataframe of subgraphs
+	 
+	:param subgraph_metrics: Pandas dataframe of subgraphs
 	:param comparison_metrics: Pandas dataframe of comparisons
 
 	:Example: 
@@ -374,8 +385,8 @@ def all_match(subgraph_metrics, comparison_metrics):
 def subgraph_comparison_merge(subgraph_metrics, comparison_metrics):
 	"""
 	Concatenation of subgraphs and comparison metrics and drops duplicates.Get subgraphs in both RM, and remove duplicated subgraphs
-     
-    :param subgraph_metrics: Pandas dataframe of subgraphs
+	 
+	:param subgraph_metrics: Pandas dataframe of subgraphs
 	:param comparison_metrics: Pandas dataframe of comparisonss
 
 	:Example: 
@@ -396,9 +407,9 @@ def subgraph_comparison_merge(subgraph_metrics, comparison_metrics):
 def create_graph(rm, subgraph_metrics, comparison_metrics, edge_width = .2):
 	"""
 	Concatenation of subgraphs and comparison metrics and drops duplicates.Get subgraphs in both RM, and remove duplicated subgraphs
-     
+	 
 	:param rm: name of a RM
-    :param subgraph_metrics: Pandas dataframe of subgraphs
+	:param subgraph_metrics: Pandas dataframe of subgraphs
 	:param comparison_metrics: Pandas dataframe of comparisons
 	:param edge_width: edge width for subgraphs (default: .2). The comparison edges will be the double.
 
@@ -482,7 +493,7 @@ def plot_all_G(subgraph_metrics, comparison_metrics, node_size = 200, node_color
 	"""
 	Plot all the graphs separately
 		
-    :param subgraph_metrics: Pandas dataframe of subgraphs
+	:param subgraph_metrics: Pandas dataframe of subgraphs
 	:param comparison_metrics: Pandas dataframe of comparisons
 	:param node_size: Node size
 	:param node_color: Node color
@@ -507,7 +518,7 @@ def all_nx_G(subgraph_metrics, comparison_metrics, colors = ['green', 'blue', 'r
 	"""
 	Plot all the graphs separately 	# assign colors
 		
-    :param subgraph_metrics: Pandas dataframe of subgraphs
+	:param subgraph_metrics: Pandas dataframe of subgraphs
 	:param comparison_metrics: Pandas dataframe of comparisons
 	:param colors: List of colors. Only the first ones will be used.
 
@@ -541,7 +552,7 @@ def plot_all_nx_G(G, node_size = 200, node_color = "#add8e6", font_size = 10, fi
 	"""
 	Plot all the graphs separately 	# assign colors
 		
-    :param subgraph_metrics: Pandas dataframe of subgraphs
+	:param subgraph_metrics: Pandas dataframe of subgraphs
 	:param comparison_metrics: Pandas dataframe of comparisons
 	:param node_size: Node size
 	:param node_color: Node color
@@ -576,7 +587,7 @@ def plot_all_pyvis_G(G, name = "pyvis-example", directed =True, notebook = True,
 	"""
 	Plot an interactive pyvis graph
 		
-    :param G: Netwokx graph
+	:param G: Netwokx graph
 	:param directed: If directed or not (default: True)
 	:param notebook: If run in Jupyter Notebook (default: True)
 	:param cdn_resources: If the upyter Notebook is hosted on a remote serevr (default: True)
