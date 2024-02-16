@@ -1,4 +1,6 @@
 def to_rdf(	infile = 'https://raw.githubusercontent.com/achp-project/prj-maeasam/main/Site.json', outfile = "C:/Rprojects/achp-ch/graph-parser/temp.ttl"):
+	# TODO: OWL
+	# inspired from graph_comparator.py
 	import requests
 	from rdflib import Graph, URIRef, Literal, Namespace
 	from rdflib.namespace import RDF, RDFS, DC

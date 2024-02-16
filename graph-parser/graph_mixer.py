@@ -1,15 +1,15 @@
 
 def example_cidoc_subgraph(from_class = "E22_Man-Made_Object", 
-						   from_label = "Building",
-						   to_class = "E57_Material",
-						   to_label = "Basalte",
-			   property_class = "P2_has_type",
-			   mass = 10,
-			   size = 40,
-			   from_image = "https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/main/www/arches-v7-hp-EAMENA-0184608.png",
-			   to_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/20141107-jordanie-qsar_al_hallabat-027.jpg/1280px-20141107-jordanie-qsar_al_hallabat-027.jpg",
-						   width="800px", 
-						   height="300px"):
+							from_label = "Building",
+							to_class = "E57_Material",
+							to_label = "Basalte",
+				property_class = "P2_has_type",
+				mass = 10,
+				size = 40,
+				from_image = "https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/main/www/arches-v7-hp-EAMENA-0184608.png",
+				to_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/20141107-jordanie-qsar_al_hallabat-027.jpg/1280px-20141107-jordanie-qsar_al_hallabat-027.jpg",
+							width="800px", 
+							height="300px"):
 	"""
 	Plot a simple CIDOC subgraph with two nodes an one edge (node--edge--node). By default, the example is for the use of basalt in the builing of Qsar al-Hallbat.
 
@@ -217,85 +217,85 @@ def rm_selected_one(project_name = None, remote_source_files = None, dir = '/con
 	urllib.request.urlretrieve(remote_source_files[project_name], filename=f"inputResourceModels/{target_filename}")
 
 def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None, highlight_nodes = None, color_default = 'blue', color_highlight='red', color_fields = None):
-  """
-  Table for one RM. Return a networkx graph. Optional: highlight nodes (fields) listed in a list (UUIDs)
-	  
-  :param subgraph_metrics: a CSV file
-  :param rm_project: the name of one RM (ex. EAMENA)
-  :param highlight_nodes: optional. A list of UUIDs
-  :param color_fields: optional. A dataframe of node UUIDs with their color 
+	"""
+	Table for one RM. Return a networkx graph. Optional: highlight nodes (fields) listed in a list (UUIDs)
+		
+	:param subgraph_metrics: a CSV file
+	:param rm_project: the name of one RM (ex. EAMENA)
+	:param highlight_nodes: optional. A list of UUIDs
+	:param color_fields: optional. A dataframe of node UUIDs with their color 
 
-  :Example: 
-  >> # create graph
-  >> rm_graph = create_rm_graph(rm_project = 'EAMENA')
-  >> rm_graph
-  >> 
-  >> # highlight nodes (fields), EAMENA example
-  >> df_erms = erms_template()
-  >> df_erms['Enhanced record minimum standard'] = df_erms['Enhanced record minimum standard'].str.contains(r'Yes', case = False, na = False, regex = True).astype(int)
-  >> df_erms = df_erms.loc[df_erms['Enhanced record minimum standard'] == 1]
-  >> in_erms = df_erms['uuid_sql'].tolist()
-  >> rm_graph = create_rm_graph(rm_project = 'EAMENA', highlight_nodes = in_erms)
-  >> rm_graph
-  """
-  import pandas as pd		
-  import networkx as nx
-  import re
+	:Example: 
+	>> # create graph
+	>> rm_graph = create_rm_graph(rm_project = 'EAMENA')
+	>> rm_graph
+	>> 
+	>> # highlight nodes (fields), EAMENA example
+	>> df_erms = erms_template()
+	>> df_erms['Enhanced record minimum standard'] = df_erms['Enhanced record minimum standard'].str.contains(r'Yes', case = False, na = False, regex = True).astype(int)
+	>> df_erms = df_erms.loc[df_erms['Enhanced record minimum standard'] == 1]
+	>> in_erms = df_erms['uuid_sql'].tolist()
+	>> rm_graph = create_rm_graph(rm_project = 'EAMENA', highlight_nodes = in_erms)
+	>> rm_graph
+	"""
+	import pandas as pd		
+	import networkx as nx
+	import re
 
-  rm_graph = pd.read_csv(subgraph_metrics)
-  rm_graph.rename(columns={'graph_name': 'G', 
-						   'source_property': 'source_crm', 
-						   'target_property': 'target_crm',
-						   'relation_type': 'property'}, inplace=True)
-  col_order = ['G', 'source_crm', 'target_crm', 'property', 'source_id', 'target_id', 'source_name', 'target_name']
-  rm_graph = rm_graph[col_order]
-  rm_graph['G'] = rm_graph['G'].apply(lambda x: x.split('_')[0])
-  rm_graph = rm_graph.loc[rm_graph['G'] == rm_project]
-  # Create a directed graph from the DataFrame
-  G = nx.from_pandas_edgelist(rm_graph, 'source_id', 'target_id', edge_attr=['property'], create_using=nx.DiGraph())
-  # Populate node attributes
-  for _, row in rm_graph.iterrows():
-	  source = row['source_id']
-	  target = row['target_id']
-	  source_attributes = {key[len('source_'):]: row[key] for key in rm_graph.columns if key.startswith('source_')}
-	  target_attributes = {key[len('target_'):]: row[key] for key in rm_graph.columns if key.startswith('target_')}
-	  # Update or add node attributes
-	  if G.has_node(source):
-		  G.nodes[source].update(source_attributes)
-	  if G.has_node(target):
-		  G.nodes[target].update(target_attributes)
-  ## nodes
-  for n in G.nodes(data=True):
-	n[1]['label'] = n[1]['name'] # will show names
-	n[1]['title'] = re.sub(r'_', ' ', n[1]['crm'])
-	# TODO: if the has no incoming edges it has a semantic Datatype
-	# if G.in_degree(n[1]) == 0:
-	#   n[1]['shape'] = 'square'
-	#   n[1]['color'] = 'grey'
-  ## node colors
-  if color_fields is not None:
+	rm_graph = pd.read_csv(subgraph_metrics)
+	rm_graph.rename(columns={'graph_name': 'G',
+							'source_property': 'source_crm', 
+							'target_property': 'target_crm',
+							'relation_type': 'property'}, inplace=True)
+	col_order = ['G', 'source_crm', 'target_crm', 'property', 'source_id', 'target_id', 'source_name', 'target_name']
+	rm_graph = rm_graph[col_order]
+	rm_graph['G'] = rm_graph['G'].apply(lambda x: x.split('_')[0])
+	rm_graph = rm_graph.loc[rm_graph['G'] == rm_project]
+	# Create a directed graph from the DataFrame
+	G = nx.from_pandas_edgelist(rm_graph, 'source_id', 'target_id', edge_attr=['property'], create_using=nx.DiGraph())
+	# Populate node attributes
+	for _, row in rm_graph.iterrows():
+		source = row['source_id']
+		target = row['target_id']
+		source_attributes = {key[len('source_'):]: row[key] for key in rm_graph.columns if key.startswith('source_')}
+		target_attributes = {key[len('target_'):]: row[key] for key in rm_graph.columns if key.startswith('target_')}
+		# Update or add node attributes
+		if G.has_node(source):
+			G.nodes[source].update(source_attributes)
+		if G.has_node(target):
+			G.nodes[target].update(target_attributes)
+	## nodes
 	for n in G.nodes(data=True):
-	  color_out = color_fields.loc[color_fields['uuid_sql'] == n[0], 'color']
-	  if len(color_out) > 0:
-		color_out = color_out.iloc[0]
-		n[1]['color'] = color_out
-	  else:
-		n[1]['color'] = color_default
-	# from highlight
-  if type(highlight_nodes) == list:
-	node_colors = {node: color_highlight if node in highlight_nodes else color_default for node in G.nodes}
-	nx.set_node_attributes(G, values=node_colors, name='color')
-  ## edges
-  for e in G.edges(data=True):
-	e[2]['title'] = re.sub(r'_', ' ', e[2]['property']) # replace _ by spaces
-	# e[2]['title'] =  e[2]['label'] # popup labels: complete
-	property_label = re.search(r'_(.*)', e[2]['property'])[1] # get text after P53_...
-	property_label = re.sub(r'_', ' ', property_label) # replace _ by spaces
-	e[2]['label'] = property_label # permanent labels (text)
+		n[1]['label'] = n[1]['name'] # will show names
+		n[1]['title'] = re.sub(r'_', ' ', n[1]['crm'])
+		# TODO: if the has no incoming edges it has a semantic Datatype
+		# if G.in_degree(n[1]) == 0:
+		#    n[1]['shape'] = 'square'
+		#    n[1]['color'] = 'grey'
+	## node colors
+	if color_fields is not None:
+		for n in G.nodes(data=True):
+			color_out = color_fields.loc[color_fields['uuid_sql'] == n[0], 'color']
+			if len(color_out) > 0:
+				color_out = color_out.iloc[0]
+				n[1]['color'] = color_out
+			else:
+				n[1]['color'] = color_default
+		# from highlight
+	if type(highlight_nodes) == list:
+		node_colors = {node: color_highlight if node in highlight_nodes else color_default for node in G.nodes}
+		nx.set_node_attributes(G, values=node_colors, name='color')
+	## edges
+	for e in G.edges(data=True):
+		e[2]['title'] = re.sub(r'_', ' ', e[2]['property']) # replace _ by spaces
+		# e[2]['title'] =  e[2]['label'] # popup labels: complete
+		property_label = re.search(r'_(.*)', e[2]['property'])[1] # get text after P53_...
+		property_label = re.sub(r'_', ' ', property_label) # replace _ by spaces
+		e[2]['label'] = property_label # permanent labels (text)
 	# print(e)
-  return(G)
+	return(G)
 
-def plot_net_graph(G = None, show_buttons = False,   filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
+def plot_net_graph(G = None, show_buttons = False,    filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
 	"""
 	Load a pyvis netwokx graph in a HML layout that can be downloaded or plotted. Download using: `google.colab.files.download(filename)`, and plot s HTML using: `HTML(filename=filename)`
 		
@@ -314,7 +314,7 @@ def plot_net_graph(G = None, show_buttons = False,   filename = "example.html", 
 		g.show_buttons(filter_=["physics"])
 	g.from_nx(G)
 	g.save_graph(filename)
-#   return HTML(filename=filename)
+#    return HTML(filename=filename)
 
 
 def subgraph_metrics(subgraph_metrics = 'subgraphMetrics.csv'):
@@ -605,4 +605,4 @@ def plot_all_pyvis_G(G, name = "pyvis-example", directed =True, notebook = True,
 	g.from_nx(G)
 	filename = f"{name}.html"
 	g.save_graph(filename)
-	return HTML(filename=filename)   
+	return HTML(filename=filename)    
