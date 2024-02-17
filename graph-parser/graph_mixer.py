@@ -215,7 +215,7 @@ def rm_selected_one(project_name = None, remote_source_files = None, dir = '/con
 	pathlib.Path(dir).mkdir(parents=True, exist_ok=True) 
 	target_filename = f"{project_name}_{remote_source_files[project_name].split('/')[-1]}"
 	urllib.request.urlretrieve(remote_source_files[project_name], filename=f"inputResourceModels/{target_filename}")
-	print(filename + ' has been created')
+	print(target_filename + ' has been created')
 
 def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None, highlight_nodes = None, color_default = 'blue', color_highlight='red', color_fields = None):
 	"""
