@@ -1,4 +1,4 @@
-def to_rdf(infile = 'https://raw.githubusercontent.com/achp-project/prj-maeasam/main/Site.json'):
+def to_rdf(infile = 'https://raw.githubusercontent.com/achp-project/prj-maeasam/main/Site.json', export = False, outfile = None, outformat = 'turtle'):
 	# TODO: OWL
 	# inspired from graph_comparator.py
 	import requests
@@ -10,7 +10,7 @@ def to_rdf(infile = 'https://raw.githubusercontent.com/achp-project/prj-maeasam/
 
 	response = requests.get(infile)
 	data = response.json()
-	nodes = data['graph'][0]['nodes'] # Replace this with the actual nodes data
+	nodes = data['graph'][0]['nodes']
 	g = Graph()
 
 	arches_prj = Namespace("http://" + prj + "#")
@@ -25,8 +25,10 @@ def to_rdf(infile = 'https://raw.githubusercontent.com/achp-project/prj-maeasam/
 		g.add((node_uri, DC.title, Literal(node['name'])))
 		g.add((node_uri, RDFS.subClassOf, URIRef(node['ontologyclass'])))
 
-	# g.serialize(destination=outfile, format='turtle')
-	return str(g.serialize(format='turtle'))
+	if export:
+		g.serialize(destination = outfile, format = outformat)
+	else:
+		return str(g.serialize(format = outformat))
 
-# # to_rdf(outfile = "C:/Rprojects/achp-ch/graph-parser/temp_1.ttl")
-print(to_rdf('https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json'))
+to_rdf(infile = 'https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json', export = True, outfile = "C:/Rprojects/eamena-arches-dev/data/lod/example1.json", outformat = 'json-ld')
+# print(to_rdf('https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json'))
