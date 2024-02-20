@@ -30,5 +30,5 @@ def to_rdf(infile = 'https://raw.githubusercontent.com/achp-project/prj-maeasam/
 	else:
 		return str(g.serialize(format = outformat))
 
-to_rdf(infile = 'https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json', export = True, outfile = "C:/Rprojects/eamena-arches-dev/data/lod/example1.json", outformat = 'json-ld')
+# to_rdf(infile = 'https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json', export = True, outfile = "C:/Rprojects/eamena-arches-dev/data/lod/example1.json", outformat = 'json-ld')
 # print(to_rdf('https://raw.githubusercontent.com/achp-project/prj-eamena-marea/main/resource_models/Heritage%20Place.json'))
