@@ -303,7 +303,7 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 		# print(e)
 	return(G)
 
-def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference-data/concepts/heritage_places/cases/list.tsv', G = None, mass = 10, size = 20):
+def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference-data/concepts/heritage_places/cases/list.tsv', cases_img_path = "https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference-data/concepts/heritage_places/cases/img/", G = None, mass = 10, size = 20):
 	"""
 	Creates a Network graph of the images (i.e. values) giving a TSV dataframe and replace the parent node with the RM equivalent node
 		
@@ -315,10 +315,11 @@ def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-proje
 	:Example: 
 	>> # TODO
 	"""
+	# TODO: factorise paths in the parameters
 	import pandas as pd
 	import networkx as nx
 	df_list = pd.read_csv(list_path, sep='\t')
-	df_list['image_path'] = list_path + df_list['image']
+	df_list['image_path'] = cases_img_path + df_list['image']
 
 	G1 = nx.DiGraph()
 	# Add nodes to the graph
