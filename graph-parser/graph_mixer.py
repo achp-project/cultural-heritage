@@ -303,6 +303,38 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 		# print(e)
 	return(G)
 
+def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference-data/concepts/heritage_places/cases/list.tsv', G = None, mass = 10, size = 20):
+	"""
+	Creates a Network graph of the images (i.e. values) giving a TSV dataframe and replace the parent node with the RM equivalent node
+		
+	:param list_path: where the images are listed
+	:param G: the RM networkx graph
+	:param mass: mass of the node (layout)
+	:param size: size of the node (layout)
+
+	:Example: 
+	>> # TODO
+	"""
+	import pandas as pd
+	import networkx as nx
+	df_list = pd.read_csv(list_path, sep='\t')
+	df_list['image_path'] = list_path + df_list['image']
+
+	G1 = nx.DiGraph()
+	# Add nodes to the graph
+	for index, row in df_list.iterrows():
+		G1.add_node(row['uuid'], crm = 'none', id = row['uuid'], name = row['label'], label = row['label'], title = 'lorem', color = 'none', size = size, mass = mass, shape='image', image = row['image_path'])
+	# Add edges to the graph
+	for index, row in df_list.iterrows():
+		G1.add_edge(row['uuid'], row['uuid_parent'], label = "my_label")# , weight=row['weight'])
+	# replace the parent node
+	# TODO: generalise the node_parent (currently only works for 'Threat Cause [Type]')
+	node_parent = '34cfea7b-c2c0-11ea-9026-02e7594ce0a0'
+	if node_parent in G:
+		G1.add_node(node_parent, **G.nodes[node_parent])
+	return(G1)
+
+
 def plot_net_graph(G = None, show_buttons = False,    filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
 	"""
 	Load a pyvis netwokx graph in a HML layout that can be downloaded or plotted. Download using: `google.colab.files.download(filename)`, and plot s HTML using: `HTML(filename=filename)`
