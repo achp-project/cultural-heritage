@@ -217,7 +217,7 @@ def rm_selected_one(project_name = None, remote_source_files = None, dir = '/con
 	urllib.request.urlretrieve(remote_source_files[project_name], filename=f"inputResourceModels/{target_filename}")
 	print(target_filename + ' has been loaded into the folder inputResourceModels/')
 
-def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None, highlight_nodes = None, color_default = 'blue', color_highlight='red', color_fields = None):
+def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None, highlight_nodes = None, color_default = 'blue', color_highlight='red', color_fields = None, add_images = False):
 	"""
 	Table for one RM. Return a networkx graph. Optional: highlight nodes (fields) listed in a list (UUIDs)
 		
@@ -225,6 +225,7 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 	:param rm_project: the name of one RM (ex. EAMENA)
 	:param highlight_nodes: optional. A list of UUIDs
 	:param color_fields: optional. A dataframe of node UUIDs with their color 
+	:param add_images: if True, will modify the layout of the nodes to be embed images (i.e., leaves, values) 
 
 	:Example: 
 	>> # create graph
@@ -244,7 +245,7 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 	import re
 
 	rm_graph = pd.read_csv(subgraph_metrics)
-	rm_graph.rename(columns={'graph_name': 'G',
+	rm_graph.rename(columns={'graph_name': 'G', 
 							'source_property': 'source_crm', 
 							'target_property': 'target_crm',
 							'relation_type': 'property'}, inplace=True)
@@ -265,14 +266,14 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 			G.nodes[source].update(source_attributes)
 		if G.has_node(target):
 			G.nodes[target].update(target_attributes)
-	## nodes
+  ## nodes
 	for n in G.nodes(data=True):
 		n[1]['label'] = n[1]['name'] # will show names
 		n[1]['title'] = re.sub(r'_', ' ', n[1]['crm'])
-		# TODO: if the has no incoming edges it has a semantic Datatype
-		# if G.in_degree(n[1]) == 0:
-		#    n[1]['shape'] = 'square'
-		#    n[1]['color'] = 'grey'
+	# TODO: if the has no incoming edges it has a semantic Datatype
+	# if G.in_degree(n[1]) == 0:
+	#   n[1]['shape'] = 'square'
+	#   n[1]['color'] = 'grey'
 	## node colors
 	if color_fields is not None:
 		for n in G.nodes(data=True):
@@ -282,10 +283,16 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 				n[1]['color'] = color_out
 			else:
 				n[1]['color'] = color_default
-		# from highlight
+	# from highlight
 	if type(highlight_nodes) == list:
 		node_colors = {node: color_highlight if node in highlight_nodes else color_default for node in G.nodes}
 		nx.set_node_attributes(G, values=node_colors, name='color')
+	if add_images:
+		for node in G.nodes:
+			G.nodes[node]['size'] = 10
+			G.nodes[node]['mass'] = 20
+			G.nodes[node]['shape'] = 'circle'
+			G.nodes[node]['image'] = 'None'
 	## edges
 	for e in G.edges(data=True):
 		e[2]['title'] = re.sub(r'_', ' ', e[2]['property']) # replace _ by spaces
@@ -293,7 +300,7 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 		property_label = re.search(r'_(.*)', e[2]['property'])[1] # get text after P53_...
 		property_label = re.sub(r'_', ' ', property_label) # replace _ by spaces
 		e[2]['label'] = property_label # permanent labels (text)
-	# print(e)
+		# print(e)
 	return(G)
 
 def plot_net_graph(G = None, show_buttons = False,    filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
