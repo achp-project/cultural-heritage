@@ -303,7 +303,7 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 		# print(e)
 	return(G)
 
-def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference-data/concepts/heritage_places/cases/list.tsv', cases_img_path = "https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference-data/concepts/heritage_places/cases/img/", G = None, mass = 10, size = 20):
+def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference-data/concepts/heritage_places/cases/list.tsv', cases_img_path = "https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference-data/concepts/heritage_places/cases/img/", G = None, mass = 2, size = 20):
 	"""
 	Creates a Network graph of the images (i.e. values) giving a TSV dataframe and replace the parent node with the RM equivalent node
 		
@@ -325,7 +325,7 @@ def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-proje
 	for uuid_parent in uuid_parents:
 		print("*read: " + uuid_parent)
 		selected_rows = df_list[df_list['uuid_parent'] == uuid_parent]
-		print(f"Rows for uuid_parent = {uuid_parent}:\n", selected_rows, "\n")
+		# print(f"Rows for uuid_parent = {uuid_parent}:\n", selected_rows, "\n")
 		type(selected_rows)
 		# Add nodes to the graph
 		for index, row in df_list.iterrows():
