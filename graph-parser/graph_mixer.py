@@ -315,25 +315,32 @@ def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-proje
 	:Example: 
 	>> # TODO
 	"""
-	# TODO: factorise paths in the parameters
 	import pandas as pd
 	import networkx as nx
 	df_list = pd.read_csv(list_path, sep='\t')
 	df_list['image_path'] = cases_img_path + df_list['image']
-
 	G1 = nx.DiGraph()
-	# Add nodes to the graph
-	for index, row in df_list.iterrows():
-		G1.add_node(row['uuid'], crm = 'none', id = row['uuid'], name = row['label'], label = row['label'], title = 'lorem', color = 'none', size = size, mass = mass, shape='image', image = row['image_path'])
-	# Add edges to the graph
-	for index, row in df_list.iterrows():
-		G1.add_edge(row['uuid'], row['uuid_parent'], label = "my_label")# , weight=row['weight'])
-	# replace the parent node
-	# TODO: generalise the node_parent (currently only works for 'Threat Cause [Type]')
-	node_parent = '34cfea7b-c2c0-11ea-9026-02e7594ce0a0'
-	if node_parent in G:
-		G1.add_node(node_parent, **G.nodes[node_parent])
-	return(G1)
+	uuid_parents = df_list['uuid_parent'].unique()
+	# slice the df by parent uuid
+	for uuid_parent in uuid_parents:
+		print("*read: " + uuid_parent)
+		selected_rows = df_list[df_list['uuid_parent'] == uuid_parent]
+		print(f"Rows for uuid_parent = {uuid_parent}:\n", selected_rows, "\n")
+		type(selected_rows)
+		# Add nodes to the graph
+		for index, row in df_list.iterrows():
+			G1.add_node(row['uuid'], crm = 'none', id = row['uuid'], name = row['label'], label = row['label'], title = 'P90 has value', color = 'none', size = size, mass = mass, shape='image', image = row['image_path'])
+	  	# Add edges to the graph
+		for index, row in df_list.iterrows():
+			# TODO: change below to: G1.add_edge(row['uuid_parent'], row['uuid'], label = "has value")
+			# G1.add_edge(row['uuid'], row['uuid_parent'], label = "my_label")# , weight=row['weight'])
+			G1.add_edge(row['uuid_parent'], row['uuid'], label = "has value")
+		# replace the parent node
+		# TODO: generalise the node_parent (currently only works for 'Threat Cause [Type]')
+		# node_parent = '34cfea7b-c2c0-11ea-9026-02e7594ce0a0'
+		if uuid_parent in G:
+			G1.add_node(uuid_parent, **G.nodes[uuid_parent])
+		return(G1)
 
 
 def plot_net_graph(G = None, show_buttons = False,    filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
