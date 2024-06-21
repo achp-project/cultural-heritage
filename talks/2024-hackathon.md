@@ -1,11 +1,7 @@
-# Hackathon
-> 27-28 August, 2024. School of Archaeology, University of Oxford, Oxford
+# ACHP Hackathon
+> 📅 27-28 August, 2024 📍School of Archaeology, University of Oxford, Oxford
 
-## content
-
-* dev content: Hosted on our ACHP GitHub org
-* focus: Interoperability and reusability between our Arches-based projects
-* IT tools: Python
+Two days of collaborative Python coding to enhance interoperability and reusability within our Arches-based project.
 
 ## impact
 
