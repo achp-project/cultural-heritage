@@ -343,7 +343,7 @@ def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-proje
 		return(G1)
 
 
-def plot_net_graph(G = None, show_buttons = False,    filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
+def plot_net_graph(G = None, show_buttons = False, filename = "example.html", width = "1000px", height = "1000px", notebook = True, directed = True, cdn_resources = 'remote'):
 	"""
 	Load a pyvis netwokx graph in a HML layout that can be downloaded or plotted. Download using: `google.colab.files.download(filename)`, and plot s HTML using: `HTML(filename=filename)`
 		

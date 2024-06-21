@@ -23,6 +23,7 @@
 > [graph-parser](https://github.com/achp-project/cultural-heritage/tree/main/graph-parser): to model the semantic structure of the graph of resource data from different Arches-based projects
 
 Visualize an Arches-based graph in a form of an interactive collapsible tree: **[EAMENA Heritage Place](https://achp-project.github.io/cultural-heritage/graph-parser/docs/sampleOutput/EAMENA_Heritage%20Place.html)** [^3]
+
 ## Map
 > [map-projects](https://github.com/achp-project/cultural-heritage/tree/main/map-projects): to map the region of interest of different Arches-based projects
 
