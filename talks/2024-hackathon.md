@@ -10,3 +10,7 @@ Two days of collaborative Python coding to enhance interoperability and reusabil
 ## participants
 
 * @razekmh, @junaidjabbar01, @ads04r, @zoometh
+
+## Suggested subjects to discuss / demo 
+
+* Deploying Arches using Infrastructure as Code.
