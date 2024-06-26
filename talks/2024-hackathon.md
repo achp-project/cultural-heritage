@@ -14,3 +14,6 @@ Two days of collaborative Python coding to enhance interoperability and reusabil
 ## Suggested subjects to discuss / demo 
 
 * Deploying Arches using Infrastructure as Code.
+* Ways of monitoring the server performance and collecting stats.
+
+
