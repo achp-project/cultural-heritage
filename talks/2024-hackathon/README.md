@@ -9,7 +9,7 @@ Two days of collaborative Python coding to enhance interoperability and reusabil
 
 ## participants and projects
 
-* @razekmh, [CAAL](https://github.com/achp-project/prj-caal), 
+* @razekmh, [CAAL](https://github.com/achp-project/prj-caal), [MAEASaM](https://github.com/achp-project/prj-maeasam)
 * @junaidjabbar01, [MASHA](https://github.com/achp-project/prj-mahsa)
 * @ads04r, [MaREA](https://github.com/achp-project/prj-eamena-marea)
 * @zoometh, [EAMENA](https://github.com/achp-project/prj-eamena-marea)
