@@ -5,7 +5,7 @@ Two days of collaborative Python coding to enhance interoperability and reusabil
 
 ## impact
 
-* 1-hour talk at the start of WS, open to the School of Archaeology + online
+* The workshop will open with a one-hour talk open to the public on the management of cultural heritage and archeology databases. In-person + Online (hybrid).
 
 ## participants and projects
 
