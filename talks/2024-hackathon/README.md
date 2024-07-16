@@ -33,7 +33,3 @@ These settings will be prepared before the hackathon:
 ### Hackathon Content
 
 * Develop an [Arches App](https://arches.readthedocs.io/en/stable/developing/extending/creating-apps/) to query all the RMs.
-
-install an Arches v7.5 instance on AWS
-
-ask them to import a sample of data
