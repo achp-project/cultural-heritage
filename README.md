@@ -1,6 +1,10 @@
 # cultural-heritage
 > common repository
 
+## Hackathon
+
+* [2024-hackathon](https://github.com/achp-project/cultural-heritage/tree/main/talks/2024-hackathon)
+
 ## Graph
 > [graph-parser](https://github.com/achp-project/cultural-heritage/tree/main/graph-parser): to model the semantic structure of the graph of resource data from different Arches-based projects
 
@@ -21,6 +25,9 @@ Vizualise an Arches-based thesaurus in a form of an interactive collapsible tree
 ## PeriodO
 > [periodo-projects](https://github.com/achp-project/cultural-heritage/tree/main/periodo-projects): to map Arches cultural periods to the PeriodO gazetteer
 
+## talks
+
+- [2023-bhdc](https://colab.research.google.com/github/achp-project/cultural-heritage/blob/main/talks/2023-bhdc/rm_compar.ipynb)
 
 ## Logos
 
