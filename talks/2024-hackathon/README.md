@@ -1,5 +1,5 @@
-# ACHP Hackathon
-> 📅 9am-6pm, 27-28 August, 2024 [📍Seminar Room, Institute of Archaeology, 36 Beaumont St](https://maps.app.goo.gl/MtAMkX57pxdbF6Ue9), University of Oxford, United Kingdom.
+# Arches Cultural Heritage Partners' hackathon 2024
+> 📅 28 August 2024, 17h00-18h00 (UK time). In person [📍Seminar Room, Institute of Archaeology, 36 Beaumont St](https://maps.app.goo.gl/MtAMkX57pxdbF6Ue9) and on [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting\_ZTYyNTJmMDEtMWJmMC00NDk2LWJkMGQtMzgwZWI5Y2FlODgy%40thread.v2/0?context=%7b%22Tid%22%3a%22cc95de1b-97f5-4f93-b4ba-fe68b852cf91%22%2c%22Oid%22%3a%229dce33a8-66a7-403f-a2c6-95948cb855d0%22%7d), University of Oxford, United Kingdom.
 
 Two days of collaborative Python coding to enhance interoperability and reusability within our Arches-based project.
 
