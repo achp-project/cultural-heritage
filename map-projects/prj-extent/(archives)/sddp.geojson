@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "shangxi",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "project": "SDDP", "description": "Shanxi Digital Documentation Project", "url": "<a href=https://shanxi-project.org/>https://shanxi-project.org/</a>" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 109.0, 41.0 ], [ 114.0, 41.0 ], [ 114.0, 34.0 ], [ 109.0, 34.0 ], [ 109.0, 41.0 ] ] ] ] } }
-]
-}
