@@ -2,15 +2,22 @@
 	"type": "FeatureCollection",
 	"name": "maphsa",
 	"crs": {
-	  "type": "name",
-	  "properties": {
-		"name": "urn:ogc:def:crs:OGC:1.3:CRS84"
-	  }
-	},
-	"features": [
-	  {
-		"type": "Feature",
-		"properties": {},
+		"type": "name",
+		"properties": {
+		  "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+		}
+	  },
+	  "features": [
+		{
+		  "type": "Feature",
+		  "properties": {
+			  "project": "EAMENA",
+			  "description": "Endangered Archaeology in the Middle East and North Africa<br>Maritime Endangered Archaeology",
+			  "url": "<a href=https://eamena.org/>https://eamena.org/</a>",
+			  "image_url": "<img src='https://raw.githubusercontent.com/eamena-project/eamena-arches-dev/main/www/logo-eamena.png' style='width:100px;height:100px;'>",
+			  "logo": "<img src='https://raw.githubusercontent.com/achp-project/cultural-heritage/main/www/inst-eamena.png' style='height:30px;'>",
+			  "color": "#956d43"
+			},
 		"geometry": {
 		  "type": "MultiPolygon",
 		  "coordinates": [
