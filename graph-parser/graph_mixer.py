@@ -72,20 +72,21 @@ def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-exten
 			if verbose:
 				print("Error reading GeoJSON file:", e)
 		# small fix, to remove once MaEASAM is OK
-		if prj != 'maesam.geojson':
-			geojson_layer = folium.GeoJson(
-				geojson_data,
-				name='GeoJSON',
-				style_function = style_function,
-				highlight_function=lambda x: {
-				'fillOpacity':1
-				})
-			folium.features.GeoJsonPopup(fields=['description', 'url', 'logo'], 
-									aliases=['Project Name:', 'Project Website', 'Institution'],
-									labels=True, max_width=500, min_width=10).add_to(geojson_layer)
-			geojson_layer.add_to(m)
-			m.fit_bounds(m.get_bounds())
+		# if prj != 'maesam.geojson':
+		geojson_layer = folium.GeoJson(
+			geojson_data,
+			name='GeoJSON',
+			style_function = style_function,
+			highlight_function=lambda x: {
+			'fillOpacity':1
+			})
+		folium.features.GeoJsonPopup(fields=['description', 'url', 'logo'], 
+								aliases=['Project Name:', 'Project Website', 'Institution'],
+								labels=True, max_width=500, min_width=10).add_to(geojson_layer)
+		geojson_layer.add_to(m)
+		m.fit_bounds(m.get_bounds())
 	return(m)
+
 
 # ressource models
 def rm_list():
