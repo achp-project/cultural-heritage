@@ -35,57 +35,65 @@ def example_cidoc_subgraph(from_class = "E22_Man-Made_Object",
 	g.save_graph(filename)
 	return HTML(filename=filename)
 
-def projects_extent(map_dir = '/content/cultural-heritage/map-projects/prj-extent/', width=1200, height=700, verbose=False):
-	"""
-	Plot GeoJSON project extents.
+def projects_extent(map_dir='/content/cultural-heritage/map-projects/prj-extent/', width=1200, height=700, verbose=False):
+    """
+    Plot GeoJSON project extents.
 
-	:param map_dir: folder with the GeoJSON extents
+    :param map_dir: folder with the GeoJSON extents
 
-	:Example: 
-	>> projects_extent()
-	"""
-	import os
-	import folium
-	import geopandas as gpd
+    :Example: 
+    >> projects_extent()
+    """
+    import os
+    import folium
+    import geopandas as gpd
 
-	m = folium.Map(width=width, height=height)
-	projects_geojson = [f for f in os.listdir(map_dir) if os.path.isfile(os.path.join(map_dir, f))]
-	for prj in projects_geojson:
-		if verbose:
-			print("*read: " + prj)
-		def style_function(feature):
-			# Extract color information from the GeoJSON feature properties
-			color = feature['properties'].get('color', '#ff0000')  # Default to red if color is not present
-			return {
-		'fillColor': color,
-		'color': 'black',
-		'weight': 2,
-		'fillOpacity': 0.5
-		}
-		geojson_data = map_dir + prj
-		# test
-		try:
-			gdf = gpd.read_file(geojson_data)
-			if verbose:
-				print("GeoJSON file is OK.")
-		except Exception as e:
-			if verbose:
-				print("Error reading GeoJSON file:", e)
-		# small fix, to remove once MaEASAM is OK
-		# if prj != 'maesam.geojson':
-		geojson_layer = folium.GeoJson(
-			geojson_data,
-			name='GeoJSON',
-			style_function = style_function,
-			highlight_function=lambda x: {
-			'fillOpacity':1
-			})
-		folium.features.GeoJsonPopup(fields=['description', 'url', 'logo'], 
-								aliases=['Project Name:', 'Project Website', 'Institution'],
-								labels=True, max_width=500, min_width=10).add_to(geojson_layer)
-		geojson_layer.add_to(m)
-		m.fit_bounds(m.get_bounds())
-	return(m)
+    m = folium.Map(width=width, height=height)
+    projects_geojson = [f for f in os.listdir(map_dir) if os.path.isfile(os.path.join(map_dir, f))]
+    for prj in projects_geojson:
+        if verbose:
+            print("*read: " + prj)
+        def style_function(feature):
+            # Extract color information from the GeoJSON feature properties
+            color = feature['properties'].get('color', '#ff0000')  # Default to red if color is not present
+            return {
+            'fillColor': color,
+            'color': 'black',
+            'weight': 2,
+            'fillOpacity': 0.5
+            }
+        geojson_data = map_dir + prj
+        # Load the GeoJSON data using Geopandas
+        try:
+            gdf = gpd.read_file(geojson_data)
+            if verbose:
+                print("GeoJSON file is OK.")
+        except Exception as e:
+            if verbose:
+                print("Error reading GeoJSON file:", e)
+            continue  # Skip to the next file if the current one cannot be read
+
+        # Identify available fields in the GeoJSON data
+        available_fields = list(gdf.columns)
+        popup_fields = ['description', 'url', 'logo']
+        valid_fields = [field for field in popup_fields if field in available_fields]
+        aliases = ['Project Name:', 'Project Website', 'Institution']
+        valid_aliases = [aliases[popup_fields.index(field)] for field in valid_fields]
+
+        # Create the GeoJson layer with a conditional popup based on available fields
+        geojson_layer = folium.GeoJson(
+            geojson_data,
+            name='GeoJSON',
+            style_function=style_function,
+            highlight_function=lambda x: {'fillOpacity': 1}
+        )
+        # if valid_fields:
+        folium.features.GeoJsonPopup(fields=valid_fields, aliases=valid_aliases,
+                                      labels=True, max_width=500, min_width=10).add_to(geojson_layer)
+
+        geojson_layer.add_to(m)
+        m.fit_bounds(m.get_bounds())
+    return m
 
 
 # ressource models
