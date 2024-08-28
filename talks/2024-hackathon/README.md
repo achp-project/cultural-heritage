@@ -12,7 +12,7 @@ The workshop will open with a one-hour talk open to the public on the management
 ## participants and projects
 
 * @razekmh, [CAAL](https://github.com/achp-project/prj-caal), [MAEASaM](https://github.com/achp-project/prj-maeasam)
-* @junaidjabbar01, [MASHA](https://github.com/achp-project/prj-mahsa)
+* @junaidjabbar01, [MAHSA](https://github.com/achp-project/prj-mahsa)
 * @ads04r, [MaREA](https://github.com/achp-project/prj-eamena-marea)
 * @zoometh, [EAMENA](https://github.com/achp-project/prj-eamena-marea)
 
