@@ -3,12 +3,14 @@
 
 Two days of collaborative Python coding to enhance interoperability and reusability within our Arches-based project.
 
-![alt text](image.png)
+![](image.png)
 
 ## impact
 > 📅 28 August 2024, 17h00-18h00 (UK time). In person [📍Seminar Room, Institute of Archaeology, 36 Beaumont St](https://maps.app.goo.gl/MtAMkX57pxdbF6Ue9) and on [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting\_ZTYyNTJmMDEtMWJmMC00NDk2LWJkMGQtMzgwZWI5Y2FlODgy%40thread.v2/0?context=%7b%22Tid%22%3a%22cc95de1b-97f5-4f93-b4ba-fe68b852cf91%22%2c%22Oid%22%3a%229dce33a8-66a7-403f-a2c6-95948cb855d0%22%7d), University of Oxford, United Kingdom.
 
 The workshop will open with a one-hour talk open to the public on the management of cultural heritage and archeology databases. In-person + Online (hybrid).
+
+see the [Jupyter NB of the talk](https://colab.research.google.com/github/achp-project/cultural-heritage/blob/main/talks/2024-hackathon/achp_hackathon.ipynb)
 
 
 ## participants and projects
@@ -18,29 +20,12 @@ The workshop will open with a one-hour talk open to the public on the management
 * @ads04r, [MaREA](https://github.com/achp-project/prj-eamena-marea)
 * @zoometh, [EAMENA](https://github.com/achp-project/prj-eamena-marea)
 
-## Suggested subjects to discuss / demo 
+## work done 
 
-* Deploying Arches using Infrastructure as Code.
-* Ways of monitoring the server performance and collecting stats.
+* Docker deployement of Arches v7.5
+* imported reference data from EAMENA, CAAL, MAHSA, MAEASaM
+* imported business data EAMENA, CAAL, MAHSA, MAEASaM
+* creation of an [Arches App](https://arches.readthedocs.io/en/stable/developing/extending/creating-apps/): [dashboard](https://github.com/achp-project/dashboard)
 
-## Suggested Program
-
-![alt text](image-2.png)
-
-### IT Settings
-
-These settings will be prepared before the hackathon:
-
-- [x] Install an AWS instance
-- [x] Install an Arches v7.5 training instance on AWS ~~(done by @zoometh and @ads04r)~~
-- [ ] Open an SSH connection for each participant ~~(done by @zoometh and @ads04r)~~
-- [ ] All participants import their Heritage Places (also known as HP, Sites, Places, etc.) resource models (RMs): [CAAL](https://github.com/achp-project/prj-caal/blob/main/resource_models/arches/CAAL-SitesAndMonuments.json), [EAMENA](https://github.com/achp-project/prj-eamena-marea/blob/main/resource_models/Heritage%20Place.json), etc.
-- [ ] All participants import a sample of HPs for each RM.
-
-### Hackathon Content
-
-Develop an [Arches App](https://arches.readthedocs.io/en/stable/developing/extending/creating-apps/) to query and merge all the RMs.
-
-* Aches App example: [dashboard](https://github.com/achp-project/dashboard)
 
 
