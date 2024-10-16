@@ -312,7 +312,7 @@ def create_rm_graph(subgraph_metrics = 'subgraphMetrics.csv', rm_project = None,
 		# print(e)
 	return(G)
 
-def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference_data/reference_data/concepts/hp/cases/list.tsv', cases_img_path = "https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference_data/reference_data/concepts/hp/cases/img/", G = None, mass = 2, size = 20):
+def create_img_graph(list_path = 'https://raw.githubusercontent.com/eamena-project/eamena-data/refs/heads/main/reference_data/concepts/hp/cases/list.tsv', cases_img_path = "https://raw.githubusercontent.com/eamena-project/eamena-data/main/reference_data/concepts/hp/cases/img/", G = None, mass = 2, size = 20):
 	"""
 	Creates a Network graph of the images (i.e. values) giving a TSV dataframe and replace the parent node with the RM equivalent node
 		
